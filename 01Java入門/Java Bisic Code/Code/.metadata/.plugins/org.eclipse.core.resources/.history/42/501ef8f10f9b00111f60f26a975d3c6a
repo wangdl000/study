@@ -1,0 +1,13 @@
+package cn.itcast.net.p1.uploadpic;
+
+public class UploadTask implements Runnable {
+
+	private Socket s;
+	private UploadTack(Socket s){
+		
+	}
+	@Override
+	public void run() {
+	}
+
+}

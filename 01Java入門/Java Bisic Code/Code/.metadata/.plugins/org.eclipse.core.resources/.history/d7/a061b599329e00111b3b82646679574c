@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			
+			/*
+			 * 自定义对象。 
+			 * 用js描述一个Person.
+			 * 
+			 * java: class描述  new建立对象。 
+			 * js: 函数：描述   new建立。
+			 * 
+			 */
+			
+			
+			
+			/*
+			//描述
+			function Person(){
+				alert("person run");
+			}
+			//对象
+			var p = new Person();
+			
+			p.name = "lisi";
+			p.age = 30;
+			
+			p.show = function(){
+				alert("show run....");
+			}
+			
+			p.show();
+			
+//			alert(p);
+			*/
+			
+			function Person(name,age){
+				this.name = name;
+				this.age = age;
+				
+				this.setName = function(n){
+					this.name = n;
+				}
+				
+				this.getName = function(){
+					return this.name;
+				}
+			}
+			
+			var  p = new Person("lisi",29);
+			
+//			p.setName("wangwu");
+			
+//			alert(p.getName());
+			
+			
+			
+			//js中特有的语句。 
+			//with(obj){可以使用该对象中的任何内容，而不用明确具体的对象。}
+			
+			with(p){
+				setName("haha");
+				alert(getName());
+			}
+	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,30 @@
+package cn.itcast.bean;
+
+public class Person {
+
+	private int age;
+	private String name;
+	
+	public Person(int age, String name) {
+		super();
+		this.age = age;
+		this.name = name;
+	}
+	public Person() {
+		super();
+		
+	}
+	
+	public void show(){
+		System.out.println(name+"...show run..."+age);
+	}
+	
+	private void method(){
+		System.out.println(" method run ");
+	}
+	
+	public void paramMethod(String str,int num){
+		System.out.println("paramMethod run....."+str+":"+num);
+		
+	}
+}

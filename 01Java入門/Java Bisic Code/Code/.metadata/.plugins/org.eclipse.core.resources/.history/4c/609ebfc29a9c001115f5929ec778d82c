@@ -1,0 +1,18 @@
+package cn.itcast.test;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class Test {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));
+		
+		
+	}
+
+}

@@ -1,0 +1,17 @@
+package cn.itcast.net.p6.uploadtext;
+
+import java.net.ServerSocket;
+
+public class UploadServer {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		
+		//1
+		ServerSocket ss = new ServerSocket(10005);
+	}
+
+}

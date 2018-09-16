@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+		
+		<script type="text/javascript">
+			
+			//要求是四个字母。 
+			function checkUserDemo(){
+				
+				var flag ;
+				//1,获取用户名文本框对象。
+				var userNode = document.getElementsByName("user")[0];
+				//2,获取用户输入的信息。
+				var name = userNode.value;
+				
+				//3，获取显示校验信息结果的节点对象。
+				var spanNode = document.getElementById("userspan");
+				
+				//对用户名进行正则的校验。
+				//创建正则对象，将正则表达式封装到正则对象中。 
+//				var reg = new RegExp("^\\d{4}$","i");
+				var reg = /^[a-z]{4}$/i;
+				
+				if(reg.test(name)){
+					spanNode.innerHTML = "用户名正确".fontcolor("green");
+					flag = true;
+				}else{
+					spanNode.innerHTML = "用户名错误".fontcolor("red");
+					flag = false;
+					
+				}
+				return flag;
+				
+			}
+			
+			
+			
+			
+			
+			
+			//校验方法。 
+			function check(name,regex,spanid,okinfo,errinfo){
+				
+				var flag ;
+				
+				var val = document.getElementsByName(name)[0].value;
+				
+				var spanNode = document.getElementById(spanid);
+				
+				if(regex.test(val)){
+					spanNode.innerHTML = okinfo;
+					flag = true;
+				}else{
+					spanNode.innerHTML = errinfo;
+					flag = false;					
+				}
+				return flag;
+			}
+			
+			
+			//校验用户名。
+			function checkUser(){
+				
+				var regex = /^[a-z]{4}$/i;
+				
+				return check("user",regex,"userspan","用户名正确","用户名错误");
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			function checkForm(){
+				
+				if(checkUser())
+					return true;
+				return false;
+			}
+		</script>
+	</head>
+	<body>
+		
+		<form onsubmit="return checkForm()">
+			用户名称：<input type="text" name="user" onblur="checkUser()" />
+			<span id="userspan"></span>
+			<br/>
+			
+			输入密码：<input type="text" name="psw" onblur="checkPsw()" />
+			<span id="pswspan"></span>
+			<br/>
+			
+			确认密码：<input type="text" name="repsw" onblur="checkRepsw()" />
+			<span id="repswspan"></span>
+			<br/>
+			
+			邮件地址：<input type="text" name="mail" onblur="checkMail()" />
+			<span id="mailspan"></span>
+			<br/>
+			
+			<input type="submit" value="提交数据" />
+			
+		</form>
+		
+	</body>
+</html>

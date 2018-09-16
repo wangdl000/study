@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		
+		<!--
+		节点间的层次关系：
+		
+		1，父节点。
+			parentNode
+		2，子节点。
+			childNodes:对应的一个集合。
+		3，兄弟节点
+			上一下兄弟节点。
+			下一个兄弟节点。
+		-->
+	</body>
+</html>

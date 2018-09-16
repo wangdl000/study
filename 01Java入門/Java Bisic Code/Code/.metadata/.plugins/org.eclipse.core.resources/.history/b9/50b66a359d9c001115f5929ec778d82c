@@ -1,0 +1,11 @@
+package cn.itcast.test;
+
+public class MyGetDataByFile implements GetDataInter {
+
+	@Override
+	public int getNumber() {
+
+		return 0;
+	}
+
+}

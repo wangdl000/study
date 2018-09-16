@@ -1,0 +1,19 @@
+package cn.itcast.net.p4.tcp;
+
+public class ClientDemo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		/*
+		 * Tcp传输，客户端建立的过程。
+		 * 1，创建tcp客户端socket服务。使用的是Socket对象。
+		 * 		建议该对象一创建就明确目的地。要连接的主机。 
+		 * 2，如果连接建立成功，说明数据传输通道已建立。
+		 * 		
+		 */
+	}
+
+}

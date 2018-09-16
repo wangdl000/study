@@ -1,0 +1,14 @@
+package cn.itcast.net.p3.chat;
+
+public class Send implements Runnable {
+
+	private DatagramSocket ds;
+	
+	public Send(DatagramSocket ds){
+		this.ds = ds;
+	}
+	@Override
+	public void run() {
+	}
+
+}

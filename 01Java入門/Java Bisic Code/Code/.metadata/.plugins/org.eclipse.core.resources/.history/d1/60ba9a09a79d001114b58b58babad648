@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		
+		
+		<script type="text/javascript">
+			
+			//函数。
+			/*
+			 * 格式：
+			 * function 函数名(参数列表){
+			 * 		执行语句；
+			 * 		return 返回值；
+			 * }
+			 * 明确，未知内容。
+			 * 明确，功能结果。
+			 */
+			function show(){
+				alert("show run");
+			}
+			
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

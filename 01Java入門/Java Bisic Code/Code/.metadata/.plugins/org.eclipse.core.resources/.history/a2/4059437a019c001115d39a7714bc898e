@@ -1,0 +1,22 @@
+package cn.itcast.reflect.demo;
+
+public class ReflectDemo4 {
+
+	public ReflectDemo4() {
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		getMethodDemo();
+	}
+
+	/*
+	 * 获取指定Class中的公共函数。
+	 */
+	public static void getMethodDemo() {
+	}
+
+}

@@ -1,0 +1,8 @@
+Creating elements for NewJFrame.java
+
+
+>>>  about to create class javax.swing.JFrame, constructor=public javax.swing.JFrame() throws java.awt.HeadlessException
+<<< created class javax.swing.JFrame
+
+>>>  about to create class javax.swing.JButton, constructor=public javax.swing.JButton()
+<<< created class javax.swing.JButton

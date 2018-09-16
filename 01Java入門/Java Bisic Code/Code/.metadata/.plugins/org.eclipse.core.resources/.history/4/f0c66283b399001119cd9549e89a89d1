@@ -1,0 +1,29 @@
+package cn.itcast.net.p5.tcptest;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+public class TransServer {
+
+	/**
+	 * @param args
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+
+		/*
+		 * 
+		 * 转换服务端。
+		 * 分析：
+		 * 1，serversocket服务。
+		 * 2，获取socket对象。
+		 * 3，源：socket，读取客户端发过来的需要转换的数据。
+		 * 4，目的：显示在控制台上。
+		 * 5，将数据转成大写发给客户端。 
+		 */
+		
+		//1,
+		ServerSocket ss = new ServerSocket(10004);
+	}
+
+}

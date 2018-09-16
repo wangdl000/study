@@ -1,0 +1,9 @@
+#Sun May 13 12:08:57 CST 2012
+com.aptana.ide.editor.html.AUTO_SAVE_PROMPTED=true
+com.aptana.ide.editors.FORMATTING_SET_OUTPUT=Original
+eclipse.preferences.version=1
+com.aptana.ide.editors.VALIDATORS_LIST=Tidy Html Validator
+com.aptana.ide.editor.html.AUTO_SAVE_BEFORE_PREVIEWING=true
+com.aptana.ide.editor.html.HTMLEDITOR_INITIAL_CONTENTS=<\!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http\://www.w3.org/TR/html4/strict.dtd">\r\n<html>\r\n\t<head>\r\n\t\t<meta http-equiv\="Content-Type" content\="text/html; charset\=GBK">\r\n\t\t<title>Untitled Document</title>\r\n\t</head>\r\n\t<body>\r\n\t</body>\r\n</html>\r\n
+com.aptana.ide.editor.html.BROWSER_PREVIEW_PREFERENCE=Firefox,IE
+com.aptana.ide.editors.FOLDING_HTML_NODE_LIST=body,div,head,html,script,style,

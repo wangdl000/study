@@ -1,0 +1,12 @@
+package cn.itcast.net.p2.udp;
+
+public class UDPReceDemo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,55 @@
+package cn.itcast.reflect.demo;
+
+public class Receive {
+
+	/**
+	 * @param args
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+		//创建一个接收端
+		ServerSocket ss=new ServerSocket(3000);
+		//接受客户端对象
+		Socket accept = ss.accept();
+		//读取Socket中的数据
+		InputStream is=accept.getInputStream();
+		//写入一个文件
+		File dir=new File("c:\\tupian");
+		if(!dir.exists()){
+			dir.mkdirs();
+		}
+		int count=0;
+		String ip=accept.getInetAddress().getHostAddress();
+		File file=new File(dir, ip+"("+(++count)+").jsp"); 
+		while(file.exists()){
+			file=new File(dir, ip+"("+(++count)+").jsp"); 
+		}
+		//读取客户端资源
+		byte[] buf=new byte[1024];
+		int len=0;
+		FileOutputStream fos=new FileOutputStream(file);
+		while((len=is.read(buf))!=-1){
+			fos.write(buf, 0, len);
+		}
+		//发送数据到客户端
+		OutputStream os=accept.getOutputStream();
+		os.write("发送成功".getBytes());
+		fos.close();
+		ss.close();
+		/*
+		 * 因为Socket流是客户端与服务器端进行交互的，把客户端的数据通过Socket发送到服务端
+		 * 再通过其输出流把服务端的资源发到客户端
+		 * 
+		 * 但是Socket流我们怎么拿呢？
+		 * 我们在成功建立客户端与服务端的连接后，Socket通道打开，这是底层建立的，我们无法拿到
+		 * 但是底层肯定给我们提供方法来获取Socket流中的读写流
+		 *
+		 *
+		 *那Socket流应该在客户端还是服务端呢？
+		 *
+		 *客户端，因为我们要先写数据到Socket中，然后服务端才能通过Socket流的读流方法得到数据
+		 *当然，如果我们想发数据给客户端，也得依靠Socket流
+		 */
+	}
+
+}

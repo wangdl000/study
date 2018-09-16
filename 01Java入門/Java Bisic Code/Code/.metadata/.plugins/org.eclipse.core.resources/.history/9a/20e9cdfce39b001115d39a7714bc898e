@@ -1,0 +1,22 @@
+package cn.itcast.reflect.demo;
+
+public class ReflectDemo2 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		
+	}
+	
+	public static void createNewObject(){
+		
+		
+		//ÔçÆÚ£º
+		cn.itcast.bean.Person p = new cn.itcast.bean.Person();
+		
+		
+	}
+
+}

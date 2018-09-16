@@ -1,0 +1,61 @@
+package cn.itcast.regex.demo;
+
+public class RegexDemo2 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		/*
+		 * 正则表达式对字符串的常见操作:
+		 * 1, 匹配。
+		 * 		其实使用的就是String类中的matches方法。
+		 * 
+		 * 2，切割。
+		 * 		其实使用的就是String类中的split方法。 
+		 * 
+		 * 3，替换。
+		 * 
+		 * 4，获取。
+		 */
+		
+		functionDemo_3();
+	}
+	
+	public static void functionDemo_3() {
+	}
+
+	/*
+	 * 切割。
+	 * 
+	 * 组：((A)(B(C))) 
+	 */
+	public static void functionDemo_2(){
+
+		String str = "zhangsanttttxiaoqiangmmmmmmzhaoliu";
+		
+		String[] names = str.split("(.)\\1+");//str.split("\\.");
+		
+		for(String name : names){
+			System.out.println(name);
+		}
+		
+	}
+	/*
+	 * 演示匹配。 
+	 */
+	public static void functionDemo_1(){
+	
+		
+		//匹配手机号码是否正确。 
+		String tel = "15800001111";
+		
+		String regex = "1[358]\\d{9}";   
+		
+		boolean b = tel.matches(regex);
+		System.out.println(tel+":"+b);
+	}
+	
+
+}

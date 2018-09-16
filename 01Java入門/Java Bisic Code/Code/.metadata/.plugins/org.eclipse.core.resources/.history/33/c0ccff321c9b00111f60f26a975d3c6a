@@ -1,0 +1,12 @@
+package cn.itcast.net.p2.ie_server;
+
+public class MyTomcat {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		
+		
+		<script type="text/javascript">
+			
+			//函数。
+			/*
+			 * 格式：
+			 * function 函数名(参数列表){
+			 * 		执行语句；
+			 * 		return 返回值；
+			 * }
+			 * 明确，未知内容。
+			 * 明确，功能结果。
+			 */
+			
+			/*
+			function show(){
+				alert("show run");
+			}
+			show();
+			*/
+			
+			
+			//函数的参数列表。 
+			function show(a,b){
+				
+				//函数中其实有一个数组在存储传入进来的具体实参。该数组是arguments
+				
+//				alert(arguments.length);
+				for(var x=0; x<arguments.length; x++){
+					alert(arguments[x]);
+				}
+				
+//				alert(x+"...show...."+y);
+			}
+			
+//			show(3,5,7);
+
+
+
+
+			//函数的返回值。
+			function add(){
+				
+				return 100;
+			}
+			
+//			var sum = add();//将add函数的运算结果赋值给了sum变量。
+			var sum = add;//将add指向的函数对象的地址赋给了sum。sum变量也指向了这个函数。 
+			
+			
+//			alert("sum="+sum);//直接将sum对应的函数变成字符串打印了。toString();
+			
+			
+			
+			//动态函数。 使用的javascript中Function完成的。
+			var method = new Function("x","y","var sum=x+y; return sum;");
+			
+			var q = method(4,5);
+			alert("q="+q);
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

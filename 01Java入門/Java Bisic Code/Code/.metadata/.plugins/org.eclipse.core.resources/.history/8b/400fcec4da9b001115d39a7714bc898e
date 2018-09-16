@@ -1,0 +1,46 @@
+package cn.itcast.reflect.demo;
+
+public class UploadClient {
+
+	/**
+	 * @param args
+	 * @throws IOException 
+	 * @throws UnknownHostException 
+	 */
+	public static void main(String[] args) throws UnknownHostException, IOException {
+		//创建发送端
+		Socket s=new Socket("127.0.0.1",3000);
+		//获得outputStream，把数据写入Scoket流
+		OutputStream out = s.getOutputStream();
+		BufferedOutputStream bos=new BufferedOutputStream(out);
+		//选择资源
+		File file=new File("e:\\1 (11).jpg");
+		//判读
+		if(!file.exists()){
+			System.out.println("文件不存在");
+			return;
+		}
+		//读取资源
+		InputStream is=new FileInputStream(file);
+		BufferedInputStream bis=new BufferedInputStream(is);
+		byte[] buf=new byte[1024];
+		int len=0;
+		while((len=bis.read(buf))!=-1){
+			bos.write(buf,0,len);
+			bos.flush();
+		}
+		s.shutdownInput();
+		
+		//读取服务器发回来的数据
+		InputStream in=s.getInputStream();
+		byte[] bufin=new byte[1024];
+		int lenin=in.read(bufin);
+		//打印到控制带上
+		String text=new String(bufin,0,lenin);
+		System.out.println(text);
+		bos.close();
+		bis.close();
+		s.close();
+	}
+
+}

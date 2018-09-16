@@ -1,0 +1,12 @@
+package cn.itcast.reflect.test;
+
+public class ReflectTest {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+	}
+
+}

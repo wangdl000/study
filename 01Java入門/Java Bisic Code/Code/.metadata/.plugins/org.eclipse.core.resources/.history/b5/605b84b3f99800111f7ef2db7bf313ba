@@ -1,0 +1,13 @@
+package cn.itcast.debug;
+
+public class DebugDemo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		
+	}
+
+}

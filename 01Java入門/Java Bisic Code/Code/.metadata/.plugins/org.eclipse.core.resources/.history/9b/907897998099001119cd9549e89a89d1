@@ -1,0 +1,12 @@
+package cn.itcast.net.p1.ip;
+
+public class IPDemo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+	}
+
+}

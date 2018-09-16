@@ -1,0 +1,43 @@
+package cn.itcast.regex.demo;
+
+
+/*
+ * 正则表达式。
+ * 
+ * 正则表达式用于操作字符串数据。
+ * 
+ * 
+ */
+public class RegexDemo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+	}
+	
+	/*
+	 * 需求：定义一个功能对QQ号进行校验。
+	 * 要求：长度5~15. 只能是数字， 0不能开头
+	 */
+	public static void checkQQ(String qq){
+		
+		int len = qq.length();
+		
+		if(len>=5 && len<=15){
+			
+			if(!qq.startsWith("0")){
+				
+			}else{
+				
+			}
+		}else{
+			System.out.println(qq+":长度错误");
+		}
+		
+		
+		
+	}
+
+}

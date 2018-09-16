@@ -1,0 +1,16 @@
+package cn.itcast.net.p4.tcp;
+
+public class ServerDemo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		/*
+		 * 建立tcp服务端的思路：
+		 * 1，
+		 */
+	}
+
+}

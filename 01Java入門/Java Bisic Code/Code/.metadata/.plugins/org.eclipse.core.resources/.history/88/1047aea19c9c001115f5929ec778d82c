@@ -1,0 +1,36 @@
+package cn.itcast.test;
+
+import java.io.File;
+import java.io.IOException;
+
+public class Test {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args)throws IOException {
+
+//		BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));
+		
+		File file = new File("configFile.txt");
+		BufferdReader bufr = new BufferedReader(new FileReader(file));
+		
+		GetDataInter getData = //new MyGetDataByFile();MyGetDataByIn();
+		
+		
+		operateData(getData);
+		
+		
+	}
+	
+	public static void operateData(GetDataInter getData){
+		int num = getData.getNumber();
+		
+		if(num>10){
+			System.out.println("大了");
+		}else{
+			System.out.println("小了");
+		}
+	}
+
+}

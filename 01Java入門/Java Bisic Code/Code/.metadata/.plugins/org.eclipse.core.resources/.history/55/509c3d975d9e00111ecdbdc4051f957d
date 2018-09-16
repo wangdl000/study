@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+		<style type="text/css">
+			
+			#newstext{border:#0000ff 1px solid;width:600px;height:400px}
+			a:link,a:visited{
+					color:#0000ff;
+					text-decoration:none;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<!--
+		需求：新闻字体的动态调整。
+		1，用html标签对数据进行封装。 
+		2，定义样式，定义静态样式，再定义动态样式。
+		3，确定事件源，和要处理的事件动作，是在事件处理方式中明确被处理的节点。
+			事件源：三个超链接。 如何取消超链接的默认点击效果，href="javascript:void(0)"
+			事件动作：onclick
+			被处理的节点：newstext 新闻内容。
+		
+		-->
+		<div id="newsid">
+		<h2>这是一个大新闻</h2>
+		
+		<script type="text/javascript">
+			
+			function setFontSize(size){
+				
+				//1，获取div新闻文本对象。
+				var divNode = document.getElementById("newstext");
+				
+				//2,给div设置样式。
+				divNode.style.fontSize = size;
+			}
+		</script>
+		
+		<a href="javascript:void(0)" onclick="setFontSize('24px')">大字体</a> 
+		<a href="javascript:void(0)" onclick="setFontSize('16px')">中字体</a> 
+		<a href="javascript:void(0)" onclick="setFontSize('14px')">小字体</a>
+		<div id="newstext">
+		这个新闻的内容是：......这个新闻的内容是：......这个新闻的内容是：<br/>
+		这个新闻的内容是：......这个新闻的内容是：......这个新闻的内容是：<br/>
+		这个新闻的内容是：......这个新闻的内容是：......这个新闻的内容是：<br/>
+		这个新闻的内容是：......这个新闻的内容是：......这个新闻的内容是：<br/>
+		这个新闻的内容是：......这个新闻的内容是：......这个新闻的内容是：<br/>
+		这个新闻的内容是：......这个新闻的内容是：......这个新闻的内容是：<br/>
+		</div>
+		</div>
+	</body>
+</html>

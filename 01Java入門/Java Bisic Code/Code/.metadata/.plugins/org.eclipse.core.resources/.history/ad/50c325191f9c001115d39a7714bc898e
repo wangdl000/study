@@ -1,0 +1,34 @@
+package cn.itcast.regex.test;
+
+public class RegexTest {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		/*
+		 * 1，治疗口吃:我我...我我...我我我要...要要要要...要要要要..学学学学学...学学编编...编编编编..编..程程...程程...程程程
+		 * 2，对ip地址排序。 
+		 * 3，对邮件地址校验。 
+		 */
+		test_1();
+	}
+	/*
+	 * 1,治口吃。
+	 */
+	public static void test_1(){
+		
+		String str = "我我...我我...我我我要...要要要要...要要要要..学学学学学...学学编编...编编编编..编..程程...程程...程程程";
+		
+		//1，将字符串中.去掉。 用替换。
+		str = str.replaceAll("\\.+", "");
+		System.out.println(str);
+		
+		//2,替换叠词。
+		str = str.replaceAll("(.)\\1+", "$1");
+		
+		
+	}
+
+}

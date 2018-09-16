@@ -1,0 +1,12 @@
+package cn.itcast.regdemo;
+
+public class RegServer {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+	}
+
+}

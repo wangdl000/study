@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		
+		<!--
+		如果script中使用了src指定了要运行的js文件。
+		那么该脚本标签中的js代码不会被执行。
+		-->
+		<!--script type="text/javascript" src="1.js"></script-->
+		<script type="text/javascript">
+			
+			//alert("hello javascript");
+		</script>
+		
+		
+		<script type="text/javascript">
+			/*
+			 * js语法：
+			 * 1，变量。
+			 * 2，运算符。
+			 * 3，语句，
+			 * 4，函数，
+			 * 5，数组。
+			 */
+			
+			//1,变量。用关键字完成。 var  
+			var x = 3;
+			x = true;
+			x = 34.56;
+			x = "abc";
+//			alert("x="+x);
+			
+			var y;
+//			alert(y);//undefined;未定义 。
+			
+			
+			
+			
+		</script>
+		
+		
+		
+		
+		
+		<script type="text/javascript">
+			//运算符。
+			var x = 2410;
+//			alert(x/1000*1000);
+			
+//			alert(2.4+4.6);
+
+//			alert("12"-1);
+
+//			alert(typeof("abc"));//string
+//			alert(typeof(12.45));//number
+//			alert(typeof(true));//boolean 
+//			alert(typeof('aa'));
+//			alert(typeof(34));
+			
+//			alert(false+1);//0 或者null都可以进行判断，并视为false。非0非null都视为true。
+			
+		</script>
+		
+		
+		<script type="text/javascript">
+			//语句。 
+			/*
+			 * 判断，
+			 * 选择。
+			 * 循环。 
+			 */		
+			/* //判断。
+			 var x = 3;
+			 if(4==x){
+			 	alert("yes");
+			 }else{
+			 	alert("no");
+			 }
+			 */
+			 
+			 /*//选择
+			 var str = "abc";
+			 switch(str){
+			 	case "kk":
+					alert("a");
+					break;
+				case "abc":
+					alert("b");
+					break;
+					
+			 }
+			 */
+			
+			//循环
+			/*var x = 1;
+			while(x<3){
+				alert("x="+x);
+				x++;
+			}
+			*/
+			
+			
+			for(var x=0; x<3; x++){
+				alert("x="+x);
+			}
+			
+			
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

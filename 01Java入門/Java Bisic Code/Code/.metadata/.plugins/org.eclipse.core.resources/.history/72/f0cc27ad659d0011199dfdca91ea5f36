@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+		
+		<!--meta http-equiv="refresh" content="3;url=http://www.sina.com" /-->
+        <title>New Web Project</title>
+    </head>
+    <body>
+    	
+		<b>用于</b><i>演示</i><u>常见</u>小标签的文字 。
+		X<sub>2</sub>  X<sup>2</sup>
+        <pre>
+		class Demo
+		{
+			public static void main(String[] args)
+			{
+				System.out.println("hello");
+			}
+		}
+		</pre>
+    </body>
+</html>

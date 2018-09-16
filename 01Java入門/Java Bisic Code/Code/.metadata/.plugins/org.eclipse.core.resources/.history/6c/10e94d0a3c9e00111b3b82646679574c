@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		
+		<!--
+		DOM: document  Object  Model  文档对象模型。 
+		
+		DOM的作用就是将标记型文档对象化。
+		将标记型文档封装成对象并将文档中的标签以及属性文本等所有内容都封装成了对象
+		
+		对象中封装了属性和行为，这样就可以对这些文档中的对象进行操作。
+		
+		DOM解析器本身浏览器中就内置。 
+		
+		解析方式什么样呢？
+		将标记型文档都加载进内存，按照标签的层次关系，形成一颗DOM树。树中的内容都是节点。
+		
+		形成动态效果，即使通过操作节点完成的。
+		
+		
+		DHTML：动态的HTML。它是多项技术综合体的简称。 
+		
+		包含的技术有：
+		1，html：提供了标签对数据进行封装了。负责定义页面的结构。
+		2，css：提供了丰富的样式。负责页面的样式展现。
+		3，dom：提供了对html标记型文档的多项解析。负责将页面和标签都封装成了对象。
+		4，javascript：提供了程序设计语言。负责的页面的行为。
+		
+		
+		BOM：浏览器对象模型  browser object model.
+		
+		window
+		
+		
+		-->
+		
+		<script type="text/javascript">
+			
+			var name = window.navigator.appName;
+			var version = window.navigator.appVersion;
+			
+//			alert(name+":"+version);
+
+//			alert(location.href);
+//			location.href = "http://www.sina.com.cn";
+			
+//			var b = confirm("你真的要演示吗？")
+			
+//			alert("b="+b);
+			
+			open("Sample.htm","_blank","height=200,width=400,status=yes,toolbar=no,menubar=no,location=no");
+			
+			
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

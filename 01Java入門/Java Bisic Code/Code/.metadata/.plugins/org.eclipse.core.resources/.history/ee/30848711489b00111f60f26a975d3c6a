@@ -1,0 +1,15 @@
+package cn.itcast.net.p2.ie_server;
+
+public class URLDemo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		String str_url = "http://192.168.1.100:8080/myweb/1.html?name=lisi";
+		
+		
+	}
+
+}

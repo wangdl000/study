@@ -1,0 +1,46 @@
+package cn.itcast.reflect.demo;
+
+import java.lang.reflect.Method;
+
+public class ReflectDemo4 {
+
+	public ReflectDemo4() {
+	}
+
+	/**
+	 * @param args
+	 * @throws Exception 
+	 */
+	public static void main(String[] args) throws Exception {
+
+		getMethodDemo_2();
+	}
+	
+	
+
+	public static void getMethodDemo_2() throws Exception {
+		
+		Class claz = Class.forName("cn.itcast.bean.Person");
+		
+		
+		
+		
+	}
+
+	/*
+	 * 获取指定Class中的所有公共函数。
+	 */
+	public static void getMethodDemo() throws Exception {
+		
+		Class clazz = Class.forName("cn.itcast.bean.Person");
+		
+		Method[] methods  = clazz.getMethods();//获取的都是公有的方法。 
+		methods = clazz.getDeclaredMethods();//只获取本类中所有方法，包含私有。 
+		for(Method method : methods){
+			System.out.println(method);
+		}
+		
+		
+	}
+
+}

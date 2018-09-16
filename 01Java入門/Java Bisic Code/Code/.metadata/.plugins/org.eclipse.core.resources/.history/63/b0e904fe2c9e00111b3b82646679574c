@@ -1,0 +1,15 @@
+/**
+ * @author Administrator
+ */
+
+/*
+ * 定义一个用于对数组获取最值的功能。 
+ */
+function getMax(arr){
+	
+	var index = 0;
+	for(var x=1; x<arr.length; x++){
+		
+		if(arr[x]>arr[])
+	}
+}

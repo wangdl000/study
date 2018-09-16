@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		<!--
+		仅仅对数据进行标签的封装，却不需要标签的特定含义。
+		div,span
+		
+		标签也称为元素分成两大类：
+		1，块级标签(块级元素)
+		2，行内标签(行内元素)
+		-->
+		
+		<div>这是div区域一</div>
+		<div>这是div区域二</div>
+		<span>这是span区域一</span>
+		<span>这是span区域二</span>
+		
+		<p>这是p段落区域一</p>
+		<p>这是p段落区域二</p>
+	</body>
+</html>

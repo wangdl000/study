@@ -1,0 +1,276 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,com.aptana.ide.server.portal,1.2.7.024747,"com.aptana.ide.server.portal",1336006588375
+started,bundle,com.aptana.ide.server.ui,1.2.7.024747,"com.aptana.ide.server.ui",1336006588406
+started,bundle,com.aptana.ide.server,1.2.7.024747,"com.aptana.ide.server",1336006588421
+started,bundle,com.aptana.ide.ssh,1.2.7.024747,"com.aptana.ide.ssh",1336006588421
+started,bundle,com.aptana.ide.syncing,1.2.7.024747,"com.aptana.ide.syncing",1336006588453
+started,bundle,com.aptana.ide.update,1.2.7.024747,"com.aptana.ide.update",1336006588484
+os,sysinfo,,,"win32",1336006588484
+arch,sysinfo,,,"x86",1336006588484
+ws,sysinfo,,,"win32",1336006588484
+locale,sysinfo,,,"zh_CN",1336006588484
+processors,sysinfo,,,"2",1336006588484
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1336006588484
+java.runtime.version,sysinfo,,,"1.6.0_31-b05",1336006588484
+java.specification.name,sysinfo,,,"Java Platform API Specification",1336006588484
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1336006588484
+java.specification.version,sysinfo,,,"1.6",1336006588484
+java.vendor,sysinfo,,,"Sun Microsystems Inc.",1336006588484
+java.version,sysinfo,,,"1.6.0_31",1336006588484
+java.vm.info,sysinfo,,,"mixed mode, sharing",1336006588484
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1336006588484
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1336006588484
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1336006588484
+java.vm.specification.version,sysinfo,,,"1.0",1336006588484
+java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1336006588484
+java.vm.version,sysinfo,,,"20.6-b01",1336006588484
+started,bundle,com.aptana.ide.professional.licensing,1.2.7.024688_200905101214,"com.aptana.ide.professional.licensing",1336006589109
+started,bundle,org.eclipse.epp.usagedata.ui,1.3.1.R201106061540,"org.eclipse.epp.usagedata.ui",1336006589593
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336006600750
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336006603640
+error,log,,,"Digest could not be parsed:An exception occurred while downloading feature from ""file:/E:/Tool/aptana/eclipse/site.xml.digest/digest.zip"".",1336006615843
+started,bundle,com.aptana.ide.editors,1.2.7.024747,"com.aptana.ide.editors",1336006618390
+started,bundle,com.aptana.ide.xul,1.2.7.024747,"com.aptana.ide.xul",1336006618406
+opened,editor,com.aptana.ide.server.portal,1.2.7.024747,"com.aptana.ide.server.portal.ui.MyAptanaEditor",1336006623796
+activated,editor,com.aptana.ide.server.portal,1.2.7.024747,"com.aptana.ide.server.portal.ui.MyAptanaEditor",1336006624359
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336006624531
+error,log,,,"(Build 1.2.7.024747) [ERROR] License Channel: Key Is No Longer Valid.",1336006628234
+error,log,,,"(Build 1.2.7.024747) [ERROR] License Channel: Key Is No Longer Valid.",1336006628296
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.ui.workbench"".",1336006639765
+error,log,,,"Unhandled Exception",1336006639781
+error,log,,,"Unable to execute early startup code for an extension",1336006639781
+started,bundle,com.aptana.ide.scripting,1.2.7.024747,"com.aptana.ide.scripting",1336006639890
+started,bundle,com.aptana.ide.search,1.2.7.024747,"com.aptana.ide.search",1336006639984
+error,log,,,"(Build 1.2.7.024747) [ERROR] Invalid key",1336006640218
+started,bundle,org.eclipse.eclipsemonkey,1.2.7.024747,"org.eclipse.eclipsemonkey",1336006655421
+started,bundle,org.eclipse.eclipsemonkey.lang.javascript,1.2.7.024747,"org.eclipse.eclipsemonkey.lang.javascript",1336006655500
+started,bundle,org.eclipse.eclipsemonkey.doms,1.2.7.024747,"org.eclipse.eclipsemonkey.doms",1336006656781
+activated,view,org.eclipse.ui.console,3.5.100.v20110511,"org.eclipse.ui.console.ConsoleView",1336006815906
+activated,editor,com.aptana.ide.server.portal,1.2.7.024747,"com.aptana.ide.server.portal.ui.MyAptanaEditor",1336006818265
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336006853812
+closed,editor,com.aptana.ide.server.portal,1.2.7.024747,"com.aptana.ide.server.portal.ui.MyAptanaEditor",1336006853843
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336006875281
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336007176015
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336007206671
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336007230187
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336007235625
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336007656828
+activated,view,org.eclipse.ui.console,3.5.100.v20110511,"org.eclipse.ui.console.ConsoleView",1336007656859
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336007657484
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336007658375
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336007659218
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336007659890
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336007661531
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336007662015
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336007674390
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336007705625
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336008206953
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336008210578
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336008212218
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336008214765
+started,bundle,org.eclipse.wst.server.core,1.1.303.v20110816_1717,"org.eclipse.wst.server.core",1336008576609
+started,bundle,org.eclipse.wst.server.ui,1.1.306.v20110823_1704,"org.eclipse.wst.server.ui",1336008576656
+started,bundle,org.eclipse.wst.jsdt.debug.rhino.ui,1.0.0.v201103232243,"org.eclipse.wst.jsdt.debug.rhino.ui",1336008576781
+started,bundle,org.eclipse.wst.jsdt.core,1.1.101.v201108151912,"org.eclipse.wst.jsdt.core",1336008577125
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336008668593
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336008676828
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336008871890
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336008871906
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336009120796
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336009131843
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336009259062
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336009259125
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336009259812
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336009261031
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336009417531
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1336009441546
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336009443625
+started,bundle,org.eclipse.wst.common.frameworks,1.2.101.v201107192200,"org.eclipse.wst.common.frameworks",1336009449953
+started,bundle,org.eclipse.wst.common.emf,1.2.100.v201101101900,"org.eclipse.wst.common.emf",1336009449984
+started,bundle,org.eclipse.jem.util,2.1.100.v201103021400,"org.eclipse.jem.util",1336009450406
+started,bundle,org.eclipse.wst.common.emfworkbench.integration,1.2.101.v201107140600,"org.eclipse.wst.common.emfworkbench.integration",1336009450421
+started,bundle,org.eclipse.wst.common.core,1.2.0.v200908252030,"org.eclipse.wst.common.core",1336009450484
+started,bundle,org.eclipse.wst.common.modulecore,1.2.101.v201108231700,"org.eclipse.wst.common.modulecore",1336009450484
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336009450640
+error,log,,,"No property tester contributes a property com.aptana.ide.core.ui.nature to type class org.eclipse.jdt.internal.core.JavaProject",1336009451125
+started,bundle,org.eclipse.wst.ws.service.policy.ui,1.0.300.v201108240515,"org.eclipse.wst.ws.service.policy.ui",1336009451187
+started,bundle,org.eclipse.wst.ws.service.policy,1.0.303.v201009221810,"org.eclipse.wst.ws.service.policy",1336009451203
+started,bundle,org.eclipse.wst.command.env,1.0.409.v201004211805,"org.eclipse.wst.command.env",1336009451265
+started,bundle,org.eclipse.wst.ws,1.1.203.v201004211805,"org.eclipse.wst.ws",1336009451265
+started,bundle,org.eclipse.wst.common.frameworks.ui,1.2.100.v201105122000,"org.eclipse.wst.common.frameworks.ui",1336009451343
+started,bundle,org.eclipse.compare,3.5.201.R37x_v20110817-0800,"org.eclipse.compare",1336009451718
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336009454406
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336009456218
+executed,command,org.eclipse.ui.ide,3.7.0.v20110809-1737,"org.eclipse.ui.project.closeUnrelatedProjects",1336009456296
+opened,editor,com.aptana.ide.editors,1.2.7.024747,"com.aptana.ide.ui.UntitledTextEditor",1336009456718
+closed,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336009456781
+activated,editor,com.aptana.ide.editors,1.2.7.024747,"com.aptana.ide.ui.UntitledTextEditor",1336009460390
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1336009464796
+executed,command,org.eclipse.ui.ide,3.7.0.v20110809-1737,"org.eclipse.ui.project.openProject",1336009467218
+activated,editor,com.aptana.ide.editors,1.2.7.024747,"com.aptana.ide.ui.UntitledTextEditor",1336009469468
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1336009473171
+closed,editor,com.aptana.ide.editors,1.2.7.024747,"com.aptana.ide.ui.UntitledTextEditor",1336009473171
+opened,editor,com.aptana.ide.editors,1.2.7.024747,"com.aptana.ide.ui.UntitledTextEditor",1336009474031
+activated,editor,com.aptana.ide.editors,1.2.7.024747,"com.aptana.ide.ui.UntitledTextEditor",1336009474078
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1336009478375
+closed,editor,com.aptana.ide.editors,1.2.7.024747,"com.aptana.ide.ui.UntitledTextEditor",1336009478375
+started,bundle,org.eclipse.pde.core,3.7.1.v20110822-2108,"org.eclipse.pde.core",1336009479578
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1336009481562
+error,log,,,"No property tester contributes a property com.aptana.ide.core.ui.nature to type class org.eclipse.jdt.internal.core.JavaProject",1336009483000
+started,bundle,org.eclipse.wst.jsdt.manipulation,1.0.300.v201104272153,"org.eclipse.wst.jsdt.manipulation",1336009485390
+started,bundle,org.eclipse.wst.jsdt.ui,1.1.101.v201108151912,"org.eclipse.wst.jsdt.ui",1336009485562
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1336009485921
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336009489640
+started,bundle,org.eclipse.ant.ui,3.5.100.v20110510,"org.eclipse.ant.ui",1336009492703
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336009492875
+executed,command,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.edit.text.java.rename.element",1336009492937
+error,log,,,"No property tester contributes a property com.aptana.ide.core.ui.nature to type class org.eclipse.jdt.internal.core.JavaProject",1336009494609
+executed,command,org.eclipse.ui.ide,3.7.0.v20110809-1737,"org.eclipse.ui.project.closeProject",1336009496453
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.core.resources"".",1336009496531
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336009523671
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336009541875
+opened,editor,com.aptana.ide.editors,1.2.7.024747,"com.aptana.ide.ui.UntitledTextEditor",1336009543906
+activated,editor,com.aptana.ide.editors,1.2.7.024747,"com.aptana.ide.ui.UntitledTextEditor",1336009543937
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336009547578
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336009607687
+started,bundle,org.eclipse.mylyn.java.tasks,3.6.0.v20110608-1400,"org.eclipse.mylyn.java.tasks",1336009619046
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1336009619187
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.core.resources"".",1336009756546
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1336010046140
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010049609
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010118718
+opened,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336010118921
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336010118984
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1336010122562
+activated,editor,com.aptana.ide.editors,1.2.7.024747,"com.aptana.ide.ui.UntitledTextEditor",1336010199000
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010201593
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010206187
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1336010280562
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1336010293828
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010324468
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010390406
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010397718
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010405390
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336010407703
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.core.resources"".",1336010418718
+started,bundle,org.eclipse.jdt.junit,3.7.0.v20110505-0800,"org.eclipse.jdt.junit",1336010428187
+activated,editor,com.aptana.ide.editors,1.2.7.024747,"com.aptana.ide.ui.UntitledTextEditor",1336010433859
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1336010436593
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336010437234
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1336010437828
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1336010465437
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1336010478875
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1336010480125
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1336010597218
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110505-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1336010617890
+started,bundle,org.eclipse.mylyn.ide.ui,3.6.0.v20110608-1400,"org.eclipse.mylyn.ide.ui",1336010618734
+started,bundle,org.eclipse.jpt.jaxb.ui,1.1.1.v201108080010,"org.eclipse.jpt.jaxb.ui",1336010618781
+started,bundle,org.eclipse.jpt.jpa.ui,3.0.1.v201108080010,"org.eclipse.jpt.jpa.ui",1336010618828
+started,bundle,org.eclipse.jpt.common.core,1.0.1.v201108080010,"org.eclipse.jpt.common.core",1336010618875
+started,bundle,org.eclipse.jpt.jpa.core,3.0.1.v201109073010,"org.eclipse.jpt.jpa.core",1336010618921
+started,bundle,org.eclipse.jst.ws.jaxws.ui,1.0.100.v201104032053,"org.eclipse.jst.ws.jaxws.ui",1336010618984
+started,bundle,org.eclipse.mylyn.java.ui,3.6.0.v20110608-1400,"org.eclipse.mylyn.java.ui",1336010619000
+started,bundle,org.eclipse.pde.api.tools,1.0.301.v20110728_r371,"org.eclipse.pde.api.tools",1336010619187
+started,bundle,org.eclipse.pde.api.tools.ui,1.0.301.v20110803_r371,"org.eclipse.pde.api.tools.ui",1336010619187
+started,bundle,org.eclipse.jpt.jaxb.core,1.0.1.v201108080010,"org.eclipse.jpt.jaxb.core",1336010619468
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.text.contentAssist.proposals",1336010619781
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.text.contentAssist.proposals",1336010627765
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1336010651765
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1336010652953
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336010662062
+executed,command,org.eclipse.ui.ide,3.7.0.v20110809-1737,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1336010676656
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010677828
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010678062
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010682937
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010683140
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1336010684265
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110505-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1336010695734
+executed,command,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.edit.text.java.organize.imports",1336010725140
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.core.resources"".",1336010765484
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.delete",1336010807281
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010863781
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010863968
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010865765
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010865953
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1336010867781
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1336010876078
+executed,command,org.eclipse.jdt.debug.ui,3.6.1.v20110803_r371,"org.eclipse.jdt.debug.ui.localJavaShortcut.run",1336010880859
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010882156
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010883531
+activated,view,org.eclipse.ui.console,3.5.100.v20110511,"org.eclipse.ui.console.ConsoleView",1336010883562
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1336010884609
+error,log,,,"No property tester contributes a property com.aptana.ide.core.ui.nature to type class org.eclipse.jdt.internal.core.JavaProject",1336010884718
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.refresh",1336010886140
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010887593
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010899125
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336010899546
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010904187
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010915750
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010922281
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010924234
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010929859
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010969984
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010970968
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010984968
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010986078
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010987312
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010989921
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336010997937
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1336011004390
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336011006187
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336011017265
+opened,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336011017421
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336011017468
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.text.contentAssist.proposals",1336011044437
+executed,command,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.edit.text.java.organize.imports",1336011080781
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.cut",1336011145765
+executed,command,org.eclipse.ui.ide,3.7.0.v20110809-1737,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1336011159265
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336011160296
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336011160515
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.core.resources"".",1336011167812
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1336011173078
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1336011205015
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110505-0800,"org.eclipse.ui.edit.text.goto.lineEnd",1336011206765
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1336011207921
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336011226812
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336011263296
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1336011270859
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336011343640
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336011356953
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1336011358031
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1336011403078
+executed,command,org.eclipse.ui.ide,3.7.0.v20110809-1737,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1336011404578
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336011405968
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336011406156
+executed,command,org.eclipse.ui.ide,3.7.0.v20110809-1737,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1336011408109
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336011409187
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336011409609
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1336011410265
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336011441125
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336011459656
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.text.contentAssist.proposals",1336011464250
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1336011471312
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.core.resources"".",1336011473109
+executed,command,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.edit.text.java.toggle.comment",1336011478687
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1336011482046
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.paste",1336011491343
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1336011493031
+executed,command,org.eclipse.jdt.debug.ui,3.6.1.v20110803_r371,"org.eclipse.jdt.debug.ui.localJavaShortcut.run",1336011501953
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336011503593
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336011509859
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336011534453
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336011540359
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336011566265
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.core.resources"".",1336011793078
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336012035015
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336012036203
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336012066203
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336012145140
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336012147343
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336012150765
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1336012151656
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336012156421
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336013397531
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336013401468
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336013550953
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1336013558421

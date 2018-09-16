@@ -1,0 +1,68 @@
+package cn.itcast.net.p1.uploadpic;
+
+
+class Rec{
+	private String name;
+	private String sex;
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public String getSex() {
+		return this.sex;
+	}
+}
+
+class Pro implements Runnable {
+	private Res res;
+	private boolean mark = true;
+
+	public Pro(Res res) {
+		this.res = res;
+	}
+
+	public void run() {
+		while (true) {
+			if (mark) {
+				res.setName("ÕÅÈý");
+				res.setSex("ÄÐ");
+				this.mark = false;
+			} else {
+				res.setName("rose");
+				res.setSex("female");
+				this.mark = true;
+			}
+		}
+	}
+}
+
+class Con implements Runnable {
+	private Res res;
+
+	public Con(Res res) {
+		this.res = res;
+	}
+
+	public void run() {
+		while (true) {
+			System.out.println(res.getName() + "---" + res.getSex());
+		}
+	}
+}
+
+public class ThreadDemo {
+	public static void main(String args[]) {
+		Res res = new Res();
+		new Thread(new Pro(res)).start();
+		new Thread(new Con(res)).start();
+	}
+}

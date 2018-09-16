@@ -1,0 +1,18 @@
+package cn.itcast.reflect.test;
+
+
+/*
+ * µçÄÔÔËĞĞ¡£ 
+ */
+public class ReflectTest {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		Mainboard mb = new Mainboard();
+		mb.run();
+	}
+
+}

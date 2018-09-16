@@ -1,0 +1,21 @@
+package cn.itcast.net.p2.udp;
+
+public class UDPReceDemo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		/*
+		 * 建立UDP接收端的思路。
+		 * 1，建立udp socket服务
+		 * 2，创建数据包，用于存储接收到的数据。方便用数据包对象的方法解析这些数据.
+		 * 3，使用socket服务的receive方法将接收的数据存储到数据包中。
+		 * 4，通过数据包的方法解析数据包中的数据。
+		 * 5，关闭资源 
+		 */
+	}
+	
+
+}

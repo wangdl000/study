@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		
+		<!--
+			列表标签：dl 定义列表的范围。 
+			分两部分：
+				上层项目：dt
+				下层项目：dd	该标签具备着缩进效果。 
+		
+		-->
+		
+		<dl>
+			<dt>上层项目演示</dt>
+			<dd>下层项目演示</dd>
+			<dd>下层项目演示</dd>
+			<dd>下层项目演示</dd>
+		</dl>
+		
+		<!--
+		带符号的项目列表。
+		有序：
+			ol
+		无序：
+			ul
+			
+		这两个列表中的具体条目都是用 li 标签封装。 
+		
+		该项目列表标签带缩进。 
+		-->
+		
+		<ul>
+			<li>无序项目列表</li>			
+			<li>无序项目列表</li>			
+			<li>无序项目列表</li>			
+			<li>无序项目列表</li>			
+		</ul>
+		
+		<ol>
+			<li>有序项目列表</li>
+			<li>有序项目列表</li>
+			<li>有序项目列表</li>
+			<li>有序项目列表</li>
+		</ol>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

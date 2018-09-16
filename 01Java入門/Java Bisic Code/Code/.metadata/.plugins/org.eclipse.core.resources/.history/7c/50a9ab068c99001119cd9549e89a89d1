@@ -1,0 +1,16 @@
+package cn.itcast.net.p3.chat;
+
+import java.net.DatagramSocket;
+
+public class Rece implements Runnable {
+
+private DatagramSocket ds;
+	
+	public Rece(DatagramSocket ds){
+		this.ds = ds;
+	}
+	@Override
+	public void run() {
+	}
+
+}

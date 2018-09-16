@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		<!--
+		1,根据href的值中 所体现的协议启动相对应的解析引擎。
+		2,解析主机时，先到本地hosts文件中找对应的ip地址，如果没有，
+		在到DNS服务器中去解析ip地址。
+		3,访问该ip，获取指定路径中的数据。 
+		4,将获取到的数据显示在页面上。  
+		-->
+		<a href="http://www.sina.com.cn">新浪网站</a>
+		
+	</body>
+</html>

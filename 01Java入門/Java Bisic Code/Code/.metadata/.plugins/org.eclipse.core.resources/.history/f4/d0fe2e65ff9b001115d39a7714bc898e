@@ -1,0 +1,17 @@
+package cn.itcast.reflect.demo;
+
+public class ReflectDemo3 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		getFieldDemo();
+		
+	}
+
+	public static void getFieldDemo() {
+	}
+	
+}

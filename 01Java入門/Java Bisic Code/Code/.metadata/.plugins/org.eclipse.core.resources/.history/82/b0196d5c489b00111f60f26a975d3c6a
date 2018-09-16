@@ -1,0 +1,31 @@
+package cn.itcast.net.p2.ie_server;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class URLDemo {
+
+	/**
+	 * @param args
+	 * @throws MalformedURLException 
+	 */
+	public static void main(String[] args) throws MalformedURLException {
+
+		String str_url = "http://192.168.1.100:8080/myweb/1.html?name=lisi";
+		
+		URL url = new URL(str_url);
+		
+//		System.out.println("getProtocol:"+url.getProtocol());
+//		System.out.println("getHost:"+url.getHost());
+//		System.out.println("getPort:"+url.getPort());
+//		System.out.println("getFile:"+url.getFile());
+//		System.out.println("getPath:"+url.getPath());
+//		System.out.println("getQuery:"+url.getQuery());
+		
+		
+		
+		
+		
+	}
+
+}

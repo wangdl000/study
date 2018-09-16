@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		
+		<!--
+		DOM: document  Object  Model  文档对象模型。 
+		
+		DOM的作用就是将标记型文档对象化。
+		将标记型文档封装成对象并将文档中的标签以及属性文本等所有内容都封装成了对象
+		
+		对象中封装了属性和行为，这样就可以对这些文档中的对象进行操作。
+		
+		DOM解析器本身浏览器中就内置。 
+		
+		解析方式什么样呢？
+		
+		
+		-->
+		
+	</body>
+</html>

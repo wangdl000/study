@@ -1,0 +1,24 @@
+package cn.itcast.net.p3.chat;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class Test {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		ArrayList<Integer> al = new ArrayList<Integer>();
+		for(int x=1; x<=16; x++){
+			al.add(x);
+		}
+		
+		
+		
+		int num = new Random().nextInt(16)+1;
+		System.out.println(num);
+	}
+
+}

@@ -1,0 +1,21 @@
+package cn.itcast.net.p1.ip;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+public class IPDemo {
+
+	/**
+	 * @param args
+	 * @throws UnknownHostException 
+	 */
+	public static void main(String[] args) throws UnknownHostException {
+
+		//获取本地主机ip地址对象。 
+		InetAddress ip = InetAddress.getLocalHost();
+		
+		System.out.println(ip.getHostAddress());
+		System.out.println(ip.getHostName());
+	}
+
+}

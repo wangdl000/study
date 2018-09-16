@@ -1,0 +1,5 @@
+#Sun May 13 11:46:12 CST 2012
+eclipse.preferences.version=1
+com.aptana.ide.core.ui.PREF_KEY_FIRST_STARTUP=true
+com.aptana.ide.core.ui.WEB_PERSPECTIVE_LAST_VERSION=64
+com.aptana.ide.core.ui.PREF_FILE_EXPLORER_WEB_FILES=*.js;*.htm;*.html;*.xhtm;*.xhtml;*.css;*.xml;*.xsl;*.xslt;*.fla;*.gif;*.jpg;*.jpeg;*.php;*.asp;*.jsp;*.png;*.as;*.sdoc;*.swf;*.shtml;*.txt;*.aspx;*.asmx

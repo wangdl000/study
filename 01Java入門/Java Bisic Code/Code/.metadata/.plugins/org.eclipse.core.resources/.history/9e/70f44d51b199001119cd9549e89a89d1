@@ -1,0 +1,16 @@
+package cn.itcast.net.p5.tcptest;
+
+public class TransClient {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		/*
+		 * ×ª»»¿Í»§¶Ë:
+		 * 1,
+		 */
+	}
+
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+        <title>Untitled Document</title>
+        <style type="text/css">
+            div {
+                border: #0000ff 1px solid;
+                width: 200px;
+                height: 50px;
+				margin:5px;
+				padding:10px;
+            }
+			#div_1{background-color:#00ffff;}
+			#div_2{background-color:#00ff00;}
+			#div_3{background-color:#ff00ff;}
+			#div_4{background-color:#ffff00;}
+        </style>
+    </head>
+    <body>
+    	
+		<script type="text/javascript">
+			//创建并添加节点。需求：在div_1中加入内部文字。
+			function crtAddNode_2(){
+				
+				//1，创建文本节点。通过document的createTextNode方法。 
+//				var textNode = document.createTextNode("这是新文本");
+				//2，获取div_1节点。
+				var divNode = document.getElementById("div_1");
+				
+				//3，使用div_1节点的方法完成文件节点的添加。 appendChild
+//				divNode.appendChild(textNode);
+				
+				
+				
+				//需求：添加一个按钮。 
+				//1,创建一个按钮。
+				var butNode = document.createElement("input");
+				//2,使用该input节点的type属性来执行该input是一个按钮。
+				butNode.type = "button";
+				butNode.value = "新来的按钮";
+				
+				divNode.appendChild(butNode);
+			}
+			
+			//另一种添加节点的方法。
+			function crtAddNode(){
+				
+				var divNode = document.getElementById("div_1");
+				
+				// 使用该节点的innerHTML属性即可。
+			}
+		
+		</script>
+    	<input type="button" value="演示创建增加节点" onclick="crtAddNode()" />
+    	<input type="button" value="演示创建增加节点" onclick="crtAddNode()" />
+    	<input type="button" value="演示创建增加节点" onclick="crtAddNode()" />
+    	<input type="button" value="演示创建增加节点" onclick="crtAddNode()" />
+		<hr/>
+        <div id="div_1">
+        </div>
+        <div id="div_2">
+            下午好困啊！
+        </div>
+        <div id="div_3">
+            明天放假啦！
+        </div>
+        <div id="div_4">
+            就剩一句了！
+        </div>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+package cn.itcast.regdemo;
+
+import java.io.InputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class RegServer {
+
+	/**
+	 * @param args
+	 * @throws Exception 
+	 */
+	public static void main(String[] args) throws Exception {
+		
+		ServerSocket ss = new ServerSocket(11000);
+		
+		Socket s = ss.accept();
+		
+		System.out.println(s.getInetAddress().getHostAddress()+"..connected");
+		
+		InputStream in = s.getInputStream();
+		
+		byte[] buf = new byte[1024];
+		
+		int len = in.read(buf);
+		String text = new String(buf,0,len);
+		
+		System.out.println(text);
+
+	}
+
+}

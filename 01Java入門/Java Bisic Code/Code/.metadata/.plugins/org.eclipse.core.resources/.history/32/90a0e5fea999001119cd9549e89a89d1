@@ -1,0 +1,19 @@
+package cn.itcast.net.p4.tcp;
+
+public class ServerDemo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+//		服务端接收客户端发送过来的数据，并打印在控制台上。 
+		/*
+		 * 建立tcp服务端的思路：
+		 * 1，创建服务端socket服务。通过ServerSocket对象。
+		 * 2，服务端必须对外提供一个端口，否则客户端无法连接。
+		 * 3，获取连接过来的客户端对象。
+		 * 4，通过客户端对象获取socket流读取客户端发来的数据 
+		 */
+	}
+
+}

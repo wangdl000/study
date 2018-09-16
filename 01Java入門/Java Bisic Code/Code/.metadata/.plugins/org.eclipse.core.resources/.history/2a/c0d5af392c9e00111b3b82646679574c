@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			
+			var str = "abc";
+			
+//			document.write(str.fontcolor("red"));
+			
+//			document.write(str.link("http://www.sina.com.cn"));
+
+
+
+			var arr = [3,5,1,7,8,4];
+			
+			function mySort(arr){
+				
+				for(var x=0; x<arr.length-1; x++){
+					for(var y=x+1; y<arr.length; y++){
+						if(arr[x]>arr[y]){
+							swap(arr,x,y);
+						}
+					}
+				}
+			}
+			
+			function swap(arr,x,y){
+				var temp = arr[x];
+				arr[x] = arr[y];
+				arr[y] = temp;
+			}
+			
+			
+			document.write(arr);
+			document.writeln();
+			mySort(arr);
+			document.write(arr);
+			
+		</script>
+		
+	</body>
+</html>

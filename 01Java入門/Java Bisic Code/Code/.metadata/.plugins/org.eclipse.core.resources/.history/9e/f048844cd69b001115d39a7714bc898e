@@ -1,0 +1,12 @@
+package cn.itcast.reflect.demo;
+
+public class ReflectDemo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+	}
+
+}

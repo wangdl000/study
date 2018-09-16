@@ -1,0 +1,22 @@
+package cn.itcast.reflect.demo;
+
+public class ReflectDemo3 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		getFieldDemo();
+		
+	}
+
+	/*
+	 * 获取字节码文件中的字段。
+	 */
+	public static void getFieldDemo() {
+		
+		
+	}
+	
+}

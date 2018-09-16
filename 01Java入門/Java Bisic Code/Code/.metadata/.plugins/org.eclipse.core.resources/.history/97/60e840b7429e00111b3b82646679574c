@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		
+		<!--
+		节点间的层次关系：
+		
+		1，父节点。
+			parentNode：对应的一个节点对象。 
+		2，子节点。
+			childNodes：对应的一个集合。
+		3，兄弟节点
+			上一下兄弟节点。
+				previousSibling
+			下一个兄弟节点。
+				nextSibling
+		-->
+		<script type="text/javascript">
+			function getNodeByLevel(){
+				
+				//获取table对象
+				var tabNode = document.getElementsByTagName("table")[0];
+				
+				//获取其父节点。 
+//				var node  = tabNode.parentNode;
+//				alert(node.nodeName);
+
+				//获取子节点。 
+				var nodes = tabNode.childNodes;
+				alert(nodes[0].nodeName);
+			}	
+		</script>
+		
+		<input type="button" value="演示层次关系" onclick="getNodeByLevel()"/>
+		
+		<table>			
+			<tr>
+				<td>单元格一</td>				
+				<td>单元格二</td>				
+			</tr>	
+			<tr>
+				<td>单元格三</td>				
+				<td>单元格四</td>				
+			</tr>		
+		</table>
+	</body>
+</html>

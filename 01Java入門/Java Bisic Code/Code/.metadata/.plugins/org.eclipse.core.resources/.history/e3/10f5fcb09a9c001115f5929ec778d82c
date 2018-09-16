@@ -1,0 +1,13 @@
+package cn.itcast.test;
+
+public class Test {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));
+	}
+
+}

@@ -1,0 +1,12 @@
+package cn.itcast.net.p3.chat;
+
+public class Test {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+	}
+
+}

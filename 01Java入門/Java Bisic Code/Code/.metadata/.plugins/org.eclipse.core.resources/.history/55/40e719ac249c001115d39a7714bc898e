@@ -1,0 +1,31 @@
+package cn.itcast.regex.test;
+
+import java.util.List;
+
+
+/*
+ * 网页爬虫：其实就一个程序用于在互联网中获取符合指定规则的数据。 
+ * 
+ * 爬取邮箱地址。 
+ * 
+ */
+public class RegexTest2 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		
+		
+	}
+	
+	public static List<String>  getMails(){
+		
+		//1,读取源文件。
+		
+		//2,对读取的数据进行规则的匹配。从中获取符合规则的数据.
+		
+	}
+
+}

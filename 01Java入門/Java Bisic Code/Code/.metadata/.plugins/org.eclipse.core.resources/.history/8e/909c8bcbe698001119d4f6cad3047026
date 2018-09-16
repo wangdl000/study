@@ -1,0 +1,33 @@
+package cn.itcast.gui.p1.awt;
+
+
+import java.util.Arrays;
+import java.util.Random;
+
+public class Test {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		
+		Random r = new Random();
+		
+		int[] arr = {1,2,3,4,5};
+		
+		
+		
+		for(int x=0; x<arr.length; x++){
+			int num = r.nextInt(arr.length-x)+1;
+			
+//			System.out.println(num);
+			arr[num-1] = arr[arr.length-x-1];
+			arr[arr.length-x-1] = num;
+			
+		}
+		
+		System.out.println(Arrays.toString(arr));
+	}
+
+}

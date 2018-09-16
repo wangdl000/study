@@ -1,0 +1,19 @@
+package cn.itcast.net.p2.ie_server;
+
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class MyBrowser {
+
+	/**
+	 * @param args
+	 * @throws IOException 
+	 * @throws UnknownHostException 
+	 */
+	public static void main(String[] args) throws UnknownHostException, IOException {
+
+		Socket s = new Socket("192.168.1.100",8080);
+	}
+
+}

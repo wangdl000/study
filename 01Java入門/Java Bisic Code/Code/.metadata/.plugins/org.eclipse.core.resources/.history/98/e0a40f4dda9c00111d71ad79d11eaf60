@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	
+	
+<!--
+GET提交方式：
+地址栏：http://192.168.1.100:11000/?user=abc&psw=123&repsw=123&sex=nan&tech=java&country=usa
+	
+GET /?user=abc&psw=123&repsw=123&sex=nan&tech=java&country=usa HTTP/1.1
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, application/x-shockwave-flash, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, */*
+Accept-Language: zh-cn,zu;q=0.5
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; InfoPath.2)
+Host: 192.168.1.100:11000
+Connection: Keep-Alive
+
+
+
+POST提交方式：
+地址栏：http://192.168.1.100:11000/
+POST / HTTP/1.1
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, application/x-shockwave-flash, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, */*
+Accept-Language: zh-cn,zu;q=0.5
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; InfoPath.2)
+Host: 192.168.1.100:11000
+Content-Length: 62
+Connection: Keep-Alive
+Cache-Control: no-cache
+
+user=abc&psw=34&repsw=34&sex=nan&tech=html&tech=css&country=en
+
+--------------------
+
+GET和POST提交的区别。
+1，
+GET提交，会将表单中的信息显示在地址栏中。
+POST提交,不会将信息显示在地址栏。 
+
+2，
+GET提交，对于敏感信息不安全。比如密码。
+POST提交,对于敏感信息安全。
+
+3，
+GET提交，对于大体积数据不行，因为地址栏存储数据有限。
+POST提交,可以提交大体积数据。 
+
+
+4，
+GET提交，将提交的数据封装到了请求行。 
+POST提交,将提交的数据封装到了请求体中。
+
+
+注意：
+如果是提交中文信息，服务端是Tomcat服务器。
+get提交中文，服务器端需要对收到的数据进行ISO8859-1的编码，然后在对数据进行指定中文码表的解码。
+
+
+-->
+	
+	
+	
+	
+	
+	
+	
+	<body>
+<form action="http://192.168.1.100:11000" method="post">
+	<table border="1" bordercolor="blue" cellpadding="10" cellspacing="0" width="500">
+    <tr>
+        <th colspan=2>
+        	注册页面
+        </th>
+       
+    </tr>
+    <tr>
+        <td>
+        	用户名称： 
+        </td>
+        <td>
+        	<input type="text" name="user" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+        	输入密码：
+        </td>
+        <td>
+        	<input type="password" name="psw" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+        	确认密码：
+        </td>
+        <td>
+        	<input type="password" name="repsw" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+        	选择性别：
+        </td>
+        <td>
+        	<input type="radio" name="sex" value="nan">男
+        	<input type="radio" name="sex" value="nv">女
+        </td>
+    </tr>
+    <tr>
+        <td>
+        	选择技术：
+        </td>
+        <td>
+        	<input type="checkbox" name="tech" value="java"/>JAVA
+        	<input type="checkbox" name="tech" value="html"/>HTML
+        	<input type="checkbox" name="tech" value="css"/>CSS
+        </td>
+    </tr>
+    <tr>
+        <td>
+        	选择国家：
+        </td>
+        <td>
+        	<select name="country">
+        		<option value="none">--选择国家--</option>
+        		<option value="usa">--美国--</option>
+        		<option value="en">--英国--</option>
+        		<option value="cn">--中国--</option>
+        	</select>
+        </td>
+    </tr>
+    <tr>
+        <th colspan=2>
+        	<input type="reset" value="清除数据"/>
+        	<input type="submit" value="提交数据"/>
+        </th>
+        
+    </tr>
+</table>
+
+</form>	
+		
+	</body>
+</html>

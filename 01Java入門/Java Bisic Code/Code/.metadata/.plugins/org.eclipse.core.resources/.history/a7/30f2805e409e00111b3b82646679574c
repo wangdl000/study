@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		
+		<!--
+		操作页面就是在操作页面中的节点。
+		所以，获取到被操作的节点是第一步。 
+		
+		如何获取节点呢？
+		可以通过标记型文档对象来完成。该对象是document。
+		
+		1，获取节点：
+			getElementById(): 通过标签中的id属性值来获取该标签节点对象。 返回的是一个节点对象。 
+			getElementsByName():通过标签的name属性值来获取该标签节点对象，返回的是一个节点对象数组。因为name的值有可能相同。
+			getElementsByTagName():通过标签的名称来获取标签节点对象，返回的是一个节点对象数组，因为标签名会重复。 
+		-->
+		
+		<script type="text/javascript">
+			function getNode(){
+			
+			//通过id获取。
+			
+//			var node = document.getElementById("div_id");
+			
+//			alert(node.nodeName+","+node.nodeType+","+node.nodeValue);	//节点都有三个属性，1，节点名称，2，节点类型，3，节点值。
+
+//			alert(node.innerHTML);
+
+
+			//通过name值获取节点。
+//			var nodes = document.getElementsByName("user");
+//			var node = nodes[0];// 获取到名称为user的节点对象。 
+//			alert(nodes.length);	
+//			var val = node.value;
+//			alert("val="+val);
+
+
+			//通过标签名来获取。 
+			}
+		</script>
+		<input type="button" value="演示获取节点" onclick="getNode()" />
+		
+		<div id="div_id">
+			这是一个div区域
+		</div>
+		<input type="text" name="user" value="hahah" />
+		
+		<span>
+			这是一个span区域
+		</span>
+		
+		
+		
+	</body>
+</html>

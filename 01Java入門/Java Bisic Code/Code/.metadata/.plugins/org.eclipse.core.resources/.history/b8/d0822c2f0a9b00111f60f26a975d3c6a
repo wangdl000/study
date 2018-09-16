@@ -1,0 +1,12 @@
+package cn.itcast.net.p1.uploadpic;
+
+public class UploadClient {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		
+		<!--
+		需求：新闻字体的动态调整。
+		1，用html标签对数据进行封装。 
+		
+		
+		-->
+		<div id="newsid">
+		这是一个大新闻
+		大字体 中字体 小字体
+		这个新闻的内容是：......这个新闻的内容是：......这个新闻的内容是：......这个新闻的内容是：<br/>
+		这个新闻的内容是：......这个新闻的内容是：......这个新闻的内容是：......这个新闻的内容是：<br/>
+		这个新闻的内容是：......这个新闻的内容是：......这个新闻的内容是：......这个新闻的内容是：<br/>
+		这个新闻的内容是：......这个新闻的内容是：......这个新闻的内容是：......这个新闻的内容是：<br/>
+		
+	</body>
+</html>

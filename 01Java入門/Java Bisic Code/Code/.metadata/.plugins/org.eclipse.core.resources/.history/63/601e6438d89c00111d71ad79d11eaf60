@@ -1,0 +1,18 @@
+package cn.itcast.regdemo;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+public class RegServer {
+
+	/**
+	 * @param args
+	 * @throws Exception 
+	 */
+	public static void main(String[] args) throws Exception {
+		
+		ServerSocket ss = new ServerSocket(11000);
+
+	}
+
+}

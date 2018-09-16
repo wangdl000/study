@@ -1,0 +1,24 @@
+package cn.itcast.net.p6.uploadtext;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+public class UploadServer {
+
+	/**
+	 * @param args
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+
+		
+		//1
+		ServerSocket ss = new ServerSocket(10005);
+		
+		//2,
+		
+		
+		
+	}
+
+}

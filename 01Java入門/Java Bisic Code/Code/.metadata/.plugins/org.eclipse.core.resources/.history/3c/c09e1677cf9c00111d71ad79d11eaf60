@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	
+	
+	<frameset rows="30%,*">
+		<frame src="top.html" name="top"/>
+		
+		<frameset cols="30%,*">
+			<frame src="left.html"/>
+			<frame src="right.html"/>
+		</frameset>
+		
+		
+		
+	</frameset>
+	
+	
+	
+	<body>
+	</body>
+</html>

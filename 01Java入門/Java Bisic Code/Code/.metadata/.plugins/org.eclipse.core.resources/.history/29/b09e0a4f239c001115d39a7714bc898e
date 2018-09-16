@@ -1,0 +1,16 @@
+package cn.itcast.regex.test;
+
+
+/*
+ * ÍøÒ³ÅÀ³æ¡£ 
+ */
+public class RegexTest2 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+	}
+
+}

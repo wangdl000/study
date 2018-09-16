@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		
+		<!--
+		操作页面就是在操作页面中的节点。
+		所以，获取到被操作的节点是第一步。 
+		
+		如何获取节点呢？
+		可以通过标记型文档对象来完成。该对象是document。
+		
+		
+		-->
+		
+		
+		
+		
+		
+	</body>
+</html>

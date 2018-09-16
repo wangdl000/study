@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		
+		<!--
+		演示一下表单标签。 
+		
+		标签中的组件如何要对服务端进行数据的提交。
+		每一个组件都必须明确name和value属性。对于文本框可以不用明确value。因为输入的内容就是value值。 
+		-->
+		
+		<form>
+			用户名称：<input type="text" name="user" /><br/>
+			输入密码：<input type="password" name="psw" /><br/>
+			选择性别：<input type="radio" name="sex" value="nan" />男
+					 <input type="radio" name="sex" value="nv" checked="checked"/>女<br/>
+			选择技术：<input type="checkbox" name="tech" value="java"/>JAVA 
+			  		 <input type="checkbox" name="tech" value="html" />HTML 
+					 <input type="checkbox" name="tech" value="css" />CSS<br/> 
+			<!--将表单中的组件还原-->			
+			<input type="reset" value="还原数据/清除数据"/>
+			<!--将表单中的组件的数据打包提交到指定的目的地-->			
+			<input type="submit" value="提交数据">
+			
+			<hr/>
+			<!---------------------------------------->
+			选择文件：<input type="file" name="uploadfile"/><br/>
+			<input type="image" src="11.jpg"/><br/>
+			<!--
+				该隐藏框，用于定义页面不需要显示的数据，但是有可能需要对页面进行运算的数据
+				或者是提交给服务端的数据
+			-->
+			<input type="hidden" name="mykey" value="myvalue"/>
+			
+			<input type="button" value="一个按钮" onclick="alert('HAHAAHA')"/>
+		</form>
+		
+	</body>
+</html>

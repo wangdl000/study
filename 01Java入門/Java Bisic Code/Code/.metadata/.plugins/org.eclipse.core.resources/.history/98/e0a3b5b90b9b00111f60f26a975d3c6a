@@ -1,0 +1,20 @@
+package cn.itcast.net.p1.uploadpic;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+public class UploadPicServer {
+
+	/**
+	 * @param args
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+			
+		//创建tcp的socket服务端。
+		ServerSocket ss = new ServerSocket(10006);
+		
+		
+	}
+
+}

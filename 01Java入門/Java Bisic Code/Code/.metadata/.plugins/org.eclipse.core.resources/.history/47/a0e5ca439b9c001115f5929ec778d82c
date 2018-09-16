@@ -1,0 +1,29 @@
+package cn.itcast.test;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Test {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args)throws IOException {
+
+		BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));
+		
+		int num = Integer.parseInt(bufr.readLine());
+		
+		if(num>10){
+			System.out.println("大了");
+		}else{
+			System.out.println("小了");
+		}
+	}
+	
+	public static void operateData(GetDataInter getData){
+		
+	}
+
+}

@@ -1,0 +1,21 @@
+package cn.itcast.reflect.test;
+
+
+/*
+ * 电脑运行。 
+ */
+public class ReflectTest {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		Mainboard mb = new Mainboard();
+		mb.run();
+		//每次添加一个设备都需要修改代码传递一个新创建的对象
+		mb.usePCI(new SoundCard());
+		//能不能不修改代码就可以完成这个动作。 
+	}
+
+}

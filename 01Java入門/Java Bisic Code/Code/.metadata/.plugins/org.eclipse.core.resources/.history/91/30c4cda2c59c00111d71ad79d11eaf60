@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>Untitled Document</title>
+	</head>
+	<body>
+		
+		<table border="1" bordercolor="blue" cellpadding="5" cellspacing="0" width="500">
+			<tr>
+				<td>个人信息</td>
+			</tr>
+			<tr>
+				<td>张三</td>
+				<td>27</td>
+			</tr>
+		</table>
+		<HR/>
+		
+		<table border="1" bordercolor="blue" cellpadding="5" cellspacing="0" width="500" >
+			<caption>表格标题</caption>
+			<tr>
+				<th>姓名</th>
+				<th>年龄</th>
+			</tr>
+			<tr>
+				<td>张三</td>
+				<td>30</td>
+			</tr>
+		</table>
+		
+		  
+		
+	</body>
+</html>
