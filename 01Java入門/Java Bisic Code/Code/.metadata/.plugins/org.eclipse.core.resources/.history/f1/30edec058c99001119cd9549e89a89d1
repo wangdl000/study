@@ -1,9 +1,0 @@
-package cn.itcast.net.p3.chat;
-
-public class Rece implements Runnable {
-
-	@Override
-	public void run() {
-	}
-
-}
