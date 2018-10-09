@@ -22,7 +22,7 @@
 ### ２．インストール  
 -  下図の順番通り、JDKをインストールする。  
     -  1)  
-![インストール1](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_jdk/02_01_jdk file.PNG)  
+![インストール1](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_jdk/02_01_jdk_file.PNG)  
     -  2)  
 ![インストール2](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_jdk/02_02_conform.PNG)  
     -  3)  
