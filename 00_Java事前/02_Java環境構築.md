@@ -8,7 +8,7 @@
 ### 1. JDK1.8ダウンロード（バージョン：Java SE Development Kit 8u181）
 **[ダウンロードリンク](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)**    
 -  下記の画像よりJDKをダウンロードする。  
-![jdk download](/resource_jdk/01_download.PNG)
+![jdk download](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_jdk/01_download.PNG)    
 
 
 ### 2. Java语言  
