@@ -92,6 +92,17 @@ JDK是程序员使用java语言编写java程序所需的开发工具包，是提
 
 
 ### 总结
-Java 承诺 “编写一次，随处运行”。
+Java 承诺 “编写一次，随处运行”。比如在Windows系统中编译好的Java程序（\*.class）,不需要重新再编译就可以在别的系统（如Linux等）中运行。  
+**Java虽然是一门语言，但是更强调动手能力。无论理论掌握的多么透彻，都不如运用环境（JVM）和开发工具，实际编写运行代码，去理解程序意图更容易。**  
 
 
+####编译、执行 Java 程序  
+-  Java编译命令：javac HelloWorld.Java    ※　HelloWorld是java文件的名字。  
+-  Java类执行命令：java HelloWord  
+public class MyFirstJavaProgram {  
+    public static void main(String []args) {  
+       System.out.println("Hello World");  
+    }   
+}  
+
+>>>>>> 加油！ >>>>>>
