@@ -1,0 +1,59 @@
+## Java5到Java10的新增特性功能
+> #### *Java5*
+> #### *Java6*
+> #### *Java7*
+> #### *Java8*
+> #### *Java9*
+> #### *Java10*
+
+## 详细内容
+### 1. Java5  
+
+  - 泛型（Generics）：  
+![](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_jdk/06_01_java_os.jpg)  
+
+
+### 2. Java6  
+
+集合框架在Java6中得到了增强，更有利于人们的开发。比如，新增了很多的接口和类，还有添加了新的数组拷贝方法，比如Arrays.copyOf和Arrays.copeOfRange。  
+
+Scripting，他可以让其他的语言在Java的平台上编译运行，因为Java6中已经包含了一个机遇MozillaRhino的一个实现JS的脚本引擎。  
+
+JDBC4.0版本的规范从Java6之后开始支持了。  
+
+### 3. Java7  
+
+  - 泛型实例化类型的自动推断：  
+  
+
+字面常量数字的下划线。用下划线连接整数，其本身没有什么含意，主要是可以提高代码中的可读性，但是不能用在数字的首末。  
+
+  - 二进制前缀0b或者0B。比如Byte、int、long等整形的数据类型在Java7中已经可以用可以用二进制来表示了。  
+  
+
+  - switch在Java7版本之后就支持String类型。  
+  - 新增try-with-resources语句：  
+  
+
+ 单个catch中，可以捕获多个异常类型，而且根据改进的类型，检查后会重新抛出异常。  
+
+### 4. Java8  
+
+ Java8中，新增了很多的特效功能，主要有：lambada表达式、重复注解、方法引用、默认方法、类型注解、方法参数反射、类型推断增强、Stream API 、HashMap改进、Date Time API、还有java.util 包下的改进，比如新增了并行数组排序、无符号运算、Base的64编解码。HotSpot中还删除了永久代等等。新增的这些功能让得Java8到现在还有很多公司的开发者在使用！  
+
+### 5. Java9  
+
+  - 在Java9版本中，新增了JVM的机制，而且还统一了JVM中的日志，所有组件都引导同一个日志管理系统中。  
+  - diamond语法与匿名内部类结合使用  
+  - java模块系统 （Java Platform Module System）。  
+  - 新的版本号格式。$MAJOR.$MINOR.$SECURITY.$PATCH  
+  - Javadoc中，简化了Doclet API。加入了搜索框，支持新的模块系统和生成H5的格式。  
+  - properties文件支持UTF-8编码，在此前的Java版本中，只支持ISO-8859-1。  
+  - 支持私有接口方法  
+  
+### 6. Java10  
+
+  - 局部变量类型推断：  
+
+
+使用var保留类型来声明变量。注意：var不属于关键字，它的使用场景必须为：本地变量可以被初始化、有了增强的for循环、传统for循环中声明的索引变量、Try-with-resources 变量。   
