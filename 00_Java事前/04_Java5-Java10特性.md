@@ -1,4 +1,5 @@
 ## Java5到Java10的新增特性功能
+![](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_java/00_logo.jpg)  
 > #### *Java5*
 > #### *Java6*
 > #### *Java7*
