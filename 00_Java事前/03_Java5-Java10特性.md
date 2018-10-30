@@ -8,11 +8,23 @@
 > #### *Java10*
 
 ## 详细内容
+
 ### 1. Java5  
 
   - 泛型（Generics）：  
-![](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_jdk/06_01_java_os.jpg)  
-
+  ![](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_java/01_05_generics.jpg)  
+  - 枚举(Typesafe Enums)：  
+  ![](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_java/01_05_enum.jpg)   
+  - 可变参数 (Varargs)：注意！其本质是一个数组，如果一个方法中包含了可变参数，那么必须放在最后的位置。  
+  ![](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_java/01_05_Varargs.jpg)   
+  - 新的线程模型和并发库（java.util.concurrent)  
+  - 注解（Annotations）  
+  ![](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_java/01_05_Annotations.jpg)   
+  -  静态导入（Static Import）  
+  ![](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_java/01_05_StaticImport.jpg)  
+  - 自动封箱拆箱(Autoboxing/Unboxing)  
+  - 增强循环（Enhanced for Loop）  
+  ![](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_java/01_05_Loop.jpg)  
 
 ### 2. Java6  
 
@@ -25,16 +37,17 @@ JDBC4.0版本的规范从Java6之后开始支持了。
 ### 3. Java7  
 
   - 泛型实例化类型的自动推断：  
-  
+  ![](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_java/01_07_tuiduan.jpg)  
 
-字面常量数字的下划线。用下划线连接整数，其本身没有什么含意，主要是可以提高代码中的可读性，但是不能用在数字的首末。  
+  - 字面常量数字的下划线。用下划线连接整数，其本身没有什么含意，主要是可以提高代码中的可读性，但是不能用在数字的首末。  
 
   - 二进制前缀0b或者0B。比如Byte、int、long等整形的数据类型在Java7中已经可以用可以用二进制来表示了。  
-  
+   ![](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_java/01_07_byte.jpg)  
+ 
 
   - switch在Java7版本之后就支持String类型。  
   - 新增try-with-resources语句：  
-  
+  ![](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_java/01_07_try_with_resources.jpg)  
 
  单个catch中，可以捕获多个异常类型，而且根据改进的类型，检查后会重新抛出异常。  
 
@@ -55,6 +68,9 @@ JDBC4.0版本的规范从Java6之后开始支持了。
 ### 6. Java10  
 
   - 局部变量类型推断：  
+  ![](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_java/01_06_param.jpg)  
 
+使用var保留类型来声明变量。注意：var不属于关键字，它的使用场景必须为：本地变量可以被初始化、有了增强的for循环、传统for循环中声明的索引变量、Try-with-resources 变量。 
 
-使用var保留类型来声明变量。注意：var不属于关键字，它的使用场景必须为：本地变量可以被初始化、有了增强的for循环、传统for循环中声明的索引变量、Try-with-resources 变量。   
+### 总结  
+  当然，新增的一些特性远远不止这些。上述内容的具体用法，将在基本数据类型中详细描述。
