@@ -68,7 +68,7 @@ JDBC4.0版本的规范从Java6之后开始支持了。
 ### 6. Java10  
 
   - 局部变量类型推断：  
-  ![](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_java/01_06_param.jpg)  
+  ![](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_java/01_10_param.jpg)  
 
 使用var保留类型来声明变量。注意：var不属于关键字，它的使用场景必须为：本地变量可以被初始化、有了增强的for循环、传统for循环中声明的索引变量、Try-with-resources 变量。 
 
