@@ -15,9 +15,9 @@
 
 - #### システムの種類の確認方法は下図を参照してください。  
      -  1) PC \> プロパティ(R) を選択する。  
-![jdk download](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_jdk/01_01_pc_prop.PNG)    
+![jdk download](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_jdk/01_01_pc_prop.png)    
      -  2) システムの種類を確認する。  
-![jdk download](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_jdk/01_02_sys_type.PNG)    
+![jdk download](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_jdk/01_02_sys_type.png)    
 
 ### ２．インストール  
 -  下図の順番通り、JDKをインストールする。  
