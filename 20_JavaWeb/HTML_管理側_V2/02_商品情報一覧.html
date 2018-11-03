@@ -1,0 +1,300 @@
+﻿<!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title id="title">商品情報一覧・検索</title>
+	<link rel="stylesheet" href="css/admin.css" type="text/css" media="all" />
+	<script type="text/javascript" src="js/common.js" xml:space="preserve" ></script>
+</head>
+
+<body>
+	<div id="container" class="layout01">
+		<div id="header">
+			<div class="logo"><img src="images/common/header/logo.jpg" alt="" width="166" height="60" /></div>
+			<div class="user"><span>ＸＸＸＸ ああああ いいいい 様</span></div>
+			<div>
+				<div class="navi">
+					<ul>
+						<li><input type="button" value="ログアウト" class="button" style="width:100px;height:30px" alt="ログアウト" onclick="window.open('00_ログイン.html', '_self' );" ></li>
+					</ul>
+				</div><!--navi-->
+			</div>
+		</div><!--header-->
+
+		<div id="separate"></div>
+
+		<div id="contents">
+			<div id="leftarea">
+				<ul>
+					<li class="list1"><input type="button" value="トップ" class="button" style="width:150px;height:30px" alt="トップ" onclick="window.open('01_トップページ.html', '_self' );" ></li>
+					<li class="list1"><input type="button" value="商品管理" class="button" style="width:150px;height:30px" alt="商品管理" onclick="window.open('02_商品情報一覧.html', '_self' );" ></li>
+					<li class="list1"><input type="button" value="マスター管理" class="button" style="width:150px;height:30px" alt="マスター管理" onclick="window.open('04_マスタ管理一覧.html', '_self' );" ></li>
+					<li class="list1"><input type="button" value="お知らせ管理" class="button" style="width:150px;height:30px" alt="お知らせ管理" onclick="window.open('06_お知らせ一覧.html', '_self' );" ></li>
+					<li class="list1"><input type="button" value="カタログ管理" class="button" style="width:150px;height:30px" alt="カタログ管理" onclick="window.open('08_カタログ管理一覧.html', '_self' );" ></li>
+					<li class="list1"><input type="button" value="ユーザ管理" class="button" style="width:150px;height:30px" alt="ユーザ管理" onclick="window.open('10_ユーザ情報一覧.html', '_self' );" ></li>
+				</ul>
+				<br>
+				<ul>
+					<li class="list1"><input type="button" value="商品情報一括取り込み" class="button" style="width:150px;height:30px" alt="商品情報一括取り込み" onclick="window.open('13_商品情報一括取り込み.html', '_self' );" ></li>
+				</ul>
+			</div><!--leftpanel-->
+
+			<div id="rightarea">
+				<div id="pagetitle">
+					<span style="font-size:150%;font-weight:bold;">商品情報一覧・検索</span>
+					<div style="clear: both;margin: 0px 0px 0px 0px;padding: 2px 0;text-align: right;vertical-align:middle;border-top: 2px solid #0000ff;"></div>
+				</div>
+				<div id="mainarea" class="adminmainarea">
+					<div class="main">
+						<div class="center" style="width: 92%; padding: 8px; background: #c0c0c0; border: 1px solid #808080;">
+							<table width="100%">
+								<colgroup width="15%"></colgroup>
+								<colgroup width="25%"></colgroup>
+								<colgroup width="10%"></colgroup>
+								<colgroup width="40%"></colgroup>
+								<colgroup width="10%"></colgroup>
+								<tr>
+									<td class="left">カタログ</td>
+									<td class="left">
+										<select id="keywordselect" title="ctgry" name="ctgry">
+											<option value="0">すべて</option>
+											<option value="1">Ｔコース</option>
+											<option value="2">Ｖコース</option>
+											<option value="3">Ｎコース</option>
+											<option value="4">Ｊコース</option>
+											<option value="5">Ｌコース</option>
+											<option value="6">Ａコース</option>
+										</select>
+									</td>
+									<td class="left"></td>
+									<td class="left" colspan="2">&nbsp;</td>
+								</tr>
+								<tr>
+									<td class="left">
+                                        カタログ商品番号</td>
+									<td class="left"><input type="text" name="itemid" size="10" maxlength="10" value="" /></td>
+									<td class="left">商品名</td>
+									<td class="left"><input type="text" name="itemname" size="30" maxlength="30" value="" /></td>
+									<td class="left">&nbsp;</td>
+								</tr>
+								<tr>
+									<td class="left">掲載区分</td>
+									<td class="left">
+										<select id="keywordselectkbn" title="ctgry" name="ctgry">
+											<option value="0">すべて</option>
+											<option value="1">編集中</option>
+											<option value="2">掲載中</option>
+											<option value="3">掲載終了</option>
+											<option value="4">掲載停止</option>
+											<option value="5">一括取り込み</option>
+										</select>
+									</td>
+									<td class="left">カテゴリ</td>
+									<td class="left">
+										<select id="keykategori" title="ctgry" name="ctgry">
+											<option value="0">すべて</option>
+											<option value="1">特集</option>
+											<option value="2">一般食品</option>
+											<option value="3">和洋菓子</option>
+											<option value="4">惣菜</option>
+											<option value="5">ブランド</option>
+											<option value="6">果物</option>
+											<option value="7">老舗の味</option>
+											<option value="8">社会貢献ギフト</option>
+											<option value="9">おすすめ商品</option>
+											<option value="10">インターネット限定</option>
+										</select>
+									</td>
+									<td class="left"><input type="button" value="検　索" class="button" style="width:100px;height:20px" alt="検索" onclick="window.open('02_商品情報一覧.html', '_self' );" ></td>
+								</tr>
+<!--
+								<tr class="right">
+									<td colspan="5">
+										<a href=""><img src="images/admin/admin_01.png" alt="商品詳細一括アップロード" /></a>
+										<a href=""><img src="images/admin/admin_02.png" alt="画像一括アップロード" /></a>
+									</td>
+								</tr>
+-->
+							</table>
+						</div>
+
+						<div class="pager">
+							<table width="100%">
+								<colgroup width="50%"></colgroup>
+								<colgroup width="25%"></colgroup>
+								<colgroup width="25%"></colgroup>
+								<tr>
+									<td class="left">
+										<ul class="clearfix">
+											<li class="info">1&nbsp;～&nbsp;10件／全76件</li>
+											<li class="prev">&laquo;前へ</li>
+											<li><strong>[1]</strong></li>
+											<li><a href="02_商品情報一覧.html" >[2]</a></li>
+											<li><a href="02_商品情報一覧.html" >[3]</a></li>
+											<li><a href="02_商品情報一覧.html" >[4]</a></li>
+											<li><a href="02_商品情報一覧.html" >[5]</a></li>
+											<li><a href="02_商品情報一覧.html" >[6]</a></li>
+											<li><a href="02_商品情報一覧.html" >[7]</a></li>
+											<li><a href="02_商品情報一覧.html" >[8]</a></li>
+											<li class="next"><a href="02_商品情報一覧.html" >次へ&raquo;</a></li>
+										</ul>
+									</td>
+									<td class="right">並び順
+										<select id="keywordselectsort" title="ctgry" name="ctgry">
+											<option value="0">商品番号（昇順）</option>
+											<option value="0">商品番号（降順）</option>
+											<option value="0">商品名（昇順）</option>
+											<option value="0">商品名（降順）</option>
+										</select>
+									</td>
+                                    <td class="right">表示件数
+										<select id="keywordselectcount" title="ctgry" name="ctgry">
+											<option value="0">10</option>
+											<option value="0">20</option>
+											<option value="0">50</option>
+											<option value="0">100</option>
+										</select>
+									</td>
+								</tr>
+							</table>
+						</div>
+
+						<div style="margin-top: 10px;">
+							<table class="itemlisttable" width="95%">
+								<colgroup width="25%"></colgroup>
+								<colgroup width="15%"></colgroup>
+								<colgroup width="53%"></colgroup>
+								<colgroup width="7%"></colgroup>
+								<tr>
+									<td rowspan="5" class="center" style="padding: 2px;"><a href="03_商品情報編集.html"><img src="images/item/0000250371-01d.jpg" alt="氷温熟成 辛子明太子" height="160px" width="160px" /></a></td>
+									<th>商品番号</th><td class="left">10001-1</td>
+									<td rowspan="5"><a href="03_商品情報編集.html">編集</a></td>
+								</tr>
+								<tr><th>カタログ名</th><td class="left">Ｔコース</td></tr>
+								<tr><th>カテゴリ名</th><td class="left">
+                                    特集，魚介，一般食品，惣菜</td></tr>
+								<tr><th>商品名</th><td class="left">氷温熟成 辛子明太子</td></tr>
+								<tr><th>掲載区分</th><td class="left">一括取り込み</td></tr>
+
+								<tr><td class="noborder" colspan="4"><hr class="hr" /></td></tr>
+								<tr>
+									<td rowspan="5" class="center" style="padding: 2px;"><a href="03_商品情報編集.html"><img src="images/item/0000251476-01d.jpg" alt="ハム・ソーセージ詰合せ" height="160px" width="160px" /></a></td>
+									<th>商品番号</th><td class="left">10002-1</td>
+									<td rowspan="5"><a href="03_商品情報編集.html">編集</a></td>
+								</tr>
+								<tr><th>カタログ名</th><td class="left">Ｔコース</td></tr>
+								<tr><th>カテゴリ名</th><td class="left">
+                                    精肉・ハム，一般食品</td></tr>
+								<tr><th>商品名</th><td class="left">ハム・ソーセージ詰合せ</td></tr>
+								<tr><th>掲載区分</th><td class="left">編集中</td></tr>
+
+								<tr><td class="noborder" colspan="4"><hr class="hr" /></td></tr>
+								<tr>
+									<td rowspan="5" class="center" style="padding: 2px;"><a href="03_商品情報編集.html"><img src="images/item/0000251722-01d.jpg" alt="かに・帆立貝柱クリアパック" height="160px" width="160px" /></a></td>
+									<th>商品番号</th><td class="left">10003-1</td>
+									<td rowspan="5"><a href="03_商品情報編集.html">編集</a></td>
+								</tr>
+								<tr><th>カタログ名</th><td class="left">Ｔコース</td></tr>
+								<tr><th>カテゴリ名</th><td class="left">
+                                    魚介，一般食品</td></tr>
+								<tr><th>商品名</th><td class="left">かに・帆立貝柱クリアパック</td></tr>
+								<tr><th>掲載区分</th><td class="left">掲載中</td></tr>
+
+								<tr><td class="noborder" colspan="4"><hr class="hr" /></td></tr>
+								<tr>
+									<td rowspan="5" class="center" style="padding: 2px;"><a href="03_商品情報編集.html"><img src="images/item/0000258957-01d.jpg" alt="匠の逸品詰合せ" height="160px" width="160px" /></a></td>
+									<th>商品番号</th><td class="left">10004-1</td>
+									<td rowspan="5"><a href="03_商品情報編集.html">編集</a></td>
+								</tr>
+								<tr><th>カタログ名</th><td class="left">Ｖコース</td></tr>
+								<tr><th>カテゴリ名</th><td class="left">
+                                    精肉・ハム，惣菜，老舗の味</td></tr>
+								<tr><th>商品名</th><td class="left">匠の逸品詰合せ</td></tr>
+								<tr><th>掲載区分</th><td class="left">掲載中</td></tr>
+
+								<tr><td class="noborder" colspan="4"><hr class="hr" /></td></tr>
+								<tr>
+									<td rowspan="5" class="center" style="padding: 2px;"><a href="03_商品情報編集.html"><img src="images/item/0000286521-01d.jpg" alt="栗きんとん" height="160px" width="160px" /></a></td>
+									<th>商品番号</th><td class="left">10005-1</td>
+									<td rowspan="5"><a href="03_商品情報編集.html">編集</a></td>
+								</tr>
+								<tr><th>カタログ名</th><td class="left">Ｖコース</td></tr>
+								<tr><th>カテゴリ名</th><td class="left">
+                                    一般食品，惣菜，老舗の味</td></tr>
+								<tr><th>商品名</th><td class="left">栗きんとん</td></tr>
+								<tr><th>掲載区分</th><td class="left">掲載停止</td></tr>
+
+								<tr><td class="noborder" colspan="4"><hr class="hr" /></td></tr>
+								<tr>
+									<td rowspan="5" class="center" style="padding: 2px;"><a href="03_商品情報編集.html"><img src="images/item/0000258958-01d.jpg" alt="2010dlg品質競技会金賞受賞セット" height="160px" width="160px" /></a></td>
+									<th>商品番号</th><td class="left">10006-1</td>
+									<td rowspan="5"><a href="03_商品情報編集.html">編集</a></td>
+								</tr>
+								<tr><th>カタログ名</th><td class="left">Ｖコース</td></tr>
+								<tr><th>カテゴリ名</th><td class="left">
+                                    精肉・ハム，惣菜，老舗の味</td></tr>
+								<tr><th>商品名</th><td class="left">2010dlg品質競技会金賞受賞セット</td></tr>
+								<tr><th>掲載区分</th><td class="left">掲載中</td></tr>
+
+								<tr><td class="noborder" colspan="4"><hr class="hr" /></td></tr>
+								<tr>
+									<td rowspan="5" class="center" style="padding: 2px;"><a href="03_商品情報編集.html"><img src="images/item/0000217437-01d.jpg" alt="お好み焼・たこ焼セット" height="160px" width="160px" /></a></td>
+									<th>商品番号</th><td class="left">10007-1</td>
+									<td rowspan="5"><a href="03_商品情報編集.html">編集</a></td>
+								</tr>
+								<tr><th>カタログ名</th><td class="left">Ｎコース</td></tr>
+								<tr><th>カテゴリ名</th><td class="left">
+                                    一般食品，惣菜，老舗の味</td></tr>
+								<tr><th>商品名</th><td class="left">お好み焼・たこ焼セット</td></tr>
+								<tr><th>掲載区分</th><td class="left">掲載中</td></tr>
+
+								<tr><td class="noborder" colspan="4"><hr class="hr" /></td></tr>
+								<tr>
+									<td rowspan="5" class="center" style="padding: 2px;"><a href="03_商品情報編集.html"><img src="images/item/0000259884-01d.jpg" alt="毬栗（いがぐり）" height="160px" width="160px" /></a></td>
+									<th>商品番号</th><td class="left">10008-1</td>
+									<td rowspan="5"><a href="03_商品情報編集.html">編集</a></td>
+								</tr>
+								<tr><th>カタログ名</th><td class="left">Ｌコース</td></tr>
+								<tr><th>カテゴリ名</th><td class="left">
+                                    一般食品，惣菜，老舗の味</td></tr>
+								<tr><th>商品名</th><td class="left">毬栗（いがぐり）</td></tr>
+								<tr><th>掲載区分</th><td class="left">掲載中</td></tr>
+
+								<tr><td class="noborder" colspan="4"><hr class="hr" /></td></tr>
+								<tr>
+									<td rowspan="5" class="center" style="padding: 2px;"><a href="03_商品情報編集.html"><img src="images/item/0000251475-01d.jpg" alt="ハム・ソーセージ詰合せ" height="160px" width="160px" /></a></td>
+									<th>商品番号</th><td class="left">10009-1</td>
+									<td rowspan="5"><a href="03_商品情報編集.html">編集</a></td>
+								</tr>
+								<tr><th>カタログ名</th><td class="left">Ｊコース</td></tr>
+								<tr><th>カテゴリ名</th><td class="left">
+                                    精肉・ハム，惣菜，老舗の味</td></tr>
+								<tr><th>商品名</th><td class="left">ハム・ソーセージ詰合せ</td></tr>
+								<tr><th>掲載区分</th><td class="left">掲載中</td></tr>
+
+								<tr><td class="noborder" colspan="4"><hr class="hr" /></td></tr>
+								<tr>
+									<td rowspan="5" class="center" style="padding: 2px;"><a href="03_商品情報編集.html"><img src="images/item/0000001218-01d.jpg" alt="シュミネガトーセック詰合せ" height="160px" width="160px" /></a></td>
+									<th>商品番号</th><td class="left">10010-1</td>
+									<td rowspan="5"><a href="03_商品情報編集.html">編集</a></td>
+								</tr>
+								<tr><th>カタログ名</th><td class="left">Ａコース</td></tr>
+								<tr><th>カテゴリ名</th><td class="left">
+                                    一般食品，惣菜，老舗の味</td></tr>
+								<tr><th>商品名</th><td class="left">シュミネガトーセック詰合せ</td></tr>
+								<tr><th>掲載区分</th><td class="left">掲載中</td></tr>
+
+							</table>
+						</div>
+					</div>
+				</div><!-- mainarea -->
+			</div><!-- rightarea -->
+		</div><!--contents-->
+
+		<div id="pagetop"><a href="#container"><img src="images/common/btn_pagetop.png" alt="このページのトップへ" width="126" height="24" /></a></div>
+		<div id="adminfooter">
+			<div class="separate"></div>
+			<div class="copy">copyright &copy; 2010 ana trading co.,ltd all rights reserved.</div>
+		</div><!--footer-->
+	</div><!--container-->
+</body>
+</html>

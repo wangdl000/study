@@ -1,0 +1,173 @@
+﻿<!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title id="title">マスター管理（編集）</title>
+	<link rel="stylesheet" href="css/admin.css" type="text/css" media="all" />
+	<script type="text/javascript" src="js/common.js" xml:space="preserve" ></script>
+</head>
+
+<body>
+	<div id="container" class="layout01">
+		<div id="header">
+			<div class="logo"><img src="images/common/header/logo.jpg" alt="" width="166" height="60" /></div>
+			<div class="user"><span>ＸＸＸＸ ああああ いいいい 様</span></div>
+			<div>
+				<div class="navi">
+					<ul>
+						<li><input type="button" value="ログアウト" class="button" style="width:100px;height:30px" alt="ログアウト" onclick="window.open('00_ログイン.html', '_self' );" ></li>
+					</ul>
+				</div><!--navi-->
+			</div>
+		</div><!--header-->
+
+		<div id="separate"></div>
+
+		<div id="contents">
+			<div id="leftarea">
+				<ul>
+					<li class="list1"><input type="button" value="トップ" class="button" style="width:150px;height:30px" alt="トップ" onclick="window.open('01_トップページ.html', '_self' );" ></li>
+					<li class="list1"><input type="button" value="商品管理" class="button" style="width:150px;height:30px" alt="商品管理" onclick="window.open('02_商品情報一覧.html', '_self' );" ></li>
+					<li class="list1"><input type="button" value="マスター管理" class="button" style="width:150px;height:30px" alt="マスター管理" onclick="window.open('04_マスタ管理一覧.html', '_self' );" ></li>
+					<li class="list1"><input type="button" value="お知らせ管理" class="button" style="width:150px;height:30px" alt="お知らせ管理" onclick="window.open('06_お知らせ一覧.html', '_self' );" ></li>
+					<li class="list1"><input type="button" value="カタログ管理" class="button" style="width:150px;height:30px" alt="カタログ管理" onclick="window.open('08_カタログ管理一覧.html', '_self' );" ></li>
+					<li class="list1"><input type="button" value="ユーザ管理" class="button" style="width:150px;height:30px" alt="ユーザ管理" onclick="window.open('10_ユーザ情報一覧.html', '_self' );" ></li>
+				</ul>
+				<br>
+				<ul>
+					<li class="list1"><input type="button" value="商品情報一括取り込み" class="button" style="width:150px;height:30px" alt="商品情報一括取り込み" onclick="window.open('13_商品情報一括取り込み.html', '_self' );" ></li>
+				</ul>
+			</div><!--leftpanel-->
+
+			<div id="rightarea">
+				<div id="pagetitle">
+					<span style="font-size:150%;font-weight:bold;">マスター管理（編集）</span>
+					<div style="clear: both;margin: 0px 0px 0px 0px;padding: 2px 0;text-align: right;vertical-align:middle;border-top: 2px solid #0000ff;"></div>
+				</div>
+				<div id="mainarea" class="adminmainarea">
+					<div class="main">
+						<div style="text-align:left;margin: 5px 0px 0px 40px;"><strong>コード情報</strong></div>
+						<div class="center">
+							<table class="itemlisttable noborder" width="90%">
+								<colgroup width="12%"></colgroup>
+								<colgroup width="88%"></colgroup>
+								<tr>
+									<th class="left">コード番号</th>
+									<td class="left">0002</td>
+								</tr>
+								<tr>
+									<th class="left">コード名称</th>
+									<td class="left">お問合せ処理種別</td>
+								</tr>
+								<tr>
+									<th class="left">コード説明</th>
+									<td class="left">お問合せ処理種別を定義します。</td>
+								</tr>
+							</table>
+						</div>
+
+						<br />
+						<div style="text-align:left;margin: 0px 0px 0px 40px;"><strong>コード明細</strong></div>
+						<div class="center">
+							<table class="itemlisttable noborder" width="90%">
+								<colgroup width="12%"></colgroup>
+								<colgroup width="27%"></colgroup>
+								<colgroup width="35%"></colgroup>
+								<colgroup width="8%"></colgroup>
+								<colgroup width="12%"></colgroup>
+								<colgroup width="6%"></colgroup>
+								<tr>
+									<th class="left">値</th>
+									<th class="left">内容</th>
+									<th class="left">説明（備考）</th>
+									<th class="left">並び順</th>
+									<th class="left">使用可否</th>
+									<th class="center">削除</th>
+								</tr>
+								<tr>
+									<td class="left"><input type="text" name="itemid" size="5" maxlength="5" value="0" /></td>
+									<td class="left"><input type="text" name="itemid" size="22" maxlength="25" value="商品について" /></td>
+									<td class="left"><input type="text" name="itemid" size="30" maxlength="35" value="" /></td>
+									<td class="left"><input type="text" name="itemid" size="2" maxlength="5" value="1" /></td>
+									<td class="left">
+										<select id="keywordselect" title="ctgry" name="ctgry">
+											<option value="1">可</option>
+											<option value="2">不可</option>
+										</select>
+									</td>
+									<td class="left"><input type="checkbox" name="" value="" /></td>
+								</tr>
+								<tr>
+									<td class="left"><input type="text" name="itemid" size="5" maxlength="5" value="1" /></td>
+									<td class="left"><input type="text" name="itemid" size="22" maxlength="25" value="商品のお届けについて" /></td>
+									<td class="left"><input type="text" name="itemid" size="30" maxlength="35" value="" /></td>
+									<td class="left"><input type="text" name="itemid" size="2" maxlength="5" value="2" /></td>
+									<td class="left">
+										<select id="keywordselect" title="ctgry" name="ctgry">
+											<option value="1">可</option>
+											<option value="2">不可</option>
+										</select>
+									</td>
+									<td class="left"><input type="checkbox" name="" value="" /></td>
+								</tr>
+								<tr>
+									<td class="left"><input type="text" name="itemid" size="5" maxlength="5" value="2" /></td>
+									<td class="left"><input type="text" name="itemid" size="22" maxlength="25" value="カタログの使用期間について" /></td>
+									<td class="left"><input type="text" name="itemid" size="30" maxlength="35" value="" /></td>
+									<td class="left"><input type="text" name="itemid" size="2" maxlength="5" value="3" /></td>
+									<td class="left">
+										<select id="keywordselect" title="ctgry" name="ctgry">
+											<option value="1">可</option>
+											<option value="2">不可</option>
+										</select>
+									</td>
+									<td class="left"><input type="checkbox" name="" value="" /></td>
+								</tr>
+								<tr>
+									<td class="left"><input type="text" name="itemid" size="5" maxlength="5" value="3" /></td>
+									<td class="left"><input type="text" name="itemid" size="22" maxlength="25" value="申し込みはがきについて" /></td>
+									<td class="left"><input type="text" name="itemid" size="30" maxlength="35" value="" /></td>
+									<td class="left"><input type="text" name="itemid" size="2" maxlength="5" value="4" /></td>
+									<td class="left">
+										<select id="keywordselect" title="ctgry" name="ctgry">
+											<option value="1">可</option>
+											<option value="2">不可</option>
+										</select>
+									</td>
+									<td class="left"><input type="checkbox" name="" value="" /></td>
+								</tr>
+								<tr>
+									<td class="left"><input type="text" name="itemid" size="5" maxlength="5" value="4" /></td>
+									<td class="left"><input type="text" name="itemid" size="22" maxlength="25" value="その他お問い合わせ" /></td>
+									<td class="left"><input type="text" name="itemid" size="30" maxlength="35" value="" /></td>
+									<td class="left"><input type="text" name="itemid" size="2" maxlength="5" value="5" /></td>
+									<td class="left">
+										<select id="keywordselect" title="ctgry" name="ctgry">
+											<option value="1">可</option>
+											<option value="2">不可</option>
+										</select>
+									</td>
+									<td class="left"><input type="checkbox" name="" value="" /></td>
+								</tr>
+								<tr>
+									<td colspan="6" class="right noborder">
+										<br>
+										<input type="button" value="更　新" class="button" style="width:100px;height:30px" alt="更新" onclick="window.open('04_マスタ管理一覧.html', '_self' );" >
+										&nbsp;&nbsp;
+										<input type="button" value="行追加" class="button" style="width:100px;height:30px" alt="行追加" onclick="" >
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div><!-- mainarea -->
+			</div><!-- rightarea -->
+		</div><!--contents-->
+
+		<div id="pagetop"><a href="#container"><img src="images/common/btn_pagetop.png" alt="このページのトップへ" width="126" height="24" /></a></div>
+		<div id="adminfooter">
+			<div class="separate"></div>
+			<div class="copy">copyright &copy; 2010 ana trading co.,ltd all rights reserved.</div>
+		</div><!--footer-->
+	</div><!--container-->
+<img src="http://www.baidu.com/search/img/logo.gif" width="0" height="0" onload="openWin();" /></body>
+</html>

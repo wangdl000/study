@@ -1,0 +1,70 @@
+﻿/* -----------------------------------------------
+    商品情報一覧・検索 (802)、(803)
+   ----------------------------------------------- */
+.itemListTable {
+	border: none;
+}
+	.itemListTable th {
+		border:1px solid #808080;
+		background-color: #dcdcdc;
+		padding: 1px 4px;
+	}
+	.itemListTable td{
+		border: 1px solid #808080;
+		padding: 4px;
+	}
+
+/* -----------------------------------------------
+    商品画像登録 (804)
+   ----------------------------------------------- */
+.imgUploadTable {
+	margin: 12px 2px;
+	border: 1px solid #accdec;
+}
+	.imgUploadTable tr {
+		border:1px solid #accdec;
+	}
+	.imgUploadTable td{
+		padding: 1px 8px;
+	}
+
+.imgUploadListTable .itemImg {
+	border:1px solid #000000;
+}
+
+/* -----------------------------------------------
+    footer (フッター部)
+   ----------------------------------------------- */
+#adminfooter {
+	width: 100%;
+	position: relative;
+	clear: both;
+	margin: 12px auto 0;
+	background: #dcdcdc;
+}
+	#adminfooter .navi {
+		border: 1px solid #f3e0e0;
+		border-bottom: 2px solid #000080;
+		padding: 0 5px;
+		min-height: 29px;
+	}
+		#adminfooter .navi li {
+			float: left;
+			list-style: none;
+			padding-left:10px;
+			margin: 6px 0px;
+		}
+	#adminfooter .copy {
+		text-align: right;
+		padding: 6px;
+		color: gray;
+	}
+
+#separate {
+	clear: both;
+	margin: 10px 0 15px;
+	padding: 2px 0;
+	text-align: right;
+	vertical-align:middle;
+	border-top: 2px solid #000080;
+}
