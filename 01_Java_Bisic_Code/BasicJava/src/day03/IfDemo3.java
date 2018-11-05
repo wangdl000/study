@@ -1,81 +1,72 @@
-class  IfDemo3
-{
-	public static void main(String[] args) 
-	{
-		{//¾Ö²¿´úÂë¿é¿ÉÒÔ¶¨Òå¾Ö²¿±äÁ¿µÄÉúÃüÖÜÆÚ¡£
-		int a = 3;
-		//a µÄÔËËã¡£
-		System.out.println(a+4);
+package day03;
+
+class IfDemo3 {
+	public static void main(String[] args) {
+		{
+			//å±€éƒ¨ä»£ç å—å¯ä»¥å®šä¹‰å±€éƒ¨å˜é‡çš„ç”Ÿå‘½å‘¨æœŸã€‚
+			int a = 3;
+			//a çš„è¿ç®—ã€‚
+			System.out.println(a + 4);
 		}
 
 		/*
-		ifÓï¾äµÚÈıÖÖ¸ñÊ½£º
-		if(Ìõ¼ş±í´ïÊ½)
+		ifè¯­å¥ç¬¬ä¸‰ç§æ ¼å¼ï¼š
+		if(æ¡ä»¶è¡¨è¾¾å¼)
 		{
-			Ö´ĞĞÓï¾ä£»
+			æ‰§è¡Œè¯­å¥ï¼›
 		}
-		else if (Ìõ¼ş±í´ïÊ½)
+		else if (æ¡ä»¶è¡¨è¾¾å¼)
 		{
-			Ö´ĞĞÓï¾ä£»
+			æ‰§è¡Œè¯­å¥ï¼›
 		}
-		¡­¡­
+		â€¦â€¦
 		else
 		{
-			Ö´ĞĞÓï¾ä£»
+			æ‰§è¡Œè¯­å¥ï¼›
 		}
 
 		*/
 		int x = 3;
-		if(x>1)
+		if (x > 1)
 			System.out.println("a");
-		else if(x>2)
+		else if (x > 2)
 			System.out.println("b");
-		else if(x>3)
+		else if (x > 3)
 			System.out.println("c");
 		else
 			System.out.println("d");
 
-
 		int y = 3;
-		if(y>1)
+		if (y > 1)
 			System.out.println("a1");
-		if(y>2)
+		if (y > 2)
 			System.out.println("b1");
-		if(y>3)
+		if (y > 3)
 			System.out.println("c1");
 		else
 			System.out.println("d1");
 
+		if (x == 1)
 
-		if(x==1)
-		
-			if(y==1)
-			
+			if (y == 1)
+
 				System.out.println("a");
-			
+
 			else
 				System.out.println("b");
-			
-		
-		else
-		
-			if(y==1)
-			
-				System.out.println("c");
-			
-			else
-			
-				System.out.println("d");
-			
-		
-//		if(false);
 
-		
-		{//¾Ö²¿´úÂë¿é¡£
+		else
+
+		if (y == 1) {
+
+			System.out.println("c");
+
+		} else {
+			//å±€éƒ¨ä»£ç å—ã€‚
 			int m = 89;
-			System.out.println("Hello World!..."+m);
+			System.out.println("Hello World!..." + m);
 		}
 
-		System.out.println("over....."+m);
+		//		System.out.println("over....." + m);
 	}
 }

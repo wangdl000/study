@@ -1,46 +1,44 @@
-class IfTest2 
-{
-	public static void main(String[] args) 
-	{
+package day03;
+
+class IfTest2 {
+	public static void main(String[] args) {
 
 		/*
-		Ò»ÄêÓĞËÄ¼¾¡£
-		´º¼¾£º3 4 5
-		ÏÄ¼¾£º6 7 8
-		Çï¼¾£º9 10 11
-		¶¬¼¾£º12 1 2 
-		¸ù¾İÓÃ»§ÊäÈëµÄÔÂ·İ£¬¸ø³ö¶ÔÓ¦µÄ¼¾½Ú¡£
+		ä¸€å¹´æœ‰å››å­£ã€‚
+		æ˜¥å­£ï¼š3 4 5
+		å¤å­£ï¼š6 7 8
+		ç§‹å­£ï¼š9 10 11
+		å†¬å­£ï¼š12 1 2
+		æ ¹æ®ç”¨æˆ·è¾“å…¥çš„æœˆä»½ï¼Œç»™å‡ºå¯¹åº”çš„å­£èŠ‚ã€‚
 
 
 		*/
-		
+
 		int month = 8;
-		
-		if(month<1 || month>12)
-			System.out.println(month+"ÔÂÃ»ÓĞ¶ÔÓ¦µÄ¼¾½Ú");
-		else if(month>=3 && month<=5)
-			System.out.println(month+"ÔÂÊÇ´º¼¾");
-		else if(month>=6 && month<=8)
-			System.out.println(month+"ÔÂÊÇÏÄ¼¾");
-		else if(month>=9 && month<=11)
-			System.out.println(month+"ÔÂÊÇÇï¼¾");
-		else 
-			System.out.println(month+"ÔÂÊÇ¶¬¼¾");
 
-
+		if (month < 1 || month > 12)
+			System.out.println(month + "æœˆæ²¡æœ‰å¯¹åº”çš„å­£èŠ‚");
+		else if (month >= 3 && month <= 5)
+			System.out.println(month + "æœˆæ˜¯æ˜¥å­£");
+		else if (month >= 6 && month <= 8)
+			System.out.println(month + "æœˆæ˜¯å¤å­£");
+		else if (month >= 9 && month <= 11)
+			System.out.println(month + "æœˆæ˜¯ç§‹å­£");
+		else
+			System.out.println(month + "æœˆæ˜¯å†¬å­£");
 
 		/*
 		if(month==3 || month==4 || month==5)
-			System.out.println(month+"ÔÂÊÇ´º¼¾");
+			System.out.println(month+"æœˆæ˜¯æ˜¥å­£");
 		else if(month==6 || month==7 || month==8)
-			System.out.println(month+"ÔÂÊÇÏÄ¼¾");
+			System.out.println(month+"æœˆæ˜¯å¤å­£");
 		else if(month==9 || month==10 || month==11)
-			System.out.println(month+"ÔÂÊÇÇï¼¾");
+			System.out.println(month+"æœˆæ˜¯ç§‹å­£");
 		else if(month==12 || month==1 || month==2)
-			System.out.println(month+"ÔÂÊÇ¶¬¼¾");
+			System.out.println(month+"æœˆæ˜¯å†¬å­£");
 		else
-			System.out.println(month+"ÔÂÃ»ÓĞ¶ÔÓ¦µÄ¼¾½Ú");
+			System.out.println(month+"æœˆæ²¡æœ‰å¯¹åº”çš„å­£èŠ‚");
 			*/
-			
+
 	}
 }

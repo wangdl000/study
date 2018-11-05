@@ -1,27 +1,26 @@
-class  WhileTest2
-{
-	public static void main(String[] args) 
-	{
+package day03;
+
+class WhileTest2 {
+	public static void main(String[] args) {
 
 		/*
-		Á·Ï°£º
-		1~100Ö®¼ä 6µÄ±¶Êı³öÏÖµÄ´ÎÊı¡£
-		ÒªÇó£º×Ô¼º¶ÀÁ¢Íê³ÉË¼ÏëµÄÊéĞ´¡£ºÍ²½ÖèµÄÎÄ×ÖÃèÊö¡£
+		ç»ƒä¹ ï¼š
+		1~100ä¹‹é—´ 6çš„å€æ•°å‡ºç°çš„æ¬¡æ•°ã€‚
+		è¦æ±‚ï¼šè‡ªå·±ç‹¬ç«‹å®Œæˆæ€æƒ³çš„ä¹¦å†™ã€‚å’Œæ­¥éª¤çš„æ–‡å­—æè¿°ã€‚
 
 
 		*/
 
-//		¼ÆÊıÆ÷Ë¼Ïë
+		//		è®¡æ•°å™¨æ€æƒ³
 		int x = 1;
 		int count = 0;
-		while(x<=100)
-		{
-			if(x%6==0)
+		while (x <= 100) {
+			if (x % 6 == 0)
 				count++;
-//				System.out.println("x="+x);
+			//				System.out.println("x="+x);
 			x++;
 		}
 
-		System.out.println("count="+count);
+		System.out.println("count=" + count);
 	}
 }

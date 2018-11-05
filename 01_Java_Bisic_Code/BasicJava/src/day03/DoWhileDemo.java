@@ -1,34 +1,29 @@
 package day03;
 
-class DoWhileDemo
-{
-	public static void main(String[] args)
-	{
+public class DoWhileDemo {
+	public static void main(String[] args) {
 
 		/*
 		do
 		{
-			ִ����䣻
-		}while(�������ʽ);
+			执行语句；
+		}while(条件表达式);
 
 		*/
 		int x = 1;
-		do
-		{
-			System.out.println("x="+x);
+		do {
+			System.out.println("x=" + x);
 			x++;
-		}
-		while (x<1);
+		} while (x < 1);
 
 		/*
-		do while�����ص㣺���������Ƿ����㣬ѭ��������ִ��һ�Ρ�
+		do while语句的特点：无论条件是否满足，循环体至少执行一次。
 
 		*/
 
 		int y = 1;
-		while(y<1)
-		{
-			System.out.println("y="+y);
+		while (y < 1) {
+			System.out.println("y=" + y);
 			y++;
 		}
 	}

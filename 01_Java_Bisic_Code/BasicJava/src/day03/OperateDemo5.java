@@ -1,24 +1,24 @@
-class OperateDemo5 
-{
-	public static void main(String[] args) 
-	{
+package day03;
 
-		int x = 0,y;
+class OperateDemo5 {
+	public static void main(String[] args) {
 
-		y = (x>1)?100:200;
-		System.out.println("y="+y);
+		int x = 0, y;
 
-		//»ñÈ¡Á½¸öÕûÊýÖÐµÄ½Ï´óµÄÕûÊý¡£
+		y = (x > 1) ? 100 : 200;
+		System.out.println("y=" + y);
 
-		int a,b;
-		int max = a>b?a:b;
+		int a = 1;
+		int b = 2;
+		//èŽ·å–ä¸¤ä¸ªæ•´æ•°ä¸­çš„è¾ƒå¤§çš„æ•´æ•°ã€‚
+		int max = a > b ? a : b;
 
-		//»ñÈ¡Èý¸öÕûÊýÖÐµÄ½Ï´óµÄÕûÊý¡£
-
-		int o,p,q;
-
-		int temp = o>p?o:p;
-		int max2 = temp>q?temp:q;
+		int o = 2;
+		int p = 3;
+		int q = 4;
+		//èŽ·å–ä¸‰ä¸ªæ•´æ•°ä¸­çš„è¾ƒå¤§çš„æ•´æ•°ã€‚
+		int temp = o > p ? o : p;
+		int max2 = temp > q ? temp : q;
 
 	}
 }

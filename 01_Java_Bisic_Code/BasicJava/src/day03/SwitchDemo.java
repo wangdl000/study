@@ -1,65 +1,63 @@
-class SwitchDemo 
-{
-	public static void main(String[] args) 
-	{
+package day03;
+
+class SwitchDemo {
+	public static void main(String[] args) {
 
 		/*
-		switch(±í´ïÊ½)
+		switch(è¡¨è¾¾å¼)
 		{
-			case È¡Öµ1:
-				Ö´ĞĞÓï¾ä£»
-				break£»
-			case È¡Öµ2:
-				Ö´ĞĞÓï¾ä£»
-				break£»
-			¡­...
+			case å–å€¼1:
+				æ‰§è¡Œè¯­å¥ï¼›
+				breakï¼›
+			case å–å€¼2:
+				æ‰§è¡Œè¯­å¥ï¼›
+				breakï¼›
+			â€¦...
 			default:
-				Ö´ĞĞÓï¾ä£»
-				break£»
+				æ‰§è¡Œè¯­å¥ï¼›
+				breakï¼›
 		}
 
 		*/
 
 		int x = 2;
-		switch(x)//byte,short,int,char.
+		switch (x)//byte,short,int,char.
 		{
-			default:
-				System.out.println("d");
-				//break;
-			case 4:
-				System.out.println("a");
-				//break;
-			case 1:
-				System.out.println("b");
-				break;
-			case 3:
-				System.out.println("c");
-				break;
-			
+		default:
+			System.out.println("d");
+			//break;
+		case 4:
+			System.out.println("a");
+			//break;
+		case 1:
+			System.out.println("b");
+			break;
+		case 3:
+			System.out.println("c");
+			break;
+
 		}
 
-		int a = 4,b =2;
+		int a = 4, b = 2;
 		char opr = '%';
 
-		switch(opr)
-		{
-			case '+':
-				System.out.println(a+b);
-				break;
-			case '-':
-				System.out.println(a-b);
-				break;
-			case '*':
-				System.out.println(a*b);
-				break;
-			case '/':
-				System.out.println(a/b);
-				break;
-			default:
-				System.out.println("ÎŞ·¨ÔËËã,·ûºÅ²»Ö§³Ö");
-				break;
+		switch (opr) {
+		case '+':
+			System.out.println(a + b);
+			break;
+		case '-':
+			System.out.println(a - b);
+			break;
+		case '*':
+			System.out.println(a * b);
+			break;
+		case '/':
+			System.out.println(a / b);
+			break;
+		default:
+			System.out.println("æ— æ³•è¿ç®—,ç¬¦å·ä¸æ”¯æŒ");
+			break;
 		}
-
 
 	}
 }

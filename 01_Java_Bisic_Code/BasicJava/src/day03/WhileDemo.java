@@ -1,23 +1,21 @@
-class  WhileDemo
-{
-	public static void main(String[] args) 
-	{
+package day03;
+
+class WhileDemo {
+	public static void main(String[] args) {
 
 		/*
-		while(Ìõ¼ş±í´ïÊ½)
+		while(æ¡ä»¶è¡¨è¾¾å¼)
 		{
-			Ö´ĞĞÓï¾ä£»
+			æ‰§è¡Œè¯­å¥ï¼›
 		}
 
 		*/
 		int x = 1;
-		while(x<3);
-		{
-			System.out.println("x="+x);
+		while (x < 3) {
+			System.out.println("x=" + x);
 
 			x++;
 		}
 
-		
 	}
 }

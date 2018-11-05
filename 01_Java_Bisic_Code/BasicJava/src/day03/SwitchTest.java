@@ -1,58 +1,55 @@
-class SwitchTest 
-{
-	public static void main(String[] args) 
-	{
+package day03;
 
-		
+class SwitchTest {
+	public static void main(String[] args) {
+
 		/*
-		ÓÃ»§ÊäÈëµÄÊı¾İ¶ÔÓ¦µÄ³öĞÇÆÚ¡£
+		ç”¨æˆ·è¾“å…¥çš„æ•°æ®å¯¹åº”çš„å‡ºæ˜ŸæœŸã€‚
 		*/
 		int week = 1;
-		switch(week)
-		{
-			default:
-				break;
-			case 1:
-				System.out.println(week+"¶ÔÓ¦µÄÊÇĞÇÆÚÒ»");
-				break;
-			case 2:
-				System.out.println(week+"¶ÔÓ¦µÄÊÇĞÇÆÚ¶ş");
-				//break;
-				//...ÒÔ´ËÀàÍÆ¡£ 
+		switch (week) {
+		default:
+			break;
+		case 1:
+			System.out.println(week + "å¯¹åº”çš„æ˜¯æ˜ŸæœŸä¸€");
+			break;
+		case 2:
+			System.out.println(week + "å¯¹åº”çš„æ˜¯æ˜ŸæœŸäºŒ");
+			//break;
+			//...ä»¥æ­¤ç±»æ¨ã€‚
 		}
 
 		/*
-		¼¾½ÚµÄÊ¾Àı¡£ 
+		å­£èŠ‚çš„ç¤ºä¾‹ã€‚
 		*/
 		int month = 13;
 
-		switch(month)
-		{
-			case 3:
-			case 4:
-			case 5:
-				System.out.println(month+"ÔÂ¶ÔÓ¦µÄÊÇ´º¼¾");
-				break;
-			case 6:
-			case 7:
-			case 8:
-				System.out.println(month+"ÔÂ¶ÔÓ¦µÄÊÇÏÄ¼¾");
-				break;
-			case 9:
-			case 10:
-			case 11:
-				System.out.println(month+"ÔÂ¶ÔÓ¦µÄÊÇÇï¼¾");
-				break;
-			case 12:
-			case 1:
-			case 2:
-				System.out.println(month+"ÔÂ¶ÔÓ¦µÄÊÇ¶¬¼¾");
-				break;
-			default:
-				System.out.println(month+"ÔÂÃ»ÓĞ¶ÔÓ¦µÄ¼¾½Ú");
-				//break;
+		switch (month) {
+		case 3:
+		case 4:
+		case 5:
+			System.out.println(month + "æœˆå¯¹åº”çš„æ˜¯æ˜¥å­£");
+			break;
+		case 6:
+		case 7:
+		case 8:
+			System.out.println(month + "æœˆå¯¹åº”çš„æ˜¯å¤å­£");
+			break;
+		case 9:
+		case 10:
+		case 11:
+			System.out.println(month + "æœˆå¯¹åº”çš„æ˜¯ç§‹å­£");
+			break;
+		case 12:
+		case 1:
+		case 2:
+			System.out.println(month + "æœˆå¯¹åº”çš„æ˜¯å†¬å­£");
+			break;
+		default:
+			System.out.println(month + "æœˆæ²¡æœ‰å¯¹åº”çš„å­£èŠ‚");
+			//break;
 		}
 
-//		System.out.println("Hello World!");
+		//		System.out.println("Hello World!");
 	}
 }

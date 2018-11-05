@@ -1,30 +1,28 @@
-class IfDemo 
-{
-	public static void main(String[] args) 
-	{
-//		System.out.println("Hello World!1");
-//		System.out.println("Hello World!2");
-//		System.out.println("Hello World!3");
-//		System.out.println("Hello World!4");
+package day03;
+
+class IfDemo {
+	public static void main(String[] args) {
+		//		System.out.println("Hello World!1");
+		//		System.out.println("Hello World!2");
+		//		System.out.println("Hello World!3");
+		//		System.out.println("Hello World!4");
 
 		/*
-		ifÓï¾äµÄµÚÒ»ÖÖ¸ñÊ½£º
-		1£¬
-		if(Ìõ¼þ±í´ïÊ½)
+		ifè¯­å¥çš„ç¬¬ä¸€ç§æ ¼å¼ï¼š
+		1ï¼Œ
+		if(æ¡ä»¶è¡¨è¾¾å¼)
 		{
-			Ö´ÐÐÓï¾ä£»
+			æ‰§è¡Œè¯­å¥ï¼›
 		}
 		*/
 
 		int x = 1;
-		if(x>1)
-		{
-		
-			if(x<2)	
-			{
-			
-				System.out.println("yes");	
-				
+		if (x > 1) {
+
+			if (x < 2) {
+
+				System.out.println("yes");
+
 			}
 		}
 		System.out.println("over");

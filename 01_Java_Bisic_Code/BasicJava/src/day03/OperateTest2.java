@@ -1,10 +1,10 @@
-class OperateTest2 
-{
-	public static void main(String[] args) 
-	{
+package day03;
+
+class OperateTest2 {
+	public static void main(String[] args) {
 
 		/*
-		¶ÔÒ»¸öÕûÊıµÄ×îºóÒ»¸ö×Ö½Ú£¬¸ßËÄÎ»ºÍµÍËÄÎ»½øĞĞ»»Î»¡£
+		å¯¹ä¸€ä¸ªæ•´æ•°çš„æœ€åä¸€ä¸ªå­—èŠ‚ï¼Œé«˜å››ä½å’Œä½å››ä½è¿›è¡Œæ¢ä½ã€‚
 
 		int num = 0101-1100 & 255;
 		1100-0101
@@ -15,16 +15,13 @@ class OperateTest2
 
 		*/
 		int num = 61;
-		
-		int n1 = num & 15;//µÍËÄÎ»
-		int n2 = num & (15<<4);//¸ßËÄÎ»
 
+		int n1 = num & 15;//ä½å››ä½
+		int n2 = num & (15 << 4);//é«˜å››ä½
 
-		int n = n1<<4 | n2>>>4;
+		int n = n1 << 4 | n2 >>> 4;
 
-
-		System.out.println("n="+n);
-		
+		System.out.println("n=" + n);
 
 	}
 }

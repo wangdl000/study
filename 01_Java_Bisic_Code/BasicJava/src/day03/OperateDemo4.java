@@ -1,13 +1,13 @@
-class OperateDemo4 
-{
-	public static void main(String[] args) 
-	{
+package day03;
 
-//		System.out.println(6&3);
-//		System.out.println(6|3);
-//		System.out.println(~6);
+class OperateDemo4 {
+	public static void main(String[] args) {
 
-		System.out.println(3<<2);//3×óÒÆÁ½Î»¡£
+		//		System.out.println(6&3);
+		//		System.out.println(6|3);
+		//		System.out.println(~6);
+
+		System.out.println(3 << 2);//3ï¾—î‹…ï¾†ï¾ï½½ï¾Žï½»ï½¡ï½£
 
 	}
 }
