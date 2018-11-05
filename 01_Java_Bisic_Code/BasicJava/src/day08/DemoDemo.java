@@ -1,17 +1,15 @@
-class Demo
-{
+package day08;
+
+class Demo {
 	static Demo d = new Demo();
 
-	Demo()
-	{
-		
+	Demo() {
+
 	}
 }
 
-class  DemoDemo
-{
-	public static void main(String[] args) 
-	{		
+class DemoDemo {
+	public static void main(String[] args) {
 		new Demo();//StackOverflowError
 	}
 }

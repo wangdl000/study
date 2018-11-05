@@ -1,10 +1,10 @@
-class ForForTest 
-{
-	public static void main(String[] args) 
-	{
+package day04;
+
+class ForForTest {
+	public static void main(String[] args) {
 
 		/*
-		
+
 		*****
 		****
 		***
@@ -39,19 +39,12 @@ class ForForTest
 			z++;
 		}
 		*/
-		for(int x=1; x<=5; x++)
-		{
-			for(int y=x; y<=5; y++)
-			{
+		for (int x = 1; x <= 5; x++) {
+			for (int y = x; y <= 5; y++) {
 				System.out.print("*");
 			}
 			System.out.println();
 		}
-
-
-
-
-
 
 		/*
 
@@ -62,16 +55,12 @@ class ForForTest
 		*****
 		*/
 		System.out.println("----------");
-		for (int x=1; x<=5 ;x++ )
-		{
-			for (int y=1;y<=x ;y++ )
-			{
+		for (int x = 1; x <= 5; x++) {
+			for (int y = 1; y <= x; y++) {
 				System.out.print("*");
 			}
 			System.out.println();
 		}
-
-
 
 		System.out.println("----------");
 		/*
@@ -84,15 +73,12 @@ class ForForTest
 
 
 		*/
-		for (int x=1; x<=5; x++ )
-		{
-			for (int y=5; y>=x ;y-- )
-			{
+		for (int x = 1; x <= 5; x++) {
+			for (int y = 5; y >= x; y--) {
 				System.out.print(y);
 			}
 			System.out.println();
 		}
-
 
 		System.out.println("----------");
 		/*
@@ -101,13 +87,11 @@ class ForForTest
 		333
 		4444
 		55555
-		
+
 		*/
 
-		for (int x=1; x<=5 ; x++)
-		{
-			for (int y=1;y<=x ;y++ )
-			{
+		for (int x = 1; x <= 5; x++) {
+			for (int y = 1; y <= x; y++) {
 				System.out.print(x);
 			}
 			System.out.println();

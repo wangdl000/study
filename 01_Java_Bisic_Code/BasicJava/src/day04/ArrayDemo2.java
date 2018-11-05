@@ -1,16 +1,18 @@
-class ArrayDemo2 
+package day04;
+
+class ArrayDemo2
 {
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 		int[] arr = new int[3];
 //		System.out.println(arr[3]);//ArrayIndexOutOfBoundsException:
-		//µ±·ÃÎÊµ½Êı×éÖĞ²»´æÔÚµÄ½Ç±êÊ±£¬¾Í»á·¢Éú¸ÃÒì³£¡£
+		//å½“è®¿é—®åˆ°æ•°ç»„ä¸­ä¸å­˜åœ¨çš„è§’æ ‡æ—¶ï¼Œå°±ä¼šå‘ç”Ÿè¯¥å¼‚å¸¸ã€‚
 
 //		arr = null;
 //		System.out.println(arr[0]);//NullPointerException
-//		µ±ÒıÓÃĞÍ±äÁ¿Ã»ÓĞÈÎºÎÊµÌåÖ¸ÏòÊ±£¬»¹ÔÚÓÃÆä²Ù×÷ÊµÌå¡£¾Í»á·¢Éú¸ÃÒì³£¡£ 
+//		å½“å¼•ç”¨å‹å˜é‡æ²¡æœ‰ä»»ä½•å®ä½“æŒ‡å‘æ—¶ï¼Œè¿˜åœ¨ç”¨å…¶æ“ä½œå®ä½“ã€‚å°±ä¼šå‘ç”Ÿè¯¥å¼‚å¸¸ã€‚
 
 //		System.out.println(arr);//  [I@c17164
-		
+
 	}
 }

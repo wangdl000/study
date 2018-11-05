@@ -1,93 +1,86 @@
+package day08;
 
 /**
-½¨Á¢Ò»¸öÓÃÓÚ²Ù×÷Êı×éµÄ¹¤¾ßÀà£¬ÆäÖĞ°üº¬×Å³£¼ûµÄ¶ÔÊı×é²Ù×÷µÄº¯ÊıÈç£º×îÖµ£¬ÅÅĞòµÈ ¡£
-@author ÕÅÈı
+å»ºç«‹ä¸€ä¸ªç”¨äºæ“ä½œæ•°ç»„çš„å·¥å…·ç±»ï¼Œå…¶ä¸­åŒ…å«ç€å¸¸è§çš„å¯¹æ•°ç»„æ“ä½œçš„å‡½æ•°å¦‚ï¼šæœ€å€¼ï¼Œæ’åºç­‰ ã€‚
+@author å¼ ä¸‰
 @version V1.0
 */
 
-public class ArrayTool
-{
-	private ArrayTool(){}//¸ÃÀàÖĞµÄ·½·¨¶¼ÊÇ¾²Ì¬µÄ£¬ËùÒÔ¸ÃÀàÊÇ²»ĞèÒªµÄ´´½¨¶ÔÏóµÄ¡£ÎªÁË±£Ö¤²»ÈÃÆäËû³É´´½¨¸ÃÀà¶ÔÏó
-						//¿ÉÒÔ½«¹¹Ôìº¯ÊıË½ÓĞ»¯¡£
+public class ArrayTool {
+	private ArrayTool() {
+	}
+	//è¯¥ç±»ä¸­çš„æ–¹æ³•éƒ½æ˜¯é™æ€çš„ï¼Œæ‰€ä»¥è¯¥ç±»æ˜¯ä¸éœ€è¦çš„åˆ›å»ºå¯¹è±¡çš„ã€‚ä¸ºäº†ä¿è¯ä¸è®©å…¶ä»–æˆåˆ›å»ºè¯¥ç±»å¯¹è±¡
+	//å¯ä»¥å°†æ„é€ å‡½æ•°ç§æœ‰åŒ–ã€‚
 
 	/**
-	»ñÈ¡ÕûĞÍÊı×éµÄ×î´óÖµ¡£
-	@param arr ½ÓÊÕÒ»¸öÔªËØÎªintÀàĞÍµÄÊı×é¡£
-	@return ¸ÃÊı×éµÄ×î´óµÄÔªËØÖµ
+	è·å–æ•´å‹æ•°ç»„çš„æœ€å¤§å€¼ã€‚
+	@param arr æ¥æ”¶ä¸€ä¸ªå…ƒç´ ä¸ºintç±»å‹çš„æ•°ç»„ã€‚
+	@return è¯¥æ•°ç»„çš„æœ€å¤§çš„å…ƒç´ å€¼
 	*/
-	public static int getMax(int[] arr)
-	{
+	public static int getMax(int[] arr) {
 		int maxIndex = 0;
-		for(int x=1; x<arr.length; x++)
-		{
-			if(arr[x]>arr[maxIndex])
-					maxIndex = x;//
+		for (int x = 1; x < arr.length; x++) {
+			if (arr[x] > arr[maxIndex])
+				maxIndex = x;//
 		}
 
 		return arr[maxIndex];
 	}
+
 	/**
-	¶ÔÊı×é½øĞĞÑ¡ÔñÅÅĞò¡£
-	@param arr ½ÓÊÕÒ»¸öÔªËØÎªintÀàĞÍµÄÊı×é¡£
-	
+	å¯¹æ•°ç»„è¿›è¡Œé€‰æ‹©æ’åºã€‚
+	@param arr æ¥æ”¶ä¸€ä¸ªå…ƒç´ ä¸ºintç±»å‹çš„æ•°ç»„ã€‚
+
 	*/
-	public static void selectSort(int[] arr)
-	{
-		for(int x=0; x<arr.length-1; x++)
-		{
-			for(int y=x+1; y<arr.length; y++)
-			{
-				if(arr[x]>arr[y])
-					swap(arr,x,y);
+	public static void selectSort(int[] arr) {
+		for (int x = 0; x < arr.length - 1; x++) {
+			for (int y = x + 1; y < arr.length; y++) {
+				if (arr[x] > arr[y])
+					swap(arr, x, y);
 			}
 		}
 	}
 
 	/*
-	ÓÃÓÚ¸øÊı×é½øĞĞÔªËØµÄÎ»ÖÃÖÃ»»¡£
-	@param arr ½ÓÊÕÒ»¸öÔªËØÎªintÀàĞÍµÄÊı×é¡£
+	ç”¨äºç»™æ•°ç»„è¿›è¡Œå…ƒç´ çš„ä½ç½®ç½®æ¢ã€‚
+	@param arr æ¥æ”¶ä¸€ä¸ªå…ƒç´ ä¸ºintç±»å‹çš„æ•°ç»„ã€‚
 	@param a
 	@param b
-	
+
 	*/
-	private static void swap(int[] arr,int a,int b)
-	{
+	private static void swap(int[] arr, int a, int b) {
 		int temp = arr[a];
 		arr[a] = arr[b];
 		arr[b] = temp;
 	}
-	
+
 	/**
-	»ñÈ¡Ö¸¶¨µÄÔªËØÔÚÖ¸¶¨Êı×éÖĞµÄË÷Òı.
-	@param arr ½ÓÊÕÒ»¸öÔªËØÎªintÀàĞÍµÄÊı×é¡£
-	@param key ÒªÕÒµÄÔªËØ¡£
-	@return ·µ»Ø¸ÃÔªËØµÚÒ»´Î³öÏÖµÄÎ»ÖÃ£¬Èç¹û²»´æÔÚ·µ»Ø-1.
+	è·å–æŒ‡å®šçš„å…ƒç´ åœ¨æŒ‡å®šæ•°ç»„ä¸­çš„ç´¢å¼•.
+	@param arr æ¥æ”¶ä¸€ä¸ªå…ƒç´ ä¸ºintç±»å‹çš„æ•°ç»„ã€‚
+	@param key è¦æ‰¾çš„å…ƒç´ ã€‚
+	@return è¿”å›è¯¥å…ƒç´ ç¬¬ä¸€æ¬¡å‡ºç°çš„ä½ç½®ï¼Œå¦‚æœä¸å­˜åœ¨è¿”å›-1.
 	*/
-	public static int getIndex(int[] arr,int key)
-	{
-		for(int x=0; x<arr.length; x++)
-		{
-			if(arr[x]==key)
+	public static int getIndex(int[] arr, int key) {
+		for (int x = 0; x < arr.length; x++) {
+			if (arr[x] == key)
 				return x;
 		}
 		return -1;
 	}
 
 	/**
-	½«intÊı×é×ª»»³É×Ö·û´®¡£¸ñÊ½ÊÇ£º[e1,e2,...]
-	@param arr ½ÓÊÕÒ»¸öÔªËØÎªintÀàĞÍµÄÊı×é¡£
-	@return ·µ»Ø¸ÃÊı×éµÄ×Ö·û´®±íÏÖĞÎÊ½¡£ 
+	å°†intæ•°ç»„è½¬æ¢æˆå­—ç¬¦ä¸²ã€‚æ ¼å¼æ˜¯ï¼š[e1,e2,...]
+	@param arr æ¥æ”¶ä¸€ä¸ªå…ƒç´ ä¸ºintç±»å‹çš„æ•°ç»„ã€‚
+	@return è¿”å›è¯¥æ•°ç»„çš„å­—ç¬¦ä¸²è¡¨ç°å½¢å¼ã€‚
 	*/
-	public static String arrayToString(int[] arr)
-	{
+	public static String arrayToString(int[] arr) {
 		String str = "[";
 
-		for(int x=0; x<arr.length; x++)
-		{
-			if(x!=arr.length-1)
-				str = str + arr[x]+", ";
+		for (int x = 0; x < arr.length; x++) {
+			if (x != arr.length - 1)
+				str = str + arr[x] + ", ";
 			else
-				str = str + arr[x]+"]";
+				str = str + arr[x] + "]";
 		}
 		return str;
 	}

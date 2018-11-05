@@ -1,34 +1,36 @@
+package day07;
 
-class Person
+
+class Person3
 {
 	private String name;
 	private int age;
 	static String country = "CN";
-	public Person(String name,int age)
+	public Person3(String name,int age)
 	{
 		this.name = name;
 		this.age = age;
 	}
-	
+
 	public void show()
 	{
-		System.out.println(Person.country+":"+this.name+":"+this.age);
+		System.out.println(Person3.country+":"+this.name+":"+this.age);
 	}
 
 	public static void method()
 	{
-		System.out.println(Person.country);
+		System.out.println(Person3.country);
 	}
 }
 
-class StaticDemo2 
+class StaticDemo2
 {
 	public static void main(String[] args) throws Exception
 	{
 		Thread.sleep(5000);
-		Person.method();
+		Person3.method();
 
-		Person p = new Person("java",20);
+		Person3 p = new Person3("java",20);
 		p.show();
 	}
 }

@@ -1,59 +1,54 @@
-class ArrayTest3 
-{
-	public static void main(String[] args) 
-	{
-//		toHex(26);
+package day05;
+
+class ArrayTest3 {
+	public static void main(String[] args) {
+		//		toHex(26);
 		toBinary(-6);
-//		toOctal(26);
+		//		toOctal(26);
 		System.out.println(Integer.toBinaryString(-6));
 	}
 
-	//Ê®½øÖÆ-->Ê®Áù½øÖÆ¡£
-	public static void toHex(int num)
-	{
-		trans(num,15,4);
-	}
-	//Ê®½øÖÆ-->¶þ½øÖÆ¡£
-	public static void toBinary(int num)
-	{
-		trans(num,1,1);
-	}
-	//Ê®½øÖÆ-->°Ë½øÖÆ¡£
-	public static void toOctal(int num)
-	{
-		trans(num,7,3);
+	//åè¿›åˆ¶-->åå…­è¿›åˆ¶ã€‚
+	public static void toHex(int num) {
+		trans(num, 15, 4);
 	}
 
-	public static void trans(int num,int base,int offset)
-	{
+	//åè¿›åˆ¶-->äºŒè¿›åˆ¶ã€‚
+	public static void toBinary(int num) {
+		trans(num, 1, 1);
+	}
 
-		if(num==0)
-		{
+	//åè¿›åˆ¶-->å…«è¿›åˆ¶ã€‚
+	public static void toOctal(int num) {
+		trans(num, 7, 3);
+	}
+
+	public static void trans(int num, int base, int offset) {
+
+		if (num == 0) {
 			System.out.println("0");
-			return ;
+			return;
 		}
-		//¶¨ÒåÒ»¸ö¶ÔÓ¦¹ØÏµ±í¡£
-		char[] chs = {'0','1','2','3',
-						'4','5','6','7',
-						'8','9','A','B',
-						'C','D','E','F'};
+		//å®šä¹‰ä¸€ä¸ªå¯¹åº”å…³ç³»è¡¨ã€‚
+		char[] chs = { '0', '1', '2', '3',
+				'4', '5', '6', '7',
+				'8', '9', 'A', 'B',
+				'C', 'D', 'E', 'F' };
 		/*
-		Ò»»á²é±í»á²éµ½±È½ÏµÄÊý¾Ý¡£
-		Êý¾ÝÒ»¶à£¬¾ÍÏÈ´æ´¢ÆðÀ´£¬ÔÚ½øÐÐ²Ù×÷¡£
-		ËùÒÔ¶¨ÒåÒ»¸öÊý×é¡£ ÁÙÊ±ÈÝÆ÷¡£
+		ä¸€ä¼šæŸ¥è¡¨ä¼šæŸ¥åˆ°æ¯”è¾ƒçš„æ•°æ®ã€‚
+		æ•°æ®ä¸€å¤šï¼Œå°±å…ˆå­˜å‚¨èµ·æ¥ï¼Œåœ¨è¿›è¡Œæ“ä½œã€‚
+		æ‰€ä»¥å®šä¹‰ä¸€ä¸ªæ•°ç»„ã€‚ ä¸´æ—¶å®¹å™¨ã€‚
 		*/
 		char[] arr = new char[32];
 		int pos = arr.length;
 
-		while(num!=0)
-		{
+		while (num != 0) {
 			int temp = num & base;
 			arr[--pos] = chs[temp];
-			num  = num >>> offset;
+			num = num >>> offset;
 		}
 
-		for(int x=pos ;x<arr.length; x++)
-		{
+		for (int x = pos; x < arr.length; x++) {
 			System.out.print(arr[x]);
 		}
 		System.out.println();

@@ -1,100 +1,91 @@
+package day07;
 
 /*
 
-¾²Ì¬´úÂë¿é¡£
-Ëæ×ÅÀàµÄ¼ÓÔØ¶øÖ´ĞĞ¡£¶øÇÒÖ»Ö´ĞĞÒ»´Î¡£
+é™æ€ä»£ç å—ã€‚
+éšç€ç±»çš„åŠ è½½è€Œæ‰§è¡Œã€‚è€Œä¸”åªæ‰§è¡Œä¸€æ¬¡ã€‚
 
-×÷ÓÃ£º
-	ÓÃÓÚ¸øÀà½øĞĞ³õÊ¼»¯¡£
+ä½œç”¨ï¼š
+	ç”¨äºç»™ç±»è¿›è¡Œåˆå§‹åŒ–ã€‚
 
 
 
 */
-class StaticCode
-{
-	static int num ;
-	static 
-	{
+class StaticCode {
+	static int num;
+	static {
 		num = 10;
-//		num *=3;
+		//		num *=3;
 		System.out.println("hahahah");
 	}
-	StaticCode(){}
 
-	static void show()
-	{
+	StaticCode() {
+	}
+
+	static void show() {
 		System.out.println(num);
 	}
 }
 
-class Person
-{
+class Person1 {
 	private String name;
-	
-	
 
-	{//¹¹Ôì´úÂë¿é¡£¿ÉÒÔ¸øËùÓĞ¶ÔÏó½øĞĞ³õÊ¼»¯µÄ¡£
+	{
+		//æ„é€ ä»£ç å—ã€‚å¯ä»¥ç»™æ‰€æœ‰å¯¹è±¡è¿›è¡Œåˆå§‹åŒ–çš„ã€‚
 
 		System.out.println("constructor code ");
-//		cry();
+		//		cry();
 	}
-	
-	static 
-	{
+
+	static {
 		System.out.println("static code");
 	}
-	
-	Person()//ÊÇ¸ø¶ÔÓ¦µÄ¶ÔÏó½øĞĞÕë¶ÔĞÔµÄ³õÊ¼»¯¡£ 
-	{
+
+	//æ˜¯ç»™å¯¹åº”çš„å¯¹è±¡è¿›è¡Œé’ˆå¯¹æ€§çš„åˆå§‹åŒ–ã€‚
+	Person1() {
 		name = "baby";
-//		cry();
-	}
-	Person(String name)
-	{
-		this.name  = name;
-//		cry();
-	}
-	public void cry()
-	{
-		System.out.println("ÍÛÍÛ");
-		
+		//		cry();
 	}
 
-	public void speak()
-	{
-		System.out.println("name:"+name);
+	Person1(String name) {
+		this.name = name;
+		//		cry();
 	}
 
-	static void show()
-	{
+	public void cry() {
+		System.out.println("å“‡å“‡");
+
+	}
+
+	public void speak() {
+		System.out.println("name:" + name);
+	}
+
+	static void show() {
 		System.out.println("show run");
 	}
 }
 
-
-class StaticCodeDemo 
-{
-	static
-	{
-//		System.out.println("a");
+class StaticCodeDemo {
+	static {
+		//		System.out.println("a");
 	}
-	public static void main(String[] args) 
-	{
 
-//		Person p = null;
-//		p.speak();
+	public static void main(String[] args) {
 
-//		Person.show();
-//		Person p1 = new Person();
-//		p1.speak();
-//		Person p2 = new Person("Íú²Æ");
-//		p2.speak();
-//		new Person();
-		
+		//		Person p = null;
+		//		p.speak();
 
-//		new StaticCode().show();
-//		new StaticCode().show();
-//		StaticCode.show();
-//		System.out.println("b");
+		//		Person.show();
+		//		Person p1 = new Person();
+		//		p1.speak();
+		//		Person p2 = new Person("æ—ºè´¢");
+		//		p2.speak();
+		//		new Person();
+
+		//		new StaticCode().show();
+		//		new StaticCode().show();
+		//		StaticCode.show();
+		//		System.out.println("b");
 	}
 }

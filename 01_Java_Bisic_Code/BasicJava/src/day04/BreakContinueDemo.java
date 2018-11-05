@@ -1,23 +1,25 @@
-class BreakContinueDemo 
+package day04;
+
+class BreakContinueDemo
 {
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 
 		/*
-		break:Ìø³ö¡£
-		break×÷ÓÃµÄ·¶Î§£ºÒªÃ´ÊÇswitchÓï¾ä£¬ÒªÃ´ÊÇÑ­»·Óï¾ä¡£
-		¼Ç×¡£ºµ±breakÓï¾äµ¥¶À´æÔÚÊ±£¬ÏÂÃæ²»Òª¶¨ÒåÆäËûÓï¾ä£¬ÒòÎªÖ´ĞĞ²»µ½¡£
-			breakÌø³öËùÔÚµÄµ±Ç°Ñ­»·¡£
-			Èç¹û³öÏÖÁËÑ­»·Ç¶Ì×£¬breakÏëÒªÌø³öÖ¸¶¨µÄÑ­»·£¬¿ÉÒÔÍ¨¹ı±êºÅÀ´Íê³É¡£
+		break:è·³å‡ºã€‚
+		breakä½œç”¨çš„èŒƒå›´ï¼šè¦ä¹ˆæ˜¯switchè¯­å¥ï¼Œè¦ä¹ˆæ˜¯å¾ªç¯è¯­å¥ã€‚
+		è®°ä½ï¼šå½“breakè¯­å¥å•ç‹¬å­˜åœ¨æ—¶ï¼Œä¸‹é¢ä¸è¦å®šä¹‰å…¶ä»–è¯­å¥ï¼Œå› ä¸ºæ‰§è¡Œä¸åˆ°ã€‚
+			breakè·³å‡ºæ‰€åœ¨çš„å½“å‰å¾ªç¯ã€‚
+			å¦‚æœå‡ºç°äº†å¾ªç¯åµŒå¥—ï¼Œbreakæƒ³è¦è·³å‡ºæŒ‡å®šçš„å¾ªç¯ï¼Œå¯ä»¥é€šè¿‡æ ‡å·æ¥å®Œæˆã€‚
 
-		
+
 		for(int x=0; x<3; x++)
 		{
 			if(x==1)
 				break;
 			System.out.println("x="+x);
 		}
-		
+
 
 		xiaoqiang:for (int x=0; x<3 ;x++ )
 		{
@@ -26,18 +28,18 @@ class BreakContinueDemo
 				System.out.println("x="+x);
 				break xiaoqiang;
 			}
-			
+
 		}*/
 
 		/*
-		continue:¼ÌĞø¡£
-		×÷ÓÃµÄ·¶Î§£ºÑ­»·½á¹¹¡£
-		continue£º½áÊø±¾´ÎÑ­»·£¬¼ÌĞøÏÂ´ÎÑ­»·¡£
-		Èç¹ûcontinueµ¥¶À´æÔÚÊ±£¬ÏÂÃæ²»ÒªÓĞÈÎºÎÓï¾ä£¬ÒòÎªÖ´ĞĞ²»µ½¡£
+		continue:ç»§ç»­ã€‚
+		ä½œç”¨çš„èŒƒå›´ï¼šå¾ªç¯ç»“æ„ã€‚
+		continueï¼šç»“æŸæœ¬æ¬¡å¾ªç¯ï¼Œç»§ç»­ä¸‹æ¬¡å¾ªç¯ã€‚
+		å¦‚æœcontinueå•ç‹¬å­˜åœ¨æ—¶ï¼Œä¸‹é¢ä¸è¦æœ‰ä»»ä½•è¯­å¥ï¼Œå› ä¸ºæ‰§è¡Œä¸åˆ°ã€‚
 
 
 
-		
+
 
 		for (int x=0; x<11 ;x++ )
 		{
@@ -53,8 +55,8 @@ class BreakContinueDemo
 				System.out.println("x="+x);
 				continue xiaoqiang;
 			}
-			
+
 		}
-	
+
 	}
 }

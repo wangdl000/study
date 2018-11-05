@@ -1,8 +1,8 @@
-class  ForForDemo
-{
-	public static void main(String[] args) 
-	{
-		//´óÈ¦Ì×Ğ¡È¦Ë¼Ïë¡£
+package day04;
+
+class ForForDemo {
+	public static void main(String[] args) {
+		//å¤§åœˆå¥—å°åœˆæ€æƒ³ã€‚
 		/*
 		for(int x=0; x<3; x++)
 		{
@@ -14,23 +14,21 @@ class  ForForDemo
 		*/
 
 		/*
-		
+
 		*****
 		*****
 		*****
 		*****
-		
+
 		*/
-		for(int x=0; x<4; x++)//ÍâÑ­»·¿ØÖÆµÄÊÇĞĞÊı
+		for (int x = 0; x < 4; x++)//å¤–å¾ªç¯æ§åˆ¶çš„æ˜¯è¡Œæ•°
 		{
-			for(int y=0; y<5; y++)//ÄÚÑ­»·¿ØÖÆµÄÊÇÃ¿Ò»ĞĞµÄ¸öÊı 
+			for (int y = 0; y < 5; y++)//å†…å¾ªç¯æ§åˆ¶çš„æ˜¯æ¯ä¸€è¡Œçš„ä¸ªæ•°
 			{
 				System.out.print("*");
 			}
 			System.out.println();
 		}
-	
-		
-		
+
 	}
 }

@@ -1,44 +1,34 @@
+package day08;
 
-//³ÉÔ±º¯Êı¡£
+//æˆå‘˜å‡½æ•°ã€‚
 /*
-µ±×Ó¸¸ÀàÖĞ³öÏÖ³ÉÔ±º¯ÊıÒ»Ä£Ò»ÑùµÄÇé¿ö£¬»áÔËĞĞ×ÓÀàµÄº¯Êı¡£
-ÕâÖÖÏÖÏó£¬³ÆÎª¸²¸Ç²Ù×÷¡£ÕâÊ±º¯ÊıÔÚ×Ó¸¸ÀàÖĞµÄÌØĞÔ¡£
-º¯ÊıÁ½¸öÌØĞÔ£º
-	1£¬ÖØÔØ¡£Í¬Ò»¸öÀàÖĞ¡£overload
-	2£¬¸²¸Ç¡£×ÓÀàÖĞ¡£¸²¸ÇÒ²³ÆÎªÖØĞ´£¬¸²Ğ´¡£override
-	
-¸²¸Ç×¢ÒâÊÂÏî£º
-1£¬×ÓÀà·½·¨¸²¸Ç¸¸Àà·½·¨Ê±£¬×ÓÀàÈ¨ÏŞ±ØĞëÒª´óÓÚµÈÓÚ¸¸ÀàµÄÈ¨ÏŞ¡£ 
-2£¬¾²Ì¬Ö»ÄÜ¸²¸Ç¾²Ì¬£¬»ò±»¾²Ì¬¸²¸Ç¡£
+å½“å­çˆ¶ç±»ä¸­å‡ºç°æˆå‘˜å‡½æ•°ä¸€æ¨¡ä¸€æ ·çš„æƒ…å†µï¼Œä¼šè¿è¡Œå­ç±»çš„å‡½æ•°ã€‚
+è¿™ç§ç°è±¡ï¼Œç§°ä¸ºè¦†ç›–æ“ä½œã€‚è¿™æ—¶å‡½æ•°åœ¨å­çˆ¶ç±»ä¸­çš„ç‰¹æ€§ã€‚
+å‡½æ•°ä¸¤ä¸ªç‰¹æ€§ï¼š
+	1ï¼Œé‡è½½ã€‚åŒä¸€ä¸ªç±»ä¸­ã€‚overload
+	2ï¼Œè¦†ç›–ã€‚å­ç±»ä¸­ã€‚è¦†ç›–ä¹Ÿç§°ä¸ºé‡å†™ï¼Œè¦†å†™ã€‚override
 
-
-
-
-
+è¦†ç›–æ³¨æ„äº‹é¡¹ï¼š
+1ï¼Œå­ç±»æ–¹æ³•è¦†ç›–çˆ¶ç±»æ–¹æ³•æ—¶ï¼Œå­ç±»æƒé™å¿…é¡»è¦å¤§äºç­‰äºçˆ¶ç±»çš„æƒé™ã€‚
+2ï¼Œé™æ€åªèƒ½è¦†ç›–é™æ€ï¼Œæˆ–è¢«é™æ€è¦†ç›–ã€‚
 
 */
-class Fu
-{
-	public static  void show()
-	{
+class Parent {
+	public static void show() {
 		System.out.println("fu show run");
 	}
 }
 
-class  Zi extends Fu
-{
-	public static void show()
-	{
+class Sun extends Fu {
+	public static void show() {
 		System.out.println("Zi show run");
 	}
 }
 
-class ExtendsDemo3 
-{
-	public static void main(String[] args) 
-	{
-//		Zi z = new Zi();
-//		z.show();
+class ExtendsDemo3 {
+	public static void main(String[] args) {
+		//		Zi z = new Zi();
+		//		z.show();
 		NewPhone p = new NewPhone();
 		p.show();
 		p.call();
@@ -46,39 +36,25 @@ class ExtendsDemo3
 }
 
 /*
-Ê²Ã´Ê±ºòÊ¹ÓÃ¸²¸Ç²Ù×÷?
+ä»€ä¹ˆæ—¶å€™ä½¿ç”¨è¦†ç›–æ“ä½œ?
 
-µ±¶ÔÒ»¸öÀà½øĞĞ×ÓÀàµÄÀ©Õ¹Ê±£¬×ÓÀàĞèÒª±£Áô¸¸ÀàµÄ¹¦ÄÜÉùÃ÷£¬
-µ«ÊÇÒª¶¨Òå×ÓÀàÖĞ¸Ã¹¦ÄÜµÄÌØÓĞÄÚÈİÊ±£¬¾ÍÊ¹ÓÃ¸²¸Ç²Ù×÷Íê³É.
+å½“å¯¹ä¸€ä¸ªç±»è¿›è¡Œå­ç±»çš„æ‰©å±•æ—¶ï¼Œå­ç±»éœ€è¦ä¿ç•™çˆ¶ç±»çš„åŠŸèƒ½å£°æ˜ï¼Œ
+ä½†æ˜¯è¦å®šä¹‰å­ç±»ä¸­è¯¥åŠŸèƒ½çš„ç‰¹æœ‰å†…å®¹æ—¶ï¼Œå°±ä½¿ç”¨è¦†ç›–æ“ä½œå®Œæˆ.
 
 */
-class honeP
-{
-	void call()
-	{}
-	void show()
-	{		
+class Phone {
+	void call() {
+	}
+
+	void show() {
 		System.out.println("number");
 	}
 }
 
-class NewPhone extends Phone
-{
-	void show()
-	{
+class NewPhone extends Phone {
+	void show() {
 		System.out.println("name");
 		System.out.println("pic");
 		super.show();
 	}
 }
-
-
-
-
-
-
-
-
-
-
-

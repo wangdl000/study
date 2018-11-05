@@ -1,24 +1,23 @@
-class ArrayTest4 
-{
-	public static void main(String[] args) 
-	{
+package day05;
+
+public class ArrayTest4 {
+	public static void main(String[] args) {
 		String week = getWeek(71);
 		System.out.println(week);
 	}
+
 	/*
-	Ê¹ÓÃ²é±í·¨¡£
-	ĞÇÆÚ¡£
+	ä½¿ç”¨æŸ¥è¡¨æ³•ã€‚
+	æ˜ŸæœŸã€‚
 	String s = "abc";
 	int x = 4;
 	*/
-	public static String getWeek(int num)
-	{
+	public static String getWeek(int num) {
 
-		if(num>7 || num<1)
-		{
-			return "´íÎóµÄĞÇÆÚ";
+		if (num > 7 || num < 1) {
+			return "é”™è¯¯çš„æ˜ŸæœŸ";
 		}
-		String[] weeks = {"","ĞÇÆÚÒ»","ĞÇÆÚ¶ş","ĞÇÆÚÈı","ĞÇÆÚËÄ","ĞÇÆÚÎå","ĞÇÆÚÁù","ĞÇÆÚÈÕ"};
+		String[] weeks = { "", "æ˜ŸæœŸä¸€", "æ˜ŸæœŸäºŒ", "æ˜ŸæœŸä¸‰", "æ˜ŸæœŸå››", "æ˜ŸæœŸäº”", "æ˜ŸæœŸå…­", "æ˜ŸæœŸæ—¥" };
 
 		return weeks[num];
 	}

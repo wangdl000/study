@@ -1,23 +1,19 @@
-class ArrayToolDemo 
-{
+package day08;
+
+class ArrayToolDemo {
 	/*
-	±£Ö¤³ÌĞòµÄ¶ÀÁ¢ÔËĞĞ¡£
+	ä¿è¯ç¨‹åºçš„ç‹¬ç«‹è¿è¡Œã€‚
 	*/
-	public static void main(String[] args) 
-	{
-		int[] arr = {4,8,2,9,72,6};
+	public static void main(String[] args) {
+		int[] arr = { 4, 8, 2, 9, 72, 6 };
 
-//		ArrayTool tool = new ArrayTool();
+		//		ArrayTool tool = new ArrayTool();
 
+		//		int max= ArrayT8ool.getMax(arr);
+		//		System.out.println("max="+max);
 
-//		int max= ArrayT8ool.getMax(arr);
-//		System.out.println("max="+max);
-
-
-		int index = ArrayTool.getIndex(arr,8);
-		System.out.println("index="+index);
+		int index = ArrayTool.getIndex(arr, 8);
+		System.out.println("index=" + index);
 	}
-
-	
 
 }

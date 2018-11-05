@@ -1,12 +1,12 @@
-class FunctionDemo2 
-{
-	public static void main2(String[] args) 
-	{		
+package day04;
 
-//		myPrint();
-		int x = add(3,5);//½ÊÈâ»ú
-		System.out.println("x="+x);
-//		System.out.println(add(3,5));
+public class FunctionDemo2 {
+	public static void main2(String[] args) {
+
+		//		myPrint();
+		int x = add(3, 5);//ç»žè‚‰æœº
+		System.out.println("x=" + x);
+		//		System.out.println(add(3,5));
 	}
 	/*
 	public static void add(int a,int b)
@@ -16,16 +16,12 @@ class FunctionDemo2
 	}
 	*/
 
-	
-	public static int add(int a,int b)
-	{
-		return a+b;
+	public static int add(int a, int b) {
+		return a + b;
 	}
 	/**/
 
-
-	public static void myPrint()
-	{
+	public static void myPrint() {
 		System.out.println("Hello World!");
 	}
 }

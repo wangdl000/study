@@ -1,33 +1,31 @@
-//»ù±¾Êı¾İÀàĞÍ²ÎÊı´«µİ
-class Demo 
-{
-	public static void main(String[] args) 
-	{
+package day06;
+
+//åŸºæœ¬æ•°æ®ç±»å‹å‚æ•°ä¼ é€’
+public class Test {
+	public static void main(String[] args) {
 
 		int x = 3;
 		show(x);
-		System.out.println("x="+x);
+		System.out.println("x=" + x);
 	}
-	public static void show(int x)
-	{
+
+	public static void show(int x) {
 		x = 4;
 	}
 }
 
-//ÒıÓÃÊı¾İÀàĞÍ²ÎÊı´«µİ
-class Demo
-{
+//å¼•ç”¨æ•°æ®ç±»å‹å‚æ•°ä¼ é€’
+class Demo {
 	int x = 3;
-	public static void main(String[] args)
-	{
+
+	public static void main(String[] args) {
 		Demo d = new Demo();
 		d.x = 9;
 		show(d);
 		System.out.println(d.x);
 	}
-	public static void show(Demo d)
-	{
+
+	public static void show(Demo d) {
 		d.x = 4;
 	}
 }
-

@@ -1,30 +1,28 @@
+package day07;
+
 /*
-public static void main(String[] args) 
+public static void main(String[] args)
 
-Ö÷º¯ÊıÌØÊâÖ®´¦£º
-1£¬¸ñÊ½ÊÇ¹Ì¶¨µÄ¡£
-2£¬±»jvmËùÊ¶±ğºÍµ÷ÓÃ¡£
+ä¸»å‡½æ•°ç‰¹æ®Šä¹‹å¤„ï¼š
+1ï¼Œæ ¼å¼æ˜¯å›ºå®šçš„ã€‚
+2ï¼Œè¢«jvmæ‰€è¯†åˆ«å’Œè°ƒç”¨ã€‚
 
-public:ÒòÎªÈ¨ÏŞ±ØĞëÊÇ×î´óµÄ¡£
-static:²»ĞèÒª¶ÔÏóµÄ,Ö±½ÓÓÃÖ÷º¯ÊıËùÊôÀàÃûµ÷ÓÃ¼´¿É¡£
-void£ºÖ÷º¯ÊıÃ»ÓĞ¾ßÌåµÄ·µ»ØÖµ¡£
-main:º¯ÊıÃû£¬²»ÊÇ¹Ø¼ü×Ö£¬Ö»ÊÇÒ»¸öjvmÊ¶±ğµÄ¹Ì¶¨µÄÃû×Ö¡£
-String[] args:ÕâÊÇÖ÷º¯ÊıµÄ²ÎÊıÁĞ±í£¬ÊÇÒ»¸öÊı×éÀàĞÍµÄ²ÎÊı£¬¶øÇÒÔªËØ¶¼ÊÇ×Ö·û´®ÀàĞÍ¡£
+public:å› ä¸ºæƒé™å¿…é¡»æ˜¯æœ€å¤§çš„ã€‚
+static:ä¸éœ€è¦å¯¹è±¡çš„,ç›´æ¥ç”¨ä¸»å‡½æ•°æ‰€å±ç±»åè°ƒç”¨å³å¯ã€‚
+voidï¼šä¸»å‡½æ•°æ²¡æœ‰å…·ä½“çš„è¿”å›å€¼ã€‚
+main:å‡½æ•°åï¼Œä¸æ˜¯å…³é”®å­—ï¼Œåªæ˜¯ä¸€ä¸ªjvmè¯†åˆ«çš„å›ºå®šçš„åå­—ã€‚
+String[] args:è¿™æ˜¯ä¸»å‡½æ•°çš„å‚æ•°åˆ—è¡¨ï¼Œæ˜¯ä¸€ä¸ªæ•°ç»„ç±»å‹çš„å‚æ•°ï¼Œè€Œä¸”å…ƒç´ éƒ½æ˜¯å­—ç¬¦ä¸²ç±»å‹ã€‚
 
 */
 
-class MainDemo 
-{
+class MainDemo {
 	public static void main(String[] args) //new String[0]
 	{
 		/**/
-//		System.out.println(args);//[Ljava.lang.String;@c17164
+		//		System.out.println(args);//[Ljava.lang.String;@c17164
 		System.out.println(args.length);
-		for(int x=0; x<args.length; x++)
+		for (int x = 0; x < args.length; x++)
 			System.out.println(args[x]);
-		
+
 	}
 }
-
-
-

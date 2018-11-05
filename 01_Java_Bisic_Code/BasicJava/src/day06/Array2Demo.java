@@ -1,54 +1,46 @@
+package day06;
+
 /*
-¶şÎ¬Êı×é¶¨ÒåµÄ¸ñÊ½¡£
+äºŒç»´æ•°ç»„å®šä¹‰çš„æ ¼å¼ã€‚
 */
 
+class Array2Demo {
+	public static void main(String[] args) {
 
-class  Array2Demo
-{
-	public static void main(String[] args) 
-	{
+		//		int[] arr = new int[3];
+		//		System.out.println(arr);//[I@1fb8ee3  @å·¦è¾¹æ˜¯å®ä½“çš„ç±»å‹ã€‚ @å³è¾¹æ˜¯å®ä½“çš„å“ˆå¸Œå€¼ã€‚
 
-//		int[] arr = new int[3];  
-//		System.out.println(arr);//[I@1fb8ee3  @×ó±ßÊÇÊµÌåµÄÀàĞÍ¡£ @ÓÒ±ßÊÇÊµÌåµÄ¹şÏ£Öµ¡£
+		//		int[][] arr = new int[3][2];//åˆ›å»ºä¸€ä¸ªäºŒç»´æ•°ç»„ï¼Œè¯¥æ•°ç»„ä¸­æœ‰3ä¸ªä¸€ç»´æ•°ç»„ï¼Œæ¯ä¸€ä¸ªä¸€ç»´æ•°ç»„ä¸­æœ‰2ä¸ªå…ƒç´ ã€‚
+		//		System.out.println(arr);//ç›´æ¥æ‰“å°äºŒç»´æ•°ç»„ã€‚   [[I@c17164
+		//		System.out.println(arr[0]);//ç›´æ¥æ‰“å°äºŒç»´æ•°ç»„ä¸­çš„è§’æ ‡0çš„ä¸€ç»´æ•°ç»„ã€‚ [I@1fb8ee3
+		//		System.out.println(arr[0][0]);//ç›´æ¥æ‰“å°äºŒç»´æ•°ç»„ä¸­çš„è§’æ ‡0çš„ä¸€ç»´æ•°ç»„ä¸­è§’æ ‡ä¸º0çš„å…ƒç´ ã€‚ 0
 
-//		int[][] arr = new int[3][2];//´´½¨Ò»¸ö¶şÎ¬Êı×é£¬¸ÃÊı×éÖĞÓĞ3¸öÒ»Î¬Êı×é£¬Ã¿Ò»¸öÒ»Î¬Êı×éÖĞÓĞ2¸öÔªËØ¡£
-//		System.out.println(arr);//Ö±½Ó´òÓ¡¶şÎ¬Êı×é¡£   [[I@c17164
-//		System.out.println(arr[0]);//Ö±½Ó´òÓ¡¶şÎ¬Êı×éÖĞµÄ½Ç±ê0µÄÒ»Î¬Êı×é¡£ [I@1fb8ee3
-//		System.out.println(arr[0][0]);//Ö±½Ó´òÓ¡¶şÎ¬Êı×éÖĞµÄ½Ç±ê0µÄÒ»Î¬Êı×éÖĞ½Ç±êÎª0µÄÔªËØ¡£ 0
+		//		int[][] arr = new int[3][];
+		//		System.out.println(arr);//ç›´æ¥æ‰“å°äºŒç»´æ•°ç»„ã€‚   [[I@c17164
+		//		System.out.println(arr[0]);//ç›´æ¥æ‰“å°äºŒç»´æ•°ç»„ä¸­çš„è§’æ ‡0çš„ä¸€ç»´æ•°ç»„ã€‚null
+		//		System.out.println(arr[0][0]);//ç›´æ¥æ‰“å°äºŒç»´æ•°ç»„ä¸­çš„è§’æ ‡0çš„ä¸€ç»´æ•°ç»„ä¸­è§’æ ‡ä¸º0çš„å…ƒç´ ã€‚ NullPointerException
 
-
-
-//		int[][] arr = new int[3][];
-//		System.out.println(arr);//Ö±½Ó´òÓ¡¶şÎ¬Êı×é¡£   [[I@c17164
-//		System.out.println(arr[0]);//Ö±½Ó´òÓ¡¶şÎ¬Êı×éÖĞµÄ½Ç±ê0µÄÒ»Î¬Êı×é¡£null
-//		System.out.println(arr[0][0]);//Ö±½Ó´òÓ¡¶şÎ¬Êı×éÖĞµÄ½Ç±ê0µÄÒ»Î¬Êı×éÖĞ½Ç±êÎª0µÄÔªËØ¡£ NullPointerException
-
-
-	
-//		int[][] arr = new int[3][2];
-//		System.out.println(arr.length);//´òÓ¡¶şÎ¬Êı×éµÄ³¤¶È¡£ÆäÊµ¾ÍÊÇÒ»Î¬Êı×éµÄ¸öÊı¡£
-//		System.out.println(arr[1].length);//´òÓ¡¶şÎ¬Êı×éÖĞ½Ç±êÎª1Ò»Î¬Êı×éµÄ³¤¶È¡£
+		//		int[][] arr = new int[3][2];
+		//		System.out.println(arr.length);//æ‰“å°äºŒç»´æ•°ç»„çš„é•¿åº¦ã€‚å…¶å®å°±æ˜¯ä¸€ç»´æ•°ç»„çš„ä¸ªæ•°ã€‚
+		//		System.out.println(arr[1].length);//æ‰“å°äºŒç»´æ•°ç»„ä¸­è§’æ ‡ä¸º1ä¸€ç»´æ•°ç»„çš„é•¿åº¦ã€‚
 
 		int sum = 0;
-		int[][] arr = {{3,1,7},{5,8,2,9},{4,1}};
+		int[][] arr = { { 3, 1, 7 }, { 5, 8, 2, 9 }, { 4, 1 } };
 
-		for(int x=0; x<arr.length; x++)
-		{
-			for(int y=0; y<arr[x].length; y++)
-			{
-//				System.out.print(arr[x][y]+",");
+		for (int x = 0; x < arr.length; x++) {
+			for (int y = 0; y < arr[x].length; y++) {
+				//				System.out.print(arr[x][y]+",");
 				sum += arr[x][y];
-				
+
 			}
 		}
-		System.out.println("sum="+sum);
+		System.out.println("sum=" + sum);
 
+		//		ç”²ï¼š30 59 28 17
+		//		ä¹™ï¼›37 60 22 19
+		//		int[] arr = {{30,59,28,17},{37,60,22,19}};
 
-//		¼×£º30 59 28 17
-//		ÒÒ£»37 60 22 19
-//		int[] arr = {{30,59,28,17},{37,60,22,19}};
-
-		int[][][] arr = new int[3][2][4];
+		int[][][] arr1 = new int[3][2][4];
 	}
 }
 

@@ -1,69 +1,59 @@
+package day04;
 
 /*
-ĞèÇó£ºº¯ÊıµÄÖØÔØ¡£ 
+éœ€æ±‚ï¼šå‡½æ•°çš„é‡è½½ã€‚
 */
 
-class FunctionDemo4 
-{
-	public static void main(String[] args) 
-	{
-//		add(4,6,9);
-//		System.out.println("Hello World!");
+public class FunctionDemo4 {
+	public static void main(String[] args) {
+		//		add(4,6,9);
+		//		System.out.println("Hello World!");
 		printCFB(7);
 	}
 
 	/*
-	º¯ÊıµÄÖØÔØ¡£
+	å‡½æ•°çš„é‡è½½ã€‚
 
-	1£¬Í¬Ò»¸öÀà£¬
-	2£¬Í¬Ãû¡£
-	3£¬²ÎÊı¸öÊı²»Í¬¡£or ²ÎÊıÀàĞÍ²»Í¬¡£
-	4£¬º¯ÊıÖØÔØºÍ·µ»ØÖµÀàĞÍÎŞ¹Ø¡£
-	5£¬javaÊÇÑÏ½÷ĞÔÓïÑÔ£¬Èç¹ûº¯Êı³öÏÖµÄµ÷ÓÃµÄ²»È·¶¨ĞÔ£¬»á±àÒëÊ§°Ü¡£
+	1ï¼ŒåŒä¸€ä¸ªç±»ï¼Œ
+	2ï¼ŒåŒåã€‚
+	3ï¼Œå‚æ•°ä¸ªæ•°ä¸åŒã€‚or å‚æ•°ç±»å‹ä¸åŒã€‚
+	4ï¼Œå‡½æ•°é‡è½½å’Œè¿”å›å€¼ç±»å‹æ— å…³ã€‚
+	5ï¼Œjavaæ˜¯ä¸¥è°¨æ€§è¯­è¨€ï¼Œå¦‚æœå‡½æ•°å‡ºç°çš„è°ƒç”¨çš„ä¸ç¡®å®šæ€§ï¼Œä¼šç¼–è¯‘å¤±è´¥ã€‚
 
 
 	*/
 
-	//¼Ó·¨ÔËËã¡£Á½¸öÕûÊıµÄºÍ¡£
-	public static int add(int a,int b)
-	{
-		return a+b;
-	}
-	
-
-	//¼Ó·¨ÔËËã¡£Á½¸öĞ¡ÊıµÄºÍ¡£
-	public static double add(double a,double b)
-	{
-		return a+b;
+	//åŠ æ³•è¿ç®—ã€‚ä¸¤ä¸ªæ•´æ•°çš„å’Œã€‚
+	public static int add(int a, int b) {
+		return a + b;
 	}
 
-	//¼Ó·¨ÔËËã£¬Èı¸öÕûÊıµÄºÍ¡£ 
-	public static int add(int a,int b,int c)
-	{
-		return add(a,b)+c;
+	//åŠ æ³•è¿ç®—ã€‚ä¸¤ä¸ªå°æ•°çš„å’Œã€‚
+	public static double add(double a, double b) {
+		return a + b;
 	}
 
+	//åŠ æ³•è¿ç®—ï¼Œä¸‰ä¸ªæ•´æ•°çš„å’Œã€‚
+	public static int add(int a, int b, int c) {
+		return add(a, b) + c;
+	}
 
 	/*
-	´òÓ¡³Ë·¨±í¡£
+	æ‰“å°ä¹˜æ³•è¡¨ã€‚
 	*/
-	public static void printCFB(int num)
-	{
-		for(int x=1; x<=num; x++)
-		{
-			for(int y=1; y<=x; y++)
-			{
-				System.out.print(y+"*"+x+"="+y*x+"\t");
+	public static void printCFB(int num) {
+		for (int x = 1; x <= num; x++) {
+			for (int y = 1; y <= x; y++) {
+				System.out.print(y + "*" + x + "=" + y * x + "\t");
 			}
 			System.out.println();
 		}
 	}
 
 	/*
-	´òÓ¡±ê×¼³Ë·¨±í¡£
+	æ‰“å°æ ‡å‡†ä¹˜æ³•è¡¨ã€‚
 	*/
-	public static void printCFB()
-	{
+	public static void printCFB() {
 		printCFB(9);
 	}
 

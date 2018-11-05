@@ -1,70 +1,66 @@
-
+package day07;
 
 /*
-µ±³ÉÔ±±äÁ¿ºÍ¾Ö²¿±äÁ¿ÖØÃû£¬¿ÉÒÔÓÃ¹Ø¼ü×ÖthisÀ´Çø·Ö¡£
+å½“æˆå‘˜å˜é‡å’Œå±€éƒ¨å˜é‡é‡åï¼Œå¯ä»¥ç”¨å…³é”®å­—thisæ¥åŒºåˆ†ã€‚
 
-this : ´ú±í¶ÔÏó¡£´ú±íÄÄ¸ö¶ÔÏóÄØ£¿µ±Ç°¶ÔÏó¡£
-	   this¾ÍÊÇËùÔÚº¯ÊıËùÊô¶ÔÏóµÄÒıÓÃ¡£
-	   ¼òµ¥Ëµ£ºÄÄ¸ö¶ÔÏóµ÷ÓÃÁËthisËùÔÚµÄº¯Êı£¬this¾Í´ú±íÄÄ¸ö¶ÔÏó¡£
+this : ä»£è¡¨å¯¹è±¡ã€‚ä»£è¡¨å“ªä¸ªå¯¹è±¡å‘¢ï¼Ÿå½“å‰å¯¹è±¡ã€‚
+	   thiså°±æ˜¯æ‰€åœ¨å‡½æ•°æ‰€å±å¯¹è±¡çš„å¼•ç”¨ã€‚
+	   ç®€å•è¯´ï¼šå“ªä¸ªå¯¹è±¡è°ƒç”¨äº†thisæ‰€åœ¨çš„å‡½æ•°ï¼Œthiså°±ä»£è¡¨å“ªä¸ªå¯¹è±¡ã€‚
 
-thisÒ²¿ÉÒÔÓÃÓÚÔÚ¹¹Ôìº¯ÊıÖĞµ÷ÓÃÆäËû¹¹Ôìº¯Êı¡£
-×¢Òâ£ºÖ»ÄÜ¶¨ÒåÔÚ¹¹Ôìº¯ÊıµÄµÚÒ»ĞĞ¡£ÒòÎª³õÊ¼»¯¶¯×÷ÒªÏÈÖ´ĞĞ¡£
+thisä¹Ÿå¯ä»¥ç”¨äºåœ¨æ„é€ å‡½æ•°ä¸­è°ƒç”¨å…¶ä»–æ„é€ å‡½æ•°ã€‚
+æ³¨æ„ï¼šåªèƒ½å®šä¹‰åœ¨æ„é€ å‡½æ•°çš„ç¬¬ä¸€è¡Œã€‚å› ä¸ºåˆå§‹åŒ–åŠ¨ä½œè¦å…ˆæ‰§è¡Œã€‚
 */
 
-class Person
-{
+class Person4 {
 	private String name;
-	private int age;	
-	Person()
-	{		
+	private int age;
+
+	Person4() {
 		name = "baby";
 		age = 1;
 		System.out.println("person run");
-	}	
-	Person(String name)	
-	{
+	}
+
+	Person4(String name) {
 		this();
 		this.name = name;
 	}
-	Person(String name,int age)
-	{
+
+	Person4(String name, int age) {
 		this.name = name;
-		this.age = age;		
+		this.age = age;
 	}
-	public void speak()
-	{
-		System.out.println(this.name+":"+this.age);
+
+	public void speak() {
+		System.out.println(this.name + ":" + this.age);
 	}
 
 	/*
-	ÅĞ¶ÏÊÇ·ñÊÇÍ¬ÁäÈË¡£
+	åˆ¤æ–­æ˜¯å¦æ˜¯åŒé¾„äººã€‚
 	*/
-	public boolean compare(Person p)
-	{
+	public boolean compare(Person4 p) {
 		/*
 		if(this.age==p.age)
 			return true;
 		else
 			return false;
 		*/
-		return this.age==p.age;
+		return this.age == p.age;
 	}
 
 }
 
-class ThisDemo 
-{
-	public static void main(String[] args) 
-	{
+class ThisDemo {
+	public static void main(String[] args) {
 
-		Person p1 = new Person("aa",30);//
-		Person p2 = new Person("zz",12);
+		Person4 p1 = new Person4("aa", 30);//
+		Person4 p2 = new Person4("zz", 12);
 
 		p2.compare(p1);
-//		new Person();
-//		Person p = new Person("Íú²Æ",30);
-//		p.speak();
-//		Person p1 = new Person("Ğ¡Ç¿");
-//		p1.speak();
+		//		new Person();
+		//		Person p = new Person("æ—ºè´¢",30);
+		//		p.speak();
+		//		Person p1 = new Person("å°å¼º");
+		//		p1.speak();
 	}
 }

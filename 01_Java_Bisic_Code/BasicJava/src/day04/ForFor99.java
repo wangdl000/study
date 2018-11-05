@@ -1,38 +1,35 @@
-class ForFor99 
-{
-	public static void main(String[] args) 
-	{
+package day04;
+
+class ForFor99 {
+	public static void main(String[] args) {
 
 		/*
-		æ≈æ≈≥À∑®±Ì
+		‰πù‰πù‰πòÊ≥ïË°®
 		1*1=1
 		1*2=2 2*2=4
 		1*3=3 2*3=6 3*3=9
-		
+
 		*/
 
-		for (int x=1; x<=9 ;x++ )
-		{
-			for (int y=1; y<=x ;y++ )
-			{
-				System.out.print(y+"*"+x+"="+y*x+"\t");
+		for (int x = 1; x <= 9; x++) {
+			for (int y = 1; y <= x; y++) {
+				System.out.print(y + "*" + x + "=" + y * x + "\t");
 			}
 			System.out.println();
 		}
 
-
 		/*
-		\n:ªÿ≥µ£∫
-		\t:÷∆±Ì∑˚°£
-		\b:ÕÀ∏Ò°£
-		\r: ∞¥œ¬ªÿ≥µº¸°£
+		\n:ÂõûËΩ¶Ôºö
+		\t:Âà∂Ë°®Á¨¶„ÄÇ
+		\b:ÈÄÄÊ†º„ÄÇ
+		\r: Êåâ‰∏ãÂõûËΩ¶ÈîÆ„ÄÇ
 
-		windowsœµÕ≥÷–ªÿ≥µ∑˚∆‰ µ «”…¡Ω∏ˆ∑˚∫≈◊È≥…µƒ \r\n.
-		linux÷–ªÿ≥µ∑˚ « \n.
+		windowsÁ≥ªÁªü‰∏≠ÂõûËΩ¶Á¨¶ÂÖ∂ÂÆûÊòØÁî±‰∏§‰∏™Á¨¶Âè∑ÁªÑÊàêÁöÑ \r\n.
+		linux‰∏≠ÂõûËΩ¶Á¨¶ÊòØ \n.
 
-			
+
 		System.out.println("\\hello world\\");
 		*/
-	
+
 	}
 }

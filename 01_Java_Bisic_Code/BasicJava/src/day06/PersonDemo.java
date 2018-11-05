@@ -1,63 +1,61 @@
+package day06;
 
 /*
-ÈË£º
-ÊôÐÔ£º
-	ÄêÁä¡£
+äººï¼š
+å±žæ€§ï¼š
+	å¹´é¾„ã€‚
 
-ÐÐÎª£º
-	Ëµ»°¡£
+è¡Œä¸ºï¼š
+	è¯´è¯ã€‚
 
 */
 
 /*
-private:Ë½ÓÐ£¬ÊÇÒ»¸öÈ¨ÏÞÐÞÊÎ·û¡£ÓÃÓÚÐÞÊÎ³ÉÔ±¡£
-		Ë½ÓÐµÄÄÚÈÝÖ»ÔÚ±¾ÀàÖÐÓÐÐ§¡£
+private:ç§æœ‰ï¼Œæ˜¯ä¸€ä¸ªæƒé™ä¿®é¥°ç¬¦ã€‚ç”¨äºŽä¿®é¥°æˆå‘˜ã€‚
+		ç§æœ‰çš„å†…å®¹åªåœ¨æœ¬ç±»ä¸­æœ‰æ•ˆã€‚
 
-×¢Òâ£ºË½ÓÐ½ö½öÊÇ·â×°µÄÒ»ÖÖÌåÏÖ¶øÒÑ¡£
+æ³¨æ„ï¼šç§æœ‰ä»…ä»…æ˜¯å°è£…çš„ä¸€ç§ä½“çŽ°è€Œå·²ã€‚
 
 
 */
-class Person
-{
-	private /*Ë½ÓÐ*/int age;
+class Person {
+	private /*ç§æœ‰*/int age;
 
 	public void setAge(int a)//setXxx getXxx
 	{
 		age = a;
 	}
-	public int getAge()
-	{
+
+	public int getAge() {
 		return age;
 	}
-	/*
-	public void haha(int a)
-	{
-		if(a>0 && a<130)
-		{
+
+	//	/*
+	public void haha(int a) {
+		if (a > 0 && a < 130) {
 			age = a;
 			speak();
-		}
-		else
-			System.out.println("´íÎóµÄÊý¾Ý");
+		} else
+			System.out.println("é”™è¯¯çš„æ•°æ®");
 	}
-	*/
-	void speak()
-	{
-		System.out.println("age="+age);
+
+	//	*/
+	void speak() {
+		System.out.println("age=" + age);
 	}
 }
 
-class  PersonDemo
-{
-	public static void main(String[] args) 
-	{
+class PersonDemo {
+	public static void main(String[] args) {
 		Person p = new Person();
-//		p.age = -20;
+		//		p.age = -20;
 		p.haha(-20);
-//		p.speak();
+		//		p.speak();
 	}
 
-	public static void selectSort(int[] arr){}
+	public static void selectSort(int[] arr) {
+	}
 
-	private static void swap(int[] arr,int a,int b){}
+	private static void swap(int[] arr, int a, int b) {
+	}
 }

@@ -1,70 +1,67 @@
+package day08;
 
 /*
-Éè¼ÆÄ£Ê½£º¶ÔÎÊÌâĞĞÖ®ÓĞĞ§µÄ½â¾ö·½Ê½¡£ÆäÊµËüÊÇÒ»ÖÖË¼Ïë¡£
+è®¾è®¡æ¨¡å¼ï¼šå¯¹é—®é¢˜è¡Œä¹‹æœ‰æ•ˆçš„è§£å†³æ–¹å¼ã€‚å…¶å®å®ƒæ˜¯ä¸€ç§æ€æƒ³ã€‚
 
-1,µ¥ÀıÉè¼ÆÄ£Ê½¡£
-	½â¾öµÄÎÊÌâ£º¾ÍÊÇ¿ÉÒÔ±£Ö¤Ò»¸öÀàÔÚÄÚ´æÖĞµÄ¶ÔÏóÎ¨Ò»ĞÔ¡£
+1,å•ä¾‹è®¾è®¡æ¨¡å¼ã€‚
+	è§£å†³çš„é—®é¢˜ï¼šå°±æ˜¯å¯ä»¥ä¿è¯ä¸€ä¸ªç±»åœ¨å†…å­˜ä¸­çš„å¯¹è±¡å”¯ä¸€æ€§ã€‚
 
-±ØĞë¶ÔÓÚ¶à¸ö³ÌĞòÊ¹ÓÃÍ¬Ò»¸öÅäÖÃĞÅÏ¢¶ÔÏóÊ±£¬¾ÍĞèÒª±£Ö¤¸Ã¶ÔÏóµÄÎ¨Ò»ĞÔ¡£
+å¿…é¡»å¯¹äºå¤šä¸ªç¨‹åºä½¿ç”¨åŒä¸€ä¸ªé…ç½®ä¿¡æ¯å¯¹è±¡æ—¶ï¼Œå°±éœ€è¦ä¿è¯è¯¥å¯¹è±¡çš„å”¯ä¸€æ€§ã€‚
 
-ÈçºÎ±£Ö¤¶ÔÏóÎ¨Ò»ĞÔÄØ£¿
-1£¬²»ÔÊĞíÆäËû³ÌĞòÓÃnew´´½¨¸ÃÀà¶ÔÏó¡£
-2£¬ÔÚ¸ÃÀà´´½¨Ò»¸ö±¾ÀàÊµÀı¡£
-3£¬¶ÔÍâÌá¹©Ò»¸ö·½·¨ÈÃÆäËû³ÌĞò¿ÉÒÔ»ñÈ¡¸Ã¶ÔÏó¡£
+å¦‚ä½•ä¿è¯å¯¹è±¡å”¯ä¸€æ€§å‘¢ï¼Ÿ
+1ï¼Œä¸å…è®¸å…¶ä»–ç¨‹åºç”¨newåˆ›å»ºè¯¥ç±»å¯¹è±¡ã€‚
+2ï¼Œåœ¨è¯¥ç±»åˆ›å»ºä¸€ä¸ªæœ¬ç±»å®ä¾‹ã€‚
+3ï¼Œå¯¹å¤–æä¾›ä¸€ä¸ªæ–¹æ³•è®©å…¶ä»–ç¨‹åºå¯ä»¥è·å–è¯¥å¯¹è±¡ã€‚
 
-²½Öè£º
-1£¬Ë½ÓĞ»¯¸ÃÀà¹¹Ôìº¯Êı¡£
-2£¬Í¨¹ınewÔÚ±¾ÀàÖĞ´´½¨Ò»¸ö±¾Àà¶ÔÏó¡£
-3£¬¶¨ÒåÒ»¸ö¹«ÓĞµÄ·½·¨£¬½«´´½¨µÄ¶ÔÏó·µ»Ø¡£
+æ­¥éª¤ï¼š
+1ï¼Œç§æœ‰åŒ–è¯¥ç±»æ„é€ å‡½æ•°ã€‚
+2ï¼Œé€šè¿‡newåœ¨æœ¬ç±»ä¸­åˆ›å»ºä¸€ä¸ªæœ¬ç±»å¯¹è±¡ã€‚
+3ï¼Œå®šä¹‰ä¸€ä¸ªå…¬æœ‰çš„æ–¹æ³•ï¼Œå°†åˆ›å»ºçš„å¯¹è±¡è¿”å›ã€‚
 
 
 
 */
 
-//¶öººÊ½
-class Single//ÀàÒ»¼ÓÔØ£¬¶ÔÏó¾ÍÒÑ¾­´æÔÚÁË¡£
+//é¥¿æ±‰å¼
+class Single//ç±»ä¸€åŠ è½½ï¼Œå¯¹è±¡å°±å·²ç»å­˜åœ¨äº†ã€‚
 {
 	private static Single s = new Single();
 
-	private Single(){}
+	private Single() {
+	}
 
-	public static Single getInstance()
-	{
+	public static Single getInstance() {
 		return s;
 	}
 }
 
-
-//ÀÁººÊ½
-class Single2//Àà¼ÓÔØ½øÀ´£¬Ã»ÓĞ¶ÔÏó£¬Ö»ÓĞµ÷ÓÃÁËgetInstance·½·¨Ê±£¬²Å»á´´½¨¶ÔÏó¡£
-			//ÑÓ³Ù¼ÓÔØĞÎÊ½¡£ 
+//æ‡’æ±‰å¼
+class Single2//ç±»åŠ è½½è¿›æ¥ï¼Œæ²¡æœ‰å¯¹è±¡ï¼Œåªæœ‰è°ƒç”¨äº†getInstanceæ–¹æ³•æ—¶ï¼Œæ‰ä¼šåˆ›å»ºå¯¹è±¡ã€‚
+				//å»¶è¿ŸåŠ è½½å½¢å¼ã€‚
 {
 	private static Single2 s = null;
 
-	private Single2(){}
+	private Single2() {
+	}
 
-	public static Single2 getInstance()
-	{
-		if(s==null)
+	public static Single2 getInstance() {
+		if (s == null)
 			s = new Single2();
 		return s;
 	}
 }
 
-
-class  SingleDemo
-{
-	public static void main(String[] args) 
-	{
+class SingleDemo {
+	public static void main(String[] args) {
 		Single s1 = Single.getInstance();
 		Single s2 = Single.getInstance();
 
-		System.out.println(s1==s2);
-		
-//		Single ss = Single.s;
+		System.out.println(s1 == s2);
 
-//		Test t1 = new Test();
-//		Test t2 = new Test();
+		//		Single ss = Single.s;
+
+		//		Test t1 = new Test();
+		//		Test t2 = new Test();
 		Test t1 = Test.getInstance();
 		Test t2 = Test.getInstance();
 		t1.setNum(10);
@@ -74,23 +71,23 @@ class  SingleDemo
 	}
 }
 
-
-class Test
-{
+class Test {
 	private int num;
 
 	private static Test t = new Test();
-	private Test(){}
-	public static Test getInstance()
-	{
+
+	private Test() {
+	}
+
+	public static Test getInstance() {
 		return t;
 	}
-	public void setNum(int num)
-	{
+
+	public void setNum(int num) {
 		this.num = num;
 	}
-	public int getNum()
-	{
+
+	public int getNum() {
 		return num;
 	}
 
