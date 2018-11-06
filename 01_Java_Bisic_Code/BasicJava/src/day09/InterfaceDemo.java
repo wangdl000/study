@@ -1,3 +1,5 @@
+package day09;
+
 /*
 abstract class AbsDemo
 {
@@ -5,146 +7,128 @@ abstract class AbsDemo
 	abstract void show2();
 }
 
-µ±Ò»¸ö³éÏóÀàÖĞµÄ·½·¨¶¼ÊÇ³éÏóµÄÊ±ºò£¬ÕâÊ±¿ÉÒÔ½«¸Ã³éÏóÀàÓÃ
-ÁíÒ»ÖÖĞÎÊ½¶¨ÒåºÍ±íÊ¾£¬¾ÍÊÇ ½Ó¿Ú interface¡£
+å½“ä¸€ä¸ªæŠ½è±¡ç±»ä¸­çš„æ–¹æ³•éƒ½æ˜¯æŠ½è±¡çš„æ—¶å€™ï¼Œè¿™æ—¶å¯ä»¥å°†è¯¥æŠ½è±¡ç±»ç”¨
+å¦ä¸€ç§å½¢å¼å®šä¹‰å’Œè¡¨ç¤ºï¼Œå°±æ˜¯ æ¥å£ interfaceã€‚
 */
 
-//¶¨Òå½Ó¿ÚÊ¹ÓÃµÄ¹Ø¼ü×Ö²»ÊÇclass£¬ÊÇinterface.
+//å®šä¹‰æ¥å£ä½¿ç”¨çš„å…³é”®å­—ä¸æ˜¯classï¼Œæ˜¯interface.
 /*
-¶ÔÓÚ½Ó¿Úµ±ÖĞ³£¼ûµÄ³ÉÔ±£º¶øÇÒÕâĞ©³ÉÔ±¶¼ÓĞ¹Ì¶¨µÄĞŞÊÎ·û¡£
-1£¬È«¾Ö³£Á¿: public  static final 
+å¯¹äºæ¥å£å½“ä¸­å¸¸è§çš„æˆå‘˜ï¼šè€Œä¸”è¿™äº›æˆå‘˜éƒ½æœ‰å›ºå®šçš„ä¿®é¥°ç¬¦ã€‚
+1ï¼Œå…¨å±€å¸¸é‡: public  static final
 
-2£¬³éÏó·½·¨¡£public abstract 
+2ï¼ŒæŠ½è±¡æ–¹æ³•ã€‚public abstract
 
-ÓÉ´ËµÃ³ö½áÂÛ£¬½Ó¿ÚÖĞµÄ³ÉÔ±¶¼ÊÇ¹«¹²µÄÈ¨ÏŞ.
+ç”±æ­¤å¾—å‡ºç»“è®ºï¼Œæ¥å£ä¸­çš„æˆå‘˜éƒ½æ˜¯å…¬å…±çš„æƒé™.
 
 
 */
-interface Demo
-{
+interface Demo6 {
 	public static final int NUM = 4;
 
 	public abstract void show1();
+
 	public abstract void show2();
 }
-//ÀàÓëÀàÖ®¼äÊÇ¼Ì³Ğ¹ØÏµ£¬ÀàÓë½Ó¿ÚÖ±½ÓÊÇÊµÏÖ¹ØÏµ¡£ 
+//ç±»ä¸ç±»ä¹‹é—´æ˜¯ç»§æ‰¿å…³ç³»ï¼Œç±»ä¸æ¥å£ç›´æ¥æ˜¯å®ç°å…³ç³»ã€‚
 /*
-½Ó¿Ú²»¿ÉÒÔÊµÀı»¯¡£
+æ¥å£ä¸å¯ä»¥å®ä¾‹åŒ–ã€‚
 
-Ö»ÄÜÓÉÊµÏÖÁË½Ó¿ÚµÄ×ÓÀà²¢¸²¸ÇÁË½Ó¿ÚÖĞËùÓĞµÄ³éÏó·½·¨ºó£¬¸Ã×ÓÀà²Å¿ÉÒÔÊµÀı»¯¡£
-·ñÔò£¬Õâ¸ö×ÓÀà¾ÍÊÇÒ»¸ö³éÏóÀà¡£
+åªèƒ½ç”±å®ç°äº†æ¥å£çš„å­ç±»å¹¶è¦†ç›–äº†æ¥å£ä¸­æ‰€æœ‰çš„æŠ½è±¡æ–¹æ³•åï¼Œè¯¥å­ç±»æ‰å¯ä»¥å®ä¾‹åŒ–ã€‚
+å¦åˆ™ï¼Œè¿™ä¸ªå­ç±»å°±æ˜¯ä¸€ä¸ªæŠ½è±¡ç±»ã€‚
 
 */
 
+class Demo6Impl implements /*å®ç°*/Demo6 {
+	public void show1() {
+	}
 
-class DemoImpl implements /*ÊµÏÖ*/Demo
-{
-	public void show1()
-	{}
+	public void show2() {
 
-	public void show2()
-	{
-	
 	}
 }
 
-
 /*
-ÔÚjavaÖĞ²»Ö±½ÓÖ§³Ö¶à¼Ì³Ğ£¬ÒòÎª»á³öÏÖµ÷ÓÃµÄ²»È·¶¨ĞÔ¡£
-ËùÒÔjava½«¶à¼Ì³Ğ»úÖÆ½øĞĞ¸ÄÁ¼£¬ÔÚjavaÖĞ±ä³ÉÁË¶àÊµÏÖ¡£
+åœ¨javaä¸­ä¸ç›´æ¥æ”¯æŒå¤šç»§æ‰¿ï¼Œå› ä¸ºä¼šå‡ºç°è°ƒç”¨çš„ä¸ç¡®å®šæ€§ã€‚
+æ‰€ä»¥javaå°†å¤šç»§æ‰¿æœºåˆ¶è¿›è¡Œæ”¹è‰¯ï¼Œåœ¨javaä¸­å˜æˆäº†å¤šå®ç°ã€‚
 
-Ò»¸öÀà¿ÉÒÔÊµÏÖ¶à¸ö½Ó¿Ú¡£ 
+ä¸€ä¸ªç±»å¯ä»¥å®ç°å¤šä¸ªæ¥å£ã€‚
 
 */
 
-interface A
-{
+interface A {
 	public void show();
 }
 
-interface Z
-{
-	public int add(int a,int b);
+interface Z {
+	public int add(int a, int b);
 }
 
-
-
-
-class Test implements A,Z//¶àÊµÏÖ
+class Test implements A, Z//å¤šå®ç°
 {
-	
-	public int add(int a,int b)
-	{
-		return a+b+3;	
+
+	public int add(int a, int b) {
+		return a + b + 3;
 	}
+
 	/**/
-	public void show(){}
-	
+	public void show() {
+	}
+
 }
 
-
-
-
-
 /*
-Ò»¸öÀàÔÚ¼Ì³ĞÁíÒ»¸öÀàµÄÍ¬Ê±£¬»¹¿ÉÒÔÊµÏÖ¶à¸ö½Ó¿Ú¡£
+ä¸€ä¸ªç±»åœ¨ç»§æ‰¿å¦ä¸€ä¸ªç±»çš„åŒæ—¶ï¼Œè¿˜å¯ä»¥å®ç°å¤šä¸ªæ¥å£ã€‚
 
 
 
 */
-class Q
-{
-	public void method()
-	{}
+class Q {
+	public void method() {
+	}
 }
 
-abstract class Test2 extends Q implements A,Z
-{
+abstract class Test2 extends Q implements A, Z {
 
 }
 /*
-½Ó¿ÚµÄ³öÏÖ±ÜÃâÁËµ¥¼Ì³ĞµÄ¾ÖÏŞĞÔ¡£
+æ¥å£çš„å‡ºç°é¿å…äº†å•ç»§æ‰¿çš„å±€é™æ€§ã€‚
 
 */
 
-
-interface CC
-{
+interface CC {
 	void show();
 }
-interface MM
-{
+
+interface MM {
 	void method();
 }
 
-interface QQ extends  CC,MM//½Ó¿ÚÓë½Ó¿ÚÖ®¼äÊÇ¼Ì³Ğ¹ØÏµ£¬¶øÇÒ½Ó¿Ú¿ÉÒÔ¶à¼Ì³Ğ¡£ 
+interface QQ extends CC, MM//æ¥å£ä¸æ¥å£ä¹‹é—´æ˜¯ç»§æ‰¿å…³ç³»ï¼Œè€Œä¸”æ¥å£å¯ä»¥å¤šç»§æ‰¿ã€‚
 {
 	void function();
 }
 
-class WW implements QQ
-{
-//¸²¸Ç3¸ö·½·¨¡£
-	public void show(){}
-	public void method(){}
-	public void function(){}
+class WW implements QQ {
+	//è¦†ç›–3ä¸ªæ–¹æ³•ã€‚
+	public void show() {
+	}
+
+	public void method() {
+	}
+
+	public void function() {
+	}
 }
 
-
-class InterfaceDemo 
-{
-	public static void main(String[] args) 
-	{
+class InterfaceDemo {
+	public static void main(String[] args) {
 
 		Test t = new Test();
 		t.show();
 
-//		DemoImpl d = new DemoImpl();	
-//		System.out.println(d.NUM);
-//		System.out.println(DemoImpl.NUM);
-//		System.out.println(Demo.NUM);
+		//		DemoImpl d = new DemoImpl();
+		//		System.out.println(d.NUM);
+		//		System.out.println(DemoImpl.NUM);
+		//		System.out.println(Demo.NUM);
 	}
 }
-
-
-

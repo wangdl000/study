@@ -1,35 +1,29 @@
-
-
-
+package day10;
 
 /*
-ÎªÊ²Ã´ÄÚ²¿ÀàÄÜÖ±½Ó·ÃÎÊÍâ²¿ÀàÖĞ³ÉÔ±ÄØ£¿
-ÄÇÊÇÒòÎªÄÚ²¿Àà³ÖÓĞÁËÍâ²¿ÀàµÄÒıÓÃ¡£  Íâ²¿ÀàÃû.this
+ä¸ºä»€ä¹ˆå†…éƒ¨ç±»èƒ½ç›´æ¥è®¿é—®å¤–éƒ¨ç±»ä¸­æˆå‘˜å‘¢ï¼Ÿ
+é‚£æ˜¯å› ä¸ºå†…éƒ¨ç±»æŒæœ‰äº†å¤–éƒ¨ç±»çš„å¼•ç”¨ã€‚  å¤–éƒ¨ç±»å.this
 
 */
-class Outer
-{
+class Outer2 {
 	int num = 3;
-	class Inner
-	{
+
+	class Inner {
 		int num = 4;
-		void show()
-		{
+
+		void show() {
 			int num = 5;
-			System.out.println(Outer.this.num);
+			System.out.println(Outer2.this.num);
 		}
 	}
-	void method()
-	{
+
+	void method() {
 		new Inner().show();
 	}
 }
 
-
-class InnerClassDemo2 
-{
-	public static void main(String[] args) 
-	{
-		new Outer().method();
+class InnerClassDemo2 {
+	public static void main(String[] args) {
+		new Outer2().method();
 	}
 }

@@ -1,58 +1,54 @@
+package day10;
+
 /*
-ÄÚ²¿Àà·ÃÎÊÌØµã£º
-1£¬ÄÚ²¿Àà¿ÉÒÔÖ±½Ó·ÃÎÊÍâ²¿ÀàÖĞµÄ³ÉÔ±¡£
-2£¬Íâ²¿ÀàÒª·ÃÎÊÄÚ²¿Àà£¬±ØĞë½¨Á¢ÄÚ²¿ÀàµÄ¶ÔÏó¡£
+å†…éƒ¨ç±»è®¿é—®ç‰¹ç‚¹ï¼š
+1ï¼Œå†…éƒ¨ç±»å¯ä»¥ç›´æ¥è®¿é—®å¤–éƒ¨ç±»ä¸­çš„æˆå‘˜ã€‚
+2ï¼Œå¤–éƒ¨ç±»è¦è®¿é—®å†…éƒ¨ç±»ï¼Œå¿…é¡»å»ºç«‹å†…éƒ¨ç±»çš„å¯¹è±¡ã€‚
 
 
-Ò»°ÑÓÃÓÚÀàµÄÉè¼Æ¡£
+ä¸€æŠŠç”¨äºç±»çš„è®¾è®¡ã€‚
 
-·ÖÎöÊÂÎïÊ±£¬·¢ÏÖ¸ÃÊÂÎïÃèÊöÖĞ»¹ÓĞÊÂÎï£¬¶øÇÒÕâ¸öÊÂÎï»¹ÔÚ·ÃÎÊ±»ÃèÊöÊÂÎïµÄÄÚÈİ¡£
-ÕâÊ±¾ÍÊÇ»¹ÓĞµÄÊÂÎï¶¨Òå³ÉÄÚ²¿ÀàÀ´ÃèÊö¡£
+åˆ†æäº‹ç‰©æ—¶ï¼Œå‘ç°è¯¥äº‹ç‰©æè¿°ä¸­è¿˜æœ‰äº‹ç‰©ï¼Œè€Œä¸”è¿™ä¸ªäº‹ç‰©è¿˜åœ¨è®¿é—®è¢«æè¿°äº‹ç‰©çš„å†…å®¹ã€‚
+è¿™æ—¶å°±æ˜¯è¿˜æœ‰çš„äº‹ç‰©å®šä¹‰æˆå†…éƒ¨ç±»æ¥æè¿°ã€‚
 
 
 
 */
-class Outer
-{
+class Outer {
 	private static int num = 31;
 
-	class Inner// ÄÚ²¿Àà¡£
+	class Inner// å†…éƒ¨ç±»ã€‚
 	{
-		void show()
-		{
-			System.out.println("show run..."+num);
+		void show() {
+			System.out.println("show run..." + num);
 		}
-		/*static void function()//Èç¹ûÄÚ²¿ÀàÖĞ¶¨ÒåÁË¾²Ì¬³ÉÔ±£¬¸ÃÄÚ²¿ÀàÒ²±ØĞëÊÇ¾²Ì¬µÄ¡£
+		/*static void function()//å¦‚æœå†…éƒ¨ç±»ä¸­å®šä¹‰äº†é™æ€æˆå‘˜ï¼Œè¯¥å†…éƒ¨ç±»ä¹Ÿå¿…é¡»æ˜¯é™æ€çš„ã€‚
 		{
 			System.out.println("function run ...."+num);
 		}
 		*/
 	}
 
-	public void method()
-	{
+	public void method() {
 		Inner in = new Inner();
 		in.show();
 	}
 }
 
+class InnerClassDemo {
+	public static void main(String[] args) {
+		//		Outer out = new Outer();
+		//		out.method();
+		//ç›´æ¥è®¿é—®å¤–éƒ¨ç±»ä¸­çš„å†…éƒ¨ç±»ä¸­çš„æˆå‘˜ã€‚
+		//		Outer.Inner in = new Outer().new Inner();
+		//		in.show();
 
-class InnerClassDemo
-{
-	public static void main(String[] args) 
-	{
-//		Outer out = new Outer();
-//		out.method();
-		//Ö±½Ó·ÃÎÊÍâ²¿ÀàÖĞµÄÄÚ²¿ÀàÖĞµÄ³ÉÔ±¡£
-//		Outer.Inner in = new Outer().new Inner();
-//		in.show();
+		//å¦‚æœå†…éƒ¨ç±»æ˜¯é™æ€çš„ã€‚ ç›¸å½“äºä¸€ä¸ªå¤–éƒ¨ç±»
+		//		Outer.Inner in = new Outer.Inner();
+		//		in.show();
 
-		//Èç¹ûÄÚ²¿ÀàÊÇ¾²Ì¬µÄ¡£ Ïàµ±ÓÚÒ»¸öÍâ²¿Àà
-//		Outer.Inner in = new Outer.Inner();
-//		in.show();
+		//å¦‚æœå†…éƒ¨ç±»æ˜¯é™æ€çš„ï¼Œæˆå‘˜æ˜¯é™æ€çš„ã€‚
+		//		Outer.Inner.function();
 
-		//Èç¹ûÄÚ²¿ÀàÊÇ¾²Ì¬µÄ£¬³ÉÔ±ÊÇ¾²Ì¬µÄ¡£
-//		Outer.Inner.function();
-		
 	}
 }

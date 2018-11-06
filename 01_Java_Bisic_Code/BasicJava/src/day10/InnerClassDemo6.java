@@ -1,29 +1,21 @@
+package day10;
 
-
-
-class Outer
-{
-	void method()
-	{
-		Object obj = new Object()
-		{
-			public void show()
-			{
+class Outer6 {
+	void method() {
+		Object obj = new Object() {
+			public void show() {
 				System.out.println("show run");
 			}
 
 		};
-		obj.show();//ÒòÎªÄäÃûÄÚ²¿ÀàÕâ¸ö×ÓÀà¶ÔÏó±»ÏòÉÏ×ªĞÍÎªÁËObjectÀàĞÍ¡£
-					//ÕâÑù¾Í²»ÄÜÔÚÊ¹ÓÃ×ÓÀàÌØÓĞµÄ·½·¨ÁË¡£
-
+		//		obj.show();//å› ä¸ºåŒ¿åå†…éƒ¨ç±»è¿™ä¸ªå­ç±»å¯¹è±¡è¢«å‘ä¸Šè½¬å‹ä¸ºäº†Objectç±»å‹ã€‚
+		//è¿™æ ·å°±ä¸èƒ½åœ¨ä½¿ç”¨å­ç±»ç‰¹æœ‰çš„æ–¹æ³•äº†ã€‚
 
 	}
 }
 
-class InnerClassDemo6 
-{
-	public static void main(String[] args) 
-	{
-		new Outer().method();
+class InnerClassDemo6 {
+	public static void main(String[] args) {
+		new Outer6().method();
 	}
 }

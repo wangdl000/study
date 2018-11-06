@@ -1,124 +1,109 @@
+package day09;
+
 /*
-¹ÍÔ±Ê¾Àı£º
-ĞèÇó£º¹«Ë¾ÖĞ³ÌĞòÔ±ÓĞĞÕÃû£¬¹¤ºÅ£¬Ğ½Ë®£¬¹¤×÷ÄÚÈİ¡£
-ÏîÄ¿¾­Àí³ıÁËÓĞĞÕÃû£¬¹¤ºÅ£¬Ğ½Ë®£¬»¹ÓĞ½±½ğ£¬¹¤×÷ÄÚÈİ¡£
-¶Ô¸ø³öĞèÇó½øĞĞÊı¾İ½¨Ä£¡£
+é›‡å‘˜ç¤ºä¾‹ï¼š
+éœ€æ±‚ï¼šå…¬å¸ä¸­ç¨‹åºå‘˜æœ‰å§“åï¼Œå·¥å·ï¼Œè–ªæ°´ï¼Œå·¥ä½œå†…å®¹ã€‚
+é¡¹ç›®ç»ç†é™¤äº†æœ‰å§“åï¼Œå·¥å·ï¼Œè–ªæ°´ï¼Œè¿˜æœ‰å¥–é‡‘ï¼Œå·¥ä½œå†…å®¹ã€‚
+å¯¹ç»™å‡ºéœ€æ±‚è¿›è¡Œæ•°æ®å»ºæ¨¡ã€‚
 
 
 
-·ÖÎö£º
-ÔÚÕâ¸öÎÊÌâÁìÓòÖĞ£¬ÏÈÕÒ³öÉæ¼°µÄ¶ÔÏó¡£
-Í¨¹ıÃû´ÊÌáÁ¶·¨¡£
-³ÌĞòÔ±£º
-	ÊôĞÔ£ºĞÕÃû£¬¹¤ºÅ£¬Ğ½Ë®¡¢
-	ĞĞÎª£º¹¤×÷¡£
-¾­Àí£º
-	ÊôĞÔ£ºĞÕÃû£¬¹¤ºÅ£¬Ğ½Ë®£¬½±½ğ¡£
-	ĞĞÎª£º¹¤×÷¡£
+åˆ†æï¼š
+åœ¨è¿™ä¸ªé—®é¢˜é¢†åŸŸä¸­ï¼Œå…ˆæ‰¾å‡ºæ¶‰åŠçš„å¯¹è±¡ã€‚
+é€šè¿‡åè¯æç‚¼æ³•ã€‚
+ç¨‹åºå‘˜ï¼š
+	å±æ€§ï¼šå§“åï¼Œå·¥å·ï¼Œè–ªæ°´ã€
+	è¡Œä¸ºï¼šå·¥ä½œã€‚
+ç»ç†ï¼š
+	å±æ€§ï¼šå§“åï¼Œå·¥å·ï¼Œè–ªæ°´ï¼Œå¥–é‡‘ã€‚
+	è¡Œä¸ºï¼šå·¥ä½œã€‚
 
 
-³ÌĞòÔ±ºÍ¾­Àí²»´æÔÚ×ÅÖ±½Ó¼Ì³Ğ¹ØÏµ£¬
+ç¨‹åºå‘˜å’Œç»ç†ä¸å­˜åœ¨ç€ç›´æ¥ç»§æ‰¿å…³ç³»ï¼Œ
 
-µ«ÊÇ³ÌĞòÔ±ºÍ¾­ÀíÈ´¾ßÓĞ¹²ĞÔÄÚÈİ¡£
-¿ÉÒÔ½øĞĞ³éÈ¡¡£ÒòÎªËûÃÇ¶¼ÊÇ¹«Ë¾µÄ¹ÍÔ± 
+ä½†æ˜¯ç¨‹åºå‘˜å’Œç»ç†å´å…·æœ‰å…±æ€§å†…å®¹ã€‚
+å¯ä»¥è¿›è¡ŒæŠ½å–ã€‚å› ä¸ºä»–ä»¬éƒ½æ˜¯å…¬å¸çš„é›‡å‘˜
 
-¿ÉÒÔ½«³ÌĞòÔ±ºÍ¾­Àí½øĞĞ³éÈ¡.½¨Á¢ÌåÏµ.
-	
+å¯ä»¥å°†ç¨‹åºå‘˜å’Œç»ç†è¿›è¡ŒæŠ½å–.å»ºç«‹ä½“ç³».
+
 */
 
-//ÃèÊö¹ÍÔ±¡£
+//æè¿°é›‡å‘˜ã€‚
 
-abstract class Employee
-{
+abstract class Employee {
 	private String name;
 	private String id;
 	private double pay;
-	Employee(String name,String id,double pay)
-	{
+
+	Employee(String name, String id, double pay) {
 		this.name = name;
 		this.id = id;
 		this.pay = pay;
 	}
 
 	public abstract void work();
-	
+
 }
 
-
-//ÃèÊö³ÌĞòÔ±¡£
-class Programmer extends Employee
-{
-	Programmer(String name,String id,double pay)
-	{
-		super(name,id,pay);
+//æè¿°ç¨‹åºå‘˜ã€‚
+class Programmer extends Employee {
+	Programmer(String name, String id, double pay) {
+		super(name, id, pay);
 	}
-	public void work()
-	{
+
+	public void work() {
 		System.out.println("code...");
 	}
 }
 
-//ÃèÊö¾­Àí¡£ 
-class Manager extends Employee
-{
+//æè¿°ç»ç†ã€‚
+class Manager extends Employee {
 	private int bonus;
-	Manager(String name,String id,double pay,int bonus)
-	{
-		super(name,id,pay);
+
+	Manager(String name, String id, double pay, int bonus) {
+		super(name, id, pay);
 		this.bonus = bonus;
 	}
-	public void work()
-	{
+
+	public void work() {
 		System.out.println("manage");
 	}
 }
 
-
-
-
-
-
-class  AbstractTest
-{
-	public static void main(String[] args) 
-	{
+class AbstractTest {
+	public static void main(String[] args) {
 		System.out.println("Hello World!");
 	}
 }
 
-
-class Person
-{
+class Person {
 	private String name;
 	private int age;
 
-	Person(String name,int age)
-	{
+	Person(String name, int age) {
 		this.name = name;
 		this.age = age;
 	}
-	public String getName()
-	{
+
+	public String getName() {
 		return name;
 	}
-	public void setName(String name)
-	{
+
+	public void setName(String name) {
 		this.name = name;
 	}
 }
-class Student extends Person
-{
-	Student(String name,int age)
-	{
-		super(name,age);
+
+class Student extends Person {
+	Student(String name, int age) {
+		super(name, age);
 	}
 
 }
-class Worker extends Person
-{
-	Worker(String name,int age)
-	{
-		super(name,age);
+
+class Worker extends Person {
+	Worker(String name, int age) {
+		super(name, age);
 	}
 
 }

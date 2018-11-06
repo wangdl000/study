@@ -1,30 +1,32 @@
+package day10;
+
 
 
 /*
-±ÏÀÏÊ¦ºÍ±ÏÀÑÒ¯µÄ¹ÊÊÂ¡£
+æ¯•è€å¸ˆå’Œæ¯•å§¥çˆ·çš„æ•…äº‹ã€‚
 */
 
-class ±ÏÀÑÒ¯
+class æ¯•å§¥çˆ·
 {
-	void ½²¿Î()
+	void è®²è¯¾()
 	{
-		System.out.println("¹ÜÀí");
+		System.out.println("ç®¡ç†");
 	}
-	void µöÓã()
+	void é’“é±¼()
 	{
-		System.out.println("µöÓã");
+		System.out.println("é’“é±¼");
 	}
 }
 
-class ±ÏÀÏÊ¦ extends ±ÏÀÑÒ¯
+class æ¯•è€å¸ˆ extends æ¯•å§¥çˆ·
 {
-	void ½²¿Î()
+	void è®²è¯¾()
 	{
 		System.out.println("Java");
 	}
-	void ¿´µçÓ°()
+	void çœ‹ç”µå½±()
 	{
-		System.out.println("¿´µçÓ°");
+		System.out.println("çœ‹ç”µå½±");
 	}
 }
 
@@ -34,18 +36,18 @@ class ±ÏÀÏÊ¦ extends ±ÏÀÑÒ¯
 
 class  DuoTaiDemo2
 {
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
-//		±ÏÀÏÊ¦ x = new ±ÏÀÏÊ¦();
-//		x.½²¿Î();
-//		x.¿´µçÓ°();
+//		æ¯•è€å¸ˆ x = new æ¯•è€å¸ˆ();
+//		x.è®²è¯¾();
+//		x.çœ‹ç”µå½±();
 
-		±ÏÀÑÒ¯ x = new ±ÏÀÏÊ¦();
-		x.½²¿Î();
-		x.µöÓã();
+		æ¯•å§¥çˆ· x = new æ¯•è€å¸ˆ();
+		x.è®²è¯¾();
+		x.é’“é±¼();
 
-		±ÏÀÏÊ¦ y = (±ÏÀÏÊ¦)x;//ClassCastException
-		y.¿´µçÓ°();
+		æ¯•è€å¸ˆ y = (æ¯•è€å¸ˆ)x;//ClassCastException
+		y.çœ‹ç”µå½±();
 
 
 

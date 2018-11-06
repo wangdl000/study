@@ -1,24 +1,24 @@
+package day10;
 
 /*
-ÄäÃûÄÚ²¿Àà¡£¾ÍÊÇÄÚ²¿ÀàµÄ¼òĞ´¸ñÊ½¡£
-	
-	±ØĞëÓĞÇ°Ìá£º
-	ÄÚ²¿Àà±ØĞë¼Ì³Ğ»òÕßÊµÏÖÒ»¸öÍâ²¿Àà»òÕß½Ó¿Ú¡£
+åŒ¿åå†…éƒ¨ç±»ã€‚å°±æ˜¯å†…éƒ¨ç±»çš„ç®€å†™æ ¼å¼ã€‚
 
-ÄäÃûÄÚ²¿Àà£ºÆäÊµ¾ÍÊÇÒ»¸öÄäÃû×ÓÀà¶ÔÏó¡£ 
+	å¿…é¡»æœ‰å‰æï¼š
+	å†…éƒ¨ç±»å¿…é¡»ç»§æ‰¿æˆ–è€…å®ç°ä¸€ä¸ªå¤–éƒ¨ç±»æˆ–è€…æ¥å£ã€‚
 
-¸ñÊ½£ºnew ¸¸Ààor½Ó¿Ú(){×ÓÀàÄÚÈİ}
+åŒ¿åå†…éƒ¨ç±»ï¼šå…¶å®å°±æ˜¯ä¸€ä¸ªåŒ¿åå­ç±»å¯¹è±¡ã€‚
+
+æ ¼å¼ï¼šnew çˆ¶ç±»oræ¥å£(){å­ç±»å†…å®¹}
 
 */
 
-abstract class Demo
-{
+abstract class Demo {
 	abstract void show();
 }
 
-class Outer
-{
+class Outer4 {
 	int num = 4;
+
 	/*
 	class Inner extends Demo
 	{
@@ -28,24 +28,19 @@ class Outer
 		}
 	}
 	*/
-	public void method()
-	{
+	public void method() {
 		//new Inner().show();
-		new Demo()//ÄäÃûÄÚ²¿Àà¡£
+		new Demo()//åŒ¿åå†…éƒ¨ç±»ã€‚
 		{
-			void show()
-			{
-				System.out.println("show ........"+num);
+			void show() {
+				System.out.println("show ........" + num);
 			}
 		}.show();
 	}
 }
 
-
-class InnerClassDemo4 
-{
-	public static void main(String[] args) 
-	{
-		new Outer().method();
+class InnerClassDemo4 {
+	public static void main(String[] args) {
+		new Outer4().method();
 	}
 }

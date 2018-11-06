@@ -1,12 +1,12 @@
+package day10;
 
-interface Inter
-{
+interface Inter {
 	void show1();
+
 	void show2();
 }
 
-class Outer
-{
+class Outer5 {
 	/*
 	class Inner implements Inter
 	{
@@ -15,49 +15,42 @@ class Outer
 		}
 		public void show2()
 		{
-		
+
 		}
 	}
 	*/
 
-	public void method()
-	{
-//		Inner in = new Inner();
-//		in.show1();
-//		in.show2();
-		
+	public void method() {
+		//		Inner in = new Inner();
+		//		in.show1();
+		//		in.show2();
 
-		Inter in = new Inter()
-		{
-			public void show1()
-			{
-				
+		Inter in = new Inter() {
+			public void show1() {
+
 			}
-			public void show2()
-			{
-			
+
+			public void show2() {
+
 			}
-			
+
 		};
 		in.show1();
 		in.show2();
 	}
 }
 
-
 /*
-Í¨³£µÄÊ¹ÓÃ³¡¾°Ö®Ò»£º
-µ±º¯Êı²ÎÊıÊÇ½Ó¿ÚÀàĞÍÊ±£¬¶øÇÒ½Ó¿ÚÖĞµÄ·½·¨²»³¬¹ıÈı¸ö¡£
-¿ÉÒÔÓÃÄäÃûÄÚ²¿Àà×÷ÎªÊµ¼Ê²ÎÊı½øĞĞ´«µİ
+é€šå¸¸çš„ä½¿ç”¨åœºæ™¯ä¹‹ä¸€ï¼š
+å½“å‡½æ•°å‚æ•°æ˜¯æ¥å£ç±»å‹æ—¶ï¼Œè€Œä¸”æ¥å£ä¸­çš„æ–¹æ³•ä¸è¶…è¿‡ä¸‰ä¸ªã€‚
+å¯ä»¥ç”¨åŒ¿åå†…éƒ¨ç±»ä½œä¸ºå®é™…å‚æ•°è¿›è¡Œä¼ é€’
 */
-class InnerClassDemo5 
-{
+class InnerClassDemo5 {
 
-	class Inner
-	{
+	class Inner {
 	}
-	public static void main(String[] args) 
-	{
+
+	public static void main(String[] args) {
 		System.out.println("Hello World!");
 		/*
 		show(new Inter()
@@ -67,18 +60,15 @@ class InnerClassDemo5
 		});
 		*/
 
-//		new Inner();
+		//		new Inner();
 	}
 
-	public void method()
-	{
+	public void method() {
 		new Inner();
 	}
 
-	public static void show(Inter in)
-	{
+	public static void show(Inter in) {
 		in.show1();
 		in.show2();
 	}
 }
-

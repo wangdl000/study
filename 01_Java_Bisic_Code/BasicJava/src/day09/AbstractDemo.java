@@ -1,32 +1,33 @@
+package day09;
 
 /*
-³éÏóÀà£º
-³éÏó£ºÁýÍ³£¬Ä£ºý£¬¿´²»¶®£¡²»¾ßÌå¡£
+æŠ½è±¡ç±»ï¼š
+æŠ½è±¡ï¼šç¬¼ç»Ÿï¼Œæ¨¡ç³Šï¼Œçœ‹ä¸æ‡‚ï¼ä¸å…·ä½“ã€‚
 
 
 
-ÌØµã£º
-1£¬·½·¨Ö»ÓÐÉùÃ÷Ã»ÓÐÊµÏÖÊ±£¬¸Ã·½·¨¾ÍÊÇ³éÏó·½·¨£¬ÐèÒª±»abstractÐÞÊÎ¡£
-	³éÏó·½·¨±ØÐë¶¨ÒåÔÚ³éÏóÀàÖÐ¡£¸ÃÀà±ØÐëÒ²±»abstractÐÞÊÎ¡£
-2£¬³éÏóÀà²»¿ÉÒÔ±»ÊµÀý»¯¡£ÎªÊ²Ã´£¿ÒòÎªµ÷ÓÃ³éÏó·½·¨Ã»ÒâÒå¡£
-3£¬³éÏóÀà±ØÐëÓÐÆä×ÓÀà¸²¸ÇÁËËùÓÐµÄ³éÏó·½·¨ºó£¬¸Ã×ÓÀà²Å¿ÉÒÔÊµÀý»¯¡£
-	·ñÔò£¬Õâ¸ö×ÓÀà»¹ÊÇ³éÏóÀà¡£
+ç‰¹ç‚¹ï¼š
+1ï¼Œæ–¹æ³•åªæœ‰å£°æ˜Žæ²¡æœ‰å®žçŽ°æ—¶ï¼Œè¯¥æ–¹æ³•å°±æ˜¯æŠ½è±¡æ–¹æ³•ï¼Œéœ€è¦è¢«abstractä¿®é¥°ã€‚
+	æŠ½è±¡æ–¹æ³•å¿…é¡»å®šä¹‰åœ¨æŠ½è±¡ç±»ä¸­ã€‚è¯¥ç±»å¿…é¡»ä¹Ÿè¢«abstractä¿®é¥°ã€‚
+2ï¼ŒæŠ½è±¡ç±»ä¸å¯ä»¥è¢«å®žä¾‹åŒ–ã€‚ä¸ºä»€ä¹ˆï¼Ÿå› ä¸ºè°ƒç”¨æŠ½è±¡æ–¹æ³•æ²¡æ„ä¹‰ã€‚
+3ï¼ŒæŠ½è±¡ç±»å¿…é¡»æœ‰å…¶å­ç±»è¦†ç›–äº†æ‰€æœ‰çš„æŠ½è±¡æ–¹æ³•åŽï¼Œè¯¥å­ç±»æ‰å¯ä»¥å®žä¾‹åŒ–ã€‚
+	å¦åˆ™ï¼Œè¿™ä¸ªå­ç±»è¿˜æ˜¯æŠ½è±¡ç±»ã€‚
 
 
-1£¬³éÏóÀàÖÐÓÐ¹¹Ôìº¯ÊýÂð£¿
-	ÓÐ£¬ÓÃÓÚ¸ø×ÓÀà¶ÔÏó½øÐÐ³õÊ¼»¯¡£
+1ï¼ŒæŠ½è±¡ç±»ä¸­æœ‰æž„é€ å‡½æ•°å—ï¼Ÿ
+	æœ‰ï¼Œç”¨äºŽç»™å­ç±»å¯¹è±¡è¿›è¡Œåˆå§‹åŒ–ã€‚
 
 
-	
-2£¬³éÏóÀà¿ÉÒÔ²»¶¨Òå³éÏó·½·¨Âð£¿
-	¿ÉÒÔµÄ¡£ µ«ÊÇºÜÉÙ¼û£¬Ä¿µÄ¾ÍÊÇ²»ÈÃ¸ÃÀà´´½¨¶ÔÏó¡£AWTµÄÊÊÅäÆ÷¶ÔÏó¾ÍÊÇÕâÖÖÀà¡£
-	Í¨³£Õâ¸öÀàÖÐµÄ·½·¨ÓÐ·½·¨Ìå£¬µ«ÊÇÈ´Ã»ÓÐÄÚÈÝ¡£
+
+2ï¼ŒæŠ½è±¡ç±»å¯ä»¥ä¸å®šä¹‰æŠ½è±¡æ–¹æ³•å—ï¼Ÿ
+	å¯ä»¥çš„ã€‚ ä½†æ˜¯å¾ˆå°‘è§ï¼Œç›®çš„å°±æ˜¯ä¸è®©è¯¥ç±»åˆ›å»ºå¯¹è±¡ã€‚AWTçš„é€‚é…å™¨å¯¹è±¡å°±æ˜¯è¿™ç§ç±»ã€‚
+	é€šå¸¸è¿™ä¸ªç±»ä¸­çš„æ–¹æ³•æœ‰æ–¹æ³•ä½“ï¼Œä½†æ˜¯å´æ²¡æœ‰å†…å®¹ã€‚
 
 	abstract class Demo
 	{
 		void show1()
 		{}
-		
+
 
 		void show2()
 		{}
@@ -34,39 +35,38 @@
 
 
 
-3£¬³éÏó¹Ø¼ü×Ö²»¿ÉÒÔºÍÄÇÐ©¹Ø¼ü×Ö¹²´æ?
-	private ²»ÐÐ
-	static	²»ÐÐ
-	final	²»ÐÐ
+3ï¼ŒæŠ½è±¡å…³é”®å­—ä¸å¯ä»¥å’Œé‚£äº›å…³é”®å­—å…±å­˜?
+	private ä¸è¡Œ
+	static	ä¸è¡Œ
+	final	ä¸è¡Œ
 
 
 
-4£¬³éÏóÀàºÍÒ»°ãÀàµÄÒìÍ¬µã¡£
-	ÏàÍ¬µã£º
-		³éÏóÀàºÍÒ»°ãÀà¶¼ÊÇÓÃÀ´ÃèÊöÊÂÎïµÄ£¬¶¼ÔÚÄÚ²¿¶¨ÁË³ÉÔ±¡£
-	²»Í¬£º
-		1£¬Ò»°ãÀàÓÐ×ã¹»µÄÐÅÏ¢ÃèÊöÊÂÎï¡£
-		   ³éÏóÀàÃèÊöÊÂÎïµÄÐÅÏ¢ÓÐ¿ÉÄÜ²»×ã¡£
-		2£¬Ò»°ãÀàÖÐ²»ÄÜ¶¨Òå³éÏó·½·¨£¬Ö»ÄÜ¶¨·Ç³éÏó·½·¨¡£
-		   ³éÏóÀàÖÐ¿É¶¨Òå³éÏó·½·¨£¬Í¬Ê±Ò²¿ÉÒÔ¶¨Òå·Ç³éÏó·½·¨¡£
-		3£¬Ò»°ãÀà¿ÉÒÔ±»ÊµÀý»¯¡£
-		   ³éÏóÀà²»¿ÉÒÔ±»ÊµÀý»¯¡£
+4ï¼ŒæŠ½è±¡ç±»å’Œä¸€èˆ¬ç±»çš„å¼‚åŒç‚¹ã€‚
+	ç›¸åŒç‚¹ï¼š
+		æŠ½è±¡ç±»å’Œä¸€èˆ¬ç±»éƒ½æ˜¯ç”¨æ¥æè¿°äº‹ç‰©çš„ï¼Œéƒ½åœ¨å†…éƒ¨å®šäº†æˆå‘˜ã€‚
+	ä¸åŒï¼š
+		1ï¼Œä¸€èˆ¬ç±»æœ‰è¶³å¤Ÿçš„ä¿¡æ¯æè¿°äº‹ç‰©ã€‚
+		   æŠ½è±¡ç±»æè¿°äº‹ç‰©çš„ä¿¡æ¯æœ‰å¯èƒ½ä¸è¶³ã€‚
+		2ï¼Œä¸€èˆ¬ç±»ä¸­ä¸èƒ½å®šä¹‰æŠ½è±¡æ–¹æ³•ï¼Œåªèƒ½å®šéžæŠ½è±¡æ–¹æ³•ã€‚
+		   æŠ½è±¡ç±»ä¸­å¯å®šä¹‰æŠ½è±¡æ–¹æ³•ï¼ŒåŒæ—¶ä¹Ÿå¯ä»¥å®šä¹‰éžæŠ½è±¡æ–¹æ³•ã€‚
+		3ï¼Œä¸€èˆ¬ç±»å¯ä»¥è¢«å®žä¾‹åŒ–ã€‚
+		   æŠ½è±¡ç±»ä¸å¯ä»¥è¢«å®žä¾‹åŒ–ã€‚
 
 
 
 
-5£¬³éÏóÀàÒ»¶¨ÊÇ¸ö¸¸ÀàÂð£¿
-	ÊÇµÄ¡£ÒòÎªÐèÒª×ÓÀà¸²¸ÇÆä·½·¨ºó²Å¿ÉÒÔ¶Ô×ÓÀàÊµÀý»¯¡£ 
+5ï¼ŒæŠ½è±¡ç±»ä¸€å®šæ˜¯ä¸ªçˆ¶ç±»å—ï¼Ÿ
+	æ˜¯çš„ã€‚å› ä¸ºéœ€è¦å­ç±»è¦†ç›–å…¶æ–¹æ³•åŽæ‰å¯ä»¥å¯¹å­ç±»å®žä¾‹åŒ–ã€‚
 
 
 
 
 */
 
-abstract class Demo
-{
-	abstract /*³éÏó*/ void show();
-	
+abstract class Demo {
+	abstract /*æŠ½è±¡*/ void show();
+
 }
 
 /*
@@ -86,35 +86,25 @@ class DemoB extends Demo
 	}
 }
 */
-abstract class È®¿Æ
-{
-	abstract void ºð½Ð();
+abstract class çŠ¬ç§‘ {
+	abstract void å¼å«();
 }
 
-class ¹· extends È®¿Æ
-{
-	
-	void ºð½Ð()
-	{
-		System.out.println("ÍôÍô");
-	}
-}
-class ÀÇ extends È®¿Æ
-{
-	void ºð½Ð()
-	{
-		System.out.println("à»à»");
+class ç‹— extends çŠ¬ç§‘ {
+
+	void å¼å«() {
+		System.out.println("æ±ªæ±ª");
 	}
 }
 
+class ç‹¼ extends çŠ¬ç§‘ {
+	void å¼å«() {
+		System.out.println("å—·å—·");
+	}
+}
 
-
-class AbstractDemo 
-{
-	public static void main(String[] args) 
-	{
+class AbstractDemo {
+	public static void main(String[] args) {
 		System.out.println("Hello World!");
 	}
 }
-
-
