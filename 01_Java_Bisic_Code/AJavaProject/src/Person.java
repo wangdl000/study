@@ -13,16 +13,16 @@ public class Person {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setName(String nm) {
+		name = nm;
 	}
 
 	public int getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
-		this.age = age;
+	public void setAge(int age1) {
+		this.age = age1;
 	}
 
 	public String getSex() {
