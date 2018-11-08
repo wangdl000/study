@@ -1,3 +1,5 @@
+package day13;
+
 
 class Test implements Runnable
 {
@@ -9,7 +11,7 @@ class Test implements Runnable
 
 	public void run()
 	{
-		
+
 		if(flag)
 		{
 			while(true)
@@ -17,14 +19,14 @@ class Test implements Runnable
 				{
 					System.out.println(Thread.currentThread().getName()+"..if   locka....");
 					synchronized(MyLock.lockb)				{
-						
+
 						System.out.println(Thread.currentThread().getName()+"..if   lockb....");
 					}
 				}
 		}
 		else
 		{
-			while(true)			
+			while(true)
 				synchronized(MyLock.lockb)
 				{
 					System.out.println(Thread.currentThread().getName()+"..else  lockb....");
@@ -48,9 +50,9 @@ class MyLock
 
 
 
-class DeadLockTest 
+class DeadLockTest
 {
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 		Test a = new Test(true);
 		Test b = new Test(false);

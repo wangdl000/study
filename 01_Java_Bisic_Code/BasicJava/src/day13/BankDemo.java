@@ -1,3 +1,5 @@
+package day13;
+
 /*
 需求:储户，两个，每个都到银行存钱每次存100，，共存三次。
 */
@@ -32,9 +34,9 @@ class Cus implements Runnable
 }
 
 
-class BankDemo 
+class BankDemo
 {
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 		Cus c = new Cus();
 		Thread t1 = new Thread(c);

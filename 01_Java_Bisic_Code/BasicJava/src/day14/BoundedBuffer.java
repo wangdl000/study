@@ -1,11 +1,13 @@
+package day14;
+
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 class BoundedBuffer {
    final Lock lock = new ReentrantLock();
-   final Condition notFull  = lock.newCondition(); 
-   final Condition notEmpty = lock.newCondition(); 
+   final Condition notFull  = lock.newCondition();
+   final Condition notEmpty = lock.newCondition();
 
    final Object[] items = new Object[100];
    int putptr, takeptr, count;
@@ -13,9 +15,9 @@ class BoundedBuffer {
    public void put(Object x) throws InterruptedException {
      lock.lock();
      try {
-       while (count == items.length) 
+       while (count == items.length)
          notFull.await();
-       items[putptr] = x; 
+       items[putptr] = x;
        if (++putptr == items.length) putptr = 0;
        ++count;
        notEmpty.signal();
@@ -27,9 +29,9 @@ class BoundedBuffer {
    public Object take() throws InterruptedException {
      lock.lock();
      try {
-       while (count == 0) 
+       while (count == 0)
          notEmpty.await();
-       Object x = items[takeptr]; 
+       Object x = items[takeptr];
        if (++takeptr == items.length) takeptr = 0;
        --count;
        notFull.signal();
@@ -37,5 +39,5 @@ class BoundedBuffer {
      } finally {
        lock.unlock();
      }
-   } 
+   }
  }

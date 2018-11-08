@@ -1,3 +1,5 @@
+package day13;
+
 
 /*
 死锁：常见情景之一：同步的嵌套。
@@ -33,7 +35,7 @@ class Ticket implements Runnable
 			if(num>0)
 			{
 				try{Thread.sleep(10);}catch (InterruptedException e){}
-				
+
 				System.out.println(Thread.currentThread().getName()+".....sale...."+num--);
 			}
 		}
@@ -41,9 +43,9 @@ class Ticket implements Runnable
 }
 
 
-class DeadLockDemo 
+class DeadLockDemo
 {
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 		Ticket t = new Ticket();
 //		System.out.println("t:"+t);

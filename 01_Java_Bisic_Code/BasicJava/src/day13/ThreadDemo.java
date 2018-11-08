@@ -1,3 +1,5 @@
+package day13;
+
 /*
 创建线程的第一种方式:继承Thread类。
 
@@ -24,51 +26,42 @@
 
 */
 
-
 class Demo implements Runnable//extends Fu //准备扩展Demo类的功能，让其中的内容可以作为线程的任务执行。
-					//通过接口的形式完成。
+//通过接口的形式完成。
 {
-	public void run()
-	{
+	public void run() {
 		show();
 	}
-	public void show()
-	{
-		for(int x=0; x<20; x++)
-		{
-			System.out.println(Thread.currentThread().getName()+"....."+x);
+
+	public void show() {
+		for (int x = 0; x < 20; x++) {
+			System.out.println(Thread.currentThread().getName() + "....." + x);
 		}
 	}
 }
 
-
-class  ThreadDemo
-{
-	public static void main(String[] args) 
-	{	
+class ThreadDemo {
+	public static void main(String[] args) {
 		Demo d = new Demo();
 		Thread t1 = new Thread(d);
 		Thread t2 = new Thread(d);
 		t1.start();
 		t2.start();
 
-
-//		Demo d1 = new Demo();
-//		Demo d2 = new Demo();
-//		d1.start();
-//		d2.start();
+		//		Demo d1 = new Demo();
+		//		Demo d2 = new Demo();
+		//		d1.start();
+		//		d2.start();
 	}
 }
 
-
-
 /*
-class Thread 
+class Thread
 {
 	private Runnable r;
 	Thread()
 	{
-	
+
 	}
 	Thread(Runnable r)
 	{

@@ -1,3 +1,5 @@
+package day14;
+
 
 /*
 生产者，消费者。
@@ -17,11 +19,11 @@ class Resource
 	private String name;
 	private int count = 1;
 	private boolean flag = false;
-	public synchronized void set(String name)//  
+	public synchronized void set(String name)//
 	{
 		while(flag)
 			try{this.wait();}catch(InterruptedException e){}//   t1    t0
-		
+
 		this.name = name + count;//烤鸭1  烤鸭2  烤鸭3
 		count++;//2 3 4
 		System.out.println(Thread.currentThread().getName()+"...生产者..."+this.name);//生产烤鸭1 生产烤鸭2 生产烤鸭3
@@ -75,7 +77,7 @@ class Consumer implements Runnable
 
 class  ProducerConsumerDemo
 {
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 		Resource r = new Resource();
 		Producer pro = new Producer(r);

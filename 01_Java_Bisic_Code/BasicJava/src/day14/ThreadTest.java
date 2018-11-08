@@ -1,3 +1,5 @@
+package day14;
+
 /*class Test implements Runnable
 {
 	public void run(Thread t)
@@ -6,9 +8,9 @@
 //如果错误 错误发生在哪一行？错误在第一行，应该被abstract修饰
 
 
-class ThreadTest 
+class ThreadTest
 {
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 
 		new Thread(new Runnable()
@@ -38,7 +40,7 @@ class ThreadTest
 
 			}
 		}.start();
-		
+
 		for(int x=0; x<50; x++)
 		{
 			System.out.println(Thread.currentThread().getName()+"....y="+x);
@@ -56,6 +58,6 @@ class ThreadTest
 		new Thread(r).start();
 
 		*/
-		
+
 	}
 }

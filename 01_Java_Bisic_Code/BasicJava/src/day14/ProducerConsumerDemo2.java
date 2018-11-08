@@ -1,17 +1,19 @@
+package day14;
+
 /*
-jdk1.5ï¿½Ôºï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½ 
-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½åµ½ï¿½Ë¸Ã¶ï¿½ï¿½ï¿½ï¿½Ð£ï¿½
-ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+jdk1.5ÒÔºó½«Í¬²½ºÍËø·â×°³ÉÁË¶ÔÏó¡£
+²¢½«²Ù×÷ËøµÄÒþÊ½·½Ê½¶¨Òåµ½ÁË¸Ã¶ÔÏóÖÐ£¬
+½«ÒþÊ½¶¯×÷±ä³ÉÁËÏÔÊ¾¶¯×÷¡£
 
-Lockï¿½Ó¿Ú£ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-Í¬Ê±ï¿½ï¿½Îªï¿½ï¿½î¡£ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-lock():ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½
-unlock():ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½finallyï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½
+Lock½Ó¿Ú£º ³öÏÖÌæ´úÁËÍ¬²½´úÂë¿é»òÕßÍ¬²½º¯Êý¡£½«Í¬²½µÄÒþÊ½Ëø²Ù×÷±ä³ÉÏÖÊµËø²Ù×÷¡£
+Í¬Ê±¸üÎªÁé»î¡£¿ÉÒÔÒ»¸öËøÉÏ¼ÓÉÏ¶à×é¼àÊÓÆ÷¡£
+lock():»ñÈ¡Ëø¡£
+unlock():ÊÍ·ÅËø£¬Í¨³£ÐèÒª¶¨Òåfinally´úÂë¿éÖÐ¡£
 
 
-Conditionï¿½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Objectï¿½Ðµï¿½wait notify notifyAllï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-			ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë·ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½Conditionï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-			ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¡ï¿½
+Condition½Ó¿Ú£º³öÏÖÌæ´úÁËObjectÖÐµÄwait notify notifyAll·½·¨¡£
+			½«ÕâÐ©¼àÊÓÆ÷·½·¨µ¥¶À½øÐÐÁË·â×°£¬±ä³ÉCondition¼àÊÓÆ÷¶ÔÏó¡£
+			¿ÉÒÔÈÎÒâËø½øÐÐ×éºÏ¡£
 await();
 signal();
 signalAll();
@@ -19,28 +21,27 @@ signalAll();
 
 
 */
-
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-class Resource
+class Resource14
 {
 	private String name;
 	private int count = 1;
 	private boolean flag = false;
 
-//	ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//	´´½¨Ò»¸öËø¶ÔÏó¡£
 	Lock lock = new ReentrantLock();
 
-	//Í¨ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÄ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	//Í¨¹ýÒÑÓÐµÄËø»ñÈ¡¸ÃËøÉÏµÄ¼àÊÓÆ÷¶ÔÏó¡£
 //	Condition con = lock.newCondition();
 
-	//Í¨ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß£ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¡ï¿½
+	//Í¨¹ýÒÑÓÐµÄËø»ñÈ¡Á½×é¼àÊÓÆ÷£¬Ò»×é¼àÊÓÉú²úÕß£¬Ò»×é¼àÊÓÏû·ÑÕß¡£
 	Condition producer_con = lock.newCondition();
 	Condition consumer_con = lock.newCondition();
 
-	
+
 	public  void set(String name)//  t0 t1
 	{
 		lock.lock();
@@ -49,10 +50,10 @@ class Resource
 			while(flag)
 //			try{lock.wait();}catch(InterruptedException e){}//   t1    t0
 			try{producer_con.await();}catch(InterruptedException e){}//   t1    t0
-		
-			this.name = name + count;//ï¿½ï¿½Ñ¼1  ï¿½ï¿½Ñ¼2  ï¿½ï¿½Ñ¼3
+
+			this.name = name + count;//¿¾Ñ¼1  ¿¾Ñ¼2  ¿¾Ñ¼3
 			count++;//2 3 4
-			System.out.println(Thread.currentThread().getName()+"...ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½5.0..."+this.name);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¼1 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¼2 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¼3
+			System.out.println(Thread.currentThread().getName()+"...Éú²úÕß5.0..."+this.name);//Éú²ú¿¾Ñ¼1 Éú²ú¿¾Ñ¼2 Éú²ú¿¾Ñ¼3
 			flag = true;
 //			notifyAll();
 //			con.signalAll();
@@ -62,7 +63,7 @@ class Resource
 		{
 			lock.unlock();
 		}
-		
+
 	}
 
 	public  void out()// t2 t3
@@ -73,7 +74,7 @@ class Resource
 			while(!flag)
 //			try{this.wait();}catch(InterruptedException e){}	//t2  t3
 			try{cousumer_con.await();}catch(InterruptedException e){}	//t2  t3
-			System.out.println(Thread.currentThread().getName()+"...ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.5.0......."+this.name);//ï¿½ï¿½ï¿½Ñ¿ï¿½Ñ¼1
+			System.out.println(Thread.currentThread().getName()+"...Ïû·ÑÕß.5.0......."+this.name);//Ïû·Ñ¿¾Ñ¼1
 			flag = false;
 //			notifyAll();
 //			con.signalAll();
@@ -83,14 +84,14 @@ class Resource
 		{
 			lock.unlock();
 		}
-		
+
 	}
 }
 
 class Producer implements Runnable
 {
-	private Resource r;
-	Producer(Resource r)
+	private Resource14 r;
+	Producer(Resource14 r)
 	{
 		this.r = r;
 	}
@@ -98,15 +99,15 @@ class Producer implements Runnable
 	{
 		while(true)
 		{
-			r.set("ï¿½ï¿½Ñ¼");
+			r.set("¿¾Ñ¼");
 		}
 	}
 }
 
 class Consumer implements Runnable
 {
-	private Resource r;
-	Consumer(Resource r)
+	private Resource14 r;
+	Consumer(Resource14 r)
 	{
 		this.r = r;
 	}
@@ -123,9 +124,9 @@ class Consumer implements Runnable
 
 class  ProducerConsumerDemo2
 {
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
-		Resource r = new Resource();
+		Resource14 r = new Resource14();
 		Producer pro = new Producer(r);
 		Consumer con = new Consumer(r);
 

@@ -1,3 +1,4 @@
+package day13;
 
 /*
 需求：卖票。
@@ -8,8 +9,6 @@
 
 */
 
-
-
 /*
 线程安全问题产生的原因：
 
@@ -17,13 +16,13 @@
 2，操作共享数据的线程代码有多条。
 
 当一个线程在执行操作共享数据的多条代码过程中，其他线程参与了运算。
-就会导致线程安全问题的产生。 
+就会导致线程安全问题的产生。
 
 
 解决思路；
 就是将多条操作共享数据的线程代码封装起来，当有线程在执行这些代码的时候，
 其他线程时不可以参与运算的。
-必须要当前线程把这些代码都执行完毕后，其他线程才可以参与运算。 
+必须要当前线程把这些代码都执行完毕后，其他线程才可以参与运算。
 
 在java中，用同步代码块就可以解决这个问题。
 
@@ -45,33 +44,30 @@ synchronized(对象)
 
 */
 
-class Ticket implements Runnable//extends Thread
+class Ticket133 implements Runnable//extends Thread
 {
-	private  int num = 100;
+	private int num = 100;
 
 	Object obj = new Object();
-	public void run()
-	{
-		while(true)
-		{
-			synchronized(obj)
-			{
-				if(num>0)
-				{
-					try{Thread.sleep(10);}catch (InterruptedException e){}
-					
-					System.out.println(Thread.currentThread().getName()+".....sale...."+num--);
+
+	public void run() {
+		while (true) {
+			synchronized (obj) {
+				if (num > 0) {
+					try {
+						Thread.sleep(10);
+					} catch (InterruptedException e) {
+					}
+
+					System.out.println(Thread.currentThread().getName() + ".....sale...." + num--);
 				}
 			}
 		}
 	}
 }
 
-
-class  TicketDemo
-{
-	public static void main(String[] args) 
-	{
+class TicketDemo {
+	public static void main(String[] args) {
 
 		Ticket t = new Ticket();//创建一个线程任务对象。
 
@@ -85,20 +81,17 @@ class  TicketDemo
 		t3.start();
 		t4.start();
 
-
 		/*
 		Ticket t1 = new Ticket();
-//		Ticket t2 = new Ticket();
-//		Ticket t3 = new Ticket();
-//		Ticket t4 = new Ticket();
+		//		Ticket t2 = new Ticket();
+		//		Ticket t3 = new Ticket();
+		//		Ticket t4 = new Ticket();
 
 		t1.start();
-		t1.start();//一个线程不能开启两次，会抛出无效线程状态异常 
+		t1.start();//一个线程不能开启两次，会抛出无效线程状态异常
 		t1.start();
 		t1.start();
 		*/
 
-		
 	}
 }
-

@@ -1,4 +1,4 @@
-
+2
 
 wait ºÍ sleep Çø±ð£¿
 
@@ -16,23 +16,23 @@ class Demo
 
 	void show()
 	{
-		synchronized(this)// 
+		synchronized(this)//
 		{
-		 
+
 			wait();//t0 t1 t2
-		
+
 		}
 	}
 	void method()
 	{
 		synchronized(this)//t4
 		{
-		
+
 			//wait();
 
 			notifyAll();
-		
-		
+
+
 		}//t4
 	}
 }
@@ -40,9 +40,9 @@ class Demo
 
 
 
-class  
+class
 {
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 		System.out.println("Hello World!");
 	}
