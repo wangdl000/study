@@ -1,3 +1,5 @@
+package day11;
+
 
 /*
 
@@ -5,7 +7,7 @@
 class Demo
 {
 	public int method(int[] arr,int index)
-	{		
+	{
 
 		if(arr==null)
 			throw new NullPointerException("数组的引用不能为空！");
@@ -24,14 +26,14 @@ class Demo
 
 class  ExceptionDemo2
 {
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 		int[] arr = new int[3];
-		
+
 		Demo d = new Demo();
 		int num = d.method(null,-30);
 		System.out.println("num="+num);
 		System.out.println("over");
 	}
-	
+
 }

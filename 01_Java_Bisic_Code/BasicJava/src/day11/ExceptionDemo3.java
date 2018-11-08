@@ -1,3 +1,5 @@
+package day11;
+
 /*
 对于角标是整数不存在，可以用角标越界表示，
 对于负数为角标的情况，准备用负数角标异常来表示。
@@ -5,7 +7,7 @@
 负数角标这种异常在java中并没有定义过。
 那就按照java异常的创建思想，面向对象，将负数角标进行自定义描述。并封装成对象。
 
-这种自定义的问题描述成为自定义异常。 
+这种自定义的问题描述成为自定义异常。
 
 注意：如果让一个类称为异常类，必须要继承异常体系，因为只有称为异常体系的子类才有资格具备可抛性。
 	才可以被两个关键字所操作，throws throw
@@ -14,7 +16,7 @@
 
 
 异常的分类：
-1，编译时被检测异常:只要是Exception和其子类都是，除了特殊子类RuntimeException体系。 
+1，编译时被检测异常:只要是Exception和其子类都是，除了特殊子类RuntimeException体系。
 		这种问题一旦出现，希望在编译时就进行检测，让这种问题有对应的处理方式。
 		这样的问题都可以针对性的处理。
 
@@ -42,7 +44,7 @@ class FuShuIndexException extends Exception
 	FuShuIndexException()
 	{}
 
-	
+
 	FuShuIndexException(String msg)
 	{
 		super(msg);
@@ -50,10 +52,10 @@ class FuShuIndexException extends Exception
 }
 
 
-class Demo
+class Demo11
 {
-	public int method(int[] arr,int index)//throws NullPointerException//FuShuIndexException
-	{		
+	public int method(int[] arr,int index) throws FuShuIndexException//throws NullPointerException//FuShuIndexException
+	{
 
 		if(arr==null)
 			throw new NullPointerException("数组的引用不能为空！");
@@ -70,18 +72,18 @@ class Demo
 	}
 }
 
-class  ExceptionDemo3
+class  ExceptionDemo113
 {
-	public static void main(String[] args) //throws FuShuIndexException
+	public static void main(String[] args) throws FuShuIndexException //throws FuShuIndexException
 	{
 		int[] arr = new int[3];
-		
-		Demo d = new Demo();
+
+		Demo11 d = new Demo11();
 		int num = d.method(null,-30);
 		System.out.println("num="+num);
 		System.out.println("over");
 	}
-	
+
 }
 
 /*

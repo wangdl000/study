@@ -1,3 +1,5 @@
+package day11;
+
 /*
 
 Object:所有类的根类。
@@ -40,7 +42,7 @@ class Person extends Object
 	//比较Person的年龄。是否是同龄人
 	public boolean compare(Person p)
 	{
-		return this.age == p.age;	
+		return this.age == p.age;
 	}
 	*/
 
@@ -70,23 +72,23 @@ class Person extends Object
 		return "Person :"+age;
 	}
 }
-class Demo
+class Demo116
 {
 }
 
 
-class  ObjectDemo
+class  ObjectDemo116
 {
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 		Person p1 = new Person(60);
 		Person p2 = new Person(20);
-		Demo d = new Demo();
+		Demo116 d = new Demo116();
 //		System.out.println(p1.equals(p2));
 
 //		System.out.println(p1);
 //		System.out.println(Integer.toHexString(p1.hashCode()));
-			
+
 
 //		Class clazz1 = p1.getClass();
 //		Class clazz2 = p2.getClass();
@@ -100,7 +102,7 @@ class  ObjectDemo
 
 //		Person p3 = p1;
 
-//		Demo d = new Demo();
+//		Demo116 d = new Demo116();
 
 //		System.out.println(p1==p2);
 //		System.out.println(p1.equals(p2));

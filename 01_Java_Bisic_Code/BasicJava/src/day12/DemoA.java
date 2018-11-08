@@ -1,5 +1,5 @@
 
-package packa;
+package day12;
 
 public  class  DemoA extends packb.DemoB
 {

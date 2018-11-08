@@ -1,38 +1,30 @@
+package day11;
 
+class Demo5 {
+	public int show(int index) throws ArrayIndexOutOfBoundsException {
 
-class Demo
-{
-	public int show(int index)throws ArrayIndexOutOfBoundsException
-	{
-
-		if(index<0)
+		if (index < 0)
 			throw new ArrayIndexOutOfBoundsException("越界啦！！");
 		int[] arr = new int[3];
 		return arr[index];
 	}
 }
 
+public class ExceptionDemo5 {
+	public static void main(String[] args) {
+		Demo5 d = new Demo5();
+		try {
 
-class ExceptionDemo5 
-{
-	public static void main(String[] args) 
-	{
-		Demo d = new Demo();
-		try
-		{
-			
 			int num = d.show(-1);
-			System.out.println("num="+num);
-		}
-		catch (ArrayIndexOutOfBoundsException e)
-		{
+			System.out.println("num=" + num);
+		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println(e.toString());
 
-//			return ;
-//			System.exit(0);//退出jvm。
+			//			return ;
+			//			System.exit(0);//退出jvm。
 		}
-		finally//通常用于关闭(释放)资源。
-		{
+		//通常用于关闭(释放)资源。
+		finally {
 			System.out.println("finally");
 		}
 
@@ -40,6 +32,7 @@ class ExceptionDemo5
 
 	}
 }
+
 /*
 
 连接数据库
@@ -47,7 +40,6 @@ class ExceptionDemo5
 关闭连接。
 
 */
-
 
 /*
 try catch finally 代码块组合特点：
@@ -59,7 +51,7 @@ try catch finally
 try catch(多个)当没有必要资源需要释放时，可以不用定义finally。
 
 3,
-try finally 异常无法直接catch处理，但是资源需要关闭。 
+try finally 异常无法直接catch处理，但是资源需要关闭。
 
 
 void show()throws Exception
@@ -72,18 +64,16 @@ void show()throws Exception
 	finally
 	{
 		//关闭资源。
-		
+
 	}
 
 
-	/*
-	catch(Exception e)
-	{
-		
-	}
-	*/
-	
+
+//	catch(Exception e)
+//	{
+//
+//	}
+
 }
-
 
 */

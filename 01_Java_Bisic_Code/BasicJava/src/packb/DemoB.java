@@ -2,7 +2,7 @@
 package packb;
 public class  DemoB
 {
-	/*public*/protected/*±£»¤*/  void method()
+	/*public*/protected/*ï¿½ï¿½ï¿½ï¿½*/  void method()
 	{
 		System.out.println("DemoB method run ");
 	}

@@ -1,3 +1,5 @@
+package day11;
+
 /*
 
 异常处理的捕捉形式：
@@ -25,7 +27,7 @@ finally
 异常处理的原则：
 1，函数内容如果抛出需要检测的异常，那么函数上必须要声明。
 	否则必须在函数内用trycatch捕捉，否则编译失败。
-	
+
 2，如果调用到了声明异常的函数，要么trycatch要么throws，否则编译失败。
 
 3，什么时候catch，什么时候throws 呢？
@@ -41,54 +43,42 @@ finally
 
 */
 
+class FuShuIndexException4 extends Exception {
+	FuShuIndexException4() {
+	}
 
-class FuShuIndexException extends Exception
-{
-	FuShuIndexException()
-	{}
-
-	
-	FuShuIndexException(String msg)
-	{
+	FuShuIndexException4(String msg) {
 		super(msg);
 	}
 }
 
-
-class Demo
-{
-	public int method(int[] arr,int index)//throws NullPointerException,FuShuIndexException
-	{	
-		if(arr==null)
+class Demo114 {
+	public int method(int[] arr, int index) throws FuShuIndexException4//throws NullPointerException,FuShuIndexException4
+	{
+		if (arr == null)
 			throw new NullPointerException("没有任何数组实体");
-		if(index<0)
-			throw new FuShuIndexException();
-			
+		if (index < 0)
+			throw new FuShuIndexException4();
+
 		return arr[index];
 	}
 }
 
-class  ExceptionDemo4
-{
-	public static void main(String[] args) 
-	{
-		int[] arr = new int[3];		
-		Demo d = new Demo();
-		try
-		{
-			int num = d.method(null,-1);
-			System.out.println("num="+num);
-			
+class ExceptionDemo1144 {
+	public static void main(String[] args) {
+		int[] arr = new int[3];
+		Demo114 d = new Demo114();
+		try {
+			int num = d.method(null, -1);
+			System.out.println("num=" + num);
+
 		}
-		
-		catch(NullPointerException e)
-		{
+
+		catch (NullPointerException e) {
 			System.out.println(e.toString());
-		}
-		catch (FuShuIndexException e)
-		{
-			System.out.println("message:"+e.getMessage());
-			System.out.println("string:"+e.toString());
+		} catch (FuShuIndexException4 e) {
+			System.out.println("message:" + e.getMessage());
+			System.out.println("string:" + e.toString());
 
 			e.printStackTrace();//jvm默认的异常处理机制就是调用异常对象的这个方法。
 
@@ -97,10 +87,10 @@ class  ExceptionDemo4
 		/*
 		catch(Exception e)//多catch父类的catch放在最下面。
 		{
-			
+
 		}
 		*/
 		System.out.println("over");
 	}
-	
+
 }

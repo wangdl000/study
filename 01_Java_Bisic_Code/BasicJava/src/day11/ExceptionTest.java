@@ -1,3 +1,5 @@
+package day11;
+
 
 
 /*
@@ -66,14 +68,14 @@ class Teacher
 		this.name = name;
 		comp = new Computer();
 	}
-	
+
 	public void prelect()throws NoPlanException
 	{
 		try
 		{
 			comp.run();
 			System.out.println(name+"讲课");
-			
+
 		}
 		catch (LanPingException e)
 		{
@@ -95,16 +97,16 @@ class Teacher
 	{
 		System.out.println("大家练习");
 	}
-}	
-class ExceptionTest 
+}
+class ExceptionTest
 {
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 		Teacher t  = new Teacher("毕老师");
 		try
 		{
 			t.prelect();
-			
+
 		}
 		catch (NoPlanException e)
 		{

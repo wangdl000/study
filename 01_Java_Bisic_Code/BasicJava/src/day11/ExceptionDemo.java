@@ -1,3 +1,5 @@
+package day11;
+
 
 /*
 Òì³££ºÊÇÔÚÔËĞĞÊ±ÆÚ·¢ÉúµÄ²»Õı³£Çé¿ö¡£¡£
@@ -5,7 +7,7 @@
 
 ÔÚjavaÖĞÓÃÀàµÄĞÎÊ½¶Ô²»Õı³£Çé¿ö½øĞĞÁËÃèÊöºÍ·â×°¶ÔÏó¡£
 
-ÃèÊö²»Õı³£µÄÇé¿öµÄÀà£¬¾Í³ÆÎªÒì³£Àà¡£ 
+ÃèÊö²»Õı³£µÄÇé¿öµÄÀà£¬¾Í³ÆÎªÒì³£Àà¡£
 
 ÒÔÇ°Õı³£Á÷³Ì´úÂëºÍÎÊÌâ´¦Àí´úÂëÏà½áºÏ£¬
 ÏÖÔÚ½«Õı³£Á÷³Ì´úÂëºÍÎÊÌâ´¦Àí´úÂë·ÖÀë¡£Ìá¸ßÔÄ¶ÁĞÔ.
@@ -40,10 +42,10 @@ Throwable:ÎŞÂÛÊÇerror£¬»¹ÊÇÒì³££¬ÎÊÌâ£¬ÎÊÌâ·¢Éú¾ÍÓ¦¸Ã¿ÉÒÔÅ×³ö£¬ÈÃµ÷ÓÃÕßÖªµÀ²¢´¦À
 
 
 */
- 
-class ExceptionDemo 
+
+class ExceptionDemo
 {
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 		int[] arr = new int[1024*1024*800];//java.lang.OutOfMemoryError: Java heap space
 //		arr = null;

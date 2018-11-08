@@ -1,4 +1,4 @@
-package mypack;
+package day12;
 
 //import packa.DemoA;//导入了packa包中的DemoA类。
 //import packa.DemoAA;
@@ -7,17 +7,15 @@ package mypack;
 import packa.*;//导入了packa包中所有的类。
 import packa.abc.*;
 
-packa\DemoA.class 
+packa\DemoA.class
 packa\abc\DemoAbc.class
 
 */
 //导包的原则：用到哪个类，就导入哪个类。
 
 //import 干嘛用的啊？为了简化类名书写。
-class  PackageDemo
-{
-	public static void main(String[] args) 
-	{
+class PackageDemo {
+	public static void main(String[] args) {
 
 		//packa.DemoA d = new packa.DemoA();
 		DemoAbc d = new DemoA();
@@ -28,7 +26,6 @@ class  PackageDemo
 		System.out.println("Hello Package!");
 	}
 }
-
 
 /*
 
@@ -97,8 +94,8 @@ PackageDemo.java:9: show() 在 packa.DemoA 中不是公共的；无法从外部软件包中对其进
 
           public		protected		default		  private
 同一类中    ok             ok              ok           ok
-同一包中    ok             ok              ok           
-子类中      ok             ok              
+同一包中    ok             ok              ok
+子类中      ok             ok
 不同包中    ok
 
 
