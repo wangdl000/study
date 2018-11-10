@@ -1,4 +1,5 @@
-#端数処理をする際に考えないといけないこと
-##
+# JUnit
 
-端数処理（四捨五入、切り上げ、切り捨て）
+使用方法
+
+> http://wiki.jikexueyuan.com/project/junit/

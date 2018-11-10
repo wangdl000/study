@@ -66,7 +66,7 @@
 
 详见一下链接的 Java 基本数据类型  
 
-http://wiki.jikexueyuan.com/project/java/basic-datatypes.html  
+> http://wiki.jikexueyuan.com/project/java/basic-datatypes.html  
 
 引用数据类型有：类、接口、数组  
 类：比如第一节课定义的Person.java  
@@ -95,10 +95,10 @@ StaticUtil.isBlank();（静态类）
 引用数据类型:使用时可以赋null,判断时使用equals方法  
 
 基本数据类型和引用数据类型的关系，请参照如下链接：  
-https://blog.csdn.net/lucky123sky/article/details/54924411  
+> https://blog.csdn.net/lucky123sky/article/details/54924411  
 
 包装类：  
-https://mc.mbd.baidu.com/3bkwbif?f=cp  
+> https://mc.mbd.baidu.com/3bkwbif?f=cp  
 
 综上所述，Java的数据类型分为基本数据类型8种，引用数据类型三种，总计11种数据类型。  
 

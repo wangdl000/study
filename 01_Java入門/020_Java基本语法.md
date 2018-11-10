@@ -1,7 +1,7 @@
 ## 2.0 Java的基本语法
 开始之前需要了解Java的基本语法。  
 如下链接  
-http://wiki.jikexueyuan.com/project/java/basic-syntax.html  
+> http://wiki.jikexueyuan.com/project/java/basic-syntax.html  
 
 上一次课的例子来说明Java的基本语法  
 int age = 0;  
