@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+    <definition name="navi_1" template="/jsp/tiles_parts/content_global_navi.jsp">
+        <put-attribute name="navi_img_alt" value="商品選択" />
+        <put-attribute name="navi_img" value="/images/common/header/navi_title01.gif" />
+    </definition>
+    <definition name="navi_2" template="/jsp/tiles_parts/content_global_navi.jsp">
+        <put-attribute name="navi_img_alt" value="商品確認" />
+        <put-attribute name="navi_img" value="/images/common/header/navi_title02.gif" />
+    </definition>
+    <definition name="navi_3" template="/jsp/tiles_parts/content_global_navi.jsp">
+        <put-attribute name="navi_img_alt" value="お客様情報入力" />
+        <put-attribute name="navi_img" value="/images/common/header/navi_title03.gif" />
+    </definition>
+    <definition name="navi_4" template="/jsp/tiles_parts/content_global_navi.jsp">
+        <put-attribute name="navi_img_alt" value="お申し込み内容確認" />
+        <put-attribute name="navi_img" value="/images/common/header/navi_title04.gif" />
+    </definition>
+    <definition name="navi_5" template="/jsp/tiles_parts/content_global_navi.jsp">
+        <put-attribute name="navi_img_alt" value="お申し込み完了" />
+        <put-attribute name="navi_img" value="/images/common/header/navi_title05.gif" />
+    </definition>
+
+	<definition name="main" template="/jsp/tiles_layout/layout_main.jsp">
+		<put-attribute name="title" value="ダミー" />
+		<put-attribute name="content_header" value="/jsp/tiles_parts/content_header.jsp" />
+		<put-attribute name="content_global_navi" type="definition" value="navi_1" />
+		<put-attribute name="content_left_area" value="/jsp/tiles_parts/content_left_area.jsp" />
+		<put-attribute name="content_right_area" value="/jsp/tiles_contents/item_all.jsp" />
+		<put-attribute name="content_page_top" value="/jsp/tiles_parts/content_page_top.jsp" />
+		<put-attribute name="content_footer" value="/jsp/tiles_parts/content_footer.jsp" />
+	</definition>
+
+    <definition name="order" template="/jsp/tiles_layout/layout_order.jsp">
+        <put-attribute name="title" value="ダミー" />
+        <put-attribute name="content_header" value="/jsp/tiles_parts/content_header.jsp" />
+        <put-attribute name="content_global_navi" type="definition" value="navi_1" />
+        <put-attribute name="content_global_navi"  value="/jsp/tiles_parts/content_global_navi.jsp" />
+        <put-attribute name="content_area" value="/jsp/tiles_contents/item_all.jsp" />
+        <put-attribute name="content_page_top" value="/jsp/tiles_parts/content_page_top.jsp" />
+        <put-attribute name="content_footer" value="/jsp/tiles_parts/content_footer.jsp" />
+    </definition>
+
+	<definition name="login" template="/jsp/tiles_layout/layout_login.jsp">
+		<put-attribute name="title" value="ログイン" />
+	</definition>
+
+	<definition name="top_page" extends="main">
+		<put-attribute name="title" value="トップページ" />
+		<put-attribute name="content_right_area" value="/jsp/tiles_contents/top_page.jsp" />
+	</definition>
+
+	<definition name="item_search" extends="main">
+		<put-attribute name="title" value="商品一覧" />
+		<put-attribute name="content_right_area" value="/jsp/tiles_contents/item_search.jsp" />
+	</definition>
+
+	<definition name="item_detail" extends="main">
+		<put-attribute name="title" value="商品詳細" />
+		<put-attribute name="content_right_area" value="/jsp/tiles_contents/item_detail.jsp" />
+		<put-attribute name="content_page_top" value="/jsp/tiles_parts/content_blank.jsp" />
+	</definition>
+
+	<definition name="order_cart" extends="order">
+		<put-attribute name="title" value="買い物かご" />
+        <put-attribute name="content_global_navi" type="definition" value="navi_2" />
+		<put-attribute name="content_area" value="/jsp/tiles_contents/order_cart.jsp" />
+		<put-attribute name="content_page_top" value="/jsp/tiles_parts/content_blank.jsp" />
+	</definition>
+
+	<definition name="order_input" extends="order">
+		<put-attribute name="title" value="商品のお申し込み" />
+        <put-attribute name="content_global_navi" type="definition" value="navi_3" />
+		<put-attribute name="content_area" value="/jsp/tiles_contents/order_input.jsp" />
+		<put-attribute name="content_page_top" value="/jsp/tiles_parts/content_blank.jsp" />
+	</definition>
+
+    <definition name="order_confirm" extends="order">
+        <put-attribute name="title" value="商品のお申し込み確認" />
+        <put-attribute name="content_global_navi" type="definition" value="navi_4" />
+        <put-attribute name="content_area" value="/jsp/tiles_contents/order_confirm.jsp" />
+        <put-attribute name="content_page_top" value="/jsp/tiles_parts/content_blank.jsp" />
+    </definition>
+
+    <definition name="order_complete" extends="order">
+        <put-attribute name="title" value="商品のお申し込み完了" />
+        <put-attribute name="content_global_navi" type="definition" value="navi_5" />
+        <put-attribute name="content_area" value="/jsp/tiles_contents/order_complete.jsp" />
+        <put-attribute name="content_page_top" value="/jsp/tiles_parts/content_blank.jsp" />
+    </definition>
+
+</tiles-definitions>

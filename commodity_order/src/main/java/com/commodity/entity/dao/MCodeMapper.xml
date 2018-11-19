@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.commodity.entity.dao.MCodeMapper">
+  <resultMap id="BaseResultMap" type="com.commodity.entity.dto.MCode">
+    <id column="SIKIBETSU_CD" jdbcType="VARCHAR" property="sikibetsuCd" />
+    <id column="CODE" jdbcType="VARCHAR" property="code" />
+    <result column="VALUE" jdbcType="VARCHAR" property="value" />
+    <result column="SORT_ORDER" jdbcType="DECIMAL" property="sortOrder" />
+    <result column="KOUSHIN_BI" jdbcType="TIMESTAMP" property="koushinBi" />
+    <result column="KOUSHIN_USERID" jdbcType="VARCHAR" property="koushinUserid" />
+    <result column="TOUROKU_BI" jdbcType="TIMESTAMP" property="tourokuBi" />
+    <result column="TOUROKU_USERID" jdbcType="VARCHAR" property="tourokuUserid" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    SIKIBETSU_CD, CODE, VALUE, SORT_ORDER, KOUSHIN_BI, KOUSHIN_USERID, TOUROKU_BI, TOUROKU_USERID
+  </sql>
+  <select id="selectByExample" parameterType="com.commodity.entity.dto.MCodeExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from m_code
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="com.commodity.entity.dto.MCodeKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_code
+    where SIKIBETSU_CD = #{sikibetsuCd,jdbcType=VARCHAR}
+      and CODE = #{code,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.commodity.entity.dto.MCodeKey">
+    delete from m_code
+    where SIKIBETSU_CD = #{sikibetsuCd,jdbcType=VARCHAR}
+      and CODE = #{code,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.commodity.entity.dto.MCodeExample">
+    delete from m_code
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.commodity.entity.dto.MCode">
+    insert into m_code (SIKIBETSU_CD, CODE, VALUE, 
+      SORT_ORDER, KOUSHIN_BI, KOUSHIN_USERID, 
+      TOUROKU_BI, TOUROKU_USERID)
+    values (#{sikibetsuCd,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, #{value,jdbcType=VARCHAR}, 
+      #{sortOrder,jdbcType=DECIMAL}, #{koushinBi,jdbcType=TIMESTAMP}, #{koushinUserid,jdbcType=VARCHAR}, 
+      #{tourokuBi,jdbcType=TIMESTAMP}, #{tourokuUserid,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.commodity.entity.dto.MCode">
+    insert into m_code
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="sikibetsuCd != null">
+        SIKIBETSU_CD,
+      </if>
+      <if test="code != null">
+        CODE,
+      </if>
+      <if test="value != null">
+        VALUE,
+      </if>
+      <if test="sortOrder != null">
+        SORT_ORDER,
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI,
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID,
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI,
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="sikibetsuCd != null">
+        #{sikibetsuCd,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="value != null">
+        #{value,jdbcType=VARCHAR},
+      </if>
+      <if test="sortOrder != null">
+        #{sortOrder,jdbcType=DECIMAL},
+      </if>
+      <if test="koushinBi != null">
+        #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.commodity.entity.dto.MCodeExample" resultType="java.lang.Long">
+    select count(*) from m_code
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update m_code
+    <set>
+      <if test="record.sikibetsuCd != null">
+        SIKIBETSU_CD = #{record.sikibetsuCd,jdbcType=VARCHAR},
+      </if>
+      <if test="record.code != null">
+        CODE = #{record.code,jdbcType=VARCHAR},
+      </if>
+      <if test="record.value != null">
+        VALUE = #{record.value,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sortOrder != null">
+        SORT_ORDER = #{record.sortOrder,jdbcType=DECIMAL},
+      </if>
+      <if test="record.koushinBi != null">
+        KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.koushinUserid != null">
+        KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tourokuBi != null">
+        TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.tourokuUserid != null">
+        TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update m_code
+    set SIKIBETSU_CD = #{record.sikibetsuCd,jdbcType=VARCHAR},
+      CODE = #{record.code,jdbcType=VARCHAR},
+      VALUE = #{record.value,jdbcType=VARCHAR},
+      SORT_ORDER = #{record.sortOrder,jdbcType=DECIMAL},
+      KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.commodity.entity.dto.MCode">
+    update m_code
+    <set>
+      <if test="value != null">
+        VALUE = #{value,jdbcType=VARCHAR},
+      </if>
+      <if test="sortOrder != null">
+        SORT_ORDER = #{sortOrder,jdbcType=DECIMAL},
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where SIKIBETSU_CD = #{sikibetsuCd,jdbcType=VARCHAR}
+      and CODE = #{code,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.commodity.entity.dto.MCode">
+    update m_code
+    set VALUE = #{value,jdbcType=VARCHAR},
+      SORT_ORDER = #{sortOrder,jdbcType=DECIMAL},
+      KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR}
+    where SIKIBETSU_CD = #{sikibetsuCd,jdbcType=VARCHAR}
+      and CODE = #{code,jdbcType=VARCHAR}
+  </update>
+</mapper>

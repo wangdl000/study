@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.commodity.entity.dao.MReadJyogaiMapper">
+  <resultMap id="BaseResultMap" type="com.commodity.entity.dto.MReadJyogai">
+    <id column="SYOUHIN_CD" jdbcType="CHAR" property="syouhinCd" />
+    <id column="TODOKE_FUKABI" jdbcType="DATE" property="todokeFukabi" />
+    <result column="TODOKE_HENKOUBI" jdbcType="DATE" property="todokeHenkoubi" />
+    <result column="KOUSHIN_BI" jdbcType="TIMESTAMP" property="koushinBi" />
+    <result column="KOUSHIN_USERID" jdbcType="VARCHAR" property="koushinUserid" />
+    <result column="TOUROKU_BI" jdbcType="TIMESTAMP" property="tourokuBi" />
+    <result column="TOUROKU_USERID" jdbcType="VARCHAR" property="tourokuUserid" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    SYOUHIN_CD, TODOKE_FUKABI, TODOKE_HENKOUBI, KOUSHIN_BI, KOUSHIN_USERID, TOUROKU_BI, 
+    TOUROKU_USERID
+  </sql>
+  <select id="selectByExample" parameterType="com.commodity.entity.dto.MReadJyogaiExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from m_read_jyogai
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="com.commodity.entity.dto.MReadJyogaiKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_read_jyogai
+    where SYOUHIN_CD = #{syouhinCd,jdbcType=CHAR}
+      and TODOKE_FUKABI = #{todokeFukabi,jdbcType=DATE}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.commodity.entity.dto.MReadJyogaiKey">
+    delete from m_read_jyogai
+    where SYOUHIN_CD = #{syouhinCd,jdbcType=CHAR}
+      and TODOKE_FUKABI = #{todokeFukabi,jdbcType=DATE}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.commodity.entity.dto.MReadJyogaiExample">
+    delete from m_read_jyogai
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.commodity.entity.dto.MReadJyogai">
+    insert into m_read_jyogai (SYOUHIN_CD, TODOKE_FUKABI, TODOKE_HENKOUBI, 
+      KOUSHIN_BI, KOUSHIN_USERID, TOUROKU_BI, 
+      TOUROKU_USERID)
+    values (#{syouhinCd,jdbcType=CHAR}, #{todokeFukabi,jdbcType=DATE}, #{todokeHenkoubi,jdbcType=DATE}, 
+      #{koushinBi,jdbcType=TIMESTAMP}, #{koushinUserid,jdbcType=VARCHAR}, #{tourokuBi,jdbcType=TIMESTAMP}, 
+      #{tourokuUserid,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.commodity.entity.dto.MReadJyogai">
+    insert into m_read_jyogai
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="syouhinCd != null">
+        SYOUHIN_CD,
+      </if>
+      <if test="todokeFukabi != null">
+        TODOKE_FUKABI,
+      </if>
+      <if test="todokeHenkoubi != null">
+        TODOKE_HENKOUBI,
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI,
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID,
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI,
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="syouhinCd != null">
+        #{syouhinCd,jdbcType=CHAR},
+      </if>
+      <if test="todokeFukabi != null">
+        #{todokeFukabi,jdbcType=DATE},
+      </if>
+      <if test="todokeHenkoubi != null">
+        #{todokeHenkoubi,jdbcType=DATE},
+      </if>
+      <if test="koushinBi != null">
+        #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.commodity.entity.dto.MReadJyogaiExample" resultType="java.lang.Long">
+    select count(*) from m_read_jyogai
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update m_read_jyogai
+    <set>
+      <if test="record.syouhinCd != null">
+        SYOUHIN_CD = #{record.syouhinCd,jdbcType=CHAR},
+      </if>
+      <if test="record.todokeFukabi != null">
+        TODOKE_FUKABI = #{record.todokeFukabi,jdbcType=DATE},
+      </if>
+      <if test="record.todokeHenkoubi != null">
+        TODOKE_HENKOUBI = #{record.todokeHenkoubi,jdbcType=DATE},
+      </if>
+      <if test="record.koushinBi != null">
+        KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.koushinUserid != null">
+        KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tourokuBi != null">
+        TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.tourokuUserid != null">
+        TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update m_read_jyogai
+    set SYOUHIN_CD = #{record.syouhinCd,jdbcType=CHAR},
+      TODOKE_FUKABI = #{record.todokeFukabi,jdbcType=DATE},
+      TODOKE_HENKOUBI = #{record.todokeHenkoubi,jdbcType=DATE},
+      KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.commodity.entity.dto.MReadJyogai">
+    update m_read_jyogai
+    <set>
+      <if test="todokeHenkoubi != null">
+        TODOKE_HENKOUBI = #{todokeHenkoubi,jdbcType=DATE},
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where SYOUHIN_CD = #{syouhinCd,jdbcType=CHAR}
+      and TODOKE_FUKABI = #{todokeFukabi,jdbcType=DATE}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.commodity.entity.dto.MReadJyogai">
+    update m_read_jyogai
+    set TODOKE_HENKOUBI = #{todokeHenkoubi,jdbcType=DATE},
+      KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR}
+    where SYOUHIN_CD = #{syouhinCd,jdbcType=CHAR}
+      and TODOKE_FUKABI = #{todokeFukabi,jdbcType=DATE}
+  </update>
+</mapper>

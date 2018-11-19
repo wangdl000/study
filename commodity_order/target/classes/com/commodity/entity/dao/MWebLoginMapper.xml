@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.commodity.entity.dao.MWebLoginMapper">
+  <resultMap id="BaseResultMap" type="com.commodity.entity.dto.MWebLogin">
+    <id column="TOIAWASE_NO" jdbcType="VARCHAR" property="toiawaseNo" />
+    <result column="CATALOG_ID" jdbcType="CHAR" property="catalogId" />
+    <result column="LOGIN_ID" jdbcType="VARCHAR" property="loginId" />
+    <result column="PASSWORD" jdbcType="VARCHAR" property="password" />
+    <result column="KIKAN_JYUTYU_STS" jdbcType="CHAR" property="kikanJyutyuSts" />
+    <result column="KIKAN_MUKOU_FLG" jdbcType="CHAR" property="kikanMukouFlg" />
+    <result column="WEB_MUKOU_FLG" jdbcType="CHAR" property="webMukouFlg" />
+    <result column="KOUSHIN_BI" jdbcType="TIMESTAMP" property="koushinBi" />
+    <result column="KOUSHIN_USERID" jdbcType="VARCHAR" property="koushinUserid" />
+    <result column="TOUROKU_BI" jdbcType="TIMESTAMP" property="tourokuBi" />
+    <result column="TOUROKU_USERID" jdbcType="VARCHAR" property="tourokuUserid" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    TOIAWASE_NO, CATALOG_ID, LOGIN_ID, PASSWORD, KIKAN_JYUTYU_STS, KIKAN_MUKOU_FLG, WEB_MUKOU_FLG, 
+    KOUSHIN_BI, KOUSHIN_USERID, TOUROKU_BI, TOUROKU_USERID
+  </sql>
+  <select id="selectByExample" parameterType="com.commodity.entity.dto.MWebLoginExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from m_web_login
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="com.commodity.entity.dto.MWebLoginKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_web_login
+    where TOIAWASE_NO = #{toiawaseNo,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.commodity.entity.dto.MWebLoginKey">
+    delete from m_web_login
+    where TOIAWASE_NO = #{toiawaseNo,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.commodity.entity.dto.MWebLoginExample">
+    delete from m_web_login
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.commodity.entity.dto.MWebLogin">
+    insert into m_web_login (TOIAWASE_NO, CATALOG_ID, LOGIN_ID, 
+      PASSWORD, KIKAN_JYUTYU_STS, KIKAN_MUKOU_FLG, 
+      WEB_MUKOU_FLG, KOUSHIN_BI, KOUSHIN_USERID, 
+      TOUROKU_BI, TOUROKU_USERID)
+    values (#{toiawaseNo,jdbcType=VARCHAR}, #{catalogId,jdbcType=CHAR}, #{loginId,jdbcType=VARCHAR}, 
+      #{password,jdbcType=VARCHAR}, #{kikanJyutyuSts,jdbcType=CHAR}, #{kikanMukouFlg,jdbcType=CHAR}, 
+      #{webMukouFlg,jdbcType=CHAR}, #{koushinBi,jdbcType=TIMESTAMP}, #{koushinUserid,jdbcType=VARCHAR}, 
+      #{tourokuBi,jdbcType=TIMESTAMP}, #{tourokuUserid,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.commodity.entity.dto.MWebLogin">
+    insert into m_web_login
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="toiawaseNo != null">
+        TOIAWASE_NO,
+      </if>
+      <if test="catalogId != null">
+        CATALOG_ID,
+      </if>
+      <if test="loginId != null">
+        LOGIN_ID,
+      </if>
+      <if test="password != null">
+        PASSWORD,
+      </if>
+      <if test="kikanJyutyuSts != null">
+        KIKAN_JYUTYU_STS,
+      </if>
+      <if test="kikanMukouFlg != null">
+        KIKAN_MUKOU_FLG,
+      </if>
+      <if test="webMukouFlg != null">
+        WEB_MUKOU_FLG,
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI,
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID,
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI,
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="toiawaseNo != null">
+        #{toiawaseNo,jdbcType=VARCHAR},
+      </if>
+      <if test="catalogId != null">
+        #{catalogId,jdbcType=CHAR},
+      </if>
+      <if test="loginId != null">
+        #{loginId,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="kikanJyutyuSts != null">
+        #{kikanJyutyuSts,jdbcType=CHAR},
+      </if>
+      <if test="kikanMukouFlg != null">
+        #{kikanMukouFlg,jdbcType=CHAR},
+      </if>
+      <if test="webMukouFlg != null">
+        #{webMukouFlg,jdbcType=CHAR},
+      </if>
+      <if test="koushinBi != null">
+        #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.commodity.entity.dto.MWebLoginExample" resultType="java.lang.Long">
+    select count(*) from m_web_login
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update m_web_login
+    <set>
+      <if test="record.toiawaseNo != null">
+        TOIAWASE_NO = #{record.toiawaseNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.catalogId != null">
+        CATALOG_ID = #{record.catalogId,jdbcType=CHAR},
+      </if>
+      <if test="record.loginId != null">
+        LOGIN_ID = #{record.loginId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.password != null">
+        PASSWORD = #{record.password,jdbcType=VARCHAR},
+      </if>
+      <if test="record.kikanJyutyuSts != null">
+        KIKAN_JYUTYU_STS = #{record.kikanJyutyuSts,jdbcType=CHAR},
+      </if>
+      <if test="record.kikanMukouFlg != null">
+        KIKAN_MUKOU_FLG = #{record.kikanMukouFlg,jdbcType=CHAR},
+      </if>
+      <if test="record.webMukouFlg != null">
+        WEB_MUKOU_FLG = #{record.webMukouFlg,jdbcType=CHAR},
+      </if>
+      <if test="record.koushinBi != null">
+        KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.koushinUserid != null">
+        KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tourokuBi != null">
+        TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.tourokuUserid != null">
+        TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update m_web_login
+    set TOIAWASE_NO = #{record.toiawaseNo,jdbcType=VARCHAR},
+      CATALOG_ID = #{record.catalogId,jdbcType=CHAR},
+      LOGIN_ID = #{record.loginId,jdbcType=VARCHAR},
+      PASSWORD = #{record.password,jdbcType=VARCHAR},
+      KIKAN_JYUTYU_STS = #{record.kikanJyutyuSts,jdbcType=CHAR},
+      KIKAN_MUKOU_FLG = #{record.kikanMukouFlg,jdbcType=CHAR},
+      WEB_MUKOU_FLG = #{record.webMukouFlg,jdbcType=CHAR},
+      KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.commodity.entity.dto.MWebLogin">
+    update m_web_login
+    <set>
+      <if test="catalogId != null">
+        CATALOG_ID = #{catalogId,jdbcType=CHAR},
+      </if>
+      <if test="loginId != null">
+        LOGIN_ID = #{loginId,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        PASSWORD = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="kikanJyutyuSts != null">
+        KIKAN_JYUTYU_STS = #{kikanJyutyuSts,jdbcType=CHAR},
+      </if>
+      <if test="kikanMukouFlg != null">
+        KIKAN_MUKOU_FLG = #{kikanMukouFlg,jdbcType=CHAR},
+      </if>
+      <if test="webMukouFlg != null">
+        WEB_MUKOU_FLG = #{webMukouFlg,jdbcType=CHAR},
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where TOIAWASE_NO = #{toiawaseNo,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.commodity.entity.dto.MWebLogin">
+    update m_web_login
+    set CATALOG_ID = #{catalogId,jdbcType=CHAR},
+      LOGIN_ID = #{loginId,jdbcType=VARCHAR},
+      PASSWORD = #{password,jdbcType=VARCHAR},
+      KIKAN_JYUTYU_STS = #{kikanJyutyuSts,jdbcType=CHAR},
+      KIKAN_MUKOU_FLG = #{kikanMukouFlg,jdbcType=CHAR},
+      WEB_MUKOU_FLG = #{webMukouFlg,jdbcType=CHAR},
+      KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR}
+    where TOIAWASE_NO = #{toiawaseNo,jdbcType=VARCHAR}
+  </update>
+</mapper>

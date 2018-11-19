@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.commodity.entity.dao.TToiawaseMapper">
+  <resultMap id="BaseResultMap" type="com.commodity.entity.dto.TToiawase">
+    <id column="UKETSUKE_NO" jdbcType="BIGINT" property="uketsukeNo" />
+    <result column="TOIAWASE_KBN" jdbcType="VARCHAR" property="toiawaseKbn" />
+    <result column="TOIAWASE_NAIYO" jdbcType="VARCHAR" property="toiawaseNaiyo" />
+    <result column="KNAME_1" jdbcType="VARCHAR" property="kname1" />
+    <result column="KNAME_2" jdbcType="VARCHAR" property="kname2" />
+    <result column="KANANAME_1" jdbcType="VARCHAR" property="kananame1" />
+    <result column="KANANAME_2" jdbcType="VARCHAR" property="kananame2" />
+    <result column="KNAME_HOUJIN" jdbcType="VARCHAR" property="knameHoujin" />
+    <result column="TEL_NO" jdbcType="VARCHAR" property="telNo" />
+    <result column="MAIL_ADDRESS" jdbcType="VARCHAR" property="mailAddress" />
+    <result column="TOIAWASE_NO" jdbcType="VARCHAR" property="toiawaseNo" />
+    <result column="RESPONSE_MAIL_ID" jdbcType="INTEGER" property="responseMailId" />
+    <result column="NOTIFY_MAIL_ID" jdbcType="INTEGER" property="notifyMailId" />
+    <result column="KOUSHIN_BI" jdbcType="TIMESTAMP" property="koushinBi" />
+    <result column="KOUSHIN_USERID" jdbcType="VARCHAR" property="koushinUserid" />
+    <result column="TOUROKU_BI" jdbcType="TIMESTAMP" property="tourokuBi" />
+    <result column="TOUROKU_USERID" jdbcType="VARCHAR" property="tourokuUserid" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    UKETSUKE_NO, TOIAWASE_KBN, TOIAWASE_NAIYO, KNAME_1, KNAME_2, KANANAME_1, KANANAME_2, 
+    KNAME_HOUJIN, TEL_NO, MAIL_ADDRESS, TOIAWASE_NO, RESPONSE_MAIL_ID, NOTIFY_MAIL_ID, 
+    KOUSHIN_BI, KOUSHIN_USERID, TOUROKU_BI, TOUROKU_USERID
+  </sql>
+  <select id="selectByExample" parameterType="com.commodity.entity.dto.TToiawaseExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_toiawase
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="com.commodity.entity.dto.TToiawaseKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_toiawase
+    where UKETSUKE_NO = #{uketsukeNo,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.commodity.entity.dto.TToiawaseKey">
+    delete from t_toiawase
+    where UKETSUKE_NO = #{uketsukeNo,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.commodity.entity.dto.TToiawaseExample">
+    delete from t_toiawase
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.commodity.entity.dto.TToiawase">
+    insert into t_toiawase (UKETSUKE_NO, TOIAWASE_KBN, TOIAWASE_NAIYO, 
+      KNAME_1, KNAME_2, KANANAME_1, 
+      KANANAME_2, KNAME_HOUJIN, TEL_NO, 
+      MAIL_ADDRESS, TOIAWASE_NO, RESPONSE_MAIL_ID, 
+      NOTIFY_MAIL_ID, KOUSHIN_BI, KOUSHIN_USERID, 
+      TOUROKU_BI, TOUROKU_USERID)
+    values (#{uketsukeNo,jdbcType=BIGINT}, #{toiawaseKbn,jdbcType=VARCHAR}, #{toiawaseNaiyo,jdbcType=VARCHAR}, 
+      #{kname1,jdbcType=VARCHAR}, #{kname2,jdbcType=VARCHAR}, #{kananame1,jdbcType=VARCHAR}, 
+      #{kananame2,jdbcType=VARCHAR}, #{knameHoujin,jdbcType=VARCHAR}, #{telNo,jdbcType=VARCHAR}, 
+      #{mailAddress,jdbcType=VARCHAR}, #{toiawaseNo,jdbcType=VARCHAR}, #{responseMailId,jdbcType=INTEGER}, 
+      #{notifyMailId,jdbcType=INTEGER}, #{koushinBi,jdbcType=TIMESTAMP}, #{koushinUserid,jdbcType=VARCHAR}, 
+      #{tourokuBi,jdbcType=TIMESTAMP}, #{tourokuUserid,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.commodity.entity.dto.TToiawase">
+    insert into t_toiawase
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="uketsukeNo != null">
+        UKETSUKE_NO,
+      </if>
+      <if test="toiawaseKbn != null">
+        TOIAWASE_KBN,
+      </if>
+      <if test="toiawaseNaiyo != null">
+        TOIAWASE_NAIYO,
+      </if>
+      <if test="kname1 != null">
+        KNAME_1,
+      </if>
+      <if test="kname2 != null">
+        KNAME_2,
+      </if>
+      <if test="kananame1 != null">
+        KANANAME_1,
+      </if>
+      <if test="kananame2 != null">
+        KANANAME_2,
+      </if>
+      <if test="knameHoujin != null">
+        KNAME_HOUJIN,
+      </if>
+      <if test="telNo != null">
+        TEL_NO,
+      </if>
+      <if test="mailAddress != null">
+        MAIL_ADDRESS,
+      </if>
+      <if test="toiawaseNo != null">
+        TOIAWASE_NO,
+      </if>
+      <if test="responseMailId != null">
+        RESPONSE_MAIL_ID,
+      </if>
+      <if test="notifyMailId != null">
+        NOTIFY_MAIL_ID,
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI,
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID,
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI,
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="uketsukeNo != null">
+        #{uketsukeNo,jdbcType=BIGINT},
+      </if>
+      <if test="toiawaseKbn != null">
+        #{toiawaseKbn,jdbcType=VARCHAR},
+      </if>
+      <if test="toiawaseNaiyo != null">
+        #{toiawaseNaiyo,jdbcType=VARCHAR},
+      </if>
+      <if test="kname1 != null">
+        #{kname1,jdbcType=VARCHAR},
+      </if>
+      <if test="kname2 != null">
+        #{kname2,jdbcType=VARCHAR},
+      </if>
+      <if test="kananame1 != null">
+        #{kananame1,jdbcType=VARCHAR},
+      </if>
+      <if test="kananame2 != null">
+        #{kananame2,jdbcType=VARCHAR},
+      </if>
+      <if test="knameHoujin != null">
+        #{knameHoujin,jdbcType=VARCHAR},
+      </if>
+      <if test="telNo != null">
+        #{telNo,jdbcType=VARCHAR},
+      </if>
+      <if test="mailAddress != null">
+        #{mailAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="toiawaseNo != null">
+        #{toiawaseNo,jdbcType=VARCHAR},
+      </if>
+      <if test="responseMailId != null">
+        #{responseMailId,jdbcType=INTEGER},
+      </if>
+      <if test="notifyMailId != null">
+        #{notifyMailId,jdbcType=INTEGER},
+      </if>
+      <if test="koushinBi != null">
+        #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.commodity.entity.dto.TToiawaseExample" resultType="java.lang.Long">
+    select count(*) from t_toiawase
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update t_toiawase
+    <set>
+      <if test="record.uketsukeNo != null">
+        UKETSUKE_NO = #{record.uketsukeNo,jdbcType=BIGINT},
+      </if>
+      <if test="record.toiawaseKbn != null">
+        TOIAWASE_KBN = #{record.toiawaseKbn,jdbcType=VARCHAR},
+      </if>
+      <if test="record.toiawaseNaiyo != null">
+        TOIAWASE_NAIYO = #{record.toiawaseNaiyo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.kname1 != null">
+        KNAME_1 = #{record.kname1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.kname2 != null">
+        KNAME_2 = #{record.kname2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.kananame1 != null">
+        KANANAME_1 = #{record.kananame1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.kananame2 != null">
+        KANANAME_2 = #{record.kananame2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.knameHoujin != null">
+        KNAME_HOUJIN = #{record.knameHoujin,jdbcType=VARCHAR},
+      </if>
+      <if test="record.telNo != null">
+        TEL_NO = #{record.telNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mailAddress != null">
+        MAIL_ADDRESS = #{record.mailAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.toiawaseNo != null">
+        TOIAWASE_NO = #{record.toiawaseNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.responseMailId != null">
+        RESPONSE_MAIL_ID = #{record.responseMailId,jdbcType=INTEGER},
+      </if>
+      <if test="record.notifyMailId != null">
+        NOTIFY_MAIL_ID = #{record.notifyMailId,jdbcType=INTEGER},
+      </if>
+      <if test="record.koushinBi != null">
+        KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.koushinUserid != null">
+        KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tourokuBi != null">
+        TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.tourokuUserid != null">
+        TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_toiawase
+    set UKETSUKE_NO = #{record.uketsukeNo,jdbcType=BIGINT},
+      TOIAWASE_KBN = #{record.toiawaseKbn,jdbcType=VARCHAR},
+      TOIAWASE_NAIYO = #{record.toiawaseNaiyo,jdbcType=VARCHAR},
+      KNAME_1 = #{record.kname1,jdbcType=VARCHAR},
+      KNAME_2 = #{record.kname2,jdbcType=VARCHAR},
+      KANANAME_1 = #{record.kananame1,jdbcType=VARCHAR},
+      KANANAME_2 = #{record.kananame2,jdbcType=VARCHAR},
+      KNAME_HOUJIN = #{record.knameHoujin,jdbcType=VARCHAR},
+      TEL_NO = #{record.telNo,jdbcType=VARCHAR},
+      MAIL_ADDRESS = #{record.mailAddress,jdbcType=VARCHAR},
+      TOIAWASE_NO = #{record.toiawaseNo,jdbcType=VARCHAR},
+      RESPONSE_MAIL_ID = #{record.responseMailId,jdbcType=INTEGER},
+      NOTIFY_MAIL_ID = #{record.notifyMailId,jdbcType=INTEGER},
+      KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.commodity.entity.dto.TToiawase">
+    update t_toiawase
+    <set>
+      <if test="toiawaseKbn != null">
+        TOIAWASE_KBN = #{toiawaseKbn,jdbcType=VARCHAR},
+      </if>
+      <if test="toiawaseNaiyo != null">
+        TOIAWASE_NAIYO = #{toiawaseNaiyo,jdbcType=VARCHAR},
+      </if>
+      <if test="kname1 != null">
+        KNAME_1 = #{kname1,jdbcType=VARCHAR},
+      </if>
+      <if test="kname2 != null">
+        KNAME_2 = #{kname2,jdbcType=VARCHAR},
+      </if>
+      <if test="kananame1 != null">
+        KANANAME_1 = #{kananame1,jdbcType=VARCHAR},
+      </if>
+      <if test="kananame2 != null">
+        KANANAME_2 = #{kananame2,jdbcType=VARCHAR},
+      </if>
+      <if test="knameHoujin != null">
+        KNAME_HOUJIN = #{knameHoujin,jdbcType=VARCHAR},
+      </if>
+      <if test="telNo != null">
+        TEL_NO = #{telNo,jdbcType=VARCHAR},
+      </if>
+      <if test="mailAddress != null">
+        MAIL_ADDRESS = #{mailAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="toiawaseNo != null">
+        TOIAWASE_NO = #{toiawaseNo,jdbcType=VARCHAR},
+      </if>
+      <if test="responseMailId != null">
+        RESPONSE_MAIL_ID = #{responseMailId,jdbcType=INTEGER},
+      </if>
+      <if test="notifyMailId != null">
+        NOTIFY_MAIL_ID = #{notifyMailId,jdbcType=INTEGER},
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where UKETSUKE_NO = #{uketsukeNo,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.commodity.entity.dto.TToiawase">
+    update t_toiawase
+    set TOIAWASE_KBN = #{toiawaseKbn,jdbcType=VARCHAR},
+      TOIAWASE_NAIYO = #{toiawaseNaiyo,jdbcType=VARCHAR},
+      KNAME_1 = #{kname1,jdbcType=VARCHAR},
+      KNAME_2 = #{kname2,jdbcType=VARCHAR},
+      KANANAME_1 = #{kananame1,jdbcType=VARCHAR},
+      KANANAME_2 = #{kananame2,jdbcType=VARCHAR},
+      KNAME_HOUJIN = #{knameHoujin,jdbcType=VARCHAR},
+      TEL_NO = #{telNo,jdbcType=VARCHAR},
+      MAIL_ADDRESS = #{mailAddress,jdbcType=VARCHAR},
+      TOIAWASE_NO = #{toiawaseNo,jdbcType=VARCHAR},
+      RESPONSE_MAIL_ID = #{responseMailId,jdbcType=INTEGER},
+      NOTIFY_MAIL_ID = #{notifyMailId,jdbcType=INTEGER},
+      KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR}
+    where UKETSUKE_NO = #{uketsukeNo,jdbcType=BIGINT}
+  </update>
+</mapper>

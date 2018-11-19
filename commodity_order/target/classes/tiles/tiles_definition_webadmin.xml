@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- postsample 参照用 -->
+	<definition name="home" template="/WEB-INF/jsp/postsample/layout/main-layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/jsp/postsample/partials/header.jsp" />
+		<!-- <put-attribute name="body" value="/WEB-INF/jsp/postsample/{0}/{1}.jsp" /> -->
+		<put-attribute name="body" value="/WEB-INF/jsp/postsample/postsample/post.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/postsample/partials/footer.jsp" />
+	</definition>
+
+	<definition name="webadmin"
+		template="/WEB-INF/jsp/webadmin/tiles_layout/webadmin_layout_main.jsp">
+		<put-attribute name="title" value="ダミー" />
+		<!-- header 各画面で変わらない要素 -->
+		<put-attribute name="webadmin_content_header" value="/WEB-INF/jsp/webadmin/tiles_parts/webadmin_content_header.jsp" />
+		<put-attribute name="webadmin_content_left_area" value="/WEB-INF/jsp/webadmin/tiles_parts/webadmin_content_left_area.jsp" />
+		<put-attribute name="webadmin_content_right_area" value="/WEB-INF/jsp/webadmin/tiles_parts/webadmin_content_blank.jsp" />
+		<put-attribute name="webadmin_content_page_top" value="/WEB-INF/jsp/webadmin/tiles_parts/webadmin_content_page_top.jsp" />
+		<!-- footer 各画面で変わらない要素 -->
+		<put-attribute name="webadmin_content_footer" value="/WEB-INF/jsp/webadmin/tiles_parts/webadmin_content_footer.jsp" />
+	</definition>
+
+	<definition name="webadmin_login" template="/WEB-INF/jsp/webadmin/tiles_layout/webadmin_layout_login.jsp">
+		<put-attribute name="title" value="管理画面ログイン" />
+		<!-- header 各画面で変わらない要素 -->
+		<put-attribute name="webadmin_content_header" value="/WEB-INF/jsp/webadmin/tiles_parts/webadmin_content_header.jsp" />
+		<put-attribute name="webadmin_content_left_area" value="/WEB-INF/jsp/webadmin/tiles_parts/webadmin_content_blank.jsp" />
+		<put-attribute name="webadmin_content_right_area" value="/WEB-INF/jsp/webadmin/contents/webadmin_login.jsp" />
+		<put-attribute name="webadmin_content_page_top" value="/WEB-INF/jsp/webadmin/tiles_parts/webadmin_content_page_top.jsp" />
+		<!-- footer 各画面で変わらない要素 -->
+		<put-attribute name="webadmin_content_footer" value="/WEB-INF/jsp/webadmin/tiles_parts/webadmin_content_footer.jsp" />
+	</definition>
+
+	<definition name="webadmin_top" extends="webadmin">
+		<put-attribute name="title" value="トップページ" />
+	</definition>
+
+	<definition name="webadmin_item_list" extends="webadmin">
+		<put-attribute name="title" value="商品情報一覧・検索" />
+		<put-attribute name="webadmin_content_right_area"
+			value="/WEB-INF/jsp/webadmin/contents/webadmin_item_list.jsp" />
+	</definition>
+
+	<definition name="webadmin_item_detail" extends="webadmin">
+		<put-attribute name="title" value="商品詳細説明入力" />
+		<put-attribute name="webadmin_content_right_area"
+			value="/WEB-INF/jsp/webadmin/contents/webadmin_item_detail.jsp" />
+	</definition>
+
+	<definition name="kikakuCodeList" extends="webadmin">
+		<put-attribute name="title" value="マスター管理（検索・一覧表示）" />
+		<put-attribute name="webadmin_content_right_area"
+			value="/WEB-INF/jsp/webadmin/contents/webadmin_code_list.jsp" />
+	</definition>
+
+	<definition name="kikakuCodeEdit" extends="webadmin">
+		<put-attribute name="title" value="マスター管理（編集）" />
+		<put-attribute name="webadmin_content_right_area"
+			value="/WEB-INF/jsp/webadmin/contents/webadmin_code_detail.jsp" />
+	</definition>
+
+	<definition name="catalogList" extends="webadmin">
+		<put-attribute name="title" value="カタログ管理（検索・一覧表示）" />
+		<put-attribute name="webadmin_content_right_area"
+			value="/WEB-INF/jsp/webadmin/contents/webadmin_catalog_list.jsp" />
+	</definition>
+
+	<definition name="catalogEdit" extends="webadmin">
+		<put-attribute name="title" value="カタログ管理（編集）" />
+		<put-attribute name="webadmin_content_right_area"
+			value="/WEB-INF/jsp/webadmin/contents/webadmin_catalog_detail.jsp" />
+	</definition>
+
+	<definition name="webadmin_msg_list" extends="webadmin">
+		<put-attribute name="title" value="お知らせ管理（検索・一覧表示）" />
+		<put-attribute name="webadmin_content_right_area"
+			value="/WEB-INF/jsp/webadmin/contents/webadmin_msg_list.jsp" />
+	</definition>
+
+	<definition name="webadmin_msg_regist" extends="webadmin">
+		<put-attribute name="title" value="お知らせ管理（新規）" />
+		<put-attribute name="webadmin_content_right_area"
+			value="/WEB-INF/jsp/webadmin/contents/webadmin_msg_regist.jsp" />
+	</definition>
+
+	<definition name="webadmin_msg_edit" extends="webadmin">
+		<put-attribute name="title" value="お知らせ管理（編集）" />
+		<put-attribute name="webadmin_content_right_area"
+			value="/WEB-INF/jsp/webadmin/contents/webadmin_msg_edit.jsp" />
+	</definition>
+
+	<definition name="syouhinUpload" extends="webadmin">
+		<put-attribute name="title" value="商品情報一括取り込み" />
+		<put-attribute name="webadmin_content_right_area"
+			value="/WEB-INF/jsp/webadmin/contents/webadmin_item_upload.jsp" />
+	</definition>
+
+	<definition name="webadmin_user_list" extends="webadmin">
+		<put-attribute name="title" value="ユーザ管理（検索・一覧表示）" />
+		<put-attribute name="webadmin_content_right_area"
+			value="/WEB-INF/jsp/webadmin/contents/webadmin_user_list.jsp" />
+	</definition>
+
+	<definition name="webadmin_user_regist" extends="webadmin">
+		<put-attribute name="title" value="ユーザ管理（新規）" />
+		<put-attribute name="webadmin_content_right_area"
+			value="/WEB-INF/jsp/webadmin/contents/webadmin_user_regist.jsp" />
+	</definition>
+
+	<definition name="webadmin_user_edit" extends="webadmin">
+		<put-attribute name="title" value="ユーザ管理（編集）" />
+		<put-attribute name="webadmin_content_right_area"
+			value="/WEB-INF/jsp/webadmin/contents/webadmin_user_edit.jsp" />
+	</definition>
+
+</tiles-definitions>

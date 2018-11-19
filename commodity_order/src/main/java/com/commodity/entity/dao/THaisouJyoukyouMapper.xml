@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.commodity.entity.dao.THaisouJyoukyouMapper">
+  <resultMap id="BaseResultMap" type="com.commodity.entity.dto.THaisouJyoukyou">
+    <id column="TOIAWASE_NO" jdbcType="VARCHAR" property="toiawaseNo" />
+    <id column="MEISAI_NO" jdbcType="CHAR" property="meisaiNo" />
+    <result column="HAGAKI_SYOUHIN_CD" jdbcType="VARCHAR" property="hagakiSyouhinCd" />
+    <result column="SYOUHIN_NAME" jdbcType="VARCHAR" property="syouhinName" />
+    <result column="TODOKE_BI" jdbcType="DATE" property="todokeBi" />
+    <result column="TODOKE_STS" jdbcType="CHAR" property="todokeSts" />
+    <result column="SYOUHIN_HAISOU_CD" jdbcType="CHAR" property="syouhinHaisouCd" />
+    <result column="HAISOU_DENPYOU_NO" jdbcType="VARCHAR" property="haisouDenpyouNo" />
+    <result column="HAIDEN_BIKOU" jdbcType="VARCHAR" property="haidenBikou" />
+    <result column="KOUSHIN_BI" jdbcType="TIMESTAMP" property="koushinBi" />
+    <result column="KOUSHIN_USERID" jdbcType="VARCHAR" property="koushinUserid" />
+    <result column="TOUROKU_BI" jdbcType="TIMESTAMP" property="tourokuBi" />
+    <result column="TOUROKU_USERID" jdbcType="VARCHAR" property="tourokuUserid" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    TOIAWASE_NO, MEISAI_NO, HAGAKI_SYOUHIN_CD, SYOUHIN_NAME, TODOKE_BI, TODOKE_STS, SYOUHIN_HAISOU_CD, 
+    HAISOU_DENPYOU_NO, HAIDEN_BIKOU, KOUSHIN_BI, KOUSHIN_USERID, TOUROKU_BI, TOUROKU_USERID
+  </sql>
+  <select id="selectByExample" parameterType="com.commodity.entity.dto.THaisouJyoukyouExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_haisou_jyoukyou
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="com.commodity.entity.dto.THaisouJyoukyouKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_haisou_jyoukyou
+    where TOIAWASE_NO = #{toiawaseNo,jdbcType=VARCHAR}
+      and MEISAI_NO = #{meisaiNo,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.commodity.entity.dto.THaisouJyoukyouKey">
+    delete from t_haisou_jyoukyou
+    where TOIAWASE_NO = #{toiawaseNo,jdbcType=VARCHAR}
+      and MEISAI_NO = #{meisaiNo,jdbcType=CHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.commodity.entity.dto.THaisouJyoukyouExample">
+    delete from t_haisou_jyoukyou
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.commodity.entity.dto.THaisouJyoukyou">
+    insert into t_haisou_jyoukyou (TOIAWASE_NO, MEISAI_NO, HAGAKI_SYOUHIN_CD, 
+      SYOUHIN_NAME, TODOKE_BI, TODOKE_STS, 
+      SYOUHIN_HAISOU_CD, HAISOU_DENPYOU_NO, HAIDEN_BIKOU, 
+      KOUSHIN_BI, KOUSHIN_USERID, TOUROKU_BI, 
+      TOUROKU_USERID)
+    values (#{toiawaseNo,jdbcType=VARCHAR}, #{meisaiNo,jdbcType=CHAR}, #{hagakiSyouhinCd,jdbcType=VARCHAR}, 
+      #{syouhinName,jdbcType=VARCHAR}, #{todokeBi,jdbcType=DATE}, #{todokeSts,jdbcType=CHAR}, 
+      #{syouhinHaisouCd,jdbcType=CHAR}, #{haisouDenpyouNo,jdbcType=VARCHAR}, #{haidenBikou,jdbcType=VARCHAR}, 
+      #{koushinBi,jdbcType=TIMESTAMP}, #{koushinUserid,jdbcType=VARCHAR}, #{tourokuBi,jdbcType=TIMESTAMP}, 
+      #{tourokuUserid,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.commodity.entity.dto.THaisouJyoukyou">
+    insert into t_haisou_jyoukyou
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="toiawaseNo != null">
+        TOIAWASE_NO,
+      </if>
+      <if test="meisaiNo != null">
+        MEISAI_NO,
+      </if>
+      <if test="hagakiSyouhinCd != null">
+        HAGAKI_SYOUHIN_CD,
+      </if>
+      <if test="syouhinName != null">
+        SYOUHIN_NAME,
+      </if>
+      <if test="todokeBi != null">
+        TODOKE_BI,
+      </if>
+      <if test="todokeSts != null">
+        TODOKE_STS,
+      </if>
+      <if test="syouhinHaisouCd != null">
+        SYOUHIN_HAISOU_CD,
+      </if>
+      <if test="haisouDenpyouNo != null">
+        HAISOU_DENPYOU_NO,
+      </if>
+      <if test="haidenBikou != null">
+        HAIDEN_BIKOU,
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI,
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID,
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI,
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="toiawaseNo != null">
+        #{toiawaseNo,jdbcType=VARCHAR},
+      </if>
+      <if test="meisaiNo != null">
+        #{meisaiNo,jdbcType=CHAR},
+      </if>
+      <if test="hagakiSyouhinCd != null">
+        #{hagakiSyouhinCd,jdbcType=VARCHAR},
+      </if>
+      <if test="syouhinName != null">
+        #{syouhinName,jdbcType=VARCHAR},
+      </if>
+      <if test="todokeBi != null">
+        #{todokeBi,jdbcType=DATE},
+      </if>
+      <if test="todokeSts != null">
+        #{todokeSts,jdbcType=CHAR},
+      </if>
+      <if test="syouhinHaisouCd != null">
+        #{syouhinHaisouCd,jdbcType=CHAR},
+      </if>
+      <if test="haisouDenpyouNo != null">
+        #{haisouDenpyouNo,jdbcType=VARCHAR},
+      </if>
+      <if test="haidenBikou != null">
+        #{haidenBikou,jdbcType=VARCHAR},
+      </if>
+      <if test="koushinBi != null">
+        #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.commodity.entity.dto.THaisouJyoukyouExample" resultType="java.lang.Long">
+    select count(*) from t_haisou_jyoukyou
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update t_haisou_jyoukyou
+    <set>
+      <if test="record.toiawaseNo != null">
+        TOIAWASE_NO = #{record.toiawaseNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.meisaiNo != null">
+        MEISAI_NO = #{record.meisaiNo,jdbcType=CHAR},
+      </if>
+      <if test="record.hagakiSyouhinCd != null">
+        HAGAKI_SYOUHIN_CD = #{record.hagakiSyouhinCd,jdbcType=VARCHAR},
+      </if>
+      <if test="record.syouhinName != null">
+        SYOUHIN_NAME = #{record.syouhinName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.todokeBi != null">
+        TODOKE_BI = #{record.todokeBi,jdbcType=DATE},
+      </if>
+      <if test="record.todokeSts != null">
+        TODOKE_STS = #{record.todokeSts,jdbcType=CHAR},
+      </if>
+      <if test="record.syouhinHaisouCd != null">
+        SYOUHIN_HAISOU_CD = #{record.syouhinHaisouCd,jdbcType=CHAR},
+      </if>
+      <if test="record.haisouDenpyouNo != null">
+        HAISOU_DENPYOU_NO = #{record.haisouDenpyouNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.haidenBikou != null">
+        HAIDEN_BIKOU = #{record.haidenBikou,jdbcType=VARCHAR},
+      </if>
+      <if test="record.koushinBi != null">
+        KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.koushinUserid != null">
+        KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tourokuBi != null">
+        TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.tourokuUserid != null">
+        TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_haisou_jyoukyou
+    set TOIAWASE_NO = #{record.toiawaseNo,jdbcType=VARCHAR},
+      MEISAI_NO = #{record.meisaiNo,jdbcType=CHAR},
+      HAGAKI_SYOUHIN_CD = #{record.hagakiSyouhinCd,jdbcType=VARCHAR},
+      SYOUHIN_NAME = #{record.syouhinName,jdbcType=VARCHAR},
+      TODOKE_BI = #{record.todokeBi,jdbcType=DATE},
+      TODOKE_STS = #{record.todokeSts,jdbcType=CHAR},
+      SYOUHIN_HAISOU_CD = #{record.syouhinHaisouCd,jdbcType=CHAR},
+      HAISOU_DENPYOU_NO = #{record.haisouDenpyouNo,jdbcType=VARCHAR},
+      HAIDEN_BIKOU = #{record.haidenBikou,jdbcType=VARCHAR},
+      KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.commodity.entity.dto.THaisouJyoukyou">
+    update t_haisou_jyoukyou
+    <set>
+      <if test="hagakiSyouhinCd != null">
+        HAGAKI_SYOUHIN_CD = #{hagakiSyouhinCd,jdbcType=VARCHAR},
+      </if>
+      <if test="syouhinName != null">
+        SYOUHIN_NAME = #{syouhinName,jdbcType=VARCHAR},
+      </if>
+      <if test="todokeBi != null">
+        TODOKE_BI = #{todokeBi,jdbcType=DATE},
+      </if>
+      <if test="todokeSts != null">
+        TODOKE_STS = #{todokeSts,jdbcType=CHAR},
+      </if>
+      <if test="syouhinHaisouCd != null">
+        SYOUHIN_HAISOU_CD = #{syouhinHaisouCd,jdbcType=CHAR},
+      </if>
+      <if test="haisouDenpyouNo != null">
+        HAISOU_DENPYOU_NO = #{haisouDenpyouNo,jdbcType=VARCHAR},
+      </if>
+      <if test="haidenBikou != null">
+        HAIDEN_BIKOU = #{haidenBikou,jdbcType=VARCHAR},
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where TOIAWASE_NO = #{toiawaseNo,jdbcType=VARCHAR}
+      and MEISAI_NO = #{meisaiNo,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.commodity.entity.dto.THaisouJyoukyou">
+    update t_haisou_jyoukyou
+    set HAGAKI_SYOUHIN_CD = #{hagakiSyouhinCd,jdbcType=VARCHAR},
+      SYOUHIN_NAME = #{syouhinName,jdbcType=VARCHAR},
+      TODOKE_BI = #{todokeBi,jdbcType=DATE},
+      TODOKE_STS = #{todokeSts,jdbcType=CHAR},
+      SYOUHIN_HAISOU_CD = #{syouhinHaisouCd,jdbcType=CHAR},
+      HAISOU_DENPYOU_NO = #{haisouDenpyouNo,jdbcType=VARCHAR},
+      HAIDEN_BIKOU = #{haidenBikou,jdbcType=VARCHAR},
+      KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR}
+    where TOIAWASE_NO = #{toiawaseNo,jdbcType=VARCHAR}
+      and MEISAI_NO = #{meisaiNo,jdbcType=CHAR}
+  </update>
+</mapper>

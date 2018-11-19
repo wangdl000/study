@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.commodity.entity.dao.MCatalogSyouhinMapper">
+  <resultMap id="BaseResultMap" type="com.commodity.entity.dto.MCatalogSyouhin">
+    <id column="CATALOG_ID" jdbcType="CHAR" property="catalogId" />
+    <id column="HAGAKI_SYOUHIN_CD" jdbcType="VARCHAR" property="hagakiSyouhinCd" />
+    <result column="SYOUHIN_CD" jdbcType="CHAR" property="syouhinCd" />
+    <result column="HAGAKI_SYOUHIN_KIGOU" jdbcType="VARCHAR" property="hagakiSyouhinKigou" />
+    <result column="CHOICE_SU" jdbcType="CHAR" property="choiceSu" />
+    <result column="KOUSHIN_BI" jdbcType="TIMESTAMP" property="koushinBi" />
+    <result column="KOUSHIN_USERID" jdbcType="VARCHAR" property="koushinUserid" />
+    <result column="TOUROKU_BI" jdbcType="TIMESTAMP" property="tourokuBi" />
+    <result column="TOUROKU_USERID" jdbcType="VARCHAR" property="tourokuUserid" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    CATALOG_ID, HAGAKI_SYOUHIN_CD, SYOUHIN_CD, HAGAKI_SYOUHIN_KIGOU, CHOICE_SU, KOUSHIN_BI, 
+    KOUSHIN_USERID, TOUROKU_BI, TOUROKU_USERID
+  </sql>
+  <select id="selectByExample" parameterType="com.commodity.entity.dto.MCatalogSyouhinExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from m_catalog_syouhin
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="com.commodity.entity.dto.MCatalogSyouhinKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_catalog_syouhin
+    where CATALOG_ID = #{catalogId,jdbcType=CHAR}
+      and HAGAKI_SYOUHIN_CD = #{hagakiSyouhinCd,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.commodity.entity.dto.MCatalogSyouhinKey">
+    delete from m_catalog_syouhin
+    where CATALOG_ID = #{catalogId,jdbcType=CHAR}
+      and HAGAKI_SYOUHIN_CD = #{hagakiSyouhinCd,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.commodity.entity.dto.MCatalogSyouhinExample">
+    delete from m_catalog_syouhin
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.commodity.entity.dto.MCatalogSyouhin">
+    insert into m_catalog_syouhin (CATALOG_ID, HAGAKI_SYOUHIN_CD, SYOUHIN_CD, 
+      HAGAKI_SYOUHIN_KIGOU, CHOICE_SU, KOUSHIN_BI, 
+      KOUSHIN_USERID, TOUROKU_BI, TOUROKU_USERID
+      )
+    values (#{catalogId,jdbcType=CHAR}, #{hagakiSyouhinCd,jdbcType=VARCHAR}, #{syouhinCd,jdbcType=CHAR}, 
+      #{hagakiSyouhinKigou,jdbcType=VARCHAR}, #{choiceSu,jdbcType=CHAR}, #{koushinBi,jdbcType=TIMESTAMP}, 
+      #{koushinUserid,jdbcType=VARCHAR}, #{tourokuBi,jdbcType=TIMESTAMP}, #{tourokuUserid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.commodity.entity.dto.MCatalogSyouhin">
+    insert into m_catalog_syouhin
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="catalogId != null">
+        CATALOG_ID,
+      </if>
+      <if test="hagakiSyouhinCd != null">
+        HAGAKI_SYOUHIN_CD,
+      </if>
+      <if test="syouhinCd != null">
+        SYOUHIN_CD,
+      </if>
+      <if test="hagakiSyouhinKigou != null">
+        HAGAKI_SYOUHIN_KIGOU,
+      </if>
+      <if test="choiceSu != null">
+        CHOICE_SU,
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI,
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID,
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI,
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="catalogId != null">
+        #{catalogId,jdbcType=CHAR},
+      </if>
+      <if test="hagakiSyouhinCd != null">
+        #{hagakiSyouhinCd,jdbcType=VARCHAR},
+      </if>
+      <if test="syouhinCd != null">
+        #{syouhinCd,jdbcType=CHAR},
+      </if>
+      <if test="hagakiSyouhinKigou != null">
+        #{hagakiSyouhinKigou,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceSu != null">
+        #{choiceSu,jdbcType=CHAR},
+      </if>
+      <if test="koushinBi != null">
+        #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.commodity.entity.dto.MCatalogSyouhinExample" resultType="java.lang.Long">
+    select count(*) from m_catalog_syouhin
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update m_catalog_syouhin
+    <set>
+      <if test="record.catalogId != null">
+        CATALOG_ID = #{record.catalogId,jdbcType=CHAR},
+      </if>
+      <if test="record.hagakiSyouhinCd != null">
+        HAGAKI_SYOUHIN_CD = #{record.hagakiSyouhinCd,jdbcType=VARCHAR},
+      </if>
+      <if test="record.syouhinCd != null">
+        SYOUHIN_CD = #{record.syouhinCd,jdbcType=CHAR},
+      </if>
+      <if test="record.hagakiSyouhinKigou != null">
+        HAGAKI_SYOUHIN_KIGOU = #{record.hagakiSyouhinKigou,jdbcType=VARCHAR},
+      </if>
+      <if test="record.choiceSu != null">
+        CHOICE_SU = #{record.choiceSu,jdbcType=CHAR},
+      </if>
+      <if test="record.koushinBi != null">
+        KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.koushinUserid != null">
+        KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tourokuBi != null">
+        TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.tourokuUserid != null">
+        TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update m_catalog_syouhin
+    set CATALOG_ID = #{record.catalogId,jdbcType=CHAR},
+      HAGAKI_SYOUHIN_CD = #{record.hagakiSyouhinCd,jdbcType=VARCHAR},
+      SYOUHIN_CD = #{record.syouhinCd,jdbcType=CHAR},
+      HAGAKI_SYOUHIN_KIGOU = #{record.hagakiSyouhinKigou,jdbcType=VARCHAR},
+      CHOICE_SU = #{record.choiceSu,jdbcType=CHAR},
+      KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.commodity.entity.dto.MCatalogSyouhin">
+    update m_catalog_syouhin
+    <set>
+      <if test="syouhinCd != null">
+        SYOUHIN_CD = #{syouhinCd,jdbcType=CHAR},
+      </if>
+      <if test="hagakiSyouhinKigou != null">
+        HAGAKI_SYOUHIN_KIGOU = #{hagakiSyouhinKigou,jdbcType=VARCHAR},
+      </if>
+      <if test="choiceSu != null">
+        CHOICE_SU = #{choiceSu,jdbcType=CHAR},
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where CATALOG_ID = #{catalogId,jdbcType=CHAR}
+      and HAGAKI_SYOUHIN_CD = #{hagakiSyouhinCd,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.commodity.entity.dto.MCatalogSyouhin">
+    update m_catalog_syouhin
+    set SYOUHIN_CD = #{syouhinCd,jdbcType=CHAR},
+      HAGAKI_SYOUHIN_KIGOU = #{hagakiSyouhinKigou,jdbcType=VARCHAR},
+      CHOICE_SU = #{choiceSu,jdbcType=CHAR},
+      KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR}
+    where CATALOG_ID = #{catalogId,jdbcType=CHAR}
+      and HAGAKI_SYOUHIN_CD = #{hagakiSyouhinCd,jdbcType=VARCHAR}
+  </update>
+</mapper>

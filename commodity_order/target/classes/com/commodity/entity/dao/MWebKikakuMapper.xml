@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.commodity.entity.dao.MWebKikakuMapper">
+  <resultMap id="BaseResultMap" type="com.commodity.entity.dto.MWebKikaku">
+    <id column="KIKAKU_CD" jdbcType="CHAR" property="kikakuCd" />
+    <result column="BASE_DIRECTORY" jdbcType="VARCHAR" property="baseDirectory" />
+    <result column="HAGAKI_SYOUHIN_CD_SPLIT" jdbcType="VARCHAR" property="hagakiSyouhinCdSplit" />
+    <result column="HAGAKI_SYOUHIN_CD_FORMAT" jdbcType="VARCHAR" property="hagakiSyouhinCdFormat" />
+    <result column="TOIAWASE_YUUKOU_FLG" jdbcType="CHAR" property="toiawaseYuukouFlg" />
+    <result column="KOUSHIN_BI" jdbcType="TIMESTAMP" property="koushinBi" />
+    <result column="KOUSHIN_USERID" jdbcType="VARCHAR" property="koushinUserid" />
+    <result column="TOUROKU_BI" jdbcType="TIMESTAMP" property="tourokuBi" />
+    <result column="TOUROKU_USERID" jdbcType="VARCHAR" property="tourokuUserid" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    KIKAKU_CD, BASE_DIRECTORY, HAGAKI_SYOUHIN_CD_SPLIT, HAGAKI_SYOUHIN_CD_FORMAT, TOIAWASE_YUUKOU_FLG, 
+    KOUSHIN_BI, KOUSHIN_USERID, TOUROKU_BI, TOUROKU_USERID
+  </sql>
+  <select id="selectByExample" parameterType="com.commodity.entity.dto.MWebKikakuExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from m_web_kikaku
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="com.commodity.entity.dto.MWebKikakuKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_web_kikaku
+    where KIKAKU_CD = #{kikakuCd,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.commodity.entity.dto.MWebKikakuKey">
+    delete from m_web_kikaku
+    where KIKAKU_CD = #{kikakuCd,jdbcType=CHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.commodity.entity.dto.MWebKikakuExample">
+    delete from m_web_kikaku
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.commodity.entity.dto.MWebKikaku">
+    insert into m_web_kikaku (KIKAKU_CD, BASE_DIRECTORY, HAGAKI_SYOUHIN_CD_SPLIT, 
+      HAGAKI_SYOUHIN_CD_FORMAT, TOIAWASE_YUUKOU_FLG, 
+      KOUSHIN_BI, KOUSHIN_USERID, TOUROKU_BI, 
+      TOUROKU_USERID)
+    values (#{kikakuCd,jdbcType=CHAR}, #{baseDirectory,jdbcType=VARCHAR}, #{hagakiSyouhinCdSplit,jdbcType=VARCHAR}, 
+      #{hagakiSyouhinCdFormat,jdbcType=VARCHAR}, #{toiawaseYuukouFlg,jdbcType=CHAR}, 
+      #{koushinBi,jdbcType=TIMESTAMP}, #{koushinUserid,jdbcType=VARCHAR}, #{tourokuBi,jdbcType=TIMESTAMP}, 
+      #{tourokuUserid,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.commodity.entity.dto.MWebKikaku">
+    insert into m_web_kikaku
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="kikakuCd != null">
+        KIKAKU_CD,
+      </if>
+      <if test="baseDirectory != null">
+        BASE_DIRECTORY,
+      </if>
+      <if test="hagakiSyouhinCdSplit != null">
+        HAGAKI_SYOUHIN_CD_SPLIT,
+      </if>
+      <if test="hagakiSyouhinCdFormat != null">
+        HAGAKI_SYOUHIN_CD_FORMAT,
+      </if>
+      <if test="toiawaseYuukouFlg != null">
+        TOIAWASE_YUUKOU_FLG,
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI,
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID,
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI,
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="kikakuCd != null">
+        #{kikakuCd,jdbcType=CHAR},
+      </if>
+      <if test="baseDirectory != null">
+        #{baseDirectory,jdbcType=VARCHAR},
+      </if>
+      <if test="hagakiSyouhinCdSplit != null">
+        #{hagakiSyouhinCdSplit,jdbcType=VARCHAR},
+      </if>
+      <if test="hagakiSyouhinCdFormat != null">
+        #{hagakiSyouhinCdFormat,jdbcType=VARCHAR},
+      </if>
+      <if test="toiawaseYuukouFlg != null">
+        #{toiawaseYuukouFlg,jdbcType=CHAR},
+      </if>
+      <if test="koushinBi != null">
+        #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.commodity.entity.dto.MWebKikakuExample" resultType="java.lang.Long">
+    select count(*) from m_web_kikaku
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update m_web_kikaku
+    <set>
+      <if test="record.kikakuCd != null">
+        KIKAKU_CD = #{record.kikakuCd,jdbcType=CHAR},
+      </if>
+      <if test="record.baseDirectory != null">
+        BASE_DIRECTORY = #{record.baseDirectory,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hagakiSyouhinCdSplit != null">
+        HAGAKI_SYOUHIN_CD_SPLIT = #{record.hagakiSyouhinCdSplit,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hagakiSyouhinCdFormat != null">
+        HAGAKI_SYOUHIN_CD_FORMAT = #{record.hagakiSyouhinCdFormat,jdbcType=VARCHAR},
+      </if>
+      <if test="record.toiawaseYuukouFlg != null">
+        TOIAWASE_YUUKOU_FLG = #{record.toiawaseYuukouFlg,jdbcType=CHAR},
+      </if>
+      <if test="record.koushinBi != null">
+        KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.koushinUserid != null">
+        KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tourokuBi != null">
+        TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.tourokuUserid != null">
+        TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update m_web_kikaku
+    set KIKAKU_CD = #{record.kikakuCd,jdbcType=CHAR},
+      BASE_DIRECTORY = #{record.baseDirectory,jdbcType=VARCHAR},
+      HAGAKI_SYOUHIN_CD_SPLIT = #{record.hagakiSyouhinCdSplit,jdbcType=VARCHAR},
+      HAGAKI_SYOUHIN_CD_FORMAT = #{record.hagakiSyouhinCdFormat,jdbcType=VARCHAR},
+      TOIAWASE_YUUKOU_FLG = #{record.toiawaseYuukouFlg,jdbcType=CHAR},
+      KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.commodity.entity.dto.MWebKikaku">
+    update m_web_kikaku
+    <set>
+      <if test="baseDirectory != null">
+        BASE_DIRECTORY = #{baseDirectory,jdbcType=VARCHAR},
+      </if>
+      <if test="hagakiSyouhinCdSplit != null">
+        HAGAKI_SYOUHIN_CD_SPLIT = #{hagakiSyouhinCdSplit,jdbcType=VARCHAR},
+      </if>
+      <if test="hagakiSyouhinCdFormat != null">
+        HAGAKI_SYOUHIN_CD_FORMAT = #{hagakiSyouhinCdFormat,jdbcType=VARCHAR},
+      </if>
+      <if test="toiawaseYuukouFlg != null">
+        TOIAWASE_YUUKOU_FLG = #{toiawaseYuukouFlg,jdbcType=CHAR},
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where KIKAKU_CD = #{kikakuCd,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.commodity.entity.dto.MWebKikaku">
+    update m_web_kikaku
+    set BASE_DIRECTORY = #{baseDirectory,jdbcType=VARCHAR},
+      HAGAKI_SYOUHIN_CD_SPLIT = #{hagakiSyouhinCdSplit,jdbcType=VARCHAR},
+      HAGAKI_SYOUHIN_CD_FORMAT = #{hagakiSyouhinCdFormat,jdbcType=VARCHAR},
+      TOIAWASE_YUUKOU_FLG = #{toiawaseYuukouFlg,jdbcType=CHAR},
+      KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR}
+    where KIKAKU_CD = #{kikakuCd,jdbcType=CHAR}
+  </update>
+</mapper>

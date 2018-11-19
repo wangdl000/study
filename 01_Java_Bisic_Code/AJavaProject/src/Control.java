@@ -10,6 +10,130 @@ public class Control {
 		int age1 = 10;
 		int age2 = 30;
 
+		boolean a1 = true;
+		boolean a2 = false;
+
+		int z1 = 0;
+		int z2 = 100;
+		//
+		//		int bbb = 0;
+		//		try {
+		//			int z3 = z2 / z1;
+		//
+		//		} catch (Exception e) {
+		//
+		//		} finally {
+		//
+		//		}
+
+		//		System.out.println(bbb);
+		//
+		//		Date dt = new Date();
+		//
+		//		switch (age1) {
+		//		case 10:
+		//
+		//			//Statements
+		//			break;
+		//		case 20:
+		//
+		//			//Statements
+		//			break;
+		//		case 3:
+		//
+		//			//Statements
+		//			break;
+		//		case 4:
+		//
+		//			//Statements
+		//			break;
+		//		case 5:
+		//
+		//			//Statements
+		//			break;
+		//		case 6:
+		//
+		//			//Statements
+		//			break;
+		//		default: //Optional
+		//			//Statements
+		//
+		//		}
+		//
+		//		if (age1 == 10) {
+		//
+		//		} else if (age1 == 20) {
+		//
+		//		} else if (age1 == 3) {
+		//
+		//		} else if (age1 == 4) {
+		//
+		//		} else if (age1 == 5) {
+		//
+		//		} else if (age1 == 20) {
+		//
+		//		} else if (age1 == 20) {
+		//
+		//		} else if (age1 == 20) {
+		//
+		//		}
+		//
+		//		int apple1 = 9;
+		//
+		//		if (a1) {
+		//			System.out.println("Hello World !!!!!!");
+		//		} else {
+		//
+		//			System.out.println("Hello 111World !!!!!!");
+		//		}
+		//
+		//		if (apple1 == 5) {
+		//
+		//		} else {
+		//
+		//		}
+		//
+		//		if (age1 == 10 || age2 == 30) {
+		//
+		//		}
+		//
+		//		boolean aaa = true;
+		//		while (aaa) {
+		//
+		//			if (1 == 1) {
+		//
+		//			}
+		//		}
+
+		//		Object name = new Object();
+		//
+		//		boolean result = name instanceof String;
+
+		//		age1 += age2;
+		//
+		//		age1 = age1 + age2;
+		//
+		//		if (!a1) {
+		//
+		//		}
+		//
+		//		String strX1 = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+		//
+		//		strX1.length();
+		//
+		//		char c1 = '☺';
+		//
+		//		if (c1 == '☺') {
+		//			System.out.println("yessss");
+		//		}
+
+		int x = 1;
+
+		x = x + 1;
+
+		// 引用数据类型
+		String strX = null;
+
 		int outAge1 = age2 / age1;
 
 		int outAge2 = age1 + age2;
@@ -94,10 +218,8 @@ public class Control {
 			System.out.println("第" + (j + 1) + "条：" + p.getAdrress());
 		}
 
-
 		// 案例5：
 		// 對於案例2那樣 長度固定的複雜數組，可以用枚舉（enum）使之简单化
-
 
 	}
 
@@ -111,20 +233,44 @@ public class Control {
 
 		// 注释的方式1 双斜线
 
+		int aa[] = { 1, 2, 3 };
+
 		// 定義一個引用參數 strPerson1数组，长度为4
-		String[] strPerson1 = new String[4];
+		String[] strPerson1 = new String[10000];
 		strPerson1[0] = "王";
 		strPerson1[1] = "25";
 		strPerson1[2] = "男";
 		strPerson1[3] = "東京";
 
+		int len = strPerson1.length;
+
+		System.out.println(len);
+		System.out.println(strPerson1[0]);
+
+		for (int m = 0; m < len;) {
+			System.out.println(strPerson1[m]);
+
+			m = m + 2;
+		}
+
+		int n = 0;
+		n++;
+
+		n = n + 1;
+
+		ArrayList ary = new ArrayList();
+		ary.add("王");
+		ary.add(25);
+
+		int sz = ary.size();
+
+		String strPerson11[] = { "王", "25", "男", "東京" };
 		/*
 		 * 注释的方式2
 		 */
 
 		// 或者如下定义
 		/*
-		String strPerson1[] = {"王" , "25", "男" , "東京"};
 		*/
 		// 注意数组中的各个元素的数据的类型必须一致，
 		// 如下定义则会出错（25为整数类型）

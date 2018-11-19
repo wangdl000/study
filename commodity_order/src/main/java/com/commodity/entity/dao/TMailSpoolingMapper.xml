@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.commodity.entity.dao.TMailSpoolingMapper">
+  <resultMap id="BaseResultMap" type="com.commodity.entity.dto.TMailSpooling">
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="MAIL_ADDRESS" jdbcType="VARCHAR" property="mailAddress" />
+    <result column="MAIL_FROM_ADDRESS" jdbcType="VARCHAR" property="mailFromAddress" />
+    <result column="MAIL_FROM_NAME" jdbcType="VARCHAR" property="mailFromName" />
+    <result column="MAIL_REPLYTO_ADDRESS" jdbcType="VARCHAR" property="mailReplytoAddress" />
+    <result column="MAIL_ERRORTO_ADDRESS" jdbcType="VARCHAR" property="mailErrortoAddress" />
+    <result column="NOW_SENDING" jdbcType="CHAR" property="nowSending" />
+    <result column="SENDED" jdbcType="CHAR" property="sended" />
+    <result column="KOUSHIN_BI" jdbcType="TIMESTAMP" property="koushinBi" />
+    <result column="KOUSHIN_USERID" jdbcType="VARCHAR" property="koushinUserid" />
+    <result column="TOUROKU_BI" jdbcType="TIMESTAMP" property="tourokuBi" />
+    <result column="TOUROKU_USERID" jdbcType="VARCHAR" property="tourokuUserid" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.commodity.entity.dto.TMailSpoolingWithBLOBs">
+    <result column="MAIL_TITLE" jdbcType="LONGVARCHAR" property="mailTitle" />
+    <result column="MAIL_CONTENT" jdbcType="LONGVARCHAR" property="mailContent" />
+    <result column="MAIL_CC_ADDRESS" jdbcType="LONGVARCHAR" property="mailCcAddress" />
+    <result column="MAIL_BCC_ADDRESS" jdbcType="LONGVARCHAR" property="mailBccAddress" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    ID, MAIL_ADDRESS, MAIL_FROM_ADDRESS, MAIL_FROM_NAME, MAIL_REPLYTO_ADDRESS, MAIL_ERRORTO_ADDRESS, 
+    NOW_SENDING, SENDED, KOUSHIN_BI, KOUSHIN_USERID, TOUROKU_BI, TOUROKU_USERID
+  </sql>
+  <sql id="Blob_Column_List">
+    MAIL_TITLE, MAIL_CONTENT, MAIL_CC_ADDRESS, MAIL_BCC_ADDRESS
+  </sql>
+  <select id="selectByExampleWithBLOBs" parameterType="com.commodity.entity.dto.TMailSpoolingExample" resultMap="ResultMapWithBLOBs">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from t_mail_spooling
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" parameterType="com.commodity.entity.dto.TMailSpoolingExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_mail_spooling
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="com.commodity.entity.dto.TMailSpoolingKey" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from t_mail_spooling
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.commodity.entity.dto.TMailSpoolingKey">
+    delete from t_mail_spooling
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.commodity.entity.dto.TMailSpoolingExample">
+    delete from t_mail_spooling
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.commodity.entity.dto.TMailSpoolingWithBLOBs">
+    insert into t_mail_spooling (ID, MAIL_ADDRESS, MAIL_FROM_ADDRESS, 
+      MAIL_FROM_NAME, MAIL_REPLYTO_ADDRESS, MAIL_ERRORTO_ADDRESS, 
+      NOW_SENDING, SENDED, KOUSHIN_BI, 
+      KOUSHIN_USERID, TOUROKU_BI, TOUROKU_USERID, 
+      MAIL_TITLE, MAIL_CONTENT, MAIL_CC_ADDRESS, 
+      MAIL_BCC_ADDRESS)
+    values (#{id,jdbcType=INTEGER}, #{mailAddress,jdbcType=VARCHAR}, #{mailFromAddress,jdbcType=VARCHAR}, 
+      #{mailFromName,jdbcType=VARCHAR}, #{mailReplytoAddress,jdbcType=VARCHAR}, #{mailErrortoAddress,jdbcType=VARCHAR}, 
+      #{nowSending,jdbcType=CHAR}, #{sended,jdbcType=CHAR}, #{koushinBi,jdbcType=TIMESTAMP}, 
+      #{koushinUserid,jdbcType=VARCHAR}, #{tourokuBi,jdbcType=TIMESTAMP}, #{tourokuUserid,jdbcType=VARCHAR}, 
+      #{mailTitle,jdbcType=LONGVARCHAR}, #{mailContent,jdbcType=LONGVARCHAR}, #{mailCcAddress,jdbcType=LONGVARCHAR}, 
+      #{mailBccAddress,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.commodity.entity.dto.TMailSpoolingWithBLOBs">
+    insert into t_mail_spooling
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="mailAddress != null">
+        MAIL_ADDRESS,
+      </if>
+      <if test="mailFromAddress != null">
+        MAIL_FROM_ADDRESS,
+      </if>
+      <if test="mailFromName != null">
+        MAIL_FROM_NAME,
+      </if>
+      <if test="mailReplytoAddress != null">
+        MAIL_REPLYTO_ADDRESS,
+      </if>
+      <if test="mailErrortoAddress != null">
+        MAIL_ERRORTO_ADDRESS,
+      </if>
+      <if test="nowSending != null">
+        NOW_SENDING,
+      </if>
+      <if test="sended != null">
+        SENDED,
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI,
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID,
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI,
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID,
+      </if>
+      <if test="mailTitle != null">
+        MAIL_TITLE,
+      </if>
+      <if test="mailContent != null">
+        MAIL_CONTENT,
+      </if>
+      <if test="mailCcAddress != null">
+        MAIL_CC_ADDRESS,
+      </if>
+      <if test="mailBccAddress != null">
+        MAIL_BCC_ADDRESS,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="mailAddress != null">
+        #{mailAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="mailFromAddress != null">
+        #{mailFromAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="mailFromName != null">
+        #{mailFromName,jdbcType=VARCHAR},
+      </if>
+      <if test="mailReplytoAddress != null">
+        #{mailReplytoAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="mailErrortoAddress != null">
+        #{mailErrortoAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="nowSending != null">
+        #{nowSending,jdbcType=CHAR},
+      </if>
+      <if test="sended != null">
+        #{sended,jdbcType=CHAR},
+      </if>
+      <if test="koushinBi != null">
+        #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="mailTitle != null">
+        #{mailTitle,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="mailContent != null">
+        #{mailContent,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="mailCcAddress != null">
+        #{mailCcAddress,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="mailBccAddress != null">
+        #{mailBccAddress,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.commodity.entity.dto.TMailSpoolingExample" resultType="java.lang.Long">
+    select count(*) from t_mail_spooling
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update t_mail_spooling
+    <set>
+      <if test="record.id != null">
+        ID = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.mailAddress != null">
+        MAIL_ADDRESS = #{record.mailAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mailFromAddress != null">
+        MAIL_FROM_ADDRESS = #{record.mailFromAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mailFromName != null">
+        MAIL_FROM_NAME = #{record.mailFromName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mailReplytoAddress != null">
+        MAIL_REPLYTO_ADDRESS = #{record.mailReplytoAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mailErrortoAddress != null">
+        MAIL_ERRORTO_ADDRESS = #{record.mailErrortoAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.nowSending != null">
+        NOW_SENDING = #{record.nowSending,jdbcType=CHAR},
+      </if>
+      <if test="record.sended != null">
+        SENDED = #{record.sended,jdbcType=CHAR},
+      </if>
+      <if test="record.koushinBi != null">
+        KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.koushinUserid != null">
+        KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tourokuBi != null">
+        TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.tourokuUserid != null">
+        TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mailTitle != null">
+        MAIL_TITLE = #{record.mailTitle,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.mailContent != null">
+        MAIL_CONTENT = #{record.mailContent,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.mailCcAddress != null">
+        MAIL_CC_ADDRESS = #{record.mailCcAddress,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.mailBccAddress != null">
+        MAIL_BCC_ADDRESS = #{record.mailBccAddress,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map">
+    update t_mail_spooling
+    set ID = #{record.id,jdbcType=INTEGER},
+      MAIL_ADDRESS = #{record.mailAddress,jdbcType=VARCHAR},
+      MAIL_FROM_ADDRESS = #{record.mailFromAddress,jdbcType=VARCHAR},
+      MAIL_FROM_NAME = #{record.mailFromName,jdbcType=VARCHAR},
+      MAIL_REPLYTO_ADDRESS = #{record.mailReplytoAddress,jdbcType=VARCHAR},
+      MAIL_ERRORTO_ADDRESS = #{record.mailErrortoAddress,jdbcType=VARCHAR},
+      NOW_SENDING = #{record.nowSending,jdbcType=CHAR},
+      SENDED = #{record.sended,jdbcType=CHAR},
+      KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR},
+      MAIL_TITLE = #{record.mailTitle,jdbcType=LONGVARCHAR},
+      MAIL_CONTENT = #{record.mailContent,jdbcType=LONGVARCHAR},
+      MAIL_CC_ADDRESS = #{record.mailCcAddress,jdbcType=LONGVARCHAR},
+      MAIL_BCC_ADDRESS = #{record.mailBccAddress,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_mail_spooling
+    set ID = #{record.id,jdbcType=INTEGER},
+      MAIL_ADDRESS = #{record.mailAddress,jdbcType=VARCHAR},
+      MAIL_FROM_ADDRESS = #{record.mailFromAddress,jdbcType=VARCHAR},
+      MAIL_FROM_NAME = #{record.mailFromName,jdbcType=VARCHAR},
+      MAIL_REPLYTO_ADDRESS = #{record.mailReplytoAddress,jdbcType=VARCHAR},
+      MAIL_ERRORTO_ADDRESS = #{record.mailErrortoAddress,jdbcType=VARCHAR},
+      NOW_SENDING = #{record.nowSending,jdbcType=CHAR},
+      SENDED = #{record.sended,jdbcType=CHAR},
+      KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.commodity.entity.dto.TMailSpoolingWithBLOBs">
+    update t_mail_spooling
+    <set>
+      <if test="mailAddress != null">
+        MAIL_ADDRESS = #{mailAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="mailFromAddress != null">
+        MAIL_FROM_ADDRESS = #{mailFromAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="mailFromName != null">
+        MAIL_FROM_NAME = #{mailFromName,jdbcType=VARCHAR},
+      </if>
+      <if test="mailReplytoAddress != null">
+        MAIL_REPLYTO_ADDRESS = #{mailReplytoAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="mailErrortoAddress != null">
+        MAIL_ERRORTO_ADDRESS = #{mailErrortoAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="nowSending != null">
+        NOW_SENDING = #{nowSending,jdbcType=CHAR},
+      </if>
+      <if test="sended != null">
+        SENDED = #{sended,jdbcType=CHAR},
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="mailTitle != null">
+        MAIL_TITLE = #{mailTitle,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="mailContent != null">
+        MAIL_CONTENT = #{mailContent,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="mailCcAddress != null">
+        MAIL_CC_ADDRESS = #{mailCcAddress,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="mailBccAddress != null">
+        MAIL_BCC_ADDRESS = #{mailBccAddress,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.commodity.entity.dto.TMailSpoolingWithBLOBs">
+    update t_mail_spooling
+    set MAIL_ADDRESS = #{mailAddress,jdbcType=VARCHAR},
+      MAIL_FROM_ADDRESS = #{mailFromAddress,jdbcType=VARCHAR},
+      MAIL_FROM_NAME = #{mailFromName,jdbcType=VARCHAR},
+      MAIL_REPLYTO_ADDRESS = #{mailReplytoAddress,jdbcType=VARCHAR},
+      MAIL_ERRORTO_ADDRESS = #{mailErrortoAddress,jdbcType=VARCHAR},
+      NOW_SENDING = #{nowSending,jdbcType=CHAR},
+      SENDED = #{sended,jdbcType=CHAR},
+      KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR},
+      MAIL_TITLE = #{mailTitle,jdbcType=LONGVARCHAR},
+      MAIL_CONTENT = #{mailContent,jdbcType=LONGVARCHAR},
+      MAIL_CC_ADDRESS = #{mailCcAddress,jdbcType=LONGVARCHAR},
+      MAIL_BCC_ADDRESS = #{mailBccAddress,jdbcType=LONGVARCHAR}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.commodity.entity.dto.TMailSpooling">
+    update t_mail_spooling
+    set MAIL_ADDRESS = #{mailAddress,jdbcType=VARCHAR},
+      MAIL_FROM_ADDRESS = #{mailFromAddress,jdbcType=VARCHAR},
+      MAIL_FROM_NAME = #{mailFromName,jdbcType=VARCHAR},
+      MAIL_REPLYTO_ADDRESS = #{mailReplytoAddress,jdbcType=VARCHAR},
+      MAIL_ERRORTO_ADDRESS = #{mailErrortoAddress,jdbcType=VARCHAR},
+      NOW_SENDING = #{nowSending,jdbcType=CHAR},
+      SENDED = #{sended,jdbcType=CHAR},
+      KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

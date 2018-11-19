@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.commodity.entity.dao.MKikakuCodeDetailMapper">
+  <resultMap id="BaseResultMap" type="com.commodity.entity.dto.MKikakuCodeDetail">
+    <id column="KIKAKU_CD" jdbcType="CHAR" property="kikakuCd" />
+    <id column="SIKIBETSU_CD" jdbcType="VARCHAR" property="sikibetsuCd" />
+    <id column="CODE" jdbcType="VARCHAR" property="code" />
+    <result column="VALUE" jdbcType="VARCHAR" property="value" />
+    <result column="BIKOU" jdbcType="VARCHAR" property="bikou" />
+    <result column="SORT_ORDER" jdbcType="DECIMAL" property="sortOrder" />
+    <result column="SIYOU_KAHI_FLG" jdbcType="CHAR" property="siyouKahiFlg" />
+    <result column="KOUSHIN_BI" jdbcType="TIMESTAMP" property="koushinBi" />
+    <result column="KOUSHIN_USERID" jdbcType="VARCHAR" property="koushinUserid" />
+    <result column="TOUROKU_BI" jdbcType="TIMESTAMP" property="tourokuBi" />
+    <result column="TOUROKU_USERID" jdbcType="VARCHAR" property="tourokuUserid" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    KIKAKU_CD, SIKIBETSU_CD, CODE, VALUE, BIKOU, SORT_ORDER, SIYOU_KAHI_FLG, KOUSHIN_BI, 
+    KOUSHIN_USERID, TOUROKU_BI, TOUROKU_USERID
+  </sql>
+  <select id="selectByExample" parameterType="com.commodity.entity.dto.MKikakuCodeDetailExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from m_kikaku_code_detail
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="com.commodity.entity.dto.MKikakuCodeDetailKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_kikaku_code_detail
+    where KIKAKU_CD = #{kikakuCd,jdbcType=CHAR}
+      and SIKIBETSU_CD = #{sikibetsuCd,jdbcType=VARCHAR}
+      and CODE = #{code,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.commodity.entity.dto.MKikakuCodeDetailKey">
+    delete from m_kikaku_code_detail
+    where KIKAKU_CD = #{kikakuCd,jdbcType=CHAR}
+      and SIKIBETSU_CD = #{sikibetsuCd,jdbcType=VARCHAR}
+      and CODE = #{code,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.commodity.entity.dto.MKikakuCodeDetailExample">
+    delete from m_kikaku_code_detail
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.commodity.entity.dto.MKikakuCodeDetail">
+    insert into m_kikaku_code_detail (KIKAKU_CD, SIKIBETSU_CD, CODE, 
+      VALUE, BIKOU, SORT_ORDER, 
+      SIYOU_KAHI_FLG, KOUSHIN_BI, KOUSHIN_USERID, 
+      TOUROKU_BI, TOUROKU_USERID)
+    values (#{kikakuCd,jdbcType=CHAR}, #{sikibetsuCd,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, 
+      #{value,jdbcType=VARCHAR}, #{bikou,jdbcType=VARCHAR}, #{sortOrder,jdbcType=DECIMAL}, 
+      #{siyouKahiFlg,jdbcType=CHAR}, #{koushinBi,jdbcType=TIMESTAMP}, #{koushinUserid,jdbcType=VARCHAR}, 
+      #{tourokuBi,jdbcType=TIMESTAMP}, #{tourokuUserid,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.commodity.entity.dto.MKikakuCodeDetail">
+    insert into m_kikaku_code_detail
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="kikakuCd != null">
+        KIKAKU_CD,
+      </if>
+      <if test="sikibetsuCd != null">
+        SIKIBETSU_CD,
+      </if>
+      <if test="code != null">
+        CODE,
+      </if>
+      <if test="value != null">
+        VALUE,
+      </if>
+      <if test="bikou != null">
+        BIKOU,
+      </if>
+      <if test="sortOrder != null">
+        SORT_ORDER,
+      </if>
+      <if test="siyouKahiFlg != null">
+        SIYOU_KAHI_FLG,
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI,
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID,
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI,
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="kikakuCd != null">
+        #{kikakuCd,jdbcType=CHAR},
+      </if>
+      <if test="sikibetsuCd != null">
+        #{sikibetsuCd,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="value != null">
+        #{value,jdbcType=VARCHAR},
+      </if>
+      <if test="bikou != null">
+        #{bikou,jdbcType=VARCHAR},
+      </if>
+      <if test="sortOrder != null">
+        #{sortOrder,jdbcType=DECIMAL},
+      </if>
+      <if test="siyouKahiFlg != null">
+        #{siyouKahiFlg,jdbcType=CHAR},
+      </if>
+      <if test="koushinBi != null">
+        #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.commodity.entity.dto.MKikakuCodeDetailExample" resultType="java.lang.Long">
+    select count(*) from m_kikaku_code_detail
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update m_kikaku_code_detail
+    <set>
+      <if test="record.kikakuCd != null">
+        KIKAKU_CD = #{record.kikakuCd,jdbcType=CHAR},
+      </if>
+      <if test="record.sikibetsuCd != null">
+        SIKIBETSU_CD = #{record.sikibetsuCd,jdbcType=VARCHAR},
+      </if>
+      <if test="record.code != null">
+        CODE = #{record.code,jdbcType=VARCHAR},
+      </if>
+      <if test="record.value != null">
+        VALUE = #{record.value,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bikou != null">
+        BIKOU = #{record.bikou,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sortOrder != null">
+        SORT_ORDER = #{record.sortOrder,jdbcType=DECIMAL},
+      </if>
+      <if test="record.siyouKahiFlg != null">
+        SIYOU_KAHI_FLG = #{record.siyouKahiFlg,jdbcType=CHAR},
+      </if>
+      <if test="record.koushinBi != null">
+        KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.koushinUserid != null">
+        KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tourokuBi != null">
+        TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.tourokuUserid != null">
+        TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update m_kikaku_code_detail
+    set KIKAKU_CD = #{record.kikakuCd,jdbcType=CHAR},
+      SIKIBETSU_CD = #{record.sikibetsuCd,jdbcType=VARCHAR},
+      CODE = #{record.code,jdbcType=VARCHAR},
+      VALUE = #{record.value,jdbcType=VARCHAR},
+      BIKOU = #{record.bikou,jdbcType=VARCHAR},
+      SORT_ORDER = #{record.sortOrder,jdbcType=DECIMAL},
+      SIYOU_KAHI_FLG = #{record.siyouKahiFlg,jdbcType=CHAR},
+      KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.commodity.entity.dto.MKikakuCodeDetail">
+    update m_kikaku_code_detail
+    <set>
+      <if test="value != null">
+        VALUE = #{value,jdbcType=VARCHAR},
+      </if>
+      <if test="bikou != null">
+        BIKOU = #{bikou,jdbcType=VARCHAR},
+      </if>
+      <if test="sortOrder != null">
+        SORT_ORDER = #{sortOrder,jdbcType=DECIMAL},
+      </if>
+      <if test="siyouKahiFlg != null">
+        SIYOU_KAHI_FLG = #{siyouKahiFlg,jdbcType=CHAR},
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where KIKAKU_CD = #{kikakuCd,jdbcType=CHAR}
+      and SIKIBETSU_CD = #{sikibetsuCd,jdbcType=VARCHAR}
+      and CODE = #{code,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.commodity.entity.dto.MKikakuCodeDetail">
+    update m_kikaku_code_detail
+    set VALUE = #{value,jdbcType=VARCHAR},
+      BIKOU = #{bikou,jdbcType=VARCHAR},
+      SORT_ORDER = #{sortOrder,jdbcType=DECIMAL},
+      SIYOU_KAHI_FLG = #{siyouKahiFlg,jdbcType=CHAR},
+      KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR}
+    where KIKAKU_CD = #{kikakuCd,jdbcType=CHAR}
+      and SIKIBETSU_CD = #{sikibetsuCd,jdbcType=VARCHAR}
+      and CODE = #{code,jdbcType=VARCHAR}
+  </update>
+</mapper>

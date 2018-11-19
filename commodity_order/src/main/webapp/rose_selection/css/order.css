@@ -1,0 +1,277 @@
+﻿/* -----------------------------------------------
+    ページタイトル
+   ----------------------------------------------- */
+.title {
+	text-align: left;
+	padding: 10px 4px;
+}
+.reserved {
+	padding: 10px 4px;
+}
+
+.title strong, .reserved strong {
+	font-size: large;
+}
+
+/* -----------------------------------------------
+    ジャンル切り替え
+   ----------------------------------------------- */
+#genre ul li {
+	float: left;
+	list-style: none;
+	border: 1px solid #f3e0e0;
+	border-bottom: 0px;
+	padding: 4px;
+}
+/* 選択状態 */
+.genreActive {
+	background: #eeeeee;
+}
+
+
+/* -----------------------------------------------
+    タイトル下の注意書き
+   ----------------------------------------------- */
+.advice {
+	text-align: left;
+	padding: 8px 8px 16px 8px;
+}
+
+/* -----------------------------------------------
+    画像リンクは枠なし
+   ----------------------------------------------- */
+.thumImage {
+	border: 1px solid #0055bb;
+}
+
+
+/* -----------------------------------------------
+    メインエリア下部のリンクボタン
+   ----------------------------------------------- */
+.linkBtn {
+	margin: 0px 20px 4px 20px !important;
+}
+
+/* -----------------------------------------------
+    メッセージ（赤）
+   ----------------------------------------------- */
+.msgRed {
+	color: red;
+	padding: 4px;
+}
+
+/* -----------------------------------------------
+    トップページ (003)
+   ----------------------------------------------- */
+.caution {
+	text-align: left;
+	color: #0066ff;
+	border: 1px solid #dddddd;
+	background-color: #dddddd;/*--#d3d3d3--*/
+	padding: 12px;
+	margin: 12px;
+}
+
+/* -----------------------------------------------
+    商品一覧 (A-001)
+   ----------------------------------------------- */
+.linkList {
+	margin-left: 20px;
+	border: none;
+}
+
+/* -----------------------------------------------
+    商品一覧 (A-002)
+   ----------------------------------------------- */
+.itemList .itemComment {
+	text-align: right;
+	padding-top: 30px;
+}
+
+.itemListTable {
+	border: 1px solid #accdec;
+}
+	.itemListTable tr {
+		padding: 8px;
+	}
+	.itemListTable td{
+		border: 1px solid #accdec;
+		padding: 8px;
+	}
+	.itemListTable tr td ul li {
+	list-style: none;
+	}
+
+/* -----------------------------------------------
+    商品詳細 (A-003)
+   ----------------------------------------------- */
+#orderDetailsBox {
+	text-align: left;
+	margin: 0 0 15px;
+	padding-bottom: 6px;
+}
+	#orderDetailsBox #photoArea {
+		float: left;
+		width: 330px;
+	}
+		#orderDetailsBox #photoArea .photo {
+		float: left;
+			border: 1px solid #f3e0e0;
+			padding: 4px;
+		}
+		#orderDetailsBox #photoArea .thum {
+			text-align: center;
+			background: #f2f2f2;
+			border: 1px solid #f3e0e0;
+			border-top: none;
+			padding: 6px 0 6px 20px;
+		}
+	#orderDetailsBox #infoArea {
+		padding-left: 10px;
+		float: right;
+		width: 390px;
+		min-height: 330px;
+	}
+	/*--#orderDetailsBox #infoArea .info, orderDetailsBox #infoArea .salesMessage {--*/
+		#orderDetailsBox #infoArea .salesMessage {
+			/*--background: #eeeeee;--*/
+			/*--border: 1px solid #f3e0e0;--*/
+			margin: 20px 0;
+			padding: 15px 15px;
+		}
+		#orderDetailsBox #infoArea .info {
+			margin: 20px 0;
+		}
+	#orderDetailsBox #additionalInfoArea .list {
+		line-height: 1.6;
+		margin: 2em 0;
+		width: 100%;
+		background-color: #FCF9EE;
+	}
+		#orderDetailsBox #additionalInfoArea .list dt {
+			width: 120px;
+			float: left;
+			padding-left:10px;
+			padding-bottom: 1px;
+			text-indent: 1em;
+		}
+		#orderDetailsBox #additionalInfoArea .list dd {
+			padding-left: 5em;
+			border-bottom: dotted 1px #f3e0e0;
+		}
+		#orderDetailsBox #additionalInfoArea .allergen {
+			width: 720px;
+		}
+			#orderDetailsBox #additionalInfoArea .allergen th {
+				padding:2px;
+				border:1px solid #E7D9BF;
+				background-color: #eeeeee;
+			}
+			#orderDetailsBox #additionalInfoArea .allergen td {
+				padding:2px;
+				border:1px solid #E7D9BF;
+				/*--background-color: #fcf9ee;--*/
+			}
+
+.salesMessage strong {
+	font-size: large;
+}
+
+/* -----------------------------------------------
+    商品のお申し込み (A-004)、お申込み確認 (A-007)
+   ----------------------------------------------- */
+/*.orderListTable {
+	border: 1px solid #000000;
+	margin: 0 0 2px 0;
+}
+	.orderListTable th, .orderListTableNoBorder th {
+		border:1px solid #E7D9BF;
+		background-color: #eeeeee;
+		padding-left: 4px;
+	}
+	.orderListTable td{
+		border: 1px solid #E7D9BF;
+		padding-left: 4px;
+	}
+	.orderListTableNoBorder td {
+		border: none;
+		padding-left: 4px;
+	}
+
+.sendDate {
+	text-align: left;
+	padding-left: 20px;
+}*/
+
+
+.orderListTable {
+	width:95%;
+	margin:0 auto;
+	border-bottom:1px solid #cccccc;
+}
+	.orderListTable th, .orderListTableNoBorder th {
+		border-top:1px solid #cccccc;
+		background-color: #EFF0EB;
+		padding: 0 15px;
+		width:24%;
+		text-align:left;
+		vertical-align:middle;
+	}
+	.orderListTable td{
+		background-color:#ffffff;
+		border-top: 1px solid #cccccc;
+		padding: 10px 15px;
+		text-align:left;
+		
+	}
+	.orderListTableNoBorder td {
+		border: none;
+		padding-left: 4px;
+	}
+
+.sendDate {
+	text-align: left;
+	padding-left: 20px;
+}
+.text2{
+	text-align:left;
+	margin:10px 25px 0;
+	line-height:1.2;
+}
+.textG{
+	text-align:left;
+	margin:10px 25px 0;
+	line-height:1.2;
+	color:#888888;
+}
+
+
+
+/* -----------------------------------------------
+    お申込み商品の状況 (D-001)
+   ----------------------------------------------- */
+.deliveryList {
+	font-size: large;
+	padding: 20px 0 0 10px;
+}
+.deliveryListTable {
+	border: 1px solid #E7D9BF;
+	margin: 2px 0 12px 20px;
+}
+	.deliveryListTable th {
+		border:1px solid #E7D9BF;
+		background-color: #eeeeee;
+		padding: 2px 8px;
+	}
+	.deliveryListTable td{
+		border: 1px solid #E7D9BF;
+		padding: 2px 8px;
+	}
+
+.password{
+	 width: 226px; /*17em*/
+}
+
+.password2{
+	 width: 120px; /*--10em--*/
+}

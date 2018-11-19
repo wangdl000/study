@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.commodity.entity.dao.VWebKikakuMapper">
+  <resultMap id="BaseResultMap" type="com.commodity.entity.dto.VWebKikaku">
+    <result column="KIKAKU_CD" jdbcType="CHAR" property="kikakuCd" />
+    <result column="BASE_DIRECTORY" jdbcType="VARCHAR" property="baseDirectory" />
+    <result column="KIKAKU_NAME" jdbcType="VARCHAR" property="kikakuName" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    KIKAKU_CD, BASE_DIRECTORY, KIKAKU_NAME
+  </sql>
+  <select id="selectByExample" parameterType="com.commodity.entity.dto.VWebKikakuExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from v_web_kikaku
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.commodity.entity.dto.VWebKikakuExample">
+    delete from v_web_kikaku
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.commodity.entity.dto.VWebKikaku">
+    insert into v_web_kikaku (KIKAKU_CD, BASE_DIRECTORY, KIKAKU_NAME
+      )
+    values (#{kikakuCd,jdbcType=CHAR}, #{baseDirectory,jdbcType=VARCHAR}, #{kikakuName,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.commodity.entity.dto.VWebKikaku">
+    insert into v_web_kikaku
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="kikakuCd != null">
+        KIKAKU_CD,
+      </if>
+      <if test="baseDirectory != null">
+        BASE_DIRECTORY,
+      </if>
+      <if test="kikakuName != null">
+        KIKAKU_NAME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="kikakuCd != null">
+        #{kikakuCd,jdbcType=CHAR},
+      </if>
+      <if test="baseDirectory != null">
+        #{baseDirectory,jdbcType=VARCHAR},
+      </if>
+      <if test="kikakuName != null">
+        #{kikakuName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.commodity.entity.dto.VWebKikakuExample" resultType="java.lang.Long">
+    select count(*) from v_web_kikaku
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update v_web_kikaku
+    <set>
+      <if test="record.kikakuCd != null">
+        KIKAKU_CD = #{record.kikakuCd,jdbcType=CHAR},
+      </if>
+      <if test="record.baseDirectory != null">
+        BASE_DIRECTORY = #{record.baseDirectory,jdbcType=VARCHAR},
+      </if>
+      <if test="record.kikakuName != null">
+        KIKAKU_NAME = #{record.kikakuName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update v_web_kikaku
+    set KIKAKU_CD = #{record.kikakuCd,jdbcType=CHAR},
+      BASE_DIRECTORY = #{record.baseDirectory,jdbcType=VARCHAR},
+      KIKAKU_NAME = #{record.kikakuName,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>

@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.commodity.entity.dao.VWebSyouhinMapper">
+  <resultMap id="BaseResultMap" type="com.commodity.entity.dto.VWebSyouhin">
+    <result column="CATALOG_ID" jdbcType="CHAR" property="catalogId" />
+    <result column="HAGAKI_SYOUHIN_CD" jdbcType="VARCHAR" property="hagakiSyouhinCd" />
+    <result column="SYOUHIN_HYOUJI_NAME" jdbcType="VARCHAR" property="syouhinHyoujiName" />
+    <result column="CATCH_COPY" jdbcType="VARCHAR" property="catchCopy" />
+    <result column="ITEM_SYOSAI" jdbcType="VARCHAR" property="itemSyosai" />
+    <result column="ITEM_NAIYOU" jdbcType="VARCHAR" property="itemNaiyou" />
+    <result column="ITEM_SANTI" jdbcType="VARCHAR" property="itemSanti" />
+    <result column="ITEM_KIGEN" jdbcType="VARCHAR" property="itemKigen" />
+    <result column="ALLERGIE_TAMAGO_FLG" jdbcType="CHAR" property="allergieTamagoFlg" />
+    <result column="ALLERGIE_MILK_FLG" jdbcType="CHAR" property="allergieMilkFlg" />
+    <result column="ALLERGIE_KOMUGI_FLG" jdbcType="CHAR" property="allergieKomugiFlg" />
+    <result column="ALLERGIE_PEANUT_FLG" jdbcType="CHAR" property="allergiePeanutFlg" />
+    <result column="ALLERGIE_SOBA_FLG" jdbcType="CHAR" property="allergieSobaFlg" />
+    <result column="ALLERGIE_EBI_FLG" jdbcType="CHAR" property="allergieEbiFlg" />
+    <result column="ALLERGIE_KANI_FLG" jdbcType="CHAR" property="allergieKaniFlg" />
+    <result column="ALLERGIE_ETC_TEXT" jdbcType="VARCHAR" property="allergieEtcText" />
+    <result column="KIKAN_GENTEI_FLG" jdbcType="CHAR" property="kikanGenteiFlg" />
+    <result column="DISP_GENTEI_KIKAN" jdbcType="VARCHAR" property="dispGenteiKikan" />
+    <result column="ITEM_HAISOU_HOUHOU" jdbcType="CHAR" property="itemHaisouHouhou" />
+    <result column="WEB_SYOUHIN_BIKOU" jdbcType="VARCHAR" property="webSyouhinBikou" />
+    <result column="CATALOG_KEISAI_PAGE_NO" jdbcType="DECIMAL" property="catalogKeisaiPageNo" />
+    <result column="SYOUHIN_IMAGE_1" jdbcType="VARCHAR" property="syouhinImage1" />
+    <result column="SYOUHIN_IMAGE_2" jdbcType="VARCHAR" property="syouhinImage2" />
+    <result column="SYOUHIN_IMAGE_3" jdbcType="VARCHAR" property="syouhinImage3" />
+    <result column="MINI_IMAGE_1" jdbcType="VARCHAR" property="miniImage1" />
+    <result column="MINI_IMAGE_2" jdbcType="VARCHAR" property="miniImage2" />
+    <result column="MINI_IMAGE_3" jdbcType="VARCHAR" property="miniImage3" />
+    <result column="SORT_ORDER" jdbcType="DECIMAL" property="sortOrder" />
+    <result column="TODOKE_BI_SITEI_FUKA_FLG" jdbcType="CHAR" property="todokeBiSiteiFukaFlg" />
+    <result column="SYOUHIN_CD" jdbcType="CHAR" property="syouhinCd" />
+    <result column="CHOICE_SU" jdbcType="CHAR" property="choiceSu" />
+    <result column="HAGAKI_SYOUHIN_KIGOU" jdbcType="VARCHAR" property="hagakiSyouhinKigou" />
+    <result column="TODOKE_BI" jdbcType="DATE" property="todokeBi" />
+    <result column="WEB_ITEM_KEISAI_KBN" jdbcType="VARCHAR" property="webItemKeisaiKbn" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    CATALOG_ID, HAGAKI_SYOUHIN_CD, SYOUHIN_HYOUJI_NAME, CATCH_COPY, ITEM_SYOSAI, ITEM_NAIYOU, 
+    ITEM_SANTI, ITEM_KIGEN, ALLERGIE_TAMAGO_FLG, ALLERGIE_MILK_FLG, ALLERGIE_KOMUGI_FLG, 
+    ALLERGIE_PEANUT_FLG, ALLERGIE_SOBA_FLG, ALLERGIE_EBI_FLG, ALLERGIE_KANI_FLG, ALLERGIE_ETC_TEXT, 
+    KIKAN_GENTEI_FLG, DISP_GENTEI_KIKAN, ITEM_HAISOU_HOUHOU, WEB_SYOUHIN_BIKOU, CATALOG_KEISAI_PAGE_NO, 
+    SYOUHIN_IMAGE_1, SYOUHIN_IMAGE_2, SYOUHIN_IMAGE_3, MINI_IMAGE_1, MINI_IMAGE_2, MINI_IMAGE_3, 
+    SORT_ORDER, TODOKE_BI_SITEI_FUKA_FLG, SYOUHIN_CD, CHOICE_SU, HAGAKI_SYOUHIN_KIGOU, 
+    TODOKE_BI, WEB_ITEM_KEISAI_KBN
+  </sql>
+  <select id="selectByExample" parameterType="com.commodity.entity.dto.VWebSyouhinExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from v_web_syouhin
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.commodity.entity.dto.VWebSyouhinExample">
+    delete from v_web_syouhin
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.commodity.entity.dto.VWebSyouhin">
+    insert into v_web_syouhin (CATALOG_ID, HAGAKI_SYOUHIN_CD, SYOUHIN_HYOUJI_NAME, 
+      CATCH_COPY, ITEM_SYOSAI, ITEM_NAIYOU, 
+      ITEM_SANTI, ITEM_KIGEN, ALLERGIE_TAMAGO_FLG, 
+      ALLERGIE_MILK_FLG, ALLERGIE_KOMUGI_FLG, ALLERGIE_PEANUT_FLG, 
+      ALLERGIE_SOBA_FLG, ALLERGIE_EBI_FLG, ALLERGIE_KANI_FLG, 
+      ALLERGIE_ETC_TEXT, KIKAN_GENTEI_FLG, DISP_GENTEI_KIKAN, 
+      ITEM_HAISOU_HOUHOU, WEB_SYOUHIN_BIKOU, CATALOG_KEISAI_PAGE_NO, 
+      SYOUHIN_IMAGE_1, SYOUHIN_IMAGE_2, SYOUHIN_IMAGE_3, 
+      MINI_IMAGE_1, MINI_IMAGE_2, MINI_IMAGE_3, 
+      SORT_ORDER, TODOKE_BI_SITEI_FUKA_FLG, SYOUHIN_CD, 
+      CHOICE_SU, HAGAKI_SYOUHIN_KIGOU, TODOKE_BI, 
+      WEB_ITEM_KEISAI_KBN)
+    values (#{catalogId,jdbcType=CHAR}, #{hagakiSyouhinCd,jdbcType=VARCHAR}, #{syouhinHyoujiName,jdbcType=VARCHAR}, 
+      #{catchCopy,jdbcType=VARCHAR}, #{itemSyosai,jdbcType=VARCHAR}, #{itemNaiyou,jdbcType=VARCHAR}, 
+      #{itemSanti,jdbcType=VARCHAR}, #{itemKigen,jdbcType=VARCHAR}, #{allergieTamagoFlg,jdbcType=CHAR}, 
+      #{allergieMilkFlg,jdbcType=CHAR}, #{allergieKomugiFlg,jdbcType=CHAR}, #{allergiePeanutFlg,jdbcType=CHAR}, 
+      #{allergieSobaFlg,jdbcType=CHAR}, #{allergieEbiFlg,jdbcType=CHAR}, #{allergieKaniFlg,jdbcType=CHAR}, 
+      #{allergieEtcText,jdbcType=VARCHAR}, #{kikanGenteiFlg,jdbcType=CHAR}, #{dispGenteiKikan,jdbcType=VARCHAR}, 
+      #{itemHaisouHouhou,jdbcType=CHAR}, #{webSyouhinBikou,jdbcType=VARCHAR}, #{catalogKeisaiPageNo,jdbcType=DECIMAL}, 
+      #{syouhinImage1,jdbcType=VARCHAR}, #{syouhinImage2,jdbcType=VARCHAR}, #{syouhinImage3,jdbcType=VARCHAR}, 
+      #{miniImage1,jdbcType=VARCHAR}, #{miniImage2,jdbcType=VARCHAR}, #{miniImage3,jdbcType=VARCHAR}, 
+      #{sortOrder,jdbcType=DECIMAL}, #{todokeBiSiteiFukaFlg,jdbcType=CHAR}, #{syouhinCd,jdbcType=CHAR}, 
+      #{choiceSu,jdbcType=CHAR}, #{hagakiSyouhinKigou,jdbcType=VARCHAR}, #{todokeBi,jdbcType=DATE}, 
+      #{webItemKeisaiKbn,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.commodity.entity.dto.VWebSyouhin">
+    insert into v_web_syouhin
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="catalogId != null">
+        CATALOG_ID,
+      </if>
+      <if test="hagakiSyouhinCd != null">
+        HAGAKI_SYOUHIN_CD,
+      </if>
+      <if test="syouhinHyoujiName != null">
+        SYOUHIN_HYOUJI_NAME,
+      </if>
+      <if test="catchCopy != null">
+        CATCH_COPY,
+      </if>
+      <if test="itemSyosai != null">
+        ITEM_SYOSAI,
+      </if>
+      <if test="itemNaiyou != null">
+        ITEM_NAIYOU,
+      </if>
+      <if test="itemSanti != null">
+        ITEM_SANTI,
+      </if>
+      <if test="itemKigen != null">
+        ITEM_KIGEN,
+      </if>
+      <if test="allergieTamagoFlg != null">
+        ALLERGIE_TAMAGO_FLG,
+      </if>
+      <if test="allergieMilkFlg != null">
+        ALLERGIE_MILK_FLG,
+      </if>
+      <if test="allergieKomugiFlg != null">
+        ALLERGIE_KOMUGI_FLG,
+      </if>
+      <if test="allergiePeanutFlg != null">
+        ALLERGIE_PEANUT_FLG,
+      </if>
+      <if test="allergieSobaFlg != null">
+        ALLERGIE_SOBA_FLG,
+      </if>
+      <if test="allergieEbiFlg != null">
+        ALLERGIE_EBI_FLG,
+      </if>
+      <if test="allergieKaniFlg != null">
+        ALLERGIE_KANI_FLG,
+      </if>
+      <if test="allergieEtcText != null">
+        ALLERGIE_ETC_TEXT,
+      </if>
+      <if test="kikanGenteiFlg != null">
+        KIKAN_GENTEI_FLG,
+      </if>
+      <if test="dispGenteiKikan != null">
+        DISP_GENTEI_KIKAN,
+      </if>
+      <if test="itemHaisouHouhou != null">
+        ITEM_HAISOU_HOUHOU,
+      </if>
+      <if test="webSyouhinBikou != null">
+        WEB_SYOUHIN_BIKOU,
+      </if>
+      <if test="catalogKeisaiPageNo != null">
+        CATALOG_KEISAI_PAGE_NO,
+      </if>
+      <if test="syouhinImage1 != null">
+        SYOUHIN_IMAGE_1,
+      </if>
+      <if test="syouhinImage2 != null">
+        SYOUHIN_IMAGE_2,
+      </if>
+      <if test="syouhinImage3 != null">
+        SYOUHIN_IMAGE_3,
+      </if>
+      <if test="miniImage1 != null">
+        MINI_IMAGE_1,
+      </if>
+      <if test="miniImage2 != null">
+        MINI_IMAGE_2,
+      </if>
+      <if test="miniImage3 != null">
+        MINI_IMAGE_3,
+      </if>
+      <if test="sortOrder != null">
+        SORT_ORDER,
+      </if>
+      <if test="todokeBiSiteiFukaFlg != null">
+        TODOKE_BI_SITEI_FUKA_FLG,
+      </if>
+      <if test="syouhinCd != null">
+        SYOUHIN_CD,
+      </if>
+      <if test="choiceSu != null">
+        CHOICE_SU,
+      </if>
+      <if test="hagakiSyouhinKigou != null">
+        HAGAKI_SYOUHIN_KIGOU,
+      </if>
+      <if test="todokeBi != null">
+        TODOKE_BI,
+      </if>
+      <if test="webItemKeisaiKbn != null">
+        WEB_ITEM_KEISAI_KBN,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="catalogId != null">
+        #{catalogId,jdbcType=CHAR},
+      </if>
+      <if test="hagakiSyouhinCd != null">
+        #{hagakiSyouhinCd,jdbcType=VARCHAR},
+      </if>
+      <if test="syouhinHyoujiName != null">
+        #{syouhinHyoujiName,jdbcType=VARCHAR},
+      </if>
+      <if test="catchCopy != null">
+        #{catchCopy,jdbcType=VARCHAR},
+      </if>
+      <if test="itemSyosai != null">
+        #{itemSyosai,jdbcType=VARCHAR},
+      </if>
+      <if test="itemNaiyou != null">
+        #{itemNaiyou,jdbcType=VARCHAR},
+      </if>
+      <if test="itemSanti != null">
+        #{itemSanti,jdbcType=VARCHAR},
+      </if>
+      <if test="itemKigen != null">
+        #{itemKigen,jdbcType=VARCHAR},
+      </if>
+      <if test="allergieTamagoFlg != null">
+        #{allergieTamagoFlg,jdbcType=CHAR},
+      </if>
+      <if test="allergieMilkFlg != null">
+        #{allergieMilkFlg,jdbcType=CHAR},
+      </if>
+      <if test="allergieKomugiFlg != null">
+        #{allergieKomugiFlg,jdbcType=CHAR},
+      </if>
+      <if test="allergiePeanutFlg != null">
+        #{allergiePeanutFlg,jdbcType=CHAR},
+      </if>
+      <if test="allergieSobaFlg != null">
+        #{allergieSobaFlg,jdbcType=CHAR},
+      </if>
+      <if test="allergieEbiFlg != null">
+        #{allergieEbiFlg,jdbcType=CHAR},
+      </if>
+      <if test="allergieKaniFlg != null">
+        #{allergieKaniFlg,jdbcType=CHAR},
+      </if>
+      <if test="allergieEtcText != null">
+        #{allergieEtcText,jdbcType=VARCHAR},
+      </if>
+      <if test="kikanGenteiFlg != null">
+        #{kikanGenteiFlg,jdbcType=CHAR},
+      </if>
+      <if test="dispGenteiKikan != null">
+        #{dispGenteiKikan,jdbcType=VARCHAR},
+      </if>
+      <if test="itemHaisouHouhou != null">
+        #{itemHaisouHouhou,jdbcType=CHAR},
+      </if>
+      <if test="webSyouhinBikou != null">
+        #{webSyouhinBikou,jdbcType=VARCHAR},
+      </if>
+      <if test="catalogKeisaiPageNo != null">
+        #{catalogKeisaiPageNo,jdbcType=DECIMAL},
+      </if>
+      <if test="syouhinImage1 != null">
+        #{syouhinImage1,jdbcType=VARCHAR},
+      </if>
+      <if test="syouhinImage2 != null">
+        #{syouhinImage2,jdbcType=VARCHAR},
+      </if>
+      <if test="syouhinImage3 != null">
+        #{syouhinImage3,jdbcType=VARCHAR},
+      </if>
+      <if test="miniImage1 != null">
+        #{miniImage1,jdbcType=VARCHAR},
+      </if>
+      <if test="miniImage2 != null">
+        #{miniImage2,jdbcType=VARCHAR},
+      </if>
+      <if test="miniImage3 != null">
+        #{miniImage3,jdbcType=VARCHAR},
+      </if>
+      <if test="sortOrder != null">
+        #{sortOrder,jdbcType=DECIMAL},
+      </if>
+      <if test="todokeBiSiteiFukaFlg != null">
+        #{todokeBiSiteiFukaFlg,jdbcType=CHAR},
+      </if>
+      <if test="syouhinCd != null">
+        #{syouhinCd,jdbcType=CHAR},
+      </if>
+      <if test="choiceSu != null">
+        #{choiceSu,jdbcType=CHAR},
+      </if>
+      <if test="hagakiSyouhinKigou != null">
+        #{hagakiSyouhinKigou,jdbcType=VARCHAR},
+      </if>
+      <if test="todokeBi != null">
+        #{todokeBi,jdbcType=DATE},
+      </if>
+      <if test="webItemKeisaiKbn != null">
+        #{webItemKeisaiKbn,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.commodity.entity.dto.VWebSyouhinExample" resultType="java.lang.Long">
+    select count(*) from v_web_syouhin
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update v_web_syouhin
+    <set>
+      <if test="record.catalogId != null">
+        CATALOG_ID = #{record.catalogId,jdbcType=CHAR},
+      </if>
+      <if test="record.hagakiSyouhinCd != null">
+        HAGAKI_SYOUHIN_CD = #{record.hagakiSyouhinCd,jdbcType=VARCHAR},
+      </if>
+      <if test="record.syouhinHyoujiName != null">
+        SYOUHIN_HYOUJI_NAME = #{record.syouhinHyoujiName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.catchCopy != null">
+        CATCH_COPY = #{record.catchCopy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.itemSyosai != null">
+        ITEM_SYOSAI = #{record.itemSyosai,jdbcType=VARCHAR},
+      </if>
+      <if test="record.itemNaiyou != null">
+        ITEM_NAIYOU = #{record.itemNaiyou,jdbcType=VARCHAR},
+      </if>
+      <if test="record.itemSanti != null">
+        ITEM_SANTI = #{record.itemSanti,jdbcType=VARCHAR},
+      </if>
+      <if test="record.itemKigen != null">
+        ITEM_KIGEN = #{record.itemKigen,jdbcType=VARCHAR},
+      </if>
+      <if test="record.allergieTamagoFlg != null">
+        ALLERGIE_TAMAGO_FLG = #{record.allergieTamagoFlg,jdbcType=CHAR},
+      </if>
+      <if test="record.allergieMilkFlg != null">
+        ALLERGIE_MILK_FLG = #{record.allergieMilkFlg,jdbcType=CHAR},
+      </if>
+      <if test="record.allergieKomugiFlg != null">
+        ALLERGIE_KOMUGI_FLG = #{record.allergieKomugiFlg,jdbcType=CHAR},
+      </if>
+      <if test="record.allergiePeanutFlg != null">
+        ALLERGIE_PEANUT_FLG = #{record.allergiePeanutFlg,jdbcType=CHAR},
+      </if>
+      <if test="record.allergieSobaFlg != null">
+        ALLERGIE_SOBA_FLG = #{record.allergieSobaFlg,jdbcType=CHAR},
+      </if>
+      <if test="record.allergieEbiFlg != null">
+        ALLERGIE_EBI_FLG = #{record.allergieEbiFlg,jdbcType=CHAR},
+      </if>
+      <if test="record.allergieKaniFlg != null">
+        ALLERGIE_KANI_FLG = #{record.allergieKaniFlg,jdbcType=CHAR},
+      </if>
+      <if test="record.allergieEtcText != null">
+        ALLERGIE_ETC_TEXT = #{record.allergieEtcText,jdbcType=VARCHAR},
+      </if>
+      <if test="record.kikanGenteiFlg != null">
+        KIKAN_GENTEI_FLG = #{record.kikanGenteiFlg,jdbcType=CHAR},
+      </if>
+      <if test="record.dispGenteiKikan != null">
+        DISP_GENTEI_KIKAN = #{record.dispGenteiKikan,jdbcType=VARCHAR},
+      </if>
+      <if test="record.itemHaisouHouhou != null">
+        ITEM_HAISOU_HOUHOU = #{record.itemHaisouHouhou,jdbcType=CHAR},
+      </if>
+      <if test="record.webSyouhinBikou != null">
+        WEB_SYOUHIN_BIKOU = #{record.webSyouhinBikou,jdbcType=VARCHAR},
+      </if>
+      <if test="record.catalogKeisaiPageNo != null">
+        CATALOG_KEISAI_PAGE_NO = #{record.catalogKeisaiPageNo,jdbcType=DECIMAL},
+      </if>
+      <if test="record.syouhinImage1 != null">
+        SYOUHIN_IMAGE_1 = #{record.syouhinImage1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.syouhinImage2 != null">
+        SYOUHIN_IMAGE_2 = #{record.syouhinImage2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.syouhinImage3 != null">
+        SYOUHIN_IMAGE_3 = #{record.syouhinImage3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.miniImage1 != null">
+        MINI_IMAGE_1 = #{record.miniImage1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.miniImage2 != null">
+        MINI_IMAGE_2 = #{record.miniImage2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.miniImage3 != null">
+        MINI_IMAGE_3 = #{record.miniImage3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sortOrder != null">
+        SORT_ORDER = #{record.sortOrder,jdbcType=DECIMAL},
+      </if>
+      <if test="record.todokeBiSiteiFukaFlg != null">
+        TODOKE_BI_SITEI_FUKA_FLG = #{record.todokeBiSiteiFukaFlg,jdbcType=CHAR},
+      </if>
+      <if test="record.syouhinCd != null">
+        SYOUHIN_CD = #{record.syouhinCd,jdbcType=CHAR},
+      </if>
+      <if test="record.choiceSu != null">
+        CHOICE_SU = #{record.choiceSu,jdbcType=CHAR},
+      </if>
+      <if test="record.hagakiSyouhinKigou != null">
+        HAGAKI_SYOUHIN_KIGOU = #{record.hagakiSyouhinKigou,jdbcType=VARCHAR},
+      </if>
+      <if test="record.todokeBi != null">
+        TODOKE_BI = #{record.todokeBi,jdbcType=DATE},
+      </if>
+      <if test="record.webItemKeisaiKbn != null">
+        WEB_ITEM_KEISAI_KBN = #{record.webItemKeisaiKbn,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update v_web_syouhin
+    set CATALOG_ID = #{record.catalogId,jdbcType=CHAR},
+      HAGAKI_SYOUHIN_CD = #{record.hagakiSyouhinCd,jdbcType=VARCHAR},
+      SYOUHIN_HYOUJI_NAME = #{record.syouhinHyoujiName,jdbcType=VARCHAR},
+      CATCH_COPY = #{record.catchCopy,jdbcType=VARCHAR},
+      ITEM_SYOSAI = #{record.itemSyosai,jdbcType=VARCHAR},
+      ITEM_NAIYOU = #{record.itemNaiyou,jdbcType=VARCHAR},
+      ITEM_SANTI = #{record.itemSanti,jdbcType=VARCHAR},
+      ITEM_KIGEN = #{record.itemKigen,jdbcType=VARCHAR},
+      ALLERGIE_TAMAGO_FLG = #{record.allergieTamagoFlg,jdbcType=CHAR},
+      ALLERGIE_MILK_FLG = #{record.allergieMilkFlg,jdbcType=CHAR},
+      ALLERGIE_KOMUGI_FLG = #{record.allergieKomugiFlg,jdbcType=CHAR},
+      ALLERGIE_PEANUT_FLG = #{record.allergiePeanutFlg,jdbcType=CHAR},
+      ALLERGIE_SOBA_FLG = #{record.allergieSobaFlg,jdbcType=CHAR},
+      ALLERGIE_EBI_FLG = #{record.allergieEbiFlg,jdbcType=CHAR},
+      ALLERGIE_KANI_FLG = #{record.allergieKaniFlg,jdbcType=CHAR},
+      ALLERGIE_ETC_TEXT = #{record.allergieEtcText,jdbcType=VARCHAR},
+      KIKAN_GENTEI_FLG = #{record.kikanGenteiFlg,jdbcType=CHAR},
+      DISP_GENTEI_KIKAN = #{record.dispGenteiKikan,jdbcType=VARCHAR},
+      ITEM_HAISOU_HOUHOU = #{record.itemHaisouHouhou,jdbcType=CHAR},
+      WEB_SYOUHIN_BIKOU = #{record.webSyouhinBikou,jdbcType=VARCHAR},
+      CATALOG_KEISAI_PAGE_NO = #{record.catalogKeisaiPageNo,jdbcType=DECIMAL},
+      SYOUHIN_IMAGE_1 = #{record.syouhinImage1,jdbcType=VARCHAR},
+      SYOUHIN_IMAGE_2 = #{record.syouhinImage2,jdbcType=VARCHAR},
+      SYOUHIN_IMAGE_3 = #{record.syouhinImage3,jdbcType=VARCHAR},
+      MINI_IMAGE_1 = #{record.miniImage1,jdbcType=VARCHAR},
+      MINI_IMAGE_2 = #{record.miniImage2,jdbcType=VARCHAR},
+      MINI_IMAGE_3 = #{record.miniImage3,jdbcType=VARCHAR},
+      SORT_ORDER = #{record.sortOrder,jdbcType=DECIMAL},
+      TODOKE_BI_SITEI_FUKA_FLG = #{record.todokeBiSiteiFukaFlg,jdbcType=CHAR},
+      SYOUHIN_CD = #{record.syouhinCd,jdbcType=CHAR},
+      CHOICE_SU = #{record.choiceSu,jdbcType=CHAR},
+      HAGAKI_SYOUHIN_KIGOU = #{record.hagakiSyouhinKigou,jdbcType=VARCHAR},
+      TODOKE_BI = #{record.todokeBi,jdbcType=DATE},
+      WEB_ITEM_KEISAI_KBN = #{record.webItemKeisaiKbn,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>

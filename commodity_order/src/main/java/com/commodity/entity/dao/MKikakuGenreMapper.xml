@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.commodity.entity.dao.MKikakuGenreMapper">
+  <resultMap id="BaseResultMap" type="com.commodity.entity.dto.MKikakuGenre">
+    <id column="KIKAKU_CD" jdbcType="CHAR" property="kikakuCd" />
+    <id column="GENRE_NO" jdbcType="VARCHAR" property="genreNo" />
+    <result column="GENRE_NAME" jdbcType="VARCHAR" property="genreName" />
+    <result column="SORT_ORDER" jdbcType="DECIMAL" property="sortOrder" />
+    <result column="GENRE_HEADER_IMAGE_URL" jdbcType="VARCHAR" property="genreHeaderImageUrl" />
+    <result column="GENRE_LINK_IMAGE_URL" jdbcType="VARCHAR" property="genreLinkImageUrl" />
+    <result column="MENU_HYOUJI_FLG" jdbcType="CHAR" property="menuHyoujiFlg" />
+    <result column="GENRE_ICON_HYOUJI_FLG" jdbcType="CHAR" property="genreIconHyoujiFlg" />
+    <result column="KOUSHIN_BI" jdbcType="TIMESTAMP" property="koushinBi" />
+    <result column="KOUSHIN_USERID" jdbcType="VARCHAR" property="koushinUserid" />
+    <result column="TOUROKU_BI" jdbcType="TIMESTAMP" property="tourokuBi" />
+    <result column="TOUROKU_USERID" jdbcType="VARCHAR" property="tourokuUserid" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    KIKAKU_CD, GENRE_NO, GENRE_NAME, SORT_ORDER, GENRE_HEADER_IMAGE_URL, GENRE_LINK_IMAGE_URL, 
+    MENU_HYOUJI_FLG, GENRE_ICON_HYOUJI_FLG, KOUSHIN_BI, KOUSHIN_USERID, TOUROKU_BI, TOUROKU_USERID
+  </sql>
+  <select id="selectByExample" parameterType="com.commodity.entity.dto.MKikakuGenreExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from m_kikaku_genre
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="com.commodity.entity.dto.MKikakuGenreKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_kikaku_genre
+    where KIKAKU_CD = #{kikakuCd,jdbcType=CHAR}
+      and GENRE_NO = #{genreNo,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.commodity.entity.dto.MKikakuGenreKey">
+    delete from m_kikaku_genre
+    where KIKAKU_CD = #{kikakuCd,jdbcType=CHAR}
+      and GENRE_NO = #{genreNo,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.commodity.entity.dto.MKikakuGenreExample">
+    delete from m_kikaku_genre
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.commodity.entity.dto.MKikakuGenre">
+    insert into m_kikaku_genre (KIKAKU_CD, GENRE_NO, GENRE_NAME, 
+      SORT_ORDER, GENRE_HEADER_IMAGE_URL, GENRE_LINK_IMAGE_URL, 
+      MENU_HYOUJI_FLG, GENRE_ICON_HYOUJI_FLG, KOUSHIN_BI, 
+      KOUSHIN_USERID, TOUROKU_BI, TOUROKU_USERID
+      )
+    values (#{kikakuCd,jdbcType=CHAR}, #{genreNo,jdbcType=VARCHAR}, #{genreName,jdbcType=VARCHAR}, 
+      #{sortOrder,jdbcType=DECIMAL}, #{genreHeaderImageUrl,jdbcType=VARCHAR}, #{genreLinkImageUrl,jdbcType=VARCHAR}, 
+      #{menuHyoujiFlg,jdbcType=CHAR}, #{genreIconHyoujiFlg,jdbcType=CHAR}, #{koushinBi,jdbcType=TIMESTAMP}, 
+      #{koushinUserid,jdbcType=VARCHAR}, #{tourokuBi,jdbcType=TIMESTAMP}, #{tourokuUserid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.commodity.entity.dto.MKikakuGenre">
+    insert into m_kikaku_genre
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="kikakuCd != null">
+        KIKAKU_CD,
+      </if>
+      <if test="genreNo != null">
+        GENRE_NO,
+      </if>
+      <if test="genreName != null">
+        GENRE_NAME,
+      </if>
+      <if test="sortOrder != null">
+        SORT_ORDER,
+      </if>
+      <if test="genreHeaderImageUrl != null">
+        GENRE_HEADER_IMAGE_URL,
+      </if>
+      <if test="genreLinkImageUrl != null">
+        GENRE_LINK_IMAGE_URL,
+      </if>
+      <if test="menuHyoujiFlg != null">
+        MENU_HYOUJI_FLG,
+      </if>
+      <if test="genreIconHyoujiFlg != null">
+        GENRE_ICON_HYOUJI_FLG,
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI,
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID,
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI,
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="kikakuCd != null">
+        #{kikakuCd,jdbcType=CHAR},
+      </if>
+      <if test="genreNo != null">
+        #{genreNo,jdbcType=VARCHAR},
+      </if>
+      <if test="genreName != null">
+        #{genreName,jdbcType=VARCHAR},
+      </if>
+      <if test="sortOrder != null">
+        #{sortOrder,jdbcType=DECIMAL},
+      </if>
+      <if test="genreHeaderImageUrl != null">
+        #{genreHeaderImageUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="genreLinkImageUrl != null">
+        #{genreLinkImageUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="menuHyoujiFlg != null">
+        #{menuHyoujiFlg,jdbcType=CHAR},
+      </if>
+      <if test="genreIconHyoujiFlg != null">
+        #{genreIconHyoujiFlg,jdbcType=CHAR},
+      </if>
+      <if test="koushinBi != null">
+        #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.commodity.entity.dto.MKikakuGenreExample" resultType="java.lang.Long">
+    select count(*) from m_kikaku_genre
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update m_kikaku_genre
+    <set>
+      <if test="record.kikakuCd != null">
+        KIKAKU_CD = #{record.kikakuCd,jdbcType=CHAR},
+      </if>
+      <if test="record.genreNo != null">
+        GENRE_NO = #{record.genreNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.genreName != null">
+        GENRE_NAME = #{record.genreName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sortOrder != null">
+        SORT_ORDER = #{record.sortOrder,jdbcType=DECIMAL},
+      </if>
+      <if test="record.genreHeaderImageUrl != null">
+        GENRE_HEADER_IMAGE_URL = #{record.genreHeaderImageUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.genreLinkImageUrl != null">
+        GENRE_LINK_IMAGE_URL = #{record.genreLinkImageUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.menuHyoujiFlg != null">
+        MENU_HYOUJI_FLG = #{record.menuHyoujiFlg,jdbcType=CHAR},
+      </if>
+      <if test="record.genreIconHyoujiFlg != null">
+        GENRE_ICON_HYOUJI_FLG = #{record.genreIconHyoujiFlg,jdbcType=CHAR},
+      </if>
+      <if test="record.koushinBi != null">
+        KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.koushinUserid != null">
+        KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tourokuBi != null">
+        TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.tourokuUserid != null">
+        TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update m_kikaku_genre
+    set KIKAKU_CD = #{record.kikakuCd,jdbcType=CHAR},
+      GENRE_NO = #{record.genreNo,jdbcType=VARCHAR},
+      GENRE_NAME = #{record.genreName,jdbcType=VARCHAR},
+      SORT_ORDER = #{record.sortOrder,jdbcType=DECIMAL},
+      GENRE_HEADER_IMAGE_URL = #{record.genreHeaderImageUrl,jdbcType=VARCHAR},
+      GENRE_LINK_IMAGE_URL = #{record.genreLinkImageUrl,jdbcType=VARCHAR},
+      MENU_HYOUJI_FLG = #{record.menuHyoujiFlg,jdbcType=CHAR},
+      GENRE_ICON_HYOUJI_FLG = #{record.genreIconHyoujiFlg,jdbcType=CHAR},
+      KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.commodity.entity.dto.MKikakuGenre">
+    update m_kikaku_genre
+    <set>
+      <if test="genreName != null">
+        GENRE_NAME = #{genreName,jdbcType=VARCHAR},
+      </if>
+      <if test="sortOrder != null">
+        SORT_ORDER = #{sortOrder,jdbcType=DECIMAL},
+      </if>
+      <if test="genreHeaderImageUrl != null">
+        GENRE_HEADER_IMAGE_URL = #{genreHeaderImageUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="genreLinkImageUrl != null">
+        GENRE_LINK_IMAGE_URL = #{genreLinkImageUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="menuHyoujiFlg != null">
+        MENU_HYOUJI_FLG = #{menuHyoujiFlg,jdbcType=CHAR},
+      </if>
+      <if test="genreIconHyoujiFlg != null">
+        GENRE_ICON_HYOUJI_FLG = #{genreIconHyoujiFlg,jdbcType=CHAR},
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where KIKAKU_CD = #{kikakuCd,jdbcType=CHAR}
+      and GENRE_NO = #{genreNo,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.commodity.entity.dto.MKikakuGenre">
+    update m_kikaku_genre
+    set GENRE_NAME = #{genreName,jdbcType=VARCHAR},
+      SORT_ORDER = #{sortOrder,jdbcType=DECIMAL},
+      GENRE_HEADER_IMAGE_URL = #{genreHeaderImageUrl,jdbcType=VARCHAR},
+      GENRE_LINK_IMAGE_URL = #{genreLinkImageUrl,jdbcType=VARCHAR},
+      MENU_HYOUJI_FLG = #{menuHyoujiFlg,jdbcType=CHAR},
+      GENRE_ICON_HYOUJI_FLG = #{genreIconHyoujiFlg,jdbcType=CHAR},
+      KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR}
+    where KIKAKU_CD = #{kikakuCd,jdbcType=CHAR}
+      and GENRE_NO = #{genreNo,jdbcType=VARCHAR}
+  </update>
+</mapper>

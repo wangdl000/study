@@ -19,12 +19,21 @@ class IfDemo {
 		int x = 1;
 		if (x > 1) {
 
-			if (x < 2) {
+			if (x < 3) {
 
 				System.out.println("yes");
 
 			}
 		}
+
+		if (x == 5) {
+			System.out.println("no");
+		}
+
+		if (x >= 6) {
+			System.out.println("666");
+		}
+
 		System.out.println("over");
 
 	}

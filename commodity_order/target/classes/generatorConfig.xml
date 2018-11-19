@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+
+<generatorConfiguration>
+	<properties resource="db.properties" />
+	<classPathEntry
+		location="src/main/resources/mysql-connector-java-5.1.40.jar" />
+	<context id="mysqlGenerator" defaultModelType="hierarchical" targetRuntime="MyBatis3" >
+
+		<property name="autoDelimitKeywords" value="false"/>
+		<property name="javaFileEncoding" value="UTF-8" />
+		<property name="javaFormatter"
+			value="org.mybatis.generator.api.dom.DefaultJavaFormatter" />
+		<property name="xmlFormatter"
+			value="org.mybatis.generator.api.dom.DefaultXmlFormatter" />
+		<property name="beginningDelimiter" value="`" />
+		<property name="endingDelimiter" value="`" />
+
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="${db.driver}"
+			connectionURL="${db.url}" userId="${db.username}"
+			password="${db.password}">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.commodity.entity.dto" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="com.commodity.entity.dao" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.commodity.entity.dao" targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="rootInterface" value="com.commodity.entity.DaoInterface"/>
+		</javaClientGenerator>
+
+   <table schema="webdb" tableName="M_CATALOG_GENRE_SYOUHIN" />
+    <table schema="webdb" tableName="M_CATALOG_GENRE" />
+    <table schema="webdb" tableName="M_WEB_SYOUHIN" />
+    <table schema="webdb" tableName="M_CATALOG_SYOUHIN" />
+    <table schema="webdb" tableName="M_CATALOG" />
+    <table schema="webdb" tableName="M_CODE" />
+    <table schema="webdb" tableName="M_COURSE" />
+    <table schema="webdb" tableName="T_WEB_JUCHU_MEISAI" />
+    <table schema="webdb" tableName="M_HAISOU" />
+    <table schema="webdb" tableName="M_KANRISYA_USER_KIKAKU" />
+    <table schema="webdb" tableName="M_KANRISYA_USER" />
+    <table schema="webdb" tableName="M_KIKAKU" />
+    <table schema="webdb" tableName="M_KIKAKU_CODE_DETAIL" />
+    <table schema="webdb" tableName="M_KIKAKU_CODE" />
+    <table schema="webdb" tableName="M_KIKAKU_GENRE" />
+    <table schema="webdb" tableName="M_MSG" />
+    <table schema="webdb" tableName="M_READ_JYOGAI" />
+    <table schema="webdb" tableName="M_READ_MASTER" />
+    <table schema="webdb" tableName="M_SYOUHIN" />
+    <table schema="webdb" tableName="M_SYOUHIN_READ_DETAIL" />
+    <table schema="webdb" tableName="M_SYOUHIN_READ_HEADER" />
+    <table schema="webdb" tableName="M_WEB_KIKAKU" />
+    <table schema="webdb" tableName="T_TOIAWASE" />
+    <table schema="webdb" tableName="T_WEB_JUCHU" />
+    <table schema="webdb" tableName="M_WEB_LOGIN" />
+    <table schema="webdb" tableName="T_MAIL_SPOOLING" />
+    <table schema="webdb" tableName="T_TOUJITSU_READ" />
+    <table schema="webdb" tableName="T_HAISOU_JYOUKYOU" />
+
+    <table schema="webdb" tableName="V_KIKAKU_COURSE_CATALOG" />
+    <table schema="webdb" tableName="V_CATALOG_GENRE" />
+    <table schema="webdb" tableName="V_KANRISYA_USER_KIKAKU" />
+    <table schema="webdb" tableName="V_MSG" />
+    <table schema="webdb" tableName="V_SYOUHIN_KANRI" />
+    <table schema="webdb" tableName="V_WEB_SYOUHIN" />
+    <table schema="webdb" tableName="V_WEB_KIKAKU" />
+
+<!-- <table tableName="m_catalog" domainObjectName="MCatalog"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="m_catalog_genre" domainObjectName="MCatalogGenre"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="m_catalog_genre_syouhin" domainObjectName="MCatalogGenreSyouhin"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="m_catalog_syouhin" domainObjectName="MCatalogSyouhin"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="m_code" domainObjectName="MCode"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="m_course" domainObjectName="MCourse"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="m_haisou" domainObjectName="MHaisou"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="m_kanrisya_user" domainObjectName="MKanrisyaUser"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="m_kikaku" domainObjectName="MKikaku"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="m_kikaku_code" domainObjectName="MKikakuCode"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="m_kikaku_code_detail" domainObjectName="MKikakuCodeDetail"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="m_kikaku_genre" domainObjectName="MKikakuGenre"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="m_msg" domainObjectName="MMsg"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="m_read_jyogai" domainObjectName="MReadJyogai"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="m_read_master" domainObjectName="MReadMaster"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="m_syouhin" domainObjectName="MSyouhin"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="m_web_kikaku" domainObjectName="MWebKikaku"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="m_web_login" domainObjectName="MWebLogin"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="m_web_syouhin" domainObjectName="MWebSyouhin"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="t_haisou_jyoukyou" domainObjectName="THaisouJyoukyou"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="t_toujitsu_read" domainObjectName="TToujitsuRead"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="t_web_juchu" domainObjectName="TWebJuchu"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="t_web_juchu_meisai" domainObjectName="TWebJuchuMeisai"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+<!-- <table tableName="v_kikaku_course_catalog" domainObjectName="VKikakuCourseCatalog"><property name="constructorBased" value="false"/><property name="ignoreQualifiersAtRuntime" value="false"/><property name="immutable" value="false"/><property name="modelOnly" value="false"/><property name="useActualColumnNames" value="false"/></table> -->
+
+
+	</context>
+</generatorConfiguration>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.commodity.entity.dao.MKanrisyaUserMapper">
+  <resultMap id="BaseResultMap" type="com.commodity.entity.dto.MKanrisyaUser">
+    <id column="KANRI_USER_ID" jdbcType="VARCHAR" property="kanriUserId" />
+    <result column="KANRI_USER_PASSWORD" jdbcType="VARCHAR" property="kanriUserPassword" />
+    <result column="KANRI_USER_NM" jdbcType="VARCHAR" property="kanriUserNm" />
+    <result column="SV_FLG" jdbcType="CHAR" property="svFlg" />
+    <result column="SIYOU_KAHI_FLG" jdbcType="CHAR" property="siyouKahiFlg" />
+    <result column="KOUSHIN_BI" jdbcType="TIMESTAMP" property="koushinBi" />
+    <result column="KOUSHIN_USERID" jdbcType="VARCHAR" property="koushinUserid" />
+    <result column="TOUROKU_BI" jdbcType="TIMESTAMP" property="tourokuBi" />
+    <result column="TOUROKU_USERID" jdbcType="VARCHAR" property="tourokuUserid" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    KANRI_USER_ID, KANRI_USER_PASSWORD, KANRI_USER_NM, SV_FLG, SIYOU_KAHI_FLG, KOUSHIN_BI, 
+    KOUSHIN_USERID, TOUROKU_BI, TOUROKU_USERID
+  </sql>
+  <select id="selectByExample" parameterType="com.commodity.entity.dto.MKanrisyaUserExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from m_kanrisya_user
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="com.commodity.entity.dto.MKanrisyaUserKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from m_kanrisya_user
+    where KANRI_USER_ID = #{kanriUserId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.commodity.entity.dto.MKanrisyaUserKey">
+    delete from m_kanrisya_user
+    where KANRI_USER_ID = #{kanriUserId,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.commodity.entity.dto.MKanrisyaUserExample">
+    delete from m_kanrisya_user
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.commodity.entity.dto.MKanrisyaUser">
+    insert into m_kanrisya_user (KANRI_USER_ID, KANRI_USER_PASSWORD, KANRI_USER_NM, 
+      SV_FLG, SIYOU_KAHI_FLG, KOUSHIN_BI, 
+      KOUSHIN_USERID, TOUROKU_BI, TOUROKU_USERID
+      )
+    values (#{kanriUserId,jdbcType=VARCHAR}, #{kanriUserPassword,jdbcType=VARCHAR}, #{kanriUserNm,jdbcType=VARCHAR}, 
+      #{svFlg,jdbcType=CHAR}, #{siyouKahiFlg,jdbcType=CHAR}, #{koushinBi,jdbcType=TIMESTAMP}, 
+      #{koushinUserid,jdbcType=VARCHAR}, #{tourokuBi,jdbcType=TIMESTAMP}, #{tourokuUserid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.commodity.entity.dto.MKanrisyaUser">
+    insert into m_kanrisya_user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="kanriUserId != null">
+        KANRI_USER_ID,
+      </if>
+      <if test="kanriUserPassword != null">
+        KANRI_USER_PASSWORD,
+      </if>
+      <if test="kanriUserNm != null">
+        KANRI_USER_NM,
+      </if>
+      <if test="svFlg != null">
+        SV_FLG,
+      </if>
+      <if test="siyouKahiFlg != null">
+        SIYOU_KAHI_FLG,
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI,
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID,
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI,
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="kanriUserId != null">
+        #{kanriUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="kanriUserPassword != null">
+        #{kanriUserPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="kanriUserNm != null">
+        #{kanriUserNm,jdbcType=VARCHAR},
+      </if>
+      <if test="svFlg != null">
+        #{svFlg,jdbcType=CHAR},
+      </if>
+      <if test="siyouKahiFlg != null">
+        #{siyouKahiFlg,jdbcType=CHAR},
+      </if>
+      <if test="koushinBi != null">
+        #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.commodity.entity.dto.MKanrisyaUserExample" resultType="java.lang.Long">
+    select count(*) from m_kanrisya_user
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update m_kanrisya_user
+    <set>
+      <if test="record.kanriUserId != null">
+        KANRI_USER_ID = #{record.kanriUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.kanriUserPassword != null">
+        KANRI_USER_PASSWORD = #{record.kanriUserPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="record.kanriUserNm != null">
+        KANRI_USER_NM = #{record.kanriUserNm,jdbcType=VARCHAR},
+      </if>
+      <if test="record.svFlg != null">
+        SV_FLG = #{record.svFlg,jdbcType=CHAR},
+      </if>
+      <if test="record.siyouKahiFlg != null">
+        SIYOU_KAHI_FLG = #{record.siyouKahiFlg,jdbcType=CHAR},
+      </if>
+      <if test="record.koushinBi != null">
+        KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.koushinUserid != null">
+        KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tourokuBi != null">
+        TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.tourokuUserid != null">
+        TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update m_kanrisya_user
+    set KANRI_USER_ID = #{record.kanriUserId,jdbcType=VARCHAR},
+      KANRI_USER_PASSWORD = #{record.kanriUserPassword,jdbcType=VARCHAR},
+      KANRI_USER_NM = #{record.kanriUserNm,jdbcType=VARCHAR},
+      SV_FLG = #{record.svFlg,jdbcType=CHAR},
+      SIYOU_KAHI_FLG = #{record.siyouKahiFlg,jdbcType=CHAR},
+      KOUSHIN_BI = #{record.koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{record.koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{record.tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{record.tourokuUserid,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.commodity.entity.dto.MKanrisyaUser">
+    update m_kanrisya_user
+    <set>
+      <if test="kanriUserPassword != null">
+        KANRI_USER_PASSWORD = #{kanriUserPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="kanriUserNm != null">
+        KANRI_USER_NM = #{kanriUserNm,jdbcType=VARCHAR},
+      </if>
+      <if test="svFlg != null">
+        SV_FLG = #{svFlg,jdbcType=CHAR},
+      </if>
+      <if test="siyouKahiFlg != null">
+        SIYOU_KAHI_FLG = #{siyouKahiFlg,jdbcType=CHAR},
+      </if>
+      <if test="koushinBi != null">
+        KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="koushinUserid != null">
+        KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      </if>
+      <if test="tourokuBi != null">
+        TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      </if>
+      <if test="tourokuUserid != null">
+        TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where KANRI_USER_ID = #{kanriUserId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.commodity.entity.dto.MKanrisyaUser">
+    update m_kanrisya_user
+    set KANRI_USER_PASSWORD = #{kanriUserPassword,jdbcType=VARCHAR},
+      KANRI_USER_NM = #{kanriUserNm,jdbcType=VARCHAR},
+      SV_FLG = #{svFlg,jdbcType=CHAR},
+      SIYOU_KAHI_FLG = #{siyouKahiFlg,jdbcType=CHAR},
+      KOUSHIN_BI = #{koushinBi,jdbcType=TIMESTAMP},
+      KOUSHIN_USERID = #{koushinUserid,jdbcType=VARCHAR},
+      TOUROKU_BI = #{tourokuBi,jdbcType=TIMESTAMP},
+      TOUROKU_USERID = #{tourokuUserid,jdbcType=VARCHAR}
+    where KANRI_USER_ID = #{kanriUserId,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -3,6 +3,15 @@ package day02;
 public class IntPlusDemo {
 	public static void main(String[] args) {
 
+
+
+
+
+
+
+
+
+
 		//算术运算符。 +  -  *  /  %(取余，模运算)  +(连接符)
 		// ++(自增：就在原有数据基础上+1，在赋给原有数据)  --
 
