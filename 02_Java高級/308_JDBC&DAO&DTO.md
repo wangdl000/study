@@ -1,10 +1,2 @@
-【为什么一定要前后端分离？】https://ru.mbd.baidu.com/jb960cg?f=cp
-
-html 教程：
-
-> 【HTML 教程】http://www.w3school.com.cn/html/index.asp
-
-
-JSP
-JavaScript
-SQL
+> 【JDBC连接数据库实例 - 走在修行的大街上 - 博客园】  
+https://www.cnblogs.com/hglibin/p/9556465.html
