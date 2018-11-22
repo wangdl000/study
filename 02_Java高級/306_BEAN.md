@@ -1,10 +1,9 @@
-【为什么一定要前后端分离？】https://ru.mbd.baidu.com/jb960cg?f=cp
+JavaBean 是一种JAVA语言写成的可重用组件。JavaBean符合一定规范编写的Java类，不是一种技术，而是一种规范。大家针对这种规范，总结了很多开发技巧、工具函数。符合这种规范的类，可以被其它的程序员或者框架使用。它的方法命名，构造及行为必须符合特定的约定：  
 
-html 教程：
+1、所有属性为private。  
 
-> 【HTML 教程】http://www.w3school.com.cn/html/index.asp
+2、这个类必须有一个公共的缺省构造函数。即是提供无参数的构造器。  
 
+3、这个类的属性使用getter和setter来访问，其他方法遵从标准命名规范。  
 
-JSP
-JavaScript
-SQL
+4、这个类应是可序列化的。实现serializable接口。  
