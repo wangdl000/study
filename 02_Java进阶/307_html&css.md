@@ -41,3 +41,53 @@ http://www.w3school.com.cn/html/index.asp
 30. preload; 预加载。video/audio标签常用，有autoplay时可忽略。  
 31. muted; 静音。video/audio标签常用  
 32. poster = "图片地址"； 封面。video标签常用  
+
+## 不常见但常用的属性  
+
+2-1 innerHTML属性。
+
+obj.innerHTML;用于获取或修改标签元素里面的内容。  
+1
+<div id="div1">123</div>
+<script type="text/javascript">
+    var oDiv = document.getElementById("div1");
+    console.log(oDiv.innerHTML); // 123
+    oDiv.innerHTML = "abc"; // 该div里面的值变为abc；
+</script>
+
+2-2 style属性  
+
+obj.style.属性;用于获取或修改标签的css样式。  
+1
+<div id="div1" style="width:100px;">123</div>
+<script type="text/javascript">
+    var oDiv = document.getElementById("div1");
+    console.log(oDiv.style.width); // 100px
+    oDiv.style.width = "200px"; // 该div宽变为200px；
+</script>
+
+其他样式获取/修改方法类似。
+
+2-3 className属性  
+
+obj.className; 获取/修改标签的class名，因为class为关键字，所以用className；
+1
+<div id="div1" class="box1">123</div>
+<script type="text/javascript">
+    var oDiv = document.getElementById("div1");
+    console.log(oDiv.className); // box1
+    oDiv.className = "box2"; // 该div的class名改为box2；
+</script>
+
+2-4 自定义属性  
+
+obj.自定义属性名; 获取/修改/添加标签的某个属性值  
+1
+    <div id="div1">123</div>
+    < script type="text/javascript">
+    var oDiv = document.getElementById("div1");  
+    oDiv.index = 0; // 给这个div增加一个index属性，并设值为0；
+    console.log(oDiv.index); // 0。可获取到这个index。
+    <script>
+
+注：属性名可以自己定义，但是不要和已有或关键字冲突。  
