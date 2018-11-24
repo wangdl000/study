@@ -5,3 +5,9 @@ https://www.cnblogs.com/lazio10000/p/5321741.html
 
 ### 案例代码参照  
 https://github.com/YUUXIAO/webProject
+
+### JavaScript流行
+1、JQuery  
+2、NodeJS  
+3、AngularJS
+
