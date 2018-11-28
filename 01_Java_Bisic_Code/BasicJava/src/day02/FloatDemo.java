@@ -22,7 +22,7 @@ class FloatDemo {
 			System.out.println(z);
 		}
 
-//				System.out.println(z);
+				System.out.println(bl);
 
 	}
 }

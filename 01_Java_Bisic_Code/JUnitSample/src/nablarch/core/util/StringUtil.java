@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+//import java.util.List;
 import java.util.regex.Pattern;
 
 import nablarch.core.util.annotation.Published;
@@ -50,10 +51,28 @@ public final class StringUtil {
 		assertNotTrue(length < 0, "length must not be negative.");
 
 		StringBuilder sb = new StringBuilder(length);
+
+
+
+//		StringBuffer sb2 = new StringBuffer(30);
+
+
+
+		String aaa = "";
+
+
+
+
+
 		int countToPad = length - string.codePointCount(0, string.length());
+
+
 		for (int i = 0; i < countToPad; i++) {
 			sb.append(padChar);
 		}
+
+
+
 		sb.append(string);
 		return sb.toString();
 	}
@@ -76,6 +95,9 @@ public final class StringUtil {
 	public static String rpad(String string, int length, char padChar) {
 		assertNotNull(string, "string");
 		assertNotTrue(length < 0, "length must not be negative.");
+
+
+		Person aaa = new Person();
 
 		StringBuilder sb = new StringBuilder(length);
 		sb.append(string);
@@ -611,7 +633,7 @@ public final class StringUtil {
 
 	/**
 	 * 複数の文字列をセパレータを挟んで結合する。
-	 * 
+	 *
 	 * @param separator セパレータ
 	 * @param params 結合する文字列
 	 * @return セパレータで結合した文字列
@@ -630,7 +652,7 @@ public final class StringUtil {
 
 	/**
 	 * 文字列をセパレータで分割する。
-	 * 
+	 *
 	 * @param str 分割対象文字列
 	 * @param separator セパレータ
 	 * @return 分割された文字列

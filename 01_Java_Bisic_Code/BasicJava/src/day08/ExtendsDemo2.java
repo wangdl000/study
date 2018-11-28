@@ -24,11 +24,14 @@ super：代表一个父类空间。
 
 
 */
-class Fu {
+class Fu{
 	private int num = 4;
 
 	public int getNum() {
-		return num;
+		if (this.num == 3) {
+			throw new ArrayStoreException();
+		}
+		return this.num;
 	}
 }
 
@@ -36,13 +39,22 @@ class Zi extends Fu {
 	private int num = 5;
 
 	void show() {
+
+		//		Fu fu = new Fu();
+		//		fu.getNum();
+
 		System.out.println(this.num + "....." + super.getNum());
 	}
 }
 
 class ExtendsDemo2 {
 	public static void main(String[] args) {
+
 		Zi z = new Zi();
+
+
+		BeanUtils.
 		z.show();
+
 	}
 }

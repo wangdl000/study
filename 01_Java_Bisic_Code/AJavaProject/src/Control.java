@@ -7,6 +7,15 @@ public class Control {
 		// 向控制台輸出Hello World !!!!!!
 		System.out.println("Hello World !!!!!!");
 
+		int nenjrei = 0;
+		int nianling = 0;
+
+
+		
+		String str1 = "123456789a";
+		
+		
+		
 		int age1 = 10;
 		int age2 = 30;
 
@@ -243,6 +252,14 @@ public class Control {
 		strPerson1[3] = "東京";
 
 		int len = strPerson1.length;
+
+		Person p001 = null;
+
+		p001 = new Person();
+
+
+
+
 
 		System.out.println(len);
 		System.out.println(strPerson1[0]);
