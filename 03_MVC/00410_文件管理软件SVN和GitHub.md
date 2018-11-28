@@ -54,4 +54,4 @@ http://www.aise.ics.saitama-u.ac.jp/~gotoh/HowToInstallTortoiseGit.html#toc1
    
 ![410_27](https://github.com/wangdl000/study/blob/master/03_MVC/resource_410/27_push2.png)  
     
-![410_28](https://github.com/wangdl000/study/blob/master/03_MVC/resource_410/28_commit_complete.png) 
+![410_28](https://github.com/wangdl000/study/blob/master/03_MVC/resource_410/28_commit_complete.png)  
