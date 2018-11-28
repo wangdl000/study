@@ -46,8 +46,12 @@ http://www.aise.ics.saitama-u.ac.jp/~gotoh/HowToInstallTortoiseGit.html#toc1
   - 
 ![410_23](https://github.com/wangdl000/study/blob/master/03_MVC/resource_410/23_complete.png)  
   - 3.提交（コミット）方法（需要权限）  
-![410_23](https://github.com/wangdl000/study/blob/master/03_MVC/resource_410/24_commit.png)  
+![410_24](https://github.com/wangdl000/study/blob/master/03_MVC/resource_410/24_commit.png)  
   - 4.提交文件选择和日志  
-![410_23](https://github.com/wangdl000/study/blob/master/03_MVC/resource_410/25_comment.png)  
+![410_25](https://github.com/wangdl000/study/blob/master/03_MVC/resource_410/25_comment.png)  
   - 5.PUSH（GitHub特有）  
-![410_23](https://github.com/wangdl000/study/blob/master/03_MVC/resource_410/26_push.png)  
+![410_26](https://github.com/wangdl000/study/blob/master/03_MVC/resource_410/26_push.png)  
+   
+![410_27](https://github.com/wangdl000/study/blob/master/03_MVC/resource_410/27_push2.png)  
+    
+![410_28](https://github.com/wangdl000/study/blob/master/03_MVC/resource_410/28_commit_complete.png) 
