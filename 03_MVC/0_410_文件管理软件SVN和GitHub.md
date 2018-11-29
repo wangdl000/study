@@ -7,7 +7,7 @@ http://blog.csdn.net/Peter_tang6/article/details/76577108
  - **本次课程用GitHub管理Java代码和文件**  
  - **以下安装配置步骤中日文混入，原谅我偷个懒**  
 ### 前提  
-你需要一个邮箱，用邮箱地址申请GitHub账户。略  
+你需要一个邮箱，用邮箱地址申请GitHub账户，收到GitHub邮件后激活之。略  
 
 ### GitHub安装配置  
 #### 1、Git安装教程（Windows安装超详细教程）  
