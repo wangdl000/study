@@ -27,7 +27,7 @@ Servlet多线程体系结构是建立在Java多线程机制之上的，它的生
  Struts2的Action是原型，非单实例的；会对每一个请求,产生一个Action的实例来处理。  
 
  解决servlet线程安全的方案：同步对共享数据的操作 Synchronized (this){...}、避免使用实例变量  
-![415_01](https://github.com/wangdl000/study/blob/master/03_MVC/resource_servlet/01_download.PNG)  
+![415_01](https://github.com/wangdl000/study/blob/master/03_MVC/resource_servlet/01_http.jpg)  
 ①客户端向服务器端发出请求；  
 
 ②这个过程比较重要，这时Tomcat会创建两个对象：HttpServletResponse和HttpServletRequest。并将它们的引用（注意是引用）传给刚分配的线程；  
