@@ -13,6 +13,6 @@ Maven是基于项目对象模型(POM project object model)，可以通过一小�
 
 #### １、MAVEN下载  
 https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.5.4/binaries/
-
+（Windows下载zip）
 #### 2、环境变量设置  
 
