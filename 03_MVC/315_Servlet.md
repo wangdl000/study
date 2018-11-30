@@ -188,10 +188,10 @@ Servlet线程结束，Tomcat将响应对象转换为HTTP响应发回给客户，
 ![415_04](https://github.com/wangdl000/study/blob/master/03_MVC/resource_servlet/04_run.gif)  
 
 ### 五：Servlet生命周期的各个阶段
-
+![415_05](https://github.com/wangdl000/study/blob/master/03_MVC/resource_servlet/05_way.gif)  
 
 Servlet运行在Servlet容器中，其生命周期由容器来管理。Servlet的生命周期通过javax.servlet.Servlet接口中的init()、service()和destroy()方法来表示。  
-
+![415_06](https://github.com/wangdl000/study/blob/master/03_MVC/resource_servlet/06_life.gif) 
 
 ### Servlet的生命周期包含了下面4个阶段： 
 
@@ -212,3 +212,4 @@ Servlet容器调用Servlet的service()方法对请求进行处理。要注意的
 当容器检测到一个Servlet实例应该从服务中被移除的时候，容器就会调用实例的destroy()方法，以便让该实例可以释放它所使用的资源，保存数据到持久存储设备中。当需要释放内存或者容器关闭时，容器就会调用Servlet实例的destroy()方法。在destroy()方法调用之后，容器会释放这个Servlet实例，该实例随后会被Java的垃圾收集器所回收。如果再次需要这个Servlet处理请求，Servlet容器会创建一个新的Servlet实例。  
 
 在整个Servlet的生命周期过程中，创建Servlet实例、调用实例的init()和destroy()方法都只进行一次，当初始化完成后，Servlet容器会将该实例保存在内存中，通过调用它的service()方法，为接收到的请求服务。下面给出Servlet整个生命周期过程的UML序列图  
+![415_07](https://github.com/wangdl000/study/blob/master/03_MVC/resource_servlet/07_uml.gif) 
