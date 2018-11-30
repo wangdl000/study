@@ -177,10 +177,15 @@ c) 从请求中的URL中找到正确Servlet，Tomcat为其创建或者分配一�
 d) Tomcat调用Servlet的servic()方法，根据请求参数的不同调用doGet()或者doPost()方法；
 
 e) 假设是HTTP GET请求，doGet()方法生成静态页面，并组合到响应对象里；
-Servlet线程结束，Tomcat将响应对象转换为HTTP响应发回给客户，同时删除请求和响应对象。
-从该过程中，我们可以理解Servlet的生命周期：Servlet类加载（对应3步）；Servlet实例化（对应3步）；调用init方法（对应3步）；调用service()方法（对应4、5步）；；调用destroy()方法（对应6步）。
+Servlet线程结束，Tomcat将响应对象转换为HTTP响应发回给客户，同时删除请求和响应对象。  
+从该过程中，我们可以理解Servlet的生命周期：  
+** Servlet类加载（对应3步）**   
+** Servlet实例化（对应3步）**  
+** 调用init方法（对应3步）**  
+** 调用service()方法（对应4、5步）**  
+** 调用destroy()方法（对应6步）**  
 
-
+![415_02](https://github.com/wangdl000/study/blob/master/03_MVC/resource_servlet/02_url.gif)  
 
 ### 五：Servlet生命周期的各个阶段
 
