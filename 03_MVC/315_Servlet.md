@@ -135,7 +135,7 @@ Tomcat启动后，监听我们的8080端口，当有Url请求发过来之后，�
 b) 项目文件找到后，开始寻找类文件。
 
 这个时候Tomcat去Web.xml文件中寻找<servlet-mapping> 配置节中包含”servlet/FirstServlet”字符串，进而找到该类文件所在的位置。 
-
+![415_02](https://github.com/wangdl000/study/blob/master/03_MVC/resource_servlet/02_url.gif)  
 
 
 3. Servelt中的doGet() 和 doPost() 方法
@@ -185,7 +185,7 @@ Servlet线程结束，Tomcat将响应对象转换为HTTP响应发回给客户，
 ** 调用service()方法（对应4、5步）**  
 ** 调用destroy()方法（对应6步）**  
 
-![415_02](https://github.com/wangdl000/study/blob/master/03_MVC/resource_servlet/02_url.gif)  
+![415_04](https://github.com/wangdl000/study/blob/master/03_MVC/resource_servlet/04_run.gif)  
 
 ### 五：Servlet生命周期的各个阶段
 
