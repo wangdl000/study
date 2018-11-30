@@ -9,7 +9,13 @@
 ### 4、EJB项目
 应用于大型企业应用平台开发，比如大型ERP、电信业BOSS系统等，依赖EJB容器
 ### 5、JAVA WEB Service项目
-对外提供webservice接口的项目
+对外提供webservice接口的项目。  
+（常用传输内容之一，JSON）  
+用Javascript接收Json信息方法：  
+    var json = JSON.stringify(object);  
+    var object = JSON.parse(json);  
+
+
 ### 6、eclipse插件项目
 为ECLIPSE提供插件
 
