@@ -1,7 +1,4 @@
 ## Servlet运行原理    
-资料地址  
-http://www.cnblogs.com/gaoxiangde/p/4339571.html
-
 
 ### 一：servlet定义  
 Servlet是一个Java应用程序，运行在服务器端，用来处理客户端请求并作出响应的程序。  
@@ -213,3 +210,8 @@ Servlet容器调用Servlet的service()方法对请求进行处理。要注意的
 
 在整个Servlet的生命周期过程中，创建Servlet实例、调用实例的init()和destroy()方法都只进行一次，当初始化完成后，Servlet容器会将该实例保存在内存中，通过调用它的service()方法，为接收到的请求服务。下面给出Servlet整个生命周期过程的UML序列图  
 ![415_07](https://github.com/wangdl000/study/blob/master/03_MVC/resource_servlet/07_uml.gif) 
+
+
+资料地址  
+http://www.cnblogs.com/gaoxiangde/p/4339571.html
+

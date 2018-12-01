@@ -81,7 +81,7 @@ mysql-installer-community-5.7.15.0.msiをインストールする。
   - ・URL
   http://dev.mysql.com/downloads/file/?id=465644
 ![310_07](https://github.com/wangdl000/study/blob/master/03_MVC/resource_mysql/07_dbjar1.PNG)  
-![310_07](https://github.com/wangdl000/study/blob/master/03_MVC/resource_mysql/07_dbjar1.PNG)  
+![310_07](https://github.com/wangdl000/study/blob/master/03_MVC/resource_mysql/07_dbjar2.PNG)  
 
 
 
