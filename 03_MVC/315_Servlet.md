@@ -104,6 +104,8 @@ Tomcat是一个web容器，也叫web服务器。我们都知道J2EE有十三个�
 
  Tomcat启动成功后，在浏览器中输入：http://localhost:8080/abingtest/servlet/FirstServlet
 
+(http://localhost:8080/A_bingtest/servlet/FirstServlet)
+
 ### 四：servlet运行原理
 当我们在浏览器中输入http://localhost:8080/abingtest/servlet/FirstServlet的时候，Tomcat是如何找到我们的servlet ，运行，并返回我们想看到的页面的呢。
 
