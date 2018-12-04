@@ -2,8 +2,8 @@
 
 ### 一人前のJavaエンジニアになるためのロードマップ  
 
-![インストール1](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_way/01_way1.PNG)  
-![インストール1](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_way/01_way1.PNG)  
+![インストール1](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_way/01_way1.png)  
+![インストール1](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_way/01_way1.png)  
 
 https://qiita.com/haruto167/items/5a784df032518277f4a0   
 
