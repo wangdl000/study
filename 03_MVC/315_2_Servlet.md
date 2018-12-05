@@ -104,6 +104,8 @@ package gacl.servlet.study;
 68 
 69 }
 
+这些代码都是Eclipse自动生成的，而web.xml文件中也多了<servlet></servlet>和<servlet-mapping></servlet-mapping>两对标签，这两对标签是配置ServletDemo1的，如下图所示：  
+
 
 
 
