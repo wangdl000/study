@@ -34,7 +34,75 @@ Servlet程序是由WEB服务器调用，web服务器收到客户端的Servlet访
 
 这样，我们就通过Eclipse帮我们创建好一个名字为ServletDemo1的Servlet，创建好的ServletDemo01里面会有如下代码：  
 
-
+package gacl.servlet.study;
+ 2 
+ 3 import java.io.IOException;
+ 4 import java.io.PrintWriter;
+ 5 
+ 6 import javax.servlet.ServletException;
+ 7 import javax.servlet.http.HttpServlet;
+ 8 import javax.servlet.http.HttpServletRequest;
+ 9 import javax.servlet.http.HttpServletResponse;
+10 
+11 public class ServletDemo1 extends HttpServlet {
+12 
+13     /**
+14      * The doGet method of the servlet. <br>
+15      *
+16      * This method is called when a form has its tag value method equals to get.
+17      * 
+18      * @param request the request send by the client to the server
+19      * @param response the response send by the server to the client
+20      * @throws ServletException if an error occurred
+21      * @throws IOException if an error occurred
+22      */
+23     public void doGet(HttpServletRequest request, HttpServletResponse response)
+24             throws ServletException, IOException {
+25 
+26         response.setContentType("text/html");
+27         PrintWriter out = response.getWriter();
+28         out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
+29         out.println("<HTML>");
+30         out.println("  <HEAD><TITLE>A Servlet</TITLE></HEAD>");
+31         out.println("  <BODY>");
+32         out.print("    This is ");
+33         out.print(this.getClass());
+34         out.println(", using the GET method");
+35         out.println("  </BODY>");
+36         out.println("</HTML>");
+37         out.flush();
+38         out.close();
+39     }
+40 
+41     /**
+42      * The doPost method of the servlet. <br>
+43      *
+44      * This method is called when a form has its tag value method equals to post.
+45      * 
+46      * @param request the request send by the client to the server
+47      * @param response the response send by the server to the client
+48      * @throws ServletException if an error occurred
+49      * @throws IOException if an error occurred
+50      */
+51     public void doPost(HttpServletRequest request, HttpServletResponse response)
+52             throws ServletException, IOException {
+53 
+54         response.setContentType("text/html");
+55         PrintWriter out = response.getWriter();
+56         out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
+57         out.println("<HTML>");
+58         out.println("  <HEAD><TITLE>A Servlet</TITLE></HEAD>");
+59         out.println("  <BODY>");
+60         out.print("    This is ");
+61         out.print(this.getClass());
+62         out.println(", using the POST method");
+63         out.println("  </BODY>");
+64         out.println("</HTML>");
+65         out.flush();
+66         out.close();
+67     }
+68 
+69 }
 
 
 
