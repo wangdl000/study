@@ -1,1 +1,1 @@
-## SpringMVC(GET)案例  
+## SpringMVC GET处理案例  
