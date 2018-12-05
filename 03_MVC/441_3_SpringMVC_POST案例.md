@@ -45,6 +45,7 @@
 在开发中页面传递到后台的数据可能会很多，所以我们可以把多个参数封装为一个对象来传递。但要注意的是页面中的name必须和实体类的属性名一致。  
 
 该案例的实体类为Users:    
+
     public class Users implements Serializable {
 	    private Integer userId;
 	    private String loginName;
