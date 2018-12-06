@@ -80,9 +80,9 @@ https://thinkit.co.jp/free/article/0708/2/8
 
 
 ### Spring工作流程描述  
-  ![440]( https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_flow1.png)  
+  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_flow1.png)  
 
-  ![440]( https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/05_springmvc1.png)  
+  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/05_springmvc1.jpg)  
 
   - 1. 用户向服务器发送请求，请求被Spring 前端控制Servelt DispatcherServlet捕获。  
   - 2. DispatcherServlet对请求URL进行解析，得到请求资源标识符（URI）。  
