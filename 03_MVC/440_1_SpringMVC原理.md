@@ -48,13 +48,11 @@ https://thinkit.co.jp/free/article/0708/2/8
 
 
 
-
-
 ## SpringMVC原理  
 
 ### 术语  
   - DispatcherServlet——前端控制器。  
-  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part1.png)   
+  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_mvc1.png)   
   - Controller  
   ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part2.png)   
   - HandlerAdapter  
