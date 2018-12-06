@@ -1,3 +1,4 @@
+##Servlet运行原理2
 ## 一、Servlet简介  
 　　Servlet是sun公司提供的一门用于开发动态web资源的技术。  
 　　Sun公司在其API中提供了一个servlet接口，用户若想用发一个动态web资源(即开发一个Java程序向浏览器输出数据)，需要完成以下2个步骤：  

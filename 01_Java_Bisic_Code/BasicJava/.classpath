@@ -4,5 +4,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="D:/works/GitHub/study/01_Java_Bisic_Code/lib/junit-4.12.jar"/>
 	<classpathentry kind="lib" path="src/day12/haha.jar"/>
+	<classpathentry kind="lib" path="lib/aaa.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
