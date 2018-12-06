@@ -17,6 +17,10 @@ https://thinkit.co.jp/free/article/0708/2/8
   - JavaWeb项目有两种使用方式
     - B/S====>浏览器+服务器   只要有浏览器就可以
     - C/S----->客户端+服务器.  必须的在客户端安装程序.
+    现在的JavaWeb项目(软件)基本上都是B/S的。  
+  - BS怎样通信:  
+    - 必须有请求有响应。  
+    - 有一次请求就应该具有一次响应，它们是成对出现的。   
 
 
 ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_mvc1.png)    
