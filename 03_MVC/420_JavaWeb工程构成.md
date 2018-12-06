@@ -1,8 +1,10 @@
 ## Java项目目录结构
 
-> 1、一般web项目 
-> 2、maven web项目目录结构  
-### 1、一般web项目目录结构 
+> **1、一般web项目**  
+> **2、maven web项目目录结构**  
+
+### 1、一般web项目目录结构  
+
 ![420](https://github.com/wangdl000/study/blob/master/03_MVC/resource_javaweb/01_nomal.png)     
   - 1、红色箭头src目录  
   src下一般存放包和写的类文件
