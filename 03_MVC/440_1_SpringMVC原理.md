@@ -55,7 +55,7 @@ https://thinkit.co.jp/free/article/0708/2/8
   ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_mvc1.png)   
     - 为什么叫做前端控制器？举个例子：  
     如下图，前端控制器很类似医院的分诊台。
-
+    ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_springmvc2.png)   
 
   - Controller  
   ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part2.png)   
@@ -64,11 +64,26 @@ https://thinkit.co.jp/free/article/0708/2/8
     ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part3.png)   
   - HandlerInterceptor  
   HandlerAdapter是Spring MVC内部使用的，Spring MVC会把控制器和HandlerInterceptor包装为HandlerAdapter。  
-  - 
+  - HandlerMapping  
+  DispatcherServlet会通过HandlerMapping把控制器和HandlerInterceptor包装为HandlerExecutionChain。  
+    ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part3.png)   
+  - HandlerExecutionChain  
+  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part4.png)   
+  - ModelAndView  
+  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part5.png)   
+    Spring MVC会把Model和Map封装为ModelAndView:  
+  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part6.png)   
+
+### Spring MVC——总体架构图  
+  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc1.png)   
+  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc1.png)   
 
 
+### Spring工作流程描述  
+  ![440]( https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_flow1.png)  
 
-Spring工作流程描述  
+  ![440]( https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_flow2.png)  
+
   - 1. 用户向服务器发送请求，请求被Spring 前端控制Servelt DispatcherServlet捕获。  
   - 2. DispatcherServlet对请求URL进行解析，得到请求资源标识符（URI）。  
 然后根据该URI，调用HandlerMapping获得该Handler配置的所有相关的对象（包括Handler对象以及Handler对象对应的拦截器）。  
