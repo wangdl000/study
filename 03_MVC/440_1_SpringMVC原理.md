@@ -7,7 +7,7 @@ https://thinkit.co.jp/free/article/0708/2/8
 
 ## 什么是MVC  
 
-
+![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_javaweb/01_nomal.png)    
 
 
 
