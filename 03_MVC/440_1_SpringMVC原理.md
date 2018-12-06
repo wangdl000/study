@@ -3,6 +3,9 @@
 ## 什么是MVC  
 
   - MVC是Java Web开发的一种模式。  
+    【计算机网络】这里跳过： 
+https://www.jianshu.com/p/a6d086a3997d
+
   - WEB，在英语中web即表示网页的意思，它用于表示Internet主机上供外界访问的资源。
     - Internet上供外界访问的Web资源分为：
       - 静态web资源（如html 页面）：指web页面中供人们浏览的数据始终是不变。
