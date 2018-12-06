@@ -34,6 +34,10 @@ Spring工作流程描述
   - 8. 将渲染结果返回给客户端。  
 
 资料来源：  
+
+【JavaWeb基础知识总结】  
+https://www.cnblogs.com/du-0210/p/8426624.html
+
 http://www.cnblogs.com/wangxuerui/p/5796348.html
 
 https://www.cnblogs.com/zzt-lovelinlin/p/7060461.html
