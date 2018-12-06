@@ -53,6 +53,10 @@ https://thinkit.co.jp/free/article/0708/2/8
 ### 术语  
   - DispatcherServlet——前端控制器。  
   ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_mvc1.png)   
+    - 为什么叫做前端控制器？举个例子：  
+    如下图，前端控制器很类似医院的分诊台。
+
+
   - Controller  
   ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part2.png)   
   - HandlerAdapter  
