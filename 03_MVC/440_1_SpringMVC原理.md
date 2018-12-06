@@ -33,6 +33,9 @@ http://www.tohoho-web.com/ex/draft/tomcat.htm
   - Tomcatのサーバ設定  
 https://thinkit.co.jp/free/article/0708/2/8
 
+### MVC原理  
+  - MVC就是Model-View-Controller的缩写，是一个设计模式，它强制性的使应用程序的输入、处理和输出分开。  
+
 
 
 ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_mvc1.png)    
