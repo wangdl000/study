@@ -28,12 +28,8 @@
     - Tomcat- apache，是开源的Servlet容器。  
     Tomcat 开源小型web服务器 ，完全免费，主要用于中小型web项目，只支持Servlet和JSP 等少量javaee规范 ，Apache公司jakarta 一个子项目。  
     - Jboss – hibernate公司开发的J2EE容器。不是开源免费。  
-
-
-
   - Tomcat入門  
 http://www.tohoho-web.com/ex/draft/tomcat.htm
-
   - Tomcatのサーバ設定  
 https://thinkit.co.jp/free/article/0708/2/8
 
