@@ -52,6 +52,12 @@ https://thinkit.co.jp/free/article/0708/2/8
 
 ## SpringMVC原理  
 
+### 术语  
+  - DispatcherServlet——前端控制器。  
+  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_mvc7.png)   
+
+
+
 Spring工作流程描述  
   - 1. 用户向服务器发送请求，请求被Spring 前端控制Servelt DispatcherServlet捕获。  
   - 2. DispatcherServlet对请求URL进行解析，得到请求资源标识符（URI）。  
