@@ -54,7 +54,15 @@ https://thinkit.co.jp/free/article/0708/2/8
 
 ### 术语  
   - DispatcherServlet——前端控制器。  
-  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_mvc7.png)   
+  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part1.png)   
+  - Controller  
+  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part2.png)   
+  - HandlerAdapter  
+    Spring MVC没有控制器接口，是通过注解的方式表示某个类是控制器，所以需要适配为控制器。  
+    ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part3.png)   
+  - HandlerInterceptor  
+  HandlerAdapter是Spring MVC内部使用的，Spring MVC会把控制器和HandlerInterceptor包装为HandlerAdapter。  
+  - 
 
 
 
