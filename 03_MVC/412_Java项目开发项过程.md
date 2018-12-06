@@ -1,3 +1,7 @@
+## 前言  
+开始学习之前，先根据如下链接，了解一下自己掌握的JAVA知识。  
+https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/05_Java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF.md
+
 ##一个java开发项目过程：   
 
 ### 1、项目启动
