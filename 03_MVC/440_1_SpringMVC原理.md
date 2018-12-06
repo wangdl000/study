@@ -24,7 +24,7 @@
     J2EE容器 ——
 支持EJB (EnterPrice Java Bean (企业级的javabean)) 、Spring 。  
     - weblogic BEA公司产品，被Oracle收购，全面支持JavaEE规范，收费软件，企业中非常主流的服务器 -------- 网络上文档非常全面。
-    - WebSphere （简称WACs）。文档非常少，IBM公司产品，价格昂贵，全面支持JavaEE 规范。  
+    - WebSphere （WACs框架中常用）。文档非常少，IBM公司产品，价格昂贵，全面支持JavaEE 规范。  
     - Tomcat- apache，是开源的Servlet容器。  
     Tomcat 开源小型web服务器 ，完全免费，主要用于中小型web项目，只支持Servlet和JSP 等少量javaee规范 ，Apache公司jakarta 一个子项目。  
     - Jboss – hibernate公司开发的J2EE容器。不是开源免费。  
