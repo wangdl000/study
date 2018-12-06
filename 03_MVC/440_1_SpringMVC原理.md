@@ -34,13 +34,17 @@ http://www.tohoho-web.com/ex/draft/tomcat.htm
 https://thinkit.co.jp/free/article/0708/2/8
 
 ### MVC原理  
+  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_mvc4.png)  
   - MVC就是Model-View-Controller的缩写，是一个设计模式，它强制性的使应用程序的输入、处理和输出分开。  
 
+#### View——视图层，为用户提供UI，重点关注数据的呈现  
+![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_mvc5.png)    
 
+#### Model——模型层  
+![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_mvc6.png)    
 
-![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_mvc1.png)    
-
-
+#### Controller——控制器  
+![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_mvc7.png)   
 
 
 
