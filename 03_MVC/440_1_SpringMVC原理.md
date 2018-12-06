@@ -22,6 +22,15 @@ https://thinkit.co.jp/free/article/0708/2/8
     - 必须有请求有响应。  
     - 有一次请求就应该具有一次响应，它们是成对出现的。   
 
+### 服务器介绍  
+
+  - 大型服务器：websphere(IBM),weblogic(Oracle) J2EE容器 －
+支持EJB (EnterPrice Java Bean (企业级的javabean)) – Spring
+    - weblogic BEA公司产品，被Oracle收购，全面支持JavaEE规范，收费软件，企业中非常主流的服务器 -------- 网络上文档非常全面
+WebSphere 文档非常少，IBM公司产品，价格昂贵，全面支持JavaEE 规范
+Tomcat- apache，开源的。Servlet容器。
+tomcat 开源小型web服务器 ，完全免费，主要用于中小型web项目，只支持Servlet和JSP 等少量javaee规范 ，Apache公司jakarta 一个子项目
+Jboss – hibernate公司开发。不是开源免费。J2EE容器
 
 ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_mvc1.png)    
 
