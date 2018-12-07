@@ -1,5 +1,10 @@
 ## session  
 
+### 什么是session  
+【session_百度百科】。 
+https://mr.baidu.com/i4h6d7e?f=cp
+
+
   - session常常用来保存用户的登录信息。
 
 参考资料。  
