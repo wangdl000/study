@@ -52,6 +52,10 @@ https://thinkit.co.jp/free/article/0708/2/8
 #### Controller——控制器  
 ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_mvc7.png)   
 
+## springMVC是什么：  
+
+　　springMVC是一个MVC的开源框架，springMVC=struts2+spring，springMVC就相当于是Struts2加上sring的整合，但是这里有一个疑惑就是，springMVC和spring是什么样的关系呢？这个在百度百科上有一个很好的解释：意思是说，springMVC是spring的一个后续产品，其实就是spring在原有基础上，又提供了web应用的MVC模块，可以简单的把springMVC理解为是spring的一个模块（类似AOP，IOC这样的模块），网络上经常会说springMVC和spring无缝集成，其实springMVC就是spring的一个子模块，所以根本不需要同spring进行整合。  
+
 
 
 ## SpringMVC原理  
@@ -63,6 +67,7 @@ https://thinkit.co.jp/free/article/0708/2/8
     如下图，前端控制器很类似医院的分诊台。
     ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_springmvc2.png)   
     作为前端控制器，整个流程控制的中心，控制其它组件执行，统一调度，降低组件之间的耦合性，提高每个组件的扩展性。  
+    前端控制器（DispatcherServlet）：接收请求，响应结果，相当于电脑的CPU。  
     
 
   - Controller  
@@ -70,12 +75,15 @@ https://thinkit.co.jp/free/article/0708/2/8
   - HandlerAdapter  
     Spring MVC没有控制器接口，是通过注解的方式表示某个类是控制器，所以需要适配为控制器。  
     ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part3.png)   
+    处理器适配器（HandlerAdapter）：会把处理器包装成适配器，这样就可以支持多种类型的处理器，类比笔记本的适配器（适配器模式的应用）。   
+
   - HandlerInterceptor  
   HandlerAdapter是Spring MVC内部使用的，Spring MVC会把控制器和HandlerInterceptor包装为HandlerAdapter。  
   - HandlerMapping  
   通过扩展处理器映射器实现不同的映射方式，例如：配置文件方式，实现接口方式，注解方式等。   
   DispatcherServlet会通过HandlerMapping把控制器和HandlerInterceptor包装为HandlerExecutionChain。  
     ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part3.png)   
+    处理器映射器（HandlerMapping）：根据URL去查找处理器。  
 
   - HandlerExecutionChain  
   ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part4.png)   
