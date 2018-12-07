@@ -6,7 +6,7 @@
 　　2、把开发好的Java类部署到web服务器中。  
 　　按照一种约定俗成的称呼习惯，通常我们也把实现了servlet接口的java程序，称之为Servlet。  
 
-## 二、Servlet的运行过程  
+## 二、Servlet的运行过程（生命周期）  
 Servlet程序是由WEB服务器调用，web服务器收到客户端的Servlet访问请求后：   
 　　①Web服务器首先检查是否已经装载并创建了该Servlet的实例对象。如果是，则直接执行第④步，否则，执行第②步。  
 　　②装载并创建该Servlet的一个实例对象。   
