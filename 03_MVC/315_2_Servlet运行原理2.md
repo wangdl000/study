@@ -129,11 +129,6 @@ Servlet程序是由WEB服务器调用，web服务器收到客户端的Servlet访
 　　<servlet>元素用于注册Servlet，它包含有两个主要的子元素：  <servlet-name>和<servlet-class>，分别用于设置Servlet的注册名称和Servlet的完整类名。   
 一个<servlet-mapping>元素用于映射一个已注册的Servlet的一个对外访问路径，它包含有两个子元素：<servlet-name>和<url-pattern>，分别用于指定Servlet的注册名称和Servlet的对外访问路径。例如：  
 
-
-
-资料来源：  
-https://www.cnblogs.com/xdp-gacl/p/3760336.html
-
     <servlet>
       <servlet-name>ServletDemo1</servlet-name>
       <servlet-class>gacl.servlet.study.ServletDemo1</servlet-class>
@@ -280,6 +275,8 @@ ServletDemo1被映射到了多个URL上。
 
 当访问Tomcat服务器中的某个静态HTML文件和图片时，实际上是在访问这个缺省Servlet。  
 
+##  》》》》》》》》》》》》》》》》》》》》》》分割《《《《《《《《《《《《《《《《《《
+
 ### 5.5、Servlet的线程安全问题  
 当多个客户端并发访问同一个Servlet时，web服务器会为每一个客户端的访问请求创建一个线程，并在这个线程上调用Servlet的service方法，因此service方法内如果访问了同一个资源的话，就有可能引发线程安全问题。例如下面的代码：  
 
@@ -415,3 +412,9 @@ ServletDemo1被映射到了多个URL上。
 　　让Servlet实现了SingleThreadModel接口，只要在Servlet类的定义中增加实现SingleThreadModel接口的声明即可。    
 　　对于实现了SingleThreadModel接口的Servlet，Servlet引擎仍然支持对该Servlet的多线程并发访问，其采用的方式是产生多个Servlet实例对象，并发的每个线程分别调用一个独立的Servlet实例对象。  
 　　实现SingleThreadModel接口并不能真正解决Servlet的线程安全问题，因为Servlet引擎会创建多个Servlet实例对象，而真正意义上解决多线程安全问题是指一个Servlet实例对象被多个线程同时调用的问题。事实上，在Servlet API 2.4中，已经将SingleThreadModel标记为Deprecated（过时的）。    
+
+
+
+资料来源：  
+https://www.cnblogs.com/xdp-gacl/p/3760336.html
+
