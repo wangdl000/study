@@ -65,9 +65,7 @@ https://thinkit.co.jp/free/article/0708/2/8
 
 
 ### Spring MVC——总体架构图  
- ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_springmvc103.png)  
-  
-
+ ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_springmvc102.png)  
 
 ### Spring工作流程描述  
   ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_flow1.png)  
@@ -156,6 +154,12 @@ View是一个接口，实现类支持不同的View类型（jsp、freemarker、pd
 Handler：处理器，即后端控制器用controller表示。   
 
 View：视图，即展示给用户的界面，视图中通常需要标签语言展示模型数据。    
+
+
+  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/05_springmvc2.jpg)    
+
+## 最后，再理解一下SpringMVC的基本概念  
+  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_springmvc103.png)   
 
 ### 资料来源：   
 
