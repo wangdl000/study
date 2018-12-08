@@ -95,46 +95,23 @@ https://thinkit.co.jp/free/article/0708/2/8
 
 11、 DispatcherServlet响应用户。  
 
-### 组件  
+## 组件： 
 
-  - Controller  
+### Controller  
   ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part2.png)   
 
-  - HandlerAdapter  
-    Spring MVC没有控制器接口，是通过注解的方式表示某个类是控制器，所以需要适配为控制器。  
-    ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part3.png)   
-    处理器适配器（HandlerAdapter）：会把处理器包装成适配器，这样就可以支持多种类型的处理器，类比笔记本的适配器（适配器模式的应用）。   
-
-  - HandlerInterceptor  
-  HandlerAdapter是Spring MVC内部使用的，Spring MVC会把控制器和HandlerInterceptor包装为HandlerAdapter。  
-  - HandlerMapping  
-  通过扩展处理器映射器实现不同的映射方式，例如：配置文件方式，实现接口方式，注解方式等。   
-  DispatcherServlet会通过HandlerMapping把控制器和HandlerInterceptor包装为HandlerExecutionChain。  
-    ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part3.png)   
-    处理器映射器（HandlerMapping）：根据URL去查找处理器。  
-
-  - HandlerExecutionChain  
-  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part4.png)   
-  - ModelAndView  
- 
-  - ViewResolver：通过扩展视图解析器，支持更多类型的视图解析，例如：jsp、freemarker、pdf、excel等。  
-  
-
-
-  - DispatcherServlet：作为前端控制器，整个流程控制的中心，控制其它组件执行，统一调度，降低组件之间的耦合性，提高每个组件的扩展性。  
-
-  - HandlerMapping：通过扩展处理器映射器实现不同的映射方式，例如：配置文件方式，实现接口方式，注解方式等。   
-
-  - HandlAdapter：通过扩展处理器适配器，支持更多类型的处理器。  
-
-  - ViewResolver：通过扩展视图解析器，支持更多类型的视图解析，例如：jsp、freemarker、pdf、excel等。
-
-## 组件： 
 ### 1、前端控制器DispatcherServlet（不需要工程师开发）,由框架提供  
 作用：接收请求，响应结果，相当于转发器，中央处理器。有了dispatcherServlet减少了其它组件之间的耦合度。
 用户请求到达前端控制器，它就相当于mvc模式中的c，dispatcherServlet是整个流程控制的中心，由它调用其它组件处理用户的请求，dispatcherServlet的存在降低了组件之间的耦合性。
   ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_mvc1.png)   
- 
+ 上图是前端控制器的原理图  
+
+为什么叫做前端控制器？举个例子：  
+  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_mvc2.png)   
+前端控制器很类似医院的分诊台。  
+
+在前端控制器模型中各个角色的作用：  
+  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_mvc3.png)    
 
 ### 2、处理器映射器HandlerMapping(不需要工程师开发),由框架提供  
 作用：根据请求的url查找Handler
