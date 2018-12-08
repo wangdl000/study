@@ -156,7 +156,7 @@ Handler：处理器，即后端控制器用controller表示。
 View：视图，即展示给用户的界面，视图中通常需要标签语言展示模型数据。    
 
 
-  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/05_springmvc2.jpg)    
+  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/06_springmvc2.png)    
 
 ## 最后，再理解一下SpringMVC的基本概念  
   ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_springmvc103.png)   
