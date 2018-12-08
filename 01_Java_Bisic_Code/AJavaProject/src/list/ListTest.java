@@ -1,19 +1,39 @@
 package list;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ListTest {
 	public static void main(String[] args) {
-		List books = new ArrayList();
+
+
+
+		ArrayList books = new ArrayList(2);
+
+
 		//向books集合中添加三个元素
-		books.add(new String("轻量级Java EE企业应用实战"));
+		books.add("轻量级Java EE企业应用实战");
 		books.add(new String("疯狂Java讲义"));
 		books.add(new String("疯狂Android讲义"));
+		books.add(null);
+
+
+
+		ArrayList books2 = new ArrayList();
+		for (String str : books) {
+			books2.add(str);
+		}
+
+
+//		ArrayList books2 = books;
+//		(ArrayList) books.clone();
+		books2.add("");
+
 		System.out.println(books);
 
 		//将新字符串对象插入在第二个位置
 		books.add(1, new String("疯狂Ajax讲义"));
+
+
 		for (int i = 0; i < books.size(); i++) {
 			System.out.println(books.get(i));
 		}

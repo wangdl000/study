@@ -1,5 +1,6 @@
 package map;
 
+import java.util.ArrayList;
 import java.util.Hashtable;
 
 class A {
@@ -36,10 +37,25 @@ class B {
 
 public class HashtableTest {
 	public static void main(String[] args) {
+
+
+		ArrayList val = new ArrayList();
+
+
 		Hashtable ht = new Hashtable();
+
 		ht.put(new A(60000), "疯狂Java讲义");
 		ht.put(new A(87563), "轻量级Java EE企业应用实战");
 		ht.put(new A(1232), new B());
+
+
+		ht.put("aaaa", val);
+
+		Object aabc = ht.get("aaaa");
+
+		ArrayList abc = (ArrayList) aabc;
+
+
 		System.out.println(ht);
 
 		//只要两个对象通过equals比较返回true，
