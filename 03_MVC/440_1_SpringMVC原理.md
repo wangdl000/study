@@ -65,14 +65,13 @@ https://thinkit.co.jp/free/article/0708/2/8
 
 
 ### Spring MVC——总体架构图  
-  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc1.png)   
-  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc1.png)   
+ ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_springmvc103.png)  
+  
 
 
 ### Spring工作流程描述  
   ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_flow1.png)  
-
-  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/05_springmvc1.jpg)  
+  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_flow2.png)  
 
 1、  用户发送请求至前端控制器DispatcherServlet。
 
@@ -97,14 +96,6 @@ https://thinkit.co.jp/free/article/0708/2/8
 11、 DispatcherServlet响应用户。  
 
 ### 组件  
-  - DispatcherServlet——前端控制器。（由框架提供）    
-  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_mvc1.png)   
-    - 为什么叫做前端控制器？举个例子：  
-    如下图，前端控制器很类似医院的分诊台。
-    ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_springmvc2.png)   
-    作为前端控制器，整个流程控制的中心，控制其它组件执行，统一调度，降低组件之间的耦合性，提高每个组件的扩展性。  
-    前端控制器（DispatcherServlet）：接收请求，响应结果，相当于电脑的CPU。  
-    
 
   - Controller  
   ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part2.png)   
@@ -125,9 +116,7 @@ https://thinkit.co.jp/free/article/0708/2/8
   - HandlerExecutionChain  
   ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part4.png)   
   - ModelAndView  
-  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part5.png)   
-    Spring MVC会把Model和Map封装为ModelAndView:  
-  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part6.png)   
+ 
   - ViewResolver：通过扩展视图解析器，支持更多类型的视图解析，例如：jsp、freemarker、pdf、excel等。  
   
 
@@ -144,6 +133,8 @@ https://thinkit.co.jp/free/article/0708/2/8
 ### 1、前端控制器DispatcherServlet（不需要工程师开发）,由框架提供  
 作用：接收请求，响应结果，相当于转发器，中央处理器。有了dispatcherServlet减少了其它组件之间的耦合度。
 用户请求到达前端控制器，它就相当于mvc模式中的c，dispatcherServlet是整个流程控制的中心，由它调用其它组件处理用户的请求，dispatcherServlet的存在降低了组件之间的耦合性。
+  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_mvc1.png)   
+ 
 
 ### 2、处理器映射器HandlerMapping(不需要工程师开发),由框架提供  
 作用：根据请求的url查找Handler
@@ -152,6 +143,7 @@ HandlerMapping负责根据用户请求找到Handler即处理器，springmvc提�
 ### 3、处理器适配器HandlerAdapter  
 作用：按照特定规则（HandlerAdapter要求的规则）去执行Handler
 通过HandlerAdapter对处理器进行执行，这是适配器模式的应用，通过扩展适配器可以对更多类型的处理器进行执行。
+![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part3.png)   
 
 ### 4、处理器Handler(需要工程师开发)  
 注意：编写Handler时按照HandlerAdapter的要求去做，这样适配器才可以去正确执行Handler
@@ -163,14 +155,17 @@ Handler 是继DispatcherServlet前端控制器的后端控制器，在Dispatcher
 View Resolver负责将处理结果生成View视图，View Resolver首先根据逻辑视图名解析成物理视图名即具体的页面地址，再生成View视图对象，最后对View进行渲染将处理结果通过页面展示给用户。   springmvc框架提供了很多的View视图类型，包括：jstlView、freemarkerView、pdfView等。  
 一般情况下需要通过页面标签或页面模版技术将模型数据通过页面展示给用户，需要由工程师根据业务需求开发具体的页面。  
 ViewResolver：通过扩展视图解析器，支持更多类型的视图解析，例如：jsp、freemarker、pdf、excel等。  
-
+Spring MVC会把Model和Map封装为ModelAndView:   
+  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/01_springmvc_part5.png)   
+     
 ### 6、视图View(需要工程师开发jsp...)  
 View是一个接口，实现类支持不同的View类型（jsp、freemarker、pdf...）
 
-## Spring MVC——总体架构图  
- ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/00_springmvc103.png)  
 
 ## 核心架构的具体流程步骤如下：  
+
+  ![440](https://github.com/wangdl000/study/blob/master/03_MVC/resource_springmvc/05_springmvc1.jpg)    
+
 1、首先用户发送请求——>DispatcherServlet，前端控制器收到请求后自己不进行处理，而是委托给其他的解析器进行处理，作为统一访问点，进行全局的流程控制；  
 2、DispatcherServlet——>HandlerMapping， HandlerMapping 将会把请求映射为HandlerExecutionChain 对象（包含一个Handler 处理器（页面控制器）对象、多个HandlerInterceptor 拦截器）对象，通过这种策略模式，很容易添加新的映射策略；  
 3、DispatcherServlet——>HandlerAdapter，HandlerAdapter 将会把处理器包装为适配器，从而支持多种类型的处理器，即适配器设计模式的应用，从而很容易支持很多类型的处理器；  
