@@ -1,1 +1,3 @@
 ## java读取properties文件总结
+
+　　在java项目中，操作properties文件是经常要做的，因为很多的配置信息都会写在properties文件中，这里主要是总结使用getResourceAsStream方法和InputStream流去读取properties文件，使用getResourceAsStream方法去读取properties文件时需要特别注意properties文件路径的写法，测试项目如下：  
