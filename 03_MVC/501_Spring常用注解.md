@@ -7,3 +7,10 @@
    <context:component-scan base-package="cn.gacl.java"/>  
 
 表明cn.gacl.java包及其子包中，如果某个类的头上带有特定的注解  【@Component/@Repository/@Service/@Controller】，就会将这个对象作为Bean注册进Spring容器。也可以在<context:component-scan base-package=” ”/>中指定多个包，如：  
+
+
+
+
+### 资料来源：  
+  - 【Spring常用注解】  
+https://www.cnblogs.com/xdp-gacl/p/3495887.html
