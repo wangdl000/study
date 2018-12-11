@@ -7,8 +7,8 @@
     https://www.cnblogs.com/jjh-java/p/6586795.html  
 
     - Mybatis 
-    - 
-    - 
+    - Hibernate  
+    - JPA  
 
 一、Mybatis介绍
 　　
