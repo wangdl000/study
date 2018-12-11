@@ -4,7 +4,6 @@ https://www.cnblogs.com/LeoBoy/p/6056394.html
   float和double类型的主要设计目标是为了科学计算和工程计算。他们执行二进制浮点运算，这是为了在广域数值范围上提供较为精确的快速近似计算而精心设计的。然而，它们没有提供完全精确的结果，所以不应该被用于要求精确结果的场合。但是，商业计算往往要求结果精确，这时候BigDecimal就派上大用场啦。
 
 先看下面代码  
-
     public static void main(String[] args)
     {
         System.out.println(0.2 + 0.1); 
