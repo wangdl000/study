@@ -8,7 +8,7 @@
 
     - Mybatis 
     - Hibernate  
-    - JPA  
+    - OpenJPA  
 
 一、Mybatis介绍
 　　
