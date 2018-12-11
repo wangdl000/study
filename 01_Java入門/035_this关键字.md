@@ -13,32 +13,30 @@ this是一个引用，它指向自身的这个对象。
 看下面的例子分析：
 
 复制代码
- 1 package cn.galc.test;
- 2 
- 3 public class Leaf {
- 4 
- 5     int i = 0;
- 6 
- 7     public Leaf(int i) {
- 8         this.i = i;
- 9     }
-10 
-11     Leaf increament() {
-12         i++;
-13         return this;
-14     }
-15 
-16     void print() {
-17         System.out.println("i = " + i);
-18     }
-19 
-20     public static void main(String[] args) {
-21         Leaf leaf = new Leaf(100);
-22         leaf.increament().increament().print();
-23     }
-24 }
-复制代码
-
+    package cn.galc.test;
+    
+    public class Leaf {
+    
+        int i = 0;
+    
+        public Leaf(int i) {
+            this.i = i;
+        }
+    
+        Leaf increament() {
+            i++;
+            return this;
+        }
+    
+        void print() {
+            System.out.println("i = " + i);
+        }
+    
+        public static void main(String[] args) {
+            Leaf leaf = new Leaf(100);
+            leaf.increament().increament().print();
+        }
+    }
 
 
 
@@ -58,11 +56,12 @@ this是一个引用，它指向自身的这个对象。
 
 　　首先逐个分析：leaf.increament()，这里是调用increament()方法，是对new出来的那个Leaf对象调用的，leaf是Leaf对象的引用对象，因此通过这个引用对象来调用increament()方法，即相当于是Leaf对象自己调用了increament()方法。increament()方法的定义如下：
 
-Leaf increament(){
-　　i++;
-　　return this;
+    Leaf increament(){
+    　　i++;
+    　　return this;
+    
+    }
 
-}
 　　因此Leaf对象调用increament()方法时，首先执行方法体里面的第一句话i++;这样就把Leaf对象的成员变量i的值由原来的100变成了101。此时的内存布局如下图所示。
 
 
