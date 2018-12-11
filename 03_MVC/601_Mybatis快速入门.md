@@ -235,5 +235,8 @@ public class Test1 {
 　　可以看到，数据库中的记录已经成功查询出来了。
 
 参考资料：  
-https://www.cnblogs.com/xdp-gacl/p/4261895.html
+https://www.cnblogs.com/xdp-gacl/p/4261895.html  
+
+https://dwz.cn/mwCH0hOz
+
 
