@@ -243,10 +243,11 @@ public class Test1 {
 　　可以看到，数据库中的记录已经成功查询出来了。
 
 ## 三、数据库CRUD操作是什么  
+  CRUD操作（create 添加数据read读取数据 update 修改数据delete删除数据）。  
 
-## 三、使用MyBatis对表执行CRUD操作——基于XML的实现  
+## 四、使用MyBatis对表执行CRUD操作——基于XML的实现  
 
-## 四、使用MyBatis对表执行CRUD操作——基于注解的实现  
+## 五、使用MyBatis对表执行CRUD操作——基于注解的实现  
 
 
 
