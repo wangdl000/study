@@ -690,10 +690,10 @@ mybatis-generator有三种用法：命令行、eclipse插件、maven插件。个
 
 mvn mybatis-generator:generate
 
-![601](https://github.com/wangdl000/study/blob/master/03_MVC/resource_mybatis/601_631png) 
+![601](https://github.com/wangdl000/study/blob/master/03_MVC/resource_mybatis/601_631.jpg) 
 
 最后给出目录结构图：  
-![601](https://github.com/wangdl000/study/blob/master/03_MVC/resource_mybatis/601_632.png) 
+![601](https://github.com/wangdl000/study/blob/master/03_MVC/resource_mybatis/601_632.jpg) 
 
 
 ### 最后给一些小技巧：
