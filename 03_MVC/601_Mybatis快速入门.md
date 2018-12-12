@@ -41,7 +41,7 @@
 
 　　【MYSQL驱动包】  
 　　　　mysql-connector-java-5.1.7-bin.jar
-　　
+　　  
 　　![601](https://github.com/wangdl000/study/blob/master/03_MVC/resource_mybatis/601_212.png)  
 
 #### 3、创建数据库和表，针对MySQL数据库  
@@ -54,7 +54,8 @@
      INSERT INTO users(NAME, age) VALUES('孤傲苍狼', 27);
      INSERT INTO users(NAME, age) VALUES('白虎神皇', 27);
 
-　　将SQL脚本在MySQL数据库中执行，完成创建数据库和表的操作，如下：
+　　将SQL脚本在MySQL数据库中执行，完成创建数据库和表的操作，如下： 
+ 
    ![601](https://github.com/wangdl000/study/blob/master/03_MVC/resource_mybatis/601_213.png)  
 　　
 
@@ -65,11 +66,11 @@
 #### 1、添加Mybatis的配置文件conf.xml  
 
 　　在src目录下创建一个conf.xml文件，如下图所示：  
+
   ![601](https://github.com/wangdl000/study/blob/master/03_MVC/resource_mybatis/601_221.png) 
 　　
 
 　　conf.xml文件中的内容如下：  
-
 
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
@@ -91,10 +92,10 @@
 
 #### 2、定义表所对应的实体类，如下图所示：  
 
-　![601](https://github.com/wangdl000/study/blob/master/03_MVC/resource_mybatis/601_221.png) 
+　![601](https://github.com/wangdl000/study/blob/master/03_MVC/resource_mybatis/601_222.png) 
 
 
-　　User类的代码如下：
+　　User类的代码如下：  
 
 
     package me.gacl.domain;
@@ -140,10 +141,10 @@
         }
     }
 
-　　3、定义操作users表的sql映射文件userMapper.xml
+　　3、定义操作users表的sql映射文件userMapper.xml  
 
-　　创建一个me.gacl.mapping包，专门用于存放sql映射文件，在包中创建一个userMapper.xml文件，如下图所示：
-
+　　创建一个me.gacl.mapping包，专门用于存放sql映射文件，在包中创建一个userMapper.xml文件，如下图所示：  
+![601](https://github.com/wangdl000/study/blob/master/03_MVC/resource_mybatis/601_223.png) 
 　　
 
 　　userMapper.xml文件的内容如下：
@@ -196,9 +197,9 @@
         
     </configuration>
 
-　　5、编写测试代码：执行定义的select语句
+　　5、编写测试代码：执行定义的select语句  
 
-　　创建一个Test1类，编写如下的测试代码：
+　　创建一个Test1类，编写如下的测试代码：  
 
 
     package me.gacl.test;
@@ -239,11 +240,11 @@
         }
     }
 
-　　执行结果如下：
+　　执行结果如下：  
 
-　　
+　　![601](https://github.com/wangdl000/study/blob/master/03_MVC/resource_mybatis/601_225.png) 
 
-　　可以看到，数据库中的记录已经成功查询出来了。
+　　可以看到，数据库中的记录已经成功查询出来了。  
 
 ## 三、数据库CRUD操作是什么  
   CRUD操作（create 添加数据read读取数据 update 修改数据delete删除数据）。  
@@ -586,14 +587,13 @@
 
 ### 六、利用mybatis-generator自动生成代码  
 
-mybatis-generator有三种用法：命令行、eclipse插件、maven插件。个人觉得maven插件最方便，可以在eclipse/intellij idea等ide上可以通用。
+mybatis-generator有三种用法：命令行、eclipse插件、maven插件。个人觉得maven插件最方便，可以在eclipse/intellij idea等ide上可以通用。  
 
-下面是从官网上的截图：(不过官网www.mybatis.org 最近一段时间,好象已经挂了)
+下面是从官网上的截图：(不过官网www.mybatis.org 最近一段时间,好象已经挂了)  
+![601](https://github.com/wangdl000/study/blob/master/03_MVC/resource_mybatis/601_600.png) 
 
 
-
-1、在pom.xml中添加plugin
-
+1、在pom.xml中添加plugin  
 
 
     <plugin>
@@ -622,9 +622,9 @@ mybatis-generator有三种用法：命令行、eclipse插件、maven插件。个
         </dependencies>
     </plugin>
 
-其中generatorConfig.xml的位置，大家根据实际情况自行调整
+其中generatorConfig.xml的位置，大家根据实际情况自行调整  
 
-2、generatorConfig.xml配置文件
+2、generatorConfig.xml配置文件  
 
 
     <?xml version="1.0" encoding="UTF-8"?>
@@ -686,29 +686,23 @@ mybatis-generator有三种用法：命令行、eclipse插件、maven插件。个
 
     - d) 40-46行为具体要生成的表，如果有多个表，复制这一段，改下表名即可  
 
- 
-
 ### 3、使用方式
 
 mvn mybatis-generator:generate
 
-如果是在intellij 环境，直接鼠标点击即可
+![601](https://github.com/wangdl000/study/blob/master/03_MVC/resource_mybatis/601_631png) 
+
+最后给出目录结构图：  
+![601](https://github.com/wangdl000/study/blob/master/03_MVC/resource_mybatis/601_632.png) 
 
 
+### 最后给一些小技巧：
 
- 
+#### a) 建表时，字段名称建议用"_"分隔多个单词，比如:AWB_NO、REC_ID...，这样生成的entity，属性名称就会变成漂亮的驼峰命名，即：awbNo、recId  
 
-最后给出目录结构图：
+#### b)oracle中，数值形的字段，如果指定精度，比如Number(12,2)，默认生成entity属性是BigDecimal型 ，如果不指定精度，比如:Number(9)，指默认生成的是Long型  
 
-
-
-最后给一些小技巧：
-
-a) 建表时，字段名称建议用"_"分隔多个单词，比如:AWB_NO、REC_ID...，这样生成的entity，属性名称就会变成漂亮的驼峰命名，即：awbNo、recId
-
-b)oracle中，数值形的字段，如果指定精度，比如Number(12,2)，默认生成entity属性是BigDecimal型 ，如果不指定精度，比如:Number(9)，指默认生成的是Long型
-
-c)oracle中的nvarchar/nvarchar2，mybatis-generator会识别成Object型，建议不要用nvarchar2，改用varchar2
+#### c)oracle中的nvarchar/nvarchar2，mybatis-generator会识别成Object型，建议不要用nvarchar2，改用varchar2  
 
 参考资料：  
 https://dwz.cn/mwCH0hOz
