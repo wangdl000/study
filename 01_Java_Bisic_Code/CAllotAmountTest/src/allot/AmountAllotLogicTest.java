@@ -161,6 +161,30 @@ public class AmountAllotLogicTest {
 
 	@SuppressWarnings("deprecation")
 	@Test
+	public void test_allotAmount_02() {
+		// 入力データ取得
+		List<AmountAllotBean> inputList = getInputList1();
+		BigDecimal totalAmount = new BigDecimal(0);
+		// 想定データ取得
+		List<AmountAllotBean> expectedList1 = inputList;
+
+		// 按分処理クラス初期化
+		AmountAllotLogic amountLogic = new AmountAllotLogic();
+		// 按分処理を行い、ソートする。
+		amountLogic.allotAmountSortByDepartment(inputList, totalAmount);
+
+		Assert.assertEquals(expectedList1.size(), inputList.size());
+		for (int i = 0; i < expectedList1.size(); i++) {
+			Assert.assertEquals(expectedList1.get(i).getDepartment(), inputList.get(i).getDepartment());
+			Assert.assertEquals(expectedList1.get(i).getPortion(), inputList.get(i).getPortion());
+			Assert.assertEquals(expectedList1.get(i).getAllotAmount(), inputList.get(i).getAllotAmount());
+		}
+
+
+	}
+
+	@SuppressWarnings("deprecation")
+	@Test
 	public void test_allotAmountSortByDepartment_01() {
 		// 入力データ取得
 		List<AmountAllotBean> inputList = getInputList1();
