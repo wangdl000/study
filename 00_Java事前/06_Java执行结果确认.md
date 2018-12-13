@@ -9,7 +9,8 @@
 
 > 3. log4j
     
-   ![Java log4j 1.2でテキストにログを出力するサンプル（設定ファイルがxml)](https://itsakura.com/java_log4jxml)   
+   Java log4j 1.2でテキストにログを出力するサンプル（設定ファイルがxml)   
+  https://itsakura.com/java_log4jxml   
  
 ## 内容  
 ### 1．JUnit使用  
