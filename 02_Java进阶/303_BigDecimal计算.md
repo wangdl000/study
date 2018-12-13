@@ -90,7 +90,8 @@ public BigDecimal divide(BigDecimal value);                     //除法
 
 这里有一点需要注意的是除法运算divide.
 
- BigDecimal除法可能出现不能整除的情况，比如 4.5/1.3，这时会报错java.lang.ArithmeticException: Non-terminating decimal expansion; no exact representable decimal result.
+ **BigDecimal除法可能出现不能整除的情况，比如 4.5/1.3，这时会报错**  
+java.lang.ArithmeticException: Non-terminating decimal expansion; no exact representable decimal result.
 
 其实divide方法有可以传三个参数
 
