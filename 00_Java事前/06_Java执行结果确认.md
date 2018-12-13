@@ -1,7 +1,7 @@
 ##java 运行 
 
 > 1.System.out.println();  
-  ![java程序运行介绍](https://jingyan.baidu.com/article/d621e8da10150f2865913fb7.html)   
+  https://jingyan.baidu.com/article/d621e8da10150f2865913fb7.html    
 
 
 > 2. Junit运行  
