@@ -16,3 +16,5 @@ https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.5.4/binaries/
 （Windows下载zip）
 #### 2、环境变量设置  
 
+参考资料  
+http://blog.csdn.net/u013142781/article/details/50316383
