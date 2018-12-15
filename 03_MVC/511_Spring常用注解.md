@@ -74,3 +74,5 @@ spring 默认scope 是单例模式(scope="singleton")，这样只会创建一个
 ### 资料来源：  
   - 【Spring常用注解】  
 https://www.cnblogs.com/xdp-gacl/p/3495887.html
+
+https://mbd.baidu.com/newspage/data/landingshare?pageType=1&isBdboxFrom=1&context=%7B%22nid%22%3A%22news_9480368908387504416%22%2C%22sourceFrom%22%3A%22bjh%22%7D
