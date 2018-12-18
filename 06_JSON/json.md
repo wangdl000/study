@@ -2,7 +2,7 @@
 
 ### 1.1、JSON介绍
 
-json是个非常重要的**数据结构**，在web开发中应用十分广泛。
+json是个非常重要的**数据结构**，在web开发中应用十分广泛。  
  【官方介绍】  
  http://www.json.org/json-zh.html
 
