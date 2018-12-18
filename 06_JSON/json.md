@@ -24,8 +24,7 @@ json是个非常重要的**数据结构**，在web开发中应用十分广泛。
  http://sourceforge.net/projects/json-lib/files/json-lib/  
     - （2）ezmorph是一个简单的java类库，用于将一种bean转换成另外一种bean。其动态bean的实现依赖于commons-
 beanutils包。ezmorph可以在这个地方下载源码：  
- http://sourceforge.net/projects/ezmorph
-/files/ezmorph/  
+ http://sourceforge.net/projects/ezmorph/files/ezmorph/  
     - （3）commons-beanutils是操作Java Bean的类库，依赖于commons-collections。  
     - （4）commons-collections类库是各种集合类和集合工具类的封装。  
 https://www.bbsmax.com/A/GBJr7m9R50/  
