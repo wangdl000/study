@@ -7,6 +7,17 @@ json是个非常重要的**数据结构**，在web开发中应用十分广泛。
  http://www.json.org/json-zh.html
 
 ### 1.2、JSON的数据格式
+例如：  
+
+    {
+        "name":"小强",
+        "age":16,
+        "msg":["a","b"],
+        "regex": "^http://.*"
+    };
+
+JSON 值可以是：数字（整数或浮点数）、字符串（在双引号中）、逻辑值（true 或 false）、数组（在方括号中）、对象（在花括号中）、null。  
+
 
 ### 1.3、json的底层实现  
 
@@ -33,7 +44,12 @@ beanutils包。ezmorph可以在这个地方下载源码：
     - （4）commons-collections类库是各种集合类和集合工具类的封装。  
 https://www.bbsmax.com/A/GBJr7m9R50/  
 
+### 1.4、 
+JSON.parse是将json格式的字符串转换成json对象。  
+
 ## 2、SpringMVC的JSON数据交互
+
+
 
 ### 2.1 ResponseRequestBody用法  
 
