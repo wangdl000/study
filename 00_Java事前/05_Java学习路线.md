@@ -9,6 +9,16 @@ https://qiita.com/haruto167/items/5a784df032518277f4a0
 
 ## Java学习路线  
 
+  - 第一阶段 Java基础，通过对基础阶段的学习，有Java面向对象，常用基础类，线程I/O，异常处理等基础入门的知识点等。  
+
+  - 第二阶段JavaWeb，是进阶阶段，掌握Java的基本语法，HTML5，CSS3，java，jQuery，JDBC连接池，servlet数据类型及各种运算符，开始可以写一些运算相关的程序。  
+  
+  - 第三阶段 Java框架，框架是程序中另一种存储数据的方式，比直接使用数组来存储更加的灵活，在项目中应用十分广泛。同时，我们将深入研究其中涉及到的数据结构和算法，对学员的技术深度有了一个质的提升。  
+
+  - 第四阶段 Java+云数据，亿级并发架构演进、Linux基础、搭建tomcat环境以及大数据开发云计算等高级Java教程，是Java技术的高端知识。其中穿插项目实战演练，企业真实项目供学员应用学习，进行知识体系的“二次学习”。  
+
+
+
 https://www.zhihu.com/question/56110328?utm_source=wechat_session&utm_medium=social&from=singlemessage&isappinstalled=0   
 
 **Java就是用来做项目的！Java的主要应用领域就是企业级的项目开发！要想从事企业级的项目开发，你必须掌握如下要点：**  
