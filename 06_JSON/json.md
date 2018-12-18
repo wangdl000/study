@@ -8,7 +8,7 @@ json是个非常重要的**数据结构**，在web开发中应用十分广泛。
  【官方介绍】  
  http://www.json.org/json-zh.html
 
-#### 1.2、JSON的数据格式
+#### 1.1.2、JSON的数据格式
 例如：  
 
     {
