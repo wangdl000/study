@@ -125,6 +125,12 @@ https://www.bbsmax.com/A/GBJr7m9R50/
   - 1、生成json字符串  
   实例：  
 
+    public static String createJsonString(String key, Object value) {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put(key, value);
+            return jsonObject.toString();
+    }
+
 ### 1.4、 
 
 
