@@ -37,9 +37,17 @@ JSON.parse是将json格式的字符串转换成json对象。
 
   - 备注：单引号写在{}外，每个属性名都必须用双引号。  
 
-#### JSON.stringify
+#### 1.2.2、JSON.stringify
 JSON.stringify是将json对象转换成json格式的字符串。  
 
+    var json = {"name":"小强","age":16,"msg":["a","b"],"regex": "^http://.*"};
+    var str = JSON.stringify(json);
+    console.log("json:" + str);
+    console.log("jsonLen:" + str.length);
+
+    // 结果
+    // json:{"name":"小强","age":16,"msg":["a","b"],"regex":"^http://.*"}
+    // jsonLen:60
 
 ### 1.3、json的底层实现  
 
