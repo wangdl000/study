@@ -21,6 +21,9 @@ json是个非常重要的**数据结构**，在web开发中应用十分广泛。
 JSON 值可以是：数字（整数或浮点数）、字符串（在双引号中）、逻辑值（true 或 false）、数组（在方括号中）、对象（在花括号中）、null。  
 
 ### 1.2、JSON在客户端（Javascript）的实现 
+#### 1.2.1 JSON.parse
+JSON.parse是将json格式的字符串转换成json对象。  
+ 
 实例：  
 
     var str ='{"name":"tester","age":16,"msg":["a","b"],"regex": "^http://.*"}';
@@ -33,6 +36,9 @@ JSON 值可以是：数字（整数或浮点数）、字符串（在双引号中
     // msgLen:2
 
   - 备注：单引号写在{}外，每个属性名都必须用双引号。  
+
+#### JSON.stringify
+JSON.stringify是将json对象转换成json格式的字符串。  
 
 
 ### 1.3、json的底层实现  
