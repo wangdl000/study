@@ -1,10 +1,10 @@
-## JSON  
+## 1、JSON  
 
-### JSON介绍
+### 1.1、JSON介绍
 
 json是个非常重要的**数据结构**，在web开发中应用十分广泛。
 
-### json的底层实现  
+### 1.2、json的底层实现  
 
 在使用json之前首先要明白需要哪些jar文件,初次使用的时候很容易犯错，如果没有加入正确的jar包，会报各种各样的问题。  
 
@@ -16,7 +16,7 @@ json是个非常重要的**数据结构**，在web开发中应用十分广泛。
     - ezmorph-1.0.6.jar  
     - commons-logging-1.1.jar  
 
-### JSON所需JAR包下载:  
+### 1.3、JSON所需JAR包下载:  
 
   - JSON所需JAR包  
   需要说明几点：
@@ -28,6 +28,11 @@ beanutils包。ezmorph可以在这个地方下载源码：
     - （3）commons-beanutils是操作Java Bean的类库，依赖于commons-collections。  
     - （4）commons-collections类库是各种集合类和集合工具类的封装。  
 https://www.bbsmax.com/A/GBJr7m9R50/  
+
+## 2、SpringMVC的JSON数据交互
+
+### 2.1 ResponseRequestBody用法  
+
 
 【SpringMVC的JSON数据交互-ResponseRequestBody用法】  
 https://mz.mbd.baidu.com/74im6lu?f=cp
