@@ -42,12 +42,12 @@ JSON.stringify是将json对象转换成json格式的字符串。
 
     var json = {"name":"tester","age":16,"msg":["a","b"],"regex": "^http://.*"};
     var str = JSON.stringify(json);
-    console.log("json:" + str);
-    console.log("jsonLen:" + str.length);
+    console.log("str:" + str);
+    console.log("strLen:" + str.length);
 
     // 结果
-    // json:{"name":"tester","age":16,"msg":["a","b"],"regex":"^http://.*"}
-    // jsonLen:60
+    // str:{"name":"tester","age":16,"msg":["a","b"],"regex":"^http://.*"}
+    // strLen:60
 
 ### 1.3、JSON在JAVA中使用 
 
