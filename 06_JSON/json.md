@@ -49,8 +49,8 @@ JSON.stringify是将json对象转换成json格式的字符串。
     // str:{"name":"tester","age":16,"msg":["a","b"],"regex":"^http://.*"}
     // strLen:60
 
-### 1.3、JSON在JAVA中使用 
-
+### 1.3、在JAVA中使用JSON 
+#### 1.3.1、jar文件
 在使用json之前首先要明白需要哪些jar文件,初次使用的时候很容易犯错，如果没有加入正确的jar包，会报各种各样的问题。  
 
   - 在使用json之前需要准备下面的六个jar 包：  
@@ -61,7 +61,7 @@ JSON.stringify是将json对象转换成json格式的字符串。
     - ezmorph-1.0.6.jar  
     - commons-logging-1.1.jar  
 
-### 1.3、JSON所需JAR包下载:  
+#### 1.3.2、JSON所需JAR包下载  
 
   - JSON所需JAR包  
   需要说明几点：
@@ -75,7 +75,7 @@ beanutils包。ezmorph可以在这个地方下载源码：
 https://www.bbsmax.com/A/GBJr7m9R50/  
 
 ### 1.4、 
-JSON.parse是将json格式的字符串转换成json对象。  
+
 
 ## 2、SpringMVC的JSON数据交互
 
