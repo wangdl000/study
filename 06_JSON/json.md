@@ -21,7 +21,15 @@ json是个非常重要的**数据结构**，在web开发中应用十分广泛。
 JSON 值可以是：数字（整数或浮点数）、字符串（在双引号中）、逻辑值（true 或 false）、数组（在方括号中）、对象（在花括号中）、null。  
 
 ### 1.2、JSON在客户端（Javascript）的实现 
+实例： 
+    var str ='{"name":"tester","age":16,"msg":["a","b"],"regex": "^http://.*"}';
+    var json = JSON.parse(str);
+    console.log("name:" + json.name);
+    console.log("msgLen:" + json.msg.length);
 
+    // 运行结果  
+    // name: tester  
+    // msgLen:2
 
 ### 1.3、json的底层实现  
 
