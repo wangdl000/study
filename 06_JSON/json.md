@@ -42,6 +42,8 @@ JSON.parse是将json格式的字符串转换成json对象。
 #### 1.2.2、JSON.stringify
 JSON.stringify是将json对象转换成json格式的字符串。  
 
+实例：  
+
     var json = {"name":"tester","age":16,"msg":["a","b"],"regex": "^http://.*"};
     var str = JSON.stringify(json);
     console.log("str:" + str);
@@ -52,7 +54,32 @@ JSON.stringify是将json对象转换成json格式的字符串。
     // strLen:60
   - 备注：JSON.parse和JSON.stringify支持IE8及其以上版本。  
 
+#### 1.2.3、将JSON转换成数组  
 
+实例：  
+
+    function jsonToArray(obj){
+        var r = {key:[],value:[]};
+        for(var k in obj){
+            if(!obj.hasOwnProperty(k)){
+                continue;
+            }
+            r.key.push(k);
+            r.value.push(obj[k]);
+        }
+        return r;
+    }
+    
+     var json = {"name":"tester","age":16,"msg":["a","b"],"regex": "^http://.*"};
+    var arrJson = jsonToArray(json);
+    console.log("regexKEY:" + arrJson.key[3]);
+console.log("regexVALUE:" + arrJson.value[3]);
+    console.log("KEYLen:" + arrJson.key.length);
+    
+    // 结果
+    // regexKEY: regex
+    // regexVALUE: ^http://.*
+    // KEYLen:4
 
 ### 1.3、在JAVA中使用JSON 
 #### 1.3.1、jar文件
