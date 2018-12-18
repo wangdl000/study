@@ -22,6 +22,7 @@ JSON 值可以是：数字（整数或浮点数）、字符串（在双引号中
 
 ### 1.2、JSON在客户端（Javascript）的实现 
 实例：  
+
     var str ='{"name":"tester","age":16,"msg":["a","b"],"regex": "^http://.*"}';
     var json = JSON.parse(str);
     console.log("name:" + json.name);
