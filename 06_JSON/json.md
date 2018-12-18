@@ -50,6 +50,9 @@ JSON.stringify是将json对象转换成json格式的字符串。
     // 结果
     // str:{"name":"tester","age":16,"msg":["a","b"],"regex":"^http://.*"}
     // strLen:60
+  - 备注：JSON.parse和JSON.stringify支持IE8及其以上版本。  
+
+
 
 ### 1.3、在JAVA中使用JSON 
 #### 1.3.1、jar文件
