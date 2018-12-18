@@ -73,7 +73,7 @@ JSON.stringify是将json对象转换成json格式的字符串。
      var json = {"name":"tester","age":16,"msg":["a","b"],"regex": "^http://.*"};
     var arrJson = jsonToArray(json);
     console.log("regexKEY:" + arrJson.key[3]);
-console.log("regexVALUE:" + arrJson.value[3]);
+    console.log("regexVALUE:" + arrJson.value[3]);
     console.log("KEYLen:" + arrJson.key.length);
     
     // 结果
