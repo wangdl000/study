@@ -12,7 +12,7 @@ json是个非常重要的**数据结构**，在web开发中应用十分广泛。
 实例：  
 
     {
-        "name":"小强",
+        "name":"tester",
         "age":16,
         "msg":["a","b"],
         "regex": "^http://.*"
@@ -40,13 +40,13 @@ JSON.parse是将json格式的字符串转换成json对象。
 #### 1.2.2、JSON.stringify
 JSON.stringify是将json对象转换成json格式的字符串。  
 
-    var json = {"name":"小强","age":16,"msg":["a","b"],"regex": "^http://.*"};
+    var json = {"name":"tester","age":16,"msg":["a","b"],"regex": "^http://.*"};
     var str = JSON.stringify(json);
     console.log("json:" + str);
     console.log("jsonLen:" + str.length);
 
     // 结果
-    // json:{"name":"小强","age":16,"msg":["a","b"],"regex":"^http://.*"}
+    // json:{"name":"tester","age":16,"msg":["a","b"],"regex":"^http://.*"}
     // jsonLen:60
 
 ### 1.3、json的底层实现  
