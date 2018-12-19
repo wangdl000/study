@@ -1,5 +1,7 @@
 package day06;
 
+import java.util.ArrayList;
+
 /*
 人：
 属性：
@@ -47,13 +49,80 @@ class Person {
 
 class PersonDemo {
 	public static void main(String[] args) {
+
+		PersonDemo demo1 = new PersonDemo();
+
+		String abcd = demo1.selectSort();
+
+		System.out.print(abcd);
+		System.out.print(abcd);
+		System.out.print(abcd);
+		System.out.print(abcd);
+
+		System.out.println("aaaa");
+
+		System.out.println(abcd);
+
 		Person p = new Person();
 		//		p.age = -20;
 		p.haha(-20);
 		//		p.speak();
+		int[] arr = null;
+
+		PersonDemo demo = new PersonDemo();
+		int ccc = demo.selectSort(arr);
+
+		//		int bbb = PersonDemo.selectSort(arr);
+
+		//		PersonDemo.selectSort(1);
+		String ddd = selectSort();
 	}
 
-	public static void selectSort(int[] arr) {
+	public static String selectSort() {
+
+        String[] str = new String[1];
+
+//		@SuppressWarnings("rawtypes")
+		ArrayList collection2 = new ArrayList();
+		collection2.add("");
+
+
+		ArrayList<Integer> collection3 = new ArrayList<Integer>();
+		collection3.add(1);
+
+
+		String rtn = "我实在富川";
+
+
+		String rtn1 = "我实在富川";
+
+
+		if (rtn1.equals(rtn)) {
+
+		}
+		int aa = rtn1.compareTo(rtn);
+
+
+		if (rtn == rtn1) {
+
+
+		}
+		int a = 0;
+
+		if (a == 1) {
+			return "我不是富川";
+		}
+		else {
+
+		}
+
+		return rtn;
+	}
+
+	public int selectSort(int[] arr) {
+
+		int aaa = 0;
+		return aaa;
 	}
 
 	private static void swap(int[] arr, int a, int b) {

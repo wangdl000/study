@@ -4,6 +4,12 @@ public class Control {
 
 	public static void main(String[] args) {
 
+
+		Person abcd = getPersion();
+
+
+
+
 		// 向控制台輸出Hello World !!!!!!
 		System.out.println("Hello World !!!!!!");
 
@@ -11,11 +17,11 @@ public class Control {
 		int nianling = 0;
 
 
-		
+
 		String str1 = "123456789a";
-		
-		
-		
+
+
+
 		int age1 = 10;
 		int age2 = 30;
 
@@ -230,6 +236,11 @@ public class Control {
 		// 案例5：
 		// 對於案例2那樣 長度固定的複雜數組，可以用枚舉（enum）使之简单化
 
+	}
+
+	private static Person getPersion() {
+		// TODO 自動生成されたメソッド・スタブ
+		return null;
 	}
 
 	/**

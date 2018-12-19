@@ -99,10 +99,13 @@ Java 承诺 “编写一次，随处运行”。比如在Windows系统中编译�
 ####编译、执行 Java 程序  
 -  Java编译命令：javac HelloWorld.Java    ※　HelloWorld是java文件的名字。  
 -  Java类执行命令：java HelloWord  
-public class MyFirstJavaProgram {  
-    public static void main(String []args) {  
-       System.out.println("Hello World");  
-    }   
-}  
 
->>>>>> 加油！ >>>>>>
+HelloWorld.Java  
+
+    public class HelloWorld {  
+        public static void main(String []args) {  
+           System.out.println("Hello World");  
+        }   
+    }  
+
+> >>>>> 加油！ >>>>>>
