@@ -48,6 +48,19 @@
 
 从上边的代码可以看出lambda表达式的特点，**极大程度缩减代码**。  
 
+  - 在图形用户界面程序中,匿名类可以使用lambda表达式来代替。  
+  
+    // 使用匿名内部类  
+    btn.setOnAction(new EventHandler<ActionEvent>() {  
+          @Override  
+          public void handle(ActionEvent event) {  
+              System.out.println("Hello World!");   
+          }  
+    });  
+   
+    // 或者使用 lambda expression  
+    btn.setOnAction(event -> System.out.println("Hello World!"));
+
 
 
 
