@@ -2,6 +2,10 @@
 
 https://www.cnblogs.com/franson-2016/p/5593080.html
 
+stream。  
+【Java 8系列之Stream的基本语法详解 - 有容乃大 - 博客园】https://www.cnblogs.com/mrhgw/p/9171883.html
+
+
 
 ## Java Lambda
 ### Lambda表达式的语法
