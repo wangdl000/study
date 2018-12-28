@@ -8,7 +8,7 @@
 (parameters) ->{ statements; }  
 
   - 下面是Java lambda表达式的简单例子:  
-
+  
     // 1. 不需要参数,返回值为 5  
     () -> 5  
     
