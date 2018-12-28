@@ -46,5 +46,9 @@
     // 在 Java 8 中使用双冒号操作符(double colon operator)  
     players.forEach(System.out::println);
 
+从上边的代码可以看出lambda表达式的特点，极大程度缩减代码。  
+
+
+
 
     
