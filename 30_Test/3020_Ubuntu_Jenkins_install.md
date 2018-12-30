@@ -5,3 +5,5 @@
 去Jenkins官网下载Jenkins.war 包  启动tomcat就可以了。
 
 访问：http://localhost:8080/jenkins
+
+### 二.使用 apt install 安装
