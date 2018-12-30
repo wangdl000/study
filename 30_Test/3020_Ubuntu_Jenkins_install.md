@@ -1,1 +1,3 @@
-## ubuntu z安装 Jenkinszhzhozhonzhon h中
+## ubuntu下安装Jenkins
+
+### 一.war包安装
