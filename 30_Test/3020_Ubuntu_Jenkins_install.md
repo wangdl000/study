@@ -1,0 +1,1 @@
+## ubuntu z安装 Jenkinszhzhozhonzhon h中
