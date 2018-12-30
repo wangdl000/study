@@ -7,3 +7,7 @@
 访问：http://localhost:8080/jenkins
 
 ### 二.使用 apt install 安装
+
+
+
+https://blog.csdn.net/mingjie1212/article/details/51810689
