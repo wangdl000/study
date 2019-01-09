@@ -88,3 +88,11 @@ https://blog.csdn.net/xuan314708889/article/details/80418888
   Linux（Ubuntu18.04）和Windows10 之间的局域网文件传输  
 https://blog.csdn.net/HelloZEX/article/details/80784375
 
+Ubuntu18设置静态IP
+
+https://www.neohope.org/2018/04/28/ubuntu18%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81ip/
+https://symfoware.blog.fc2.com/blog-entry-2156.html
+
+  - Netplan  
+https://ywnz.com/linuxjc/1491.html
+https://www.komee.org/entry/2018/06/06/163000
