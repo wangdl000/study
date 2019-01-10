@@ -21,3 +21,5 @@
 不知道下面教程是否好用，晚上回家试试。  
 
 【SAP S/4 1610 IDES + HANA 2.0 安装 - 江正军 - 博客园】https://www.cnblogs.com/jiangzhengjun/p/8150116.html
+
+【Install HANA client on Ubuntu | SAP Blogs】https://blogs.sap.com/2012/09/14/install-hana-client-on-ubuntu/
