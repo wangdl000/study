@@ -16,3 +16,8 @@
    
 ## SAP HANA构成
 【官方安装文档解读SAP S4 HANA架构 - 刘欣的CSDN博客 - CSDN博客】https://blog.csdn.net/ot512csdn/article/details/74157410
+
+## SAP HANA安装
+不知道下面教程是否好用，晚上回家试试。  
+
+【SAP S/4 1610 IDES + HANA 2.0 安装 - 江正军 - 博客园】https://www.cnblogs.com/jiangzhengjun/p/8150116.html
