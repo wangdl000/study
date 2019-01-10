@@ -20,6 +20,8 @@
 ## SAP HANA安装
 不知道下面教程是否好用，晚上回家试试。  
 
+【SAP S/4 HANA 1709 Fully Activated Appliance 安装文件/使用方法 - SAP R/3 - ITPUB论坛－中国专业的IT技术社区 - 手机版 - Powered by Discuz!】http://www.itpub.net/thread-2096029-1-1.html
+
 【SAP S/4 1610 IDES + HANA 2.0 安装 - 江正军 - 博客园】https://www.cnblogs.com/jiangzhengjun/p/8150116.html
 
 【Install HANA client on Ubuntu | SAP Blogs】https://blogs.sap.com/2012/09/14/install-hana-client-on-ubuntu/
