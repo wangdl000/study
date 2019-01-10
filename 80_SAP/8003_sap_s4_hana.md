@@ -14,3 +14,5 @@
 
   - SAP R3基于任何的数据库（包括SAP HANA数据库），而SAP S/4 HANA是完全基于SAP HANA构建，优化了产品代码及数据结构，简化了财务流程和产品逻辑，并且应用了SAP Fiori新的用户交互系统。  
    
+## SAP HANA构成
+【官方安装文档解读SAP S4 HANA架构 - 刘欣的CSDN博客 - CSDN博客】https://blog.csdn.net/ot512csdn/article/details/74157410
