@@ -27,3 +27,7 @@
 【SAP S/4 1610 IDES + HANA 2.0 安装 - 江正军 - 博客园】https://www.cnblogs.com/jiangzhengjun/p/8150116.html
 
 【Install HANA client on Ubuntu | SAP Blogs】https://blogs.sap.com/2012/09/14/install-hana-client-on-ubuntu/
+
+【如何安装sap HANA studio并连接到学习机(91ABAP SAP HANA学习机)--开放的SAP HANA学习机 - BJ_CHENGRONG - CSDN博客】https://blog.csdn.net/bj_chengrong/article/details/72843532
+
+【SAP HANA 部署指南_SAP HANA_SAP 解决方案_SAP 解决方案-阿里云】https://help.aliyun.com/document_detail/57229.html
