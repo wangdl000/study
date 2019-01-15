@@ -5,7 +5,8 @@
 > #### *Java7*
 > #### *Java8*
 > #### *Java9*
-> #### *Java10*
+> #### *Java10*  
+> #### *Java11*  
 
 ## 详细内容
 
@@ -71,6 +72,16 @@ JDBC4.0版本的规范从Java6之后开始支持了。
   ![](https://github.com/wangdl000/study/blob/master/00_Java%E4%BA%8B%E5%89%8D/resource_java/01_10_param.jpg)  
 
 使用var保留类型来声明变量。注意：var不属于关键字，它的使用场景必须为：本地变量可以被初始化、有了增强的for循环、传统for循环中声明的索引变量、Try-with-resources 变量。 
+
+### 7. Java11
+Epsilon 垃圾收集器。   
+什么也不做的垃圾收集器。  
+云计算监控诊断。  
+Flight Recorder（JFR）是 Oracle 刚刚开源的强大分析工具。一套集成进入 JDK、JVM 内部的事件机制框架。  
+Low-Overhead Heap Profiling，对象分配诊断。  
+支持HTTP/2。  
+增强var用法。 var可以用来作为Lambda表达式的局部变量声明。  
+
 
 ### 总结  
   当然，新增的一些特性远远不止这些。上述内容的具体用法，将在基本数据类型中详细描述。
