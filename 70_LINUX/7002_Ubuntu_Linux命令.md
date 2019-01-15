@@ -158,3 +158,6 @@ ls -lha                  以上四个操效果一样。
 
 【Ubuntu Linux基本命令说明及使用 - yangyang222222222的博客 - CSDN博客】  
 https://blog.csdn.net/yangyang222222222/article/details/79172463
+
+
+https://www.cnblogs.com/SmileHang/p/8618863.html
