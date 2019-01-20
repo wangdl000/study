@@ -5,6 +5,8 @@
 ## SAP HANA是什么鬼
 通常说到SAP，指的都是SAP Business Suite/R3(ECC) 这款产品。  
 
+应用和技术两大类。其中应用方面的包括财务会计（FI）,管理会计（CO）,供应链管理-采购（MM），供应链管理-订单履行（SD）,供应链管理-计划（PP/APO-Planning）,人力资源（HR）,产品生命周期管理（PLM），项目管理(PS)等等;技术方面的课程包括ABAP开发（ABAP），Web AS实施与维护(BASIS)等等。
+
 ### SAP S/4 HANA与SAP R3不同点
 
   - 简单地说，S/4 HANA是下一代的R/3和SAP商务套件SAP。  
