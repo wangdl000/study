@@ -1,0 +1,3 @@
+protractor.bat > protractor.log
+
+
